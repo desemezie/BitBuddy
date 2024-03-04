@@ -15,8 +15,6 @@ constexpr int TIME_SPREAD_SECONDS = 5; // Spread of time around the mean
 constexpr int MIN_DELAY_SECONDS = 2;   // Minimum delay between events
 constexpr int MAX_DELAY_SECONDS = 20;  // Maximum delay between events
 
-EventDispatcherService &EventGeneratorService::eventDispatcherService = EventDispatcherService::getInstance();
-
 EventGeneratorService &EventGeneratorService::getInstance() {
   static EventGeneratorService instance;
   return instance;
@@ -72,5 +70,9 @@ void EventGeneratorService::generateEvent() {
 
   // Select a random event based on the distribution
   const auto &selectedEvent = PREDEFINED_EVENTS[eventDistribution(generator)];
-  eventDispatcherService.dispatchEvent(selectedEvent);
+  QMetaObject::invokeMethod(&EventDispatcherService::getInstance(),
+                            "dispatchEvent",
+                            Qt::QueuedConnection,
+                            Q_ARG(const Event*, &selectedEvent));
 }
+

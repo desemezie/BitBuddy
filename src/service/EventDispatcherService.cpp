@@ -11,17 +11,6 @@ EventDispatcherService &EventDispatcherService::getInstance() {
   return instance;
 }
 
-void EventDispatcherService::registerListener(EventListener *listener) {
-  listeners.push_back(listener);
-}
-
-void EventDispatcherService::unregisterListener(EventListener *listener) {
-  listeners.erase(std::remove(listeners.begin(), listeners.end(), listener), listeners.end());
-}
-
-void EventDispatcherService::dispatchEvent(const Event &event) {
-  std::cout << "Dispatching event: " << event.getDescription() << std::endl;
-  for (auto listener : listeners) {
-    listener->onEvent(event);
-  }
+void EventDispatcherService::dispatchEvent(const Event *event) {
+  emit eventDispatched(*event);
 }

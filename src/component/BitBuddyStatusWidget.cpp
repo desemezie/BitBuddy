@@ -43,7 +43,8 @@ BitBuddyStatusWidget::BitBuddyStatusWidget(QWidget *parent) : QWidget(parent) {
     setAttributeLevel(attribute, PLACE_HOLDER_ATTRIBUTE_MAX);
   }
 
-  EventDispatcherService::getInstance().registerListener(this);
+  connect(&EventDispatcherService::getInstance(), &EventDispatcherService::eventDispatched,
+          this, &BitBuddyStatusWidget::onEvent);
 }
 
 void BitBuddyStatusWidget::setAttributeLevel(BitBuddyAttribute::Attribute attribute, int level) {
@@ -53,8 +54,8 @@ void BitBuddyStatusWidget::setAttributeLevel(BitBuddyAttribute::Attribute attrib
 }
 
 void BitBuddyStatusWidget::onEvent(const Event &event) {
-  std::cout << "BitBuddyStatusWidget received an event!" << std::endl;
   const auto *specificEvent = dynamic_cast<const SingleAttributeEvent *>(&event);
+  std::cout << "BitBuddyStatusWidget received an event: " << specificEvent->getDescription() << std::endl;
   if (specificEvent) {
     auto attribute = specificEvent->getAttribute();
     auto currentLevel = attributeBars[attribute]->value();

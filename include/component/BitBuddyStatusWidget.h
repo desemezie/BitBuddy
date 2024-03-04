@@ -17,7 +17,7 @@
 /***
  * Widget that displays the status of the BitBuddy's attributes.
  */
-class BitBuddyStatusWidget : public QWidget, public EventListener {
+class BitBuddyStatusWidget : public QWidget {
  Q_OBJECT
 
  public:
@@ -27,7 +27,8 @@ class BitBuddyStatusWidget : public QWidget, public EventListener {
    */
   explicit BitBuddyStatusWidget(QWidget *parent = nullptr);
 
-  void onEvent(const Event &event) override;
+ public slots:
+  void onEvent(const Event &event);
 
  private:
   void setAttributeLevel(BitBuddyAttribute::Attribute attribute, int level);

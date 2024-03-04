@@ -50,7 +50,6 @@ class EventGeneratorService {
    */
   static void generateEvent();
 
-  static EventDispatcherService &eventDispatcherService;
   std::thread eventGeneratorServiceThread;
   std::atomic<bool> running{false}; // Controls the event generation loop
 };
