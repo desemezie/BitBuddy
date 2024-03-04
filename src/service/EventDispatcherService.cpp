@@ -4,8 +4,6 @@
 
 #include "service/EventDispatcherService.h"
 
-#include <iostream>
-
 EventDispatcherService &EventDispatcherService::getInstance() {
   static EventDispatcherService instance;
   return instance;
