@@ -6,6 +6,7 @@
 #include <QGridLayout>
 #include "MainWindow.h"
 #include "component/BitBuddyStatusWidget.h"
+#include "component/BitBuddyWidget.h"
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   auto *centralWidget = new QWidget(this);
@@ -16,7 +17,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   auto *layout = new QGridLayout(centralWidget);
   centralWidget->setLayout(layout);
 
-  auto *statusWidget = new BitBuddyStatusWidget(this);
+  auto *bitBuddyWidget = new BitBuddyWidget("BitBuddy", this);
+
+  auto *statusWidget = new BitBuddyStatusWidget(bitBuddyWidget, this);
 
   // Create spacers to push the status widget to the top-left corner
   auto *verticalSpacer = new QSpacerItem(1, 1, QSizePolicy::Minimum, QSizePolicy::Expanding);

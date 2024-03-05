@@ -5,8 +5,10 @@
 #ifndef BITBUDDY_SRC_BITBUDDYSTATUSWIDGET_H_
 #define BITBUDDY_SRC_BITBUDDYSTATUSWIDGET_H_
 
+#include "model/BitBuddyAttributeName.h"
+#include "model/DeprecatedEventListener.h"
 #include "model/BitBuddyAttribute.h"
-#include "model/EventListener.h"
+#include "BitBuddyWidget.h"
 
 #include <QWidget>
 #include <QProgressBar>
@@ -15,7 +17,7 @@
 #include <QPair>
 
 /***
- * Widget that displays the status of the BitBuddy's attributes.
+ * Widget that displays the status of the BitBuddyWidget's attributes.
  */
 class BitBuddyStatusWidget : public QWidget {
  Q_OBJECT
@@ -25,15 +27,26 @@ class BitBuddyStatusWidget : public QWidget {
    * Constructor for the BitBuddyStatusWidget
    * @param parent The parent widget of the BitBuddyStatusWidget, typically the MainWindow.
    */
-  explicit BitBuddyStatusWidget(QWidget *parent = nullptr);
+  explicit BitBuddyStatusWidget(BitBuddyWidget *bitBuddyWidgetInstance, QWidget *parent = nullptr);
 
  public slots:
-  void onEvent(const Event &event);
+  /**
+   * Updates the progress bar for the updated attribute
+   *
+   * @param attribute The attribute that was updated
+   */
+  void onAttributeUpdated(const BitBuddyAttribute &attribute);
 
  private:
-  void setAttributeLevel(BitBuddyAttribute::Attribute attribute, int level);
+  /**
+   * Sets the level of the attribute's progress bar
+   *
+   * @param attributeName The attributeName to set the level for
+   * @param level The level to set the attributeName to
+   */
+  void setAttributeLevel(BitBuddyAttributeName::UniqueName attributeName, int level);
 
-  QMap<BitBuddyAttribute::Attribute, QProgressBar *> attributeBars;
+  QMap<BitBuddyAttributeName::UniqueName, QProgressBar *> attributeBars;
 };
 
 #endif //BITBUDDY_SRC_BITBUDDYSTATUSWIDGET_H_

@@ -10,7 +10,7 @@
 #include <vector>
 
 /***
- * Predefined events for the BitBuddy
+ * Predefined events for the BitBuddyWidget
  */
 extern const std::vector<SingleAttributeEvent> PREDEFINED_EVENTS;
 

@@ -11,11 +11,11 @@
  * @deprecated Use QT's signal/slot pattern instead as it is thread safe with QT.
  * Interface for classes that want to listen to events
  */
-class EventListener {
+class DeprecatedEventListener {
 
  public:
   [[deprecated]]
-  virtual ~EventListener() = default;
+  virtual ~DeprecatedEventListener() = default;
 
   /***
    * Called when an event is dispatched. Implement this method to handle the event.

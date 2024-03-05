@@ -30,19 +30,23 @@ add_executable(bitbuddy src/main.cpp
         include/model/Event.h
         src/model/SingleAttributeEvent.cpp
         include/model/SingleAttributeEvent.h
-        include/model/BitBuddyAttribute.h
+        include/model/BitBuddyAttributeName.h
         src/service/EventGeneratorService.cpp
         include/service/EventGeneratorService.h
         src/service/EventDispatcherService.cpp
         include/service/EventDispatcherService.h
-        include/model/EventListener.h
+        include/model/DeprecatedEventListener.h
         src/service/GameService.cpp
         include/service/GameService.h
         include/model/BitBuddyEvents.h
         src/model/BitBuddyEvents.cpp
         src/component/BitBuddyStatusWidget.cpp
         include/component/BitBuddyStatusWidget.h
-        src/model/BitBuddyAttribute.cpp)
+        src/model/BitBuddyAttributeName.cpp
+        src/component/BitBuddyWidget.cpp
+        include/component/BitBuddyWidget.h
+        src/model/BitBuddyAttribute.cpp
+        include/model/BitBuddyAttribute.h)
 target_link_libraries(bitbuddy
         Qt::Core
         Qt::Gui
