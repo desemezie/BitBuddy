@@ -5,7 +5,7 @@
 #include "model/SingleAttributeEvent.h"
 
 SingleAttributeEvent::SingleAttributeEvent(int increment,
-                                           BitBuddyAttribute::Attribute attribute,
+                                           BitBuddyAttributeName::UniqueName attribute,
                                            double probability,
                                            std::string description) :
     Event(std::move(description), probability), increment(increment), attribute(attribute) {
@@ -15,6 +15,6 @@ int SingleAttributeEvent::getIncrement() const {
   return increment;
 }
 
-BitBuddyAttribute::Attribute SingleAttributeEvent::getAttribute() const {
+BitBuddyAttributeName::UniqueName SingleAttributeEvent::getAttribute() const {
   return attribute;
 }

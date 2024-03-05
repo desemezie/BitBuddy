@@ -17,6 +17,7 @@ class EventDispatcherService : public QObject {
  public:
 /***
  * Singleton instance getter
+ *
  * @return the instance
  */
   static EventDispatcherService &getInstance();
@@ -32,15 +33,26 @@ class EventDispatcherService : public QObject {
   = delete;
 
  signals:
+  /***
+   * Signal emitted when an event is dispatched
+   *
+   * @param event The event that was dispatched
+   */
   void eventDispatched(const Event &event);
 
  public slots:
+  /***
+   * Slot that dispatches the event passed as an argumetn to all listeners. Use this if you want to send an event to
+   * BitBuddy and any other listeners.
+   *
+   * @param event The event to dispatch to all listeners
+   */
   void dispatchEvent(const Event *event);
 
  private:
   EventDispatcherService() = default;
 
-  ~EventDispatcherService() = default;
+  ~EventDispatcherService() override = default;
 
 };
 

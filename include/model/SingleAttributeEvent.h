@@ -6,7 +6,7 @@
 #define BITBUDDY_SINGLEATTRIBUTEEVENT_H
 
 #include "model/Event.h"
-#include "BitBuddyAttribute.h"
+#include "BitBuddyAttributeName.h"
 
 /***
  * Class that represents a single attribute event.
@@ -18,12 +18,12 @@ class SingleAttributeEvent : public Event {
    * Constructor for a single attribute event.
    *
    * @param increment The increment of the event, can be positive or negative.
-   * @param attribute The attribute of the event from the BitBuddyAttribute::Attribute enum.
+   * @param attribute The attribute of the event from the BitBuddyAttributeName::UniqueName enum.
    * @param probability The probability of the event occurring between 0.0 and 1.0.
    * @param description The description of the event.
    */
   SingleAttributeEvent(int increment,
-                       BitBuddyAttribute::Attribute attribute,
+                       BitBuddyAttributeName::UniqueName attribute,
                        double probability = 1.0,
                        std::string description = "Single attribute event.");
 
@@ -47,13 +47,13 @@ class SingleAttributeEvent : public Event {
   /***
    * Returns the attribute of the event.
    *
-   * @return The attribute as a BitBuddyAttribute::Attribute.
+   * @return The attribute as a BitBuddyAttributeName::UniqueName.
    */
-  [[nodiscard]] BitBuddyAttribute::Attribute getAttribute() const;
+  [[nodiscard]] BitBuddyAttributeName::UniqueName getAttribute() const;
 
  private:
   int increment; // positive or negative
-  BitBuddyAttribute::Attribute attribute;
+  BitBuddyAttributeName::UniqueName attribute;
 
 };
 
