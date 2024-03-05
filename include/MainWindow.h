@@ -6,6 +6,7 @@
 #define BITBUDDY_MAINWINDOW_H
 
 #include <QMainWindow>
+#include "component/BitBuddyActionButton.h"
 
 /***
  * The main window of the application
@@ -31,6 +32,10 @@ class MainWindow : public QMainWindow {
   MainWindow(MainWindow &&) = delete;
 
   MainWindow &operator=(MainWindow &&) = delete;
+
+private:
+    BitBuddyActionButton *buttons[8];
+
 
 };
 

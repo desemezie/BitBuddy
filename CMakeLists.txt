@@ -42,7 +42,9 @@ add_executable(bitbuddy src/main.cpp
         src/model/BitBuddyEvents.cpp
         src/component/BitBuddyStatusWidget.cpp
         include/component/BitBuddyStatusWidget.h
-        src/model/BitBuddyAttribute.cpp)
+        src/model/BitBuddyAttribute.cpp
+        src/component/BitBuddyActionButton.cpp
+        include/component/BitBuddyActionButton.h)
 target_link_libraries(bitbuddy
         Qt::Core
         Qt::Gui
