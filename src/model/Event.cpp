@@ -3,6 +3,8 @@
 //
 
 #include "model/Event.h"
+#include "model/BitBuddyAttributeName.h"
+
 
 [[deprecated]]
 Event::Event(std::string description, double probability)

@@ -6,6 +6,7 @@
 #define BITBUDDY_MAINWINDOW_H
 
 #include <QMainWindow>
+#include "model/BitBuddyAttributeName.h"
 #include "component/BitBuddyActionButton.h"
 
 /***
