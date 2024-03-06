@@ -11,9 +11,17 @@
 
 class BitBuddyActionButton: public QPushButton{
     Q_OBJECT
-public:
-    BitBuddyActionButton(const QIcon &icon, const QString &text, QWidget *parent = nullptr);
 
+    //BitBuddyActionButton(QIcon icon, const QString &text, BitBuddyAttributeName::UniqueName name, QWidget *pWidget);
+
+public:
+    explicit BitBuddyActionButton(const QIcon &icon, const QString &text,BitBuddyAttributeName::UniqueName attribute, QWidget *parent = nullptr);
+
+private slots:
+    void handleButtonClicked();
+
+private:
+    BitBuddyAttributeName::UniqueName attribute;
 
 };
 
