@@ -36,7 +36,6 @@ class MainWindow : public QMainWindow {
 private:
     BitBuddyActionButton *buttons[8];
 
-
 };
 
 #endif //BITBUDDY_MAINWINDOW_H
