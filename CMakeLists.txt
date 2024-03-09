@@ -43,8 +43,8 @@ add_executable(bitbuddy src/main.cpp
         src/component/BitBuddyStatusWidget.cpp
         include/component/BitBuddyStatusWidget.h
         src/model/BitBuddyAttributeName.cpp
-        src/component/BitBuddyWidget.cpp
-        include/component/BitBuddyWidget.h
+        src/model/BitBuddy.cpp
+        include/model/BitBuddy.h
         src/model/BitBuddyAttribute.cpp
         include/model/BitBuddyAttribute.h
         src/component/BitBuddyActionButton.cpp

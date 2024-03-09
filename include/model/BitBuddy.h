@@ -14,30 +14,30 @@
 /***
  * The main Bit Buddy Widget!
  */
-class BitBuddyWidget : public QWidget {
+class BitBuddy : public QWidget {
  Q_OBJECT
 
  public:
   /***
-   * Constructor for the BitBuddyWidget. Initializes the attribute maps.
+   * Constructor for the BitBuddy. Initializes the attribute maps.
    *
-   * @param name The name of the BitBuddyWidget
-   * @param parent The parent widget of the BitBuddyWidget, typically the MainWindow.
+   * @param name The name of the BitBuddy
+   * @param parent The parent widget of the BitBuddy, typically the MainWindow.
    */
-  explicit BitBuddyWidget(std::string name, QWidget *parent = nullptr);
+  explicit BitBuddy(std::string name, QWidget *parent = nullptr);
 
   /**
-   * Destructor for the BitBuddyWidget
+   * Destructor for the BitBuddy
    */
-  ~BitBuddyWidget() override;
+  ~BitBuddy() override;
 
-  BitBuddyWidget(const BitBuddyWidget &) = delete;
+  BitBuddy(const BitBuddy &) = delete;
 
-  BitBuddyWidget &operator=(const BitBuddyWidget &) = delete;
+  BitBuddy &operator=(const BitBuddy &) = delete;
 
-  BitBuddyWidget(BitBuddyWidget &&) = delete;
+  BitBuddy(BitBuddy &&) = delete;
 
-  BitBuddyWidget &operator=(BitBuddyWidget &&) = delete;
+  BitBuddy &operator=(BitBuddy &&) = delete;
 
   /***
    * Increments the value of the attribute with the given value
@@ -57,7 +57,7 @@ class BitBuddyWidget : public QWidget {
 
  public slots:
   /***
-   * Slot that listens for Events from the event dispatch service and updates the BitBuddyWidget's attributes.
+   * Slot that listens for Events from the event dispatch service and updates the BitBuddy's attributes.
    *
    * @param event The event to process
    */
