@@ -11,18 +11,20 @@
 #include <QPixmap>
 #include <QObject>
 #include "model/BitBuddyAttribute.h"
+#include "model/Event.h"
 
 class BitBuddySpriteHandler :public QObject{
     Q_OBJECT
 
 public:
     explicit BitBuddySpriteHandler(QLabel* displayLabel, QObject* parent = nullptr);
-
-public slots:
-    void changeSprite(BitBuddyAttributeName::UniqueName state);
+    void handleEvent(const Event& event);
+    void changeSprite(const std::string& state);
 
 private:
     QLabel* displayLabel;
+
+
 };
 
 
