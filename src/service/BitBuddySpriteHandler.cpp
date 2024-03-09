@@ -29,37 +29,51 @@ void BitBuddySpriteHandler::changeSprite(const std::string& state) {
     } else if (state.find("seems a bit withdrawn") != std::string::npos) {
         qDebug() << "Found and identified for withdrawn";
         imageName = "/Users/annabelirani/Desktop/3307repo/group17/assets/mad_bitbuddy.png";
+
     } else if (state.find("desperately thirsty") != std::string::npos) {
         qDebug() << "Found and identified for thirsty";
         imageName = "/Users/annabelirani/Desktop/3307repo/group17/assets/sad_bitbuddy.png";
+
     } else if (state.find("doesn't seem to be feeling well") != std::string::npos) {
         qDebug() << "Found and identified for sick";
         imageName = "/Users/annabelirani/Desktop/3307repo/group17/assets/sad_bitbuddy.png";
+
     } else if (state.find("eyelids are drooping") != std::string::npos) {
         qDebug() << "Found and identified for tired";
         imageName = "/Users/annabelirani/Desktop/3307repo/group17/assets/sleeping_bitbuddy.png";
+
     } else if (state.find("lets out a big yawn") != std::string::npos) {
         qDebug() << "Found and identified for bored";
         imageName = "/Users/annabelirani/Desktop/3307repo/group17/assets/sad_bitbuddy.png";
+
     } else if (state.find("could use a bath") != std::string::npos) {
         qDebug() << "Found and identified for bath";
         imageName = "/Users/annabelirani/Desktop/3307repo/group17/assets/angry_bitbuddy.png";
+
     } else if (state.find("Event for: Hunger") != std::string::npos){
         QString imagePath = "/Users/annabelirani/Desktop/3307repo/group17/assets/tmagochi_feed.png";
         displayTacoAndRemove(imagePath);
 
-    }else if (state.find("Event for: Hygiene") != std::string::npos) {
+    } else if (state.find("Event for: Hygiene") != std::string::npos) {
         QString imagePath = "/Users/annabelirani/Desktop/3307repo/group17/assets/tamagochi_bubble.png";
         displayBubbles(imagePath);
-    }else if (state.find("Event for: Tiredness") != std::string::npos) {
+
+    } else if (state.find("Event for: Tiredness") != std::string::npos) {
         QString imagePath = "/Users/annabelirani/Desktop/3307repo/group17/assets/sleeping_bitbuddy.png";
         changeSpriteSmoothly(imagePath);
         QString zzzPath = "/Users/annabelirani/Desktop/3307repo/group17/assets/tamagochi_zzz.png";
         displayZZZ(zzzPath);
+
         QTimer::singleShot(5000, this, [this]() {
             QString defaultImagePath = "/Users/annabelirani/Desktop/3307repo/group17/assets/happy_bitbuddy.png"; // Path to your default sprite
             changeSpriteSmoothly(defaultImagePath);
         });
+    } else if (state.find("Event for: Thirst") != std::string::npos) {
+        qDebug() << "HERE";
+        QString imagePath = "/Users/annabelirani/Desktop/3307repo/group17/assets/happy_bitbuddy.png";
+        changeSpriteSmoothly(imagePath);
+        QString drink = "/Users/annabelirani/Desktop/3307repo/group17/assets/tomogachi_drink.png";
+        displayDrink(drink);
     }
     /*
     QPixmap pixmap(imageName);
@@ -91,6 +105,25 @@ void BitBuddySpriteHandler::displayTacoAndRemove(const QString& imagePath){
         temporaryLabel->show();
         // Use QTimer to wait 5 seconds before removing the image
         QTimer::singleShot(3000, this, [this]() {
+            temporaryLabel->clear(); // Removes the pixmap from the label
+            // Optionally reset to a default sprite or state here
+        });
+    } else {
+        qDebug() << "Failed to load image for taco event.";
+    }
+}
+void BitBuddySpriteHandler::displayDrink(const QString& imagePath){
+    qDebug() << "Trying to load image from:" << imagePath;
+    QPixmap pixmap(imagePath);
+    if (!pixmap.isNull()) {
+        QSize newSize(250,250);
+        //temporaryLabel->setStyleSheet("background-color: red;");
+        temporaryLabel->setPixmap(pixmap.scaled(newSize, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+        temporaryLabel->resize(newSize);
+        temporaryLabel->move(535,395);
+        temporaryLabel->show();
+        // Use QTimer to wait 5 seconds before removing the image
+        QTimer::singleShot(5000, this, [this]() {
             temporaryLabel->clear(); // Removes the pixmap from the label
             // Optionally reset to a default sprite or state here
         });
@@ -145,6 +178,7 @@ void BitBuddySpriteHandler::changeSpriteSmoothly(const QString& imagePath) {
     auto *effect = new QGraphicsOpacityEffect(this);
     displayLabel->setGraphicsEffect(effect);
 
+
     auto *animation = new QPropertyAnimation(effect, "opacity");
     animation->setDuration(500); // 500 ms for fade out
     animation->setStartValue(1.0);
@@ -154,7 +188,7 @@ void BitBuddySpriteHandler::changeSpriteSmoothly(const QString& imagePath) {
     connect(animation, &QPropertyAnimation::finished, [this, imagePath, effect, animation]() {
         QPixmap pixmap(imagePath);
         if (!pixmap.isNull()) {
-            displayLabel->setPixmap(pixmap.scaled(displayLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+            displayLabel->setPixmap(pixmap.scaled(400,400, Qt::KeepAspectRatio, Qt::SmoothTransformation));
         }
 
         QPropertyAnimation *fadeInAnimation = new QPropertyAnimation(effect, "opacity");
