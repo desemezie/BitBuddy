@@ -82,7 +82,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     rowLayout2->setSpacing(0);
     layout->addWidget(spriteLabel, 0, 0, 2, 2, Qt::AlignCenter);
     layout->addLayout(rowLayout1, 2, 0, 2, 2);
-    layout->addLayout(rowLayout2, 3, 0, 2, 2);
+    layout->addLayout(rowLayout2, 4, 0, 2, 2);
 
     layout->setAlignment(Qt::AlignBottom);
     connect(&EventDispatcherService::getInstance(), &EventDispatcherService::eventDispatched,

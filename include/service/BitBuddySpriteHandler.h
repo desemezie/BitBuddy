@@ -25,8 +25,19 @@ public slots:
     void handleEvent(const Event& event);
 private:
     QLabel* displayLabel;
+    QLabel* temporaryLabel;
 
+    void displayTacoAndRemove(const QString &imagePath);
 
+    void changeSpriteSmoothly(const QString &imagePath);
+
+    void displayBubbles(const QString &imagePath);
+
+    void displayZZZ(const QString &imagePath);
+
+    void setDefaultSprite();
+
+    void changeSpriteSmoothly(const QString &imagePath, std::function<void()> callback);
 };
 
 
