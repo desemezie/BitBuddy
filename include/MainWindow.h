@@ -6,6 +6,7 @@
 #define BITBUDDY_MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QLabel>
 #include "model/BitBuddyAttributeName.h"
 #include "component/BitBuddyActionButton.h"
 
@@ -36,7 +37,7 @@ class MainWindow : public QMainWindow {
 
 private:
     BitBuddyActionButton *buttons[8];
-
+    QLabel* spriteLabel;
 };
 
 #endif //BITBUDDY_MAINWINDOW_H
