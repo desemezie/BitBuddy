@@ -40,6 +40,8 @@ private:
     void changeSpriteSmoothly(const QString &imagePath, std::function<void()> callback);
 
     void displayDrink(const QString &imagePath);
+
+    void displayPills(const QString &imagePath);
 };
 
 

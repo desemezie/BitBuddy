@@ -54,6 +54,7 @@ void BitBuddySpriteHandler::changeSprite(const std::string& state) {
         QString imagePath = "/Users/annabelirani/Desktop/3307repo/group17/assets/tmagochi_feed.png";
         displayTacoAndRemove(imagePath);
 
+
     } else if (state.find("Event for: Hygiene") != std::string::npos) {
         QString imagePath = "/Users/annabelirani/Desktop/3307repo/group17/assets/tamagochi_bubble.png";
         displayBubbles(imagePath);
@@ -74,16 +75,13 @@ void BitBuddySpriteHandler::changeSprite(const std::string& state) {
         changeSpriteSmoothly(imagePath);
         QString drink = "/Users/annabelirani/Desktop/3307repo/group17/assets/tomogachi_drink.png";
         displayDrink(drink);
+    } else if (state.find("Event for: Health") != std::string::npos){
+        QString imagePath = "/Users/annabelirani/Desktop/3307repo/group17/assets/happy_bitbuddy.png";
+        changeSpriteSmoothly(imagePath);
+        QString pills = "/Users/annabelirani/Desktop/3307repo/group17/assets/tamagochi_pills.png";
+        displayPills(pills);
     }
-    /*
-    QPixmap pixmap(imageName);
-    if (!pixmap.isNull()) {
-        // Note: Fixed the syntax for scaling the pixmap before setting it
-        displayLabel->setPixmap(pixmap.scaled(displayLabel->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
-    } else {
-        qDebug() << "Failed to load sprite for state:" << QString::fromStdString(state);
-    }
-     */
+
 }
 
 
@@ -92,6 +90,27 @@ void BitBuddySpriteHandler::handleEvent(const Event &event) {
     std::string state = event.getDescription();
     qDebug() << "Recieved event desc: " << QString::fromStdString(state);
     changeSprite(state);
+}
+
+void BitBuddySpriteHandler::displayPills(const QString& imagePath){
+    qDebug() << "load image for pill event.";
+    QPixmap pixmap(imagePath);
+    if (!pixmap.isNull()) {
+        QSize newSize(50,50);
+
+        temporaryLabel->setPixmap(pixmap.scaled(50,50, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+        temporaryLabel->resize(newSize);
+        temporaryLabel->move(607,380);
+
+        temporaryLabel->show();
+        // Use QTimer to wait 5 seconds before removing the image
+        QTimer::singleShot(3000, this, [this]() {
+            temporaryLabel->clear(); // Removes the pixmap from the label
+            // Optionally reset to a default sprite or state here
+        });
+    } else {
+        qDebug() << "Failed to load image for pill event.";
+    }
 }
 
 void BitBuddySpriteHandler::displayTacoAndRemove(const QString& imagePath){
