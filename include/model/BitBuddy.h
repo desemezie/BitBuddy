@@ -12,7 +12,7 @@
 #include "model/Event.h"
 
 /***
- * The main Bit Buddy Widget!
+ * Bit Buddy!
  */
 class BitBuddy : public QWidget {
  Q_OBJECT
@@ -25,6 +25,19 @@ class BitBuddy : public QWidget {
    * @param parent The parent widget of the BitBuddy, typically the MainWindow.
    */
   explicit BitBuddy(std::string name, QWidget *parent = nullptr);
+
+  /***
+   * Constructor for the BitBuddy that takes all of BitBuddy's attributes as parameters.
+   *
+   * @param name The name of the BitBuddy
+   * @param parent The parent widget of the BitBuddy, typically the MainWindow.
+   * @param attributes A map of the BitBuddy's attributes where the key is the attribute's unique name and the value is the attribute
+   * @param creationTime The time the BitBuddy was created
+   */
+  BitBuddy(std::string name,
+           QWidget *parent,
+           const std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> &attributes,
+           std::chrono::system_clock::time_point creationTime);
 
   /**
    * Destructor for the BitBuddy
@@ -67,6 +80,8 @@ class BitBuddy : public QWidget {
   std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> attributes;
   std::chrono::system_clock::time_point creationTime;
   std::string name;
+
+  void connectSignals() const;
 
 };
 

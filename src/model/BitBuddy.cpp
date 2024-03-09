@@ -21,8 +21,15 @@ BitBuddy::BitBuddy(std::string name, QWidget *parent)
     );
   }
 
-  connect(&EventDispatcherService::getInstance(), &EventDispatcherService::eventDispatched,
-          this, &BitBuddy::onEvent);
+  BitBuddy::connectSignals();
+}
+
+// Used for creating the bit buddy when loading from a file
+BitBuddy::BitBuddy(std::string name, QWidget *parent, const std::map<BitBuddyAttributeName::UniqueName,
+                                                                     BitBuddyAttribute> &attributes,
+                   std::chrono::system_clock::time_point creationTime)
+    : name(std::move(name)), attributes(attributes), creationTime(creationTime), QWidget(parent) {
+  connectSignals();
 }
 
 BitBuddy::~BitBuddy() {
@@ -51,4 +58,9 @@ void BitBuddy::onEvent(const Event &event) {
 
     incrementAttribute(attributeKey, increment);
   }
+}
+
+void BitBuddy::connectSignals() const {
+  connect(&EventDispatcherService::getInstance(), &EventDispatcherService::eventDispatched,
+          this, &BitBuddy::onEvent);
 }
