@@ -9,6 +9,7 @@
 #include <QLabel>
 #include "model/BitBuddyAttributeName.h"
 #include "component/BitBuddyActionButton.h"
+#include "service/BitBuddySpriteHandler.h"
 
 /***
  * The main window of the application
@@ -38,6 +39,7 @@ class MainWindow : public QMainWindow {
 private:
     BitBuddyActionButton *buttons[8];
     QLabel* spriteLabel;
+    BitBuddySpriteHandler* spriteHandler;
 };
 
 #endif //BITBUDDY_MAINWINDOW_H

@@ -9,6 +9,7 @@
 #include "component/BitBuddyStatusWidget.h"
 #include "component/BitBuddyWidget.h"
 #include "component/BitBuddyActionButton.h"
+#include "service/EventDispatcherService.h"
 #include <iostream>
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
@@ -20,13 +21,18 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     auto *layout = new QGridLayout(centralWidget);
     centralWidget->setLayout(layout);
 
+    // connect spriteHandler to bitbuddy
+    spriteLabel = new QLabel(centralWidget);
+    spriteHandler = new BitBuddySpriteHandler(spriteLabel, this);
+
+
     auto *bitBuddyWidget = new BitBuddyWidget("BitBuddy", this);
 
     auto *statusWidget = new BitBuddyStatusWidget(bitBuddyWidget, this);
 
     // Create spacers to push the status widget to the top-left corner
     auto *verticalSpacer = new QSpacerItem(1, 1, QSizePolicy::Minimum, QSizePolicy::Expanding);
-    spriteLabel = new QLabel(centralWidget);
+    //spriteLabel = new QLabel(centralWidget);
     QImage image("/Users/annabelirani/Desktop/3307repo/group17/assets/happy_bitbuddy.png");
 
     if (image.isNull()) {
@@ -79,6 +85,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     layout->addLayout(rowLayout2, 3, 0, 2, 2);
 
     layout->setAlignment(Qt::AlignBottom);
+    connect(&EventDispatcherService::getInstance(), &EventDispatcherService::eventDispatched,
+            spriteHandler, &BitBuddySpriteHandler::handleEvent);
 
 
 }

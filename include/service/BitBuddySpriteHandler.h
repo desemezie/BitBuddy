@@ -18,9 +18,11 @@ class BitBuddySpriteHandler :public QObject{
 
 public:
     explicit BitBuddySpriteHandler(QLabel* displayLabel, QObject* parent = nullptr);
-    void handleEvent(const Event& event);
+
     void changeSprite(const std::string& state);
 
+public slots:
+    void handleEvent(const Event& event);
 private:
     QLabel* displayLabel;
 
