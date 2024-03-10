@@ -8,7 +8,7 @@
 #include "model/BitBuddyAttributeName.h"
 #include "model/DeprecatedEventListener.h"
 #include "model/BitBuddyAttribute.h"
-#include "BitBuddyWidget.h"
+#include "model/BitBuddy.h"
 
 #include <QWidget>
 #include <QProgressBar>
@@ -17,7 +17,7 @@
 #include <QPair>
 
 /***
- * Widget that displays the status of the BitBuddyWidget's attributes.
+ * Widget that displays the status of the BitBuddy's attributes.
  */
 class BitBuddyStatusWidget : public QWidget {
  Q_OBJECT
@@ -27,7 +27,7 @@ class BitBuddyStatusWidget : public QWidget {
    * Constructor for the BitBuddyStatusWidget
    * @param parent The parent widget of the BitBuddyStatusWidget, typically the MainWindow.
    */
-  explicit BitBuddyStatusWidget(BitBuddyWidget *bitBuddyWidgetInstance, QWidget *parent = nullptr);
+  explicit BitBuddyStatusWidget(BitBuddy *BitBuddyInstance, QWidget *parent = nullptr);
 
  public slots:
   /**

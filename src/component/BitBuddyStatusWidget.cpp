@@ -5,7 +5,7 @@
 #include "component/BitBuddyStatusWidget.h"
 #include "service/EventDispatcherService.h"
 #include "model/SingleAttributeEvent.h"
-#include "component/BitBuddyWidget.h"
+#include "model/BitBuddy.h"
 
 #include <QVBoxLayout>
 #include <iostream>
@@ -13,7 +13,7 @@
 const int LABEL_WIDTH = 80;
 const int PROGRESS_BAR_WIDTH = 120;
 
-BitBuddyStatusWidget::BitBuddyStatusWidget(BitBuddyWidget *bitBuddyWidgetInstance, QWidget *parent) : QWidget(parent) {
+BitBuddyStatusWidget::BitBuddyStatusWidget(BitBuddy *bitBuddyWidgetInstance, QWidget *parent) : QWidget(parent) {
   auto *layout = new QVBoxLayout(this);
   layout->setAlignment(Qt::AlignTop);
 
@@ -40,7 +40,7 @@ BitBuddyStatusWidget::BitBuddyStatusWidget(BitBuddyWidget *bitBuddyWidgetInstanc
     setAttributeLevel(attribute, MAX_ATTRIBUTE_VALUE);
   }
 
-  connect(bitBuddyWidgetInstance, &BitBuddyWidget::attributeUpdated, this, &BitBuddyStatusWidget::onAttributeUpdated);
+  connect(bitBuddyWidgetInstance, &BitBuddy::attributeUpdated, this, &BitBuddyStatusWidget::onAttributeUpdated);
 }
 
 void BitBuddyStatusWidget::setAttributeLevel(BitBuddyAttributeName::UniqueName attributeName, int level) {
