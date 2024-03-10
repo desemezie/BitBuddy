@@ -12,18 +12,17 @@
 #include "service/EventDispatcherService.h"
 #include <iostream>
 
+constexpr int SCREEN_WIDTH = 1280;
+constexpr int SCREEN_HEIGHT = 720;
+
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   auto *centralWidget = new QWidget(this);
   setCentralWidget(centralWidget);
-  resize(1280, 720);
+  resize(SCREEN_WIDTH, SCREEN_HEIGHT);
 
   // Grid layout for the central widget
   auto *layout = new QGridLayout(centralWidget);
   centralWidget->setLayout(layout);
-
-  // connect spriteHandler to bitbuddy
-  spriteLabel = new QLabel(centralWidget);
-  spriteHandler = new BitBuddySpriteHandler(spriteLabel, this);
 
   auto *bitBuddy = new BitBuddy("BitBuddy", this);
 
@@ -31,27 +30,12 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
   // Create spacers to push the status widget to the top-left corner
   auto *verticalSpacer = new QSpacerItem(1, 1, QSizePolicy::Minimum, QSizePolicy::Expanding);
-  //spriteLabel = new QLabel(centralWidget);
-  QImage image(":/assets/happy_bitbuddy.png");
 
-  if (image.isNull()) {
-    qDebug() << "Failed to load the image.";
-  } else {
+  // connect spriteHandler to bitbuddy
+  spriteLabel = new QLabel(centralWidget);
+  spriteHandler = new BitBuddySpriteHandler(spriteLabel, this);
 
-    QSize imageSize(400, 400);
-
-    QPixmap pixmap = QPixmap::fromImage(image.scaled(imageSize, Qt::KeepAspectRatio, Qt::SmoothTransformation));
-
-    if (!pixmap.isNull()) {
-      //spriteLabel->setFixedSize(400,400);
-      spriteLabel->setPixmap(pixmap);
-
-      qDebug() << "Hooray!";
-    } else {
-
-      qDebug() << "Failed to create a pixmap from image.";
-    }
-  }
+  loadDefaultSprite();
 
   layout->addWidget(statusWidget, 0, 0, Qt::AlignTop | Qt::AlignLeft);
   layout->addItem(verticalSpacer, 1, 0, 1, 2);
@@ -59,10 +43,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   // Setting button icon
   QIcon buttonIcon("./thumb.png");
 
-  QHBoxLayout *rowLayout1 = new QHBoxLayout;
-  QHBoxLayout *rowLayout2 = new QHBoxLayout;
+  auto *rowLayout1 = new QHBoxLayout;
+  auto *rowLayout2 = new QHBoxLayout;
 
-  std::string buttonNames[8] = {"feed", "clean", "discipline", "play", "blah", "blah", "blah", "blah "};
   for (int i = 0; i < NUMBER_OF_ATTRIBUTES; i++) {
     auto attribute = static_cast<BitBuddyAttributeName::UniqueName>(i);
     auto *but = new BitBuddyActionButton(buttonIcon,
@@ -89,3 +72,20 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 }
 
 MainWindow::~MainWindow() = default;
+
+void MainWindow::loadDefaultSprite() {
+  QImage image(":/assets/happy_bitbuddy.png");
+
+  if (image.isNull()) {
+    qDebug() << "Failed to load the image.";
+  } else {
+    QSize imageSize(400, 400);
+    QPixmap pixmap = QPixmap::fromImage(image.scaled(imageSize, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+
+    if (!pixmap.isNull()) {
+      spriteLabel->setPixmap(pixmap);
+    } else {
+      qDebug() << "Failed to create a pixmap from image.";
+    }
+  }
+}
