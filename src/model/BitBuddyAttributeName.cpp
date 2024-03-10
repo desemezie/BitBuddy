@@ -3,7 +3,7 @@
 //
 
 #include "model/BitBuddyAttributeName.h"
-
+#include <string>
 std::string BitBuddyAttributeName::toString(UniqueName attribute) {
   switch (attribute) {
     case HUNGER: return "Hunger";

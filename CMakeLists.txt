@@ -24,6 +24,7 @@ qt_standard_project_setup()
 include_directories(include)
 
 add_executable(bitbuddy src/main.cpp
+        resources.qrc
         src/MainWindow.cpp
         include/MainWindow.h
         src/model/Event.cpp
@@ -49,7 +50,12 @@ add_executable(bitbuddy src/main.cpp
         include/model/BitBuddyAttribute.h
         src/component/BitBuddyActionButton.cpp
         include/component/BitBuddyActionButton.h
+        src/service/BitBuddySpriteHandler.cpp
+        include/service/BitBuddySpriteHandler.h
+
 )
+
+
 target_link_libraries(bitbuddy
         Qt::Core
         Qt::Gui
