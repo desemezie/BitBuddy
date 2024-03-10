@@ -1,6 +1,7 @@
 #include <QApplication>
 #include "MainWindow.h"
 #include "service/GameService.h"
+#include "LauncherWindow.h"
 
 /**
  * @brief Entry point of the main program.
@@ -14,10 +15,14 @@ int main(int argc, char *argv[]) {
   QCoreApplication::setApplicationName("BitBuddy");
   QCoreApplication::setApplicationVersion("1.0.0");
 
+  LauncherWindow start;
+  start.show();
+  /*
   MainWindow mainWindow;
   mainWindow.showNormal();
 
   GameService::getInstance().startService();
-
+*/
   return QApplication::exec();
+
 }
