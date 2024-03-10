@@ -24,6 +24,7 @@ qt_standard_project_setup()
 include_directories(include)
 
 add_executable(bitbuddy src/main.cpp
+        resources.qrc
         src/MainWindow.cpp
         include/MainWindow.h
         src/model/Event.cpp
