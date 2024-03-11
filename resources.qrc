@@ -1,7 +1,9 @@
 <!DOCTYPE RCC>
 <RCC version="1.0">
     <qresource prefix="/">
+
         <file>assets/angry_bitbuddy.png</file>
+        <file>assets/background.png</file>
         <file>assets/happy_bitbuddy.png</file>
         <file>assets/mad_bitbuddy.png</file>
         <file>assets/sad_bitbuddy.png</file>

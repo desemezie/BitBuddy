@@ -8,17 +8,23 @@
 #include "service/GameService.h"
 #include <QApplication>
 #include <QGraphicsDropShadowEffect>
+#include <QLineEdit>
 
 constexpr int SCREEN_WIDTH = 1280;
 constexpr int SCREEN_HEIGHT = 720;
 
 LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
+
+  // adding background of layout
   this->setStyleSheet("background-color: white;");
   auto *layout = new QVBoxLayout(this);
+
+  // adding background images
   addImages();
   layout->addStretch(1);
   auto *welcomeLabel = new QLabel(this);
 
+  // set design for welcome label
   welcomeLabel->setStyleSheet(R"(
     QLabel {
         background-color: white;
@@ -49,7 +55,7 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
 
   auto *playButton = new QPushButton("PLAY",this);
 
-
+  // playbutton design
   playButton->setStyleSheet(
       "QPushButton { "
       "color: #000000; "
@@ -65,6 +71,17 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
       "}"
       );
 
+  // add the place to insert a name for your bitbuddy
+  auto *nameLineEdit = new QLineEdit(this);
+  nameLineEdit->setPlaceholderText("Enter your name");
+  nameLineEdit->setFixedSize(200, 30); // Set the width and height according to your preference
+  nameLineEdit->setStyleSheet("border: 1px solid black;");
+  layout->addWidget(nameLineEdit);
+
+
+  layout->addStretch();
+
+  // add shadow effect for the box
   auto *shadowEffect = new QGraphicsDropShadowEffect(welcomeLabel);
   shadowEffect->setBlurRadius(5);
   shadowEffect->setXOffset(5);
@@ -73,12 +90,18 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
   playButton->setGraphicsEffect(shadowEffect);
   welcomeLabel->setGraphicsEffect(shadowEffect);
   playButton->setFixedSize(100,60);
-  layout->addWidget(playButton); // Add the button to the layout
+
+  // align the box
+  // add playButton
+  layout->addWidget(playButton);
+
+  // align playbutton
   layout->addStretch();
   layout->setAlignment(playButton, Qt::AlignHCenter);
   layout->setContentsMargins(0, 0, 0, 100); // Adjust top margin
   layout->setSpacing(10);
 
+  // connect the playButton to an action
   connect(playButton, &QPushButton::clicked, this, [this]() {
     this->hide();
     auto *mainWindow = new MainWindow();
@@ -91,6 +114,9 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
   });
 }
 
+/*
+ * addImages() - helper method to add the bitbuddies
+ */
 void LauncherWindow::addImages() {
   QWidget *imageContainer = new QWidget(this);
   imageContainer->setStyleSheet("background-color:#eaaee3");
@@ -104,14 +130,18 @@ void LauncherWindow::addImages() {
    */
   imageContainer->setFixedSize(SCREEN_WIDTH, SCREEN_HEIGHT); // Adjust as needed
 
-
+  // Logic for bitbuddies
   int x = 0, y = 0; // Initial position
   int xStep = 100; // Horizontal step size
   int yStep = 100; // Vertical step size
   int numRows = (SCREEN_HEIGHT / yStep ) + 2;
   bool moveRight = true; // Direction control
   int count = 0;
+
+  // vector of images
   std::vector<std::string> images = {":assets/happy_bitbuddy.png",":assets/angry_bitbuddy.png", ":assets/mad_bitbuddy.png", ":assets/sad_bitbuddy.png", ":assets/sick_bitbuddy.png", ":assets/sick_bitbuddy.png"};
+
+  // for loop for image placement
   for (int i = 0; i < numRows; ++i) {
     x = 0;
     for (int j = 0; j < 13; j++) {
@@ -131,3 +161,4 @@ void LauncherWindow::addImages() {
     y += yStep;
   }
 }
+
