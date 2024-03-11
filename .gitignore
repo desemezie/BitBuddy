@@ -3,6 +3,8 @@
 cmake-build-debug/
 cmake-build-release/
 
+.vscode/
+
 # Compiled Object files
 *.slo
 *.lo

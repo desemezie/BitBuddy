@@ -24,8 +24,38 @@ qt_standard_project_setup()
 include_directories(include)
 
 add_executable(bitbuddy src/main.cpp
+        resources.qrc
         src/MainWindow.cpp
-        include/MainWindow.h)
+        include/MainWindow.h
+        src/model/Event.cpp
+        include/model/Event.h
+        src/model/SingleAttributeEvent.cpp
+        include/model/SingleAttributeEvent.h
+        include/model/BitBuddyAttributeName.h
+        src/service/EventGeneratorService.cpp
+        include/service/EventGeneratorService.h
+        src/service/EventDispatcherService.cpp
+        include/service/EventDispatcherService.h
+        include/model/DeprecatedEventListener.h
+        src/service/GameService.cpp
+        include/service/GameService.h
+        include/model/BitBuddyEvents.h
+        src/model/BitBuddyEvents.cpp
+        src/component/BitBuddyStatusWidget.cpp
+        include/component/BitBuddyStatusWidget.h
+        src/model/BitBuddyAttributeName.cpp
+        src/model/BitBuddy.cpp
+        include/model/BitBuddy.h
+        src/model/BitBuddyAttribute.cpp
+        include/model/BitBuddyAttribute.h
+        src/component/BitBuddyActionButton.cpp
+        include/component/BitBuddyActionButton.h
+        src/service/BitBuddySpriteHandler.cpp
+        include/service/BitBuddySpriteHandler.h
+
+)
+
+
 target_link_libraries(bitbuddy
         Qt::Core
         Qt::Gui

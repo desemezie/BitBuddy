@@ -1,0 +1,22 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/">
+        <file>assets/angry_bitbuddy.png</file>
+        <file>assets/happy_bitbuddy.png</file>
+        <file>assets/mad_bitbuddy.png</file>
+        <file>assets/sad_bitbuddy.png</file>
+        <file>assets/sick_bitbuddy.png</file>
+        <file>assets/sleeping_bitbuddy.png</file>
+        <file>assets/tamagochi_birthdayHat.png</file>
+        <file>assets/tamagochi_bubble.png</file>
+        <file>assets/tamagochi_dead.png</file>
+        <file>assets/tamagochi_disc2.png</file>
+        <file>assets/tamagochi_drink.png</file>
+        <file>assets/tamagochi_health.png</file>
+        <file>assets/tamagochi_pills.png</file>
+        <file>assets/tamagochi_soap.png</file>
+        <file>assets/tamagochi_turd.png</file>
+        <file>assets/tamagochi_zzz.png</file>
+        <file>assets/tamagochi_feed.png</file>
+    </qresource>
+</RCC>
