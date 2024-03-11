@@ -17,6 +17,7 @@ find_package(Qt6 COMPONENTS
         Core
         Gui
         Widgets
+        Multimedia
         REQUIRED)
 
 qt_standard_project_setup()
@@ -52,6 +53,8 @@ add_executable(bitbuddy src/main.cpp
         include/component/BitBuddyActionButton.h
         src/service/BitBuddySpriteHandler.cpp
         include/service/BitBuddySpriteHandler.h
+        src/model/audio.cpp
+        src/model/audio.h
 
 )
 
@@ -60,5 +63,6 @@ target_link_libraries(bitbuddy
         Qt::Core
         Qt::Gui
         Qt::Widgets
+        Qt::Multimedia
 )
 
