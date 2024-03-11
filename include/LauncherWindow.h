@@ -14,6 +14,7 @@ class LauncherWindow : public QWidget{
  public:
   explicit LauncherWindow(QWidget *parent = nullptr);
 
+  void addImages();
 };
 
 #endif //BITBUDDY_GROUP17_SRC_LAUNCHERWINDOW_H_
