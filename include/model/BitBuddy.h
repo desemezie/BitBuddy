@@ -6,16 +6,14 @@
 #define BITBUDDY_SRC_COMPONENT_BITBUDDY_H_
 
 #include <QObject>
-#include <QWidget>
 #include <map>
 #include "model/BitBuddyAttribute.h"
 #include "model/Event.h"
 
-
 /***
  * Bit Buddy!
  */
-class BitBuddy : public QWidget {
+class BitBuddy : public QObject {
  Q_OBJECT
 
  public:
