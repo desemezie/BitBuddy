@@ -72,7 +72,7 @@ void BitBuddySpriteHandler::changeSprite(const std::string &state) {
     qDebug() << "HERE";
     QString imagePath = ":/assets/happy_bitbuddy.png";
     changeSpriteSmoothly(imagePath);
-    QString drink = ":/assets/tomogachi_drink.png";
+    QString drink = ":/assets/tamagochi_drink_2.png";
     displayDrink(drink);
   } else if (state.find("Event for: Health") != std::string::npos) {
     QString imagePath = ":/assets/happy_bitbuddy.png";
