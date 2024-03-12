@@ -14,3 +14,6 @@ You need to ensure that CMake can find your QT 6 installation. You can either se
 by appending a manual`CMAKE_PREFIX_PATH` or you can set the `CMAKE_PREFIX_PATH` environment variable to the path of your
 Qt 6 installation.
 
+After you've configured this, you can run `cmake ..` to configure the project, then `make` to build the project and
+then `./bitbuddy` to run the application
+
