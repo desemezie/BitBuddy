@@ -37,7 +37,6 @@ class MainWindow : public QMainWindow {
   MainWindow &operator=(MainWindow &&) = delete;
 
  private:
-  BitBuddyActionButton *buttons[8];
   QLabel *spriteLabel;
   BitBuddySpriteHandler *spriteHandler;
 

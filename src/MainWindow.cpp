@@ -20,25 +20,12 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   setCentralWidget(centralWidget);
   resize(SCREEN_WIDTH, SCREEN_HEIGHT);
 
-  QPixmap background(":/assets/background.png");
-
-  // Set the background if the image is loaded successfully
-
   // Grid layout for the central widget
   auto *layout = new QGridLayout(centralWidget);
-  /*
-  if (!background.isNull()) {
-    qDebug() << "Did not fail to load the image.";
-    QPalette palette = this->palette();
-    palette.setBrush(QPalette::Window, background.scaled(this->size(), Qt::IgnoreAspectRatio, Qt::SmoothTransformation));
-    this->setPalette(palette);
-  } else {
-    qDebug() << "Failed to load the image.";
-  }
-   */
+
   centralWidget->setLayout(layout);
 
-  auto *bitBuddy = new BitBuddy("BitBuddy", this);
+  auto *bitBuddy = new BitBuddy("BitBuddy");
 
   auto *statusWidget = new BitBuddyStatusWidget(bitBuddy, this);
 
