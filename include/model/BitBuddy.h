@@ -25,7 +25,7 @@ class BitBuddy : public QWidget {
    * @param name The name of the BitBuddy
    * @param parent The parent widget of the BitBuddy, typically the MainWindow.
    */
-  explicit BitBuddy(std::string name, QWidget *parent = nullptr);
+  explicit BitBuddy(std::string name);
 
   /***
    * Constructor for the BitBuddy that takes all of BitBuddy's attributes as parameters.
@@ -36,7 +36,6 @@ class BitBuddy : public QWidget {
    * @param creationTime The time the BitBuddy was created
    */
   BitBuddy(std::string name,
-           QWidget *parent,
            const std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> &attributes,
            std::chrono::system_clock::time_point creationTime);
 
