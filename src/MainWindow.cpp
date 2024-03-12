@@ -24,7 +24,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   auto *layout = new QGridLayout(centralWidget);
   centralWidget->setLayout(layout);
 
-  auto *bitBuddy = new BitBuddy("BitBuddy", this);
+  auto *bitBuddy = new BitBuddy("BitBuddy");
 
   auto *statusWidget = new BitBuddyStatusWidget(bitBuddy, this);
 

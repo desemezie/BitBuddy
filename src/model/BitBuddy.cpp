@@ -10,8 +10,8 @@
 
 #include <iostream>
 
-BitBuddy::BitBuddy(std::string name, QWidget *parent)
-    : name(std::move(name)), QWidget(parent), creationTime(std::chrono::system_clock::now()) {
+BitBuddy::BitBuddy(std::string name)
+    : name(std::move(name)), creationTime(std::chrono::system_clock::now()) {
   for (int i = 0; i < NUMBER_OF_ATTRIBUTES; i++) {
     // Constructs a map of the form {HUNGER -> <BitBuddyAttribute> with name HUNGER and value 10}
     attributes.emplace(
@@ -25,10 +25,10 @@ BitBuddy::BitBuddy(std::string name, QWidget *parent)
 }
 
 // Used for creating the bit buddy when loading from a file
-BitBuddy::BitBuddy(std::string name, QWidget *parent, const std::map<BitBuddyAttributeName::UniqueName,
-                                                                     BitBuddyAttribute> &attributes,
+BitBuddy::BitBuddy(std::string name, const std::map<BitBuddyAttributeName::UniqueName,
+                                                    BitBuddyAttribute> &attributes,
                    std::chrono::system_clock::time_point creationTime)
-    : name(std::move(name)), attributes(attributes), creationTime(creationTime), QWidget(parent) {
+    : name(std::move(name)), attributes(attributes), creationTime(creationTime) {
   connectSignals();
 }
 
