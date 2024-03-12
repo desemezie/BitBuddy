@@ -31,6 +31,7 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
         border-radius: 15px; /* Adjust for desired roundness */
         border: 1px solid #000; /* Optional: adds a border */
         padding: 10px; /* Adjust spacing inside the label */
+        color : black;
     }
     )");
   welcomeLabel->setAlignment(Qt::AlignCenter);
@@ -44,7 +45,7 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
     - Have fun!</p>
   )";
 
-  welcomeLabel->setFixedSize(300,200);
+  welcomeLabel->setFixedSize(300, 200);
   welcomeLabel->setText(labelText);
   welcomeLabel->setWordWrap(true);
 
@@ -53,7 +54,7 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
 
   this->resize(SCREEN_WIDTH, SCREEN_HEIGHT);
 
-  auto *playButton = new QPushButton("PLAY",this);
+  auto *playButton = new QPushButton("PLAY", this);
 
   // playbutton design
   playButton->setStyleSheet(
@@ -69,14 +70,21 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
       "color: white;"
 
       "}"
-      );
+  );
 
   // add the place to insert a name for your bitbuddy
   auto *nameLineEdit = new QLineEdit(this);
   nameLineEdit->setPlaceholderText("Enter your name");
   nameLineEdit->setFixedSize(200, 30); // Set the width and height according to your preference
   nameLineEdit->setStyleSheet("border: 1px solid black;");
-  layout->addWidget(nameLineEdit);
+  nameLineEdit->setStyleSheet("QLineEdit { color: black !important; }");
+
+  auto *hLayoutForLineEdit = new QHBoxLayout();
+  hLayoutForLineEdit->addStretch(1); // Add a stretchable space on the left side to push everything else to the right
+  hLayoutForLineEdit->addWidget(nameLineEdit); // Add the nameLineEdit to the QHBoxLayout
+  hLayoutForLineEdit->addStretch(1); // Add a stretchable space on the right side to push everything else to the left
+  layout
+      ->addLayout(hLayoutForLineEdit); // This adds the QHBoxLayout (which contains your centered nameLineEdit) to the main QVBoxLayout
 
 
   layout->addStretch();
@@ -89,7 +97,7 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
   shadowEffect->setColor(Qt::black);
   playButton->setGraphicsEffect(shadowEffect);
   welcomeLabel->setGraphicsEffect(shadowEffect);
-  playButton->setFixedSize(100,60);
+  playButton->setFixedSize(100, 60);
 
   // align the box
   // add playButton
@@ -110,7 +118,6 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
 
     GameService::getInstance().startService();
 
-
   });
 }
 
@@ -118,7 +125,7 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
  * addImages() - helper method to add the bitbuddies
  */
 void LauncherWindow::addImages() {
-  QWidget *imageContainer = new QWidget(this);
+  QWidget * imageContainer = new QWidget(this);
   imageContainer->setStyleSheet("background-color:#eaaee3");
 
   /*
@@ -134,12 +141,14 @@ void LauncherWindow::addImages() {
   int x = 0, y = 0; // Initial position
   int xStep = 100; // Horizontal step size
   int yStep = 100; // Vertical step size
-  int numRows = (SCREEN_HEIGHT / yStep ) + 2;
+  int numRows = (SCREEN_HEIGHT / yStep) + 2;
   bool moveRight = true; // Direction control
   int count = 0;
 
   // vector of images
-  std::vector<std::string> images = {":assets/happy_bitbuddy.png",":assets/angry_bitbuddy.png", ":assets/mad_bitbuddy.png", ":assets/sad_bitbuddy.png", ":assets/sick_bitbuddy.png", ":assets/sick_bitbuddy.png"};
+  std::vector<std::string> images =
+      {":assets/happy_bitbuddy.png", ":assets/angry_bitbuddy.png", ":assets/mad_bitbuddy.png",
+       ":assets/sad_bitbuddy.png", ":assets/sick_bitbuddy.png", ":assets/sick_bitbuddy.png"};
 
   // for loop for image placement
   for (int i = 0; i < numRows; ++i) {
@@ -156,7 +165,7 @@ void LauncherWindow::addImages() {
       imageLabel->adjustSize();
       imageLabel->move(x, y);
       x += xStep;
-      count ++;
+      count++;
     }
     y += yStep;
   }
