@@ -169,7 +169,7 @@ void BitBuddySpriteHandler::displayZZZ(const QString &imagePath) {
 }
 
 void BitBuddySpriteHandler::displayBubbles(const QString &imagePath) {
-  const int numberOfBubbles = 10; // Adjust the number of bubbles as needed
+  const int numberOfBubbles = 30; // Adjust the number of bubbles as needed
 
   QSize bubbleSize(50, 50); // Adjust the size of each bubble as needed
 
