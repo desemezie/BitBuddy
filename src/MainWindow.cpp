@@ -26,6 +26,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
   // Grid layout for the central widget
   auto *layout = new QGridLayout(centralWidget);
+  /*
   if (!background.isNull()) {
     qDebug() << "Did not fail to load the image.";
     QPalette palette = this->palette();
@@ -34,6 +35,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   } else {
     qDebug() << "Failed to load the image.";
   }
+   */
   centralWidget->setLayout(layout);
 
   auto *bitBuddy = new BitBuddy("BitBuddy", this);
