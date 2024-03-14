@@ -12,8 +12,8 @@
 #include "service/EventDispatcherService.h"
 #include <iostream>
 
-constexpr int SCREEN_WIDTH = 1280;
-constexpr int SCREEN_HEIGHT = 720;
+constexpr int SCREEN_WIDTH = 1920;
+constexpr int SCREEN_HEIGHT = 1080;
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   auto *centralWidget = new QWidget(this);
