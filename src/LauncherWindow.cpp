@@ -137,7 +137,7 @@ void LauncherWindow::addImages() {
 
     colorIndex = (colorIndex + 1) % backgroundColors.size();
   });
-  timer->start(750);
+  timer->start(250);
 
   imageContainer->setStyleSheet("background-color:#eaaee3");
 
