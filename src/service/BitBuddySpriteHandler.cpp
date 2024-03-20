@@ -27,39 +27,66 @@ void BitBuddySpriteHandler::changeSprite(const std::string &state) {
     auto value = bitBuddy->getAttributeValue(BitBuddyAttributeName::UniqueName::HUNGER);
     qDebug() << "Found and identified for hungry for value: "<< value;
     imageName = ":/assets/angry_bitbuddy.png";
-    changeSpriteSmoothly(imageName);
+    if (value <= 8 and bitBuddy->currentSprite != ":/assets/angry_bitbuddy.png") {
+      changeSpriteSmoothly(imageName);
+      bitBuddy->currentSprite = ":/assets/angry_bitbuddy.png";
+    }
 
   } else if (state.find("seems a bit withdrawn") != std::string::npos) {
     auto value = bitBuddy->getAttributeValue(BitBuddyAttributeName::UniqueName::HAPPINESS);
     qDebug() << "Found and identified for withdrawn for value: " << value;
     imageName = ":/assets/mad_bitbuddy.png";
-    changeSpriteSmoothly(imageName);
+    if (value <= 4 and bitBuddy->currentSprite != ":/assets/mad_bitbuddy.png") {
+      changeSpriteSmoothly(imageName);
+      bitBuddy->currentSprite = ":/assets/mad_bitbuddy.png";
+    }
+
 
   } else if (state.find("desperately thirsty") != std::string::npos) {
     auto value = bitBuddy->getAttributeValue(BitBuddyAttributeName::UniqueName::THIRST);
+
     qDebug() << "Found and identified for thirsty: " << value;
     imageName = ":/assets/sad_bitbuddy.png";
-    changeSpriteSmoothly(imageName);
+    if (value <= 7 and bitBuddy->currentSprite != ":/assets/sad_bitbuddy.png") {
+      changeSpriteSmoothly(imageName);
+      bitBuddy->currentSprite = ":/assets/sad_bitbuddy.png";
+    }
 
   } else if (state.find("doesn't seem to be feeling well") != std::string::npos) {
+    auto value = bitBuddy->getAttributeValue(BitBuddyAttributeName::UniqueName::HEALTH);
     qDebug() << "Found and identified for sick";
     imageName = ":/assets/sad_bitbuddy.png";
-    changeSpriteSmoothly(imageName);
+    if (value <= 6 and bitBuddy->currentSprite != ":/assets/sad_bitbuddy.png") {
+      changeSpriteSmoothly(imageName);
+      bitBuddy->currentSprite = ":/assets/sad_bitbuddy.png";
+    }
 
   } else if (state.find("eyelids are drooping") != std::string::npos) {
+    auto value = bitBuddy->getAttributeValue(BitBuddyAttributeName::UniqueName::TIREDNESS);
     qDebug() << "Found and identified for tired";
     imageName = ":/assets/sad_bitbuddy.png";
-    changeSpriteSmoothly(imageName);
+    if (value <= 7 and bitBuddy->currentSprite != ":/assets/sad_bitbuddy.png") {
+      changeSpriteSmoothly(imageName);
+      bitBuddy->currentSprite = ":/assets/sad_bitbuddy.png";
+    }
 
   } else if (state.find("lets out a big yawn") != std::string::npos) {
+    auto value = bitBuddy->getAttributeValue(BitBuddyAttributeName::UniqueName::BOREDOM);
     qDebug() << "Found and identified for bored";
     imageName = ":/assets/sad_bitbuddy.png";
-    changeSpriteSmoothly(imageName);
+    if (value <= 5 and bitBuddy->currentSprite != ":/assets/sad_bitbuddy.png") {
+      changeSpriteSmoothly(imageName);
+      bitBuddy->currentSprite = ":/assets/sad_bitbuddy.png";
+    }
 
   } else if (state.find("could use a bath") != std::string::npos) {
+    auto value = bitBuddy->getAttributeValue(BitBuddyAttributeName::UniqueName::HYGIENE);
     qDebug() << "Found and identified for bath";
     imageName = ":/assets/angry_bitbuddy.png";
-    changeSpriteSmoothly(imageName);
+    if (value <= 5 and bitBuddy->currentSprite != ":/assets/angry_bitbuddy.png") {
+      changeSpriteSmoothly(imageName);
+      bitBuddy->currentSprite = ":/assets/angry_bitbuddy.png";
+    }
 
   } else if (state.find("Event for: Hunger") != std::string::npos) {
     QString imagePath = ":/assets/tamagochi_feed.png";
