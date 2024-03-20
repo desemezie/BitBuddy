@@ -27,6 +27,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
   auto *bitBuddy = new BitBuddy("BitBuddy");
 
+
   auto *statusWidget = new BitBuddyStatusWidget(bitBuddy, this);
 
   // Create spacers to push the status widget to the top-left corner
@@ -34,7 +35,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
   // connect spriteHandler to bitbuddy
   spriteLabel = new QLabel(centralWidget);
-  spriteHandler = new BitBuddySpriteHandler(spriteLabel, this);
+  spriteHandler = new BitBuddySpriteHandler(spriteLabel, this, bitBuddy);
 
   loadDefaultSprite();
 

@@ -16,6 +16,7 @@
 class BitBuddy : public QObject {
  Q_OBJECT
 
+
  public:
   /***
    * Constructor for the BitBuddy. Initializes the attribute maps.
@@ -56,6 +57,7 @@ class BitBuddy : public QObject {
    * @param attribute
    * @param value
    */
+  int getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const;
   void incrementAttribute(BitBuddyAttributeName::UniqueName attribute, int value);
 
  signals:
