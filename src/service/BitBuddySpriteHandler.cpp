@@ -2,6 +2,7 @@
 // Created by Annabel Irani on 2024-03-08.
 //
 #include "service/BitBuddySpriteHandler.h"
+#include "model/SingleAttributeEvent.h"
 #include <QDebug>
 #include <QPixmap>
 #include <QTimer>
@@ -10,8 +11,8 @@
 #include <QGraphicsOpacityEffect>
 
 // Constructor
-BitBuddySpriteHandler::BitBuddySpriteHandler(QLabel *displayLabel, QObject *parent)
-    : QObject(parent), displayLabel(displayLabel) {
+BitBuddySpriteHandler::BitBuddySpriteHandler(QLabel *displayLabel, QObject *parent, BitBuddy *bitBuddy)
+    : QObject(parent), displayLabel(displayLabel), bitBuddy(bitBuddy){
   temporaryLabel = new QLabel(displayLabel->parentWidget());
   temporaryLabel->setAttribute(Qt::WA_TransparentForMouseEvents);
   temporaryLabel->hide();
@@ -21,18 +22,22 @@ BitBuddySpriteHandler::BitBuddySpriteHandler(QLabel *displayLabel, QObject *pare
 void BitBuddySpriteHandler::changeSprite(const std::string &state) {
   QString imageName;
 
+
   if (state.find("stomach rumbles loudly") != std::string::npos) {
-    qDebug() << "Found and identified for hungry";
+    auto value = bitBuddy->getAttributeValue(BitBuddyAttributeName::UniqueName::HUNGER);
+    qDebug() << "Found and identified for hungry for value: "<< value;
     imageName = ":/assets/angry_bitbuddy.png";
     changeSpriteSmoothly(imageName);
 
   } else if (state.find("seems a bit withdrawn") != std::string::npos) {
-    qDebug() << "Found and identified for withdrawn";
+    auto value = bitBuddy->getAttributeValue(BitBuddyAttributeName::UniqueName::HAPPINESS);
+    qDebug() << "Found and identified for withdrawn for value: " << value;
     imageName = ":/assets/mad_bitbuddy.png";
     changeSpriteSmoothly(imageName);
 
   } else if (state.find("desperately thirsty") != std::string::npos) {
-    qDebug() << "Found and identified for thirsty";
+    auto value = bitBuddy->getAttributeValue(BitBuddyAttributeName::UniqueName::THIRST);
+    qDebug() << "Found and identified for thirsty: " << value;
     imageName = ":/assets/sad_bitbuddy.png";
     changeSpriteSmoothly(imageName);
 
@@ -92,7 +97,7 @@ void BitBuddySpriteHandler::changeSprite(const std::string &state) {
 void BitBuddySpriteHandler::handleEvent(const Event &event) {
 
   std::string state = event.getDescription();
-  qDebug() << "Received event desc: " << QString::fromStdString(state);
+  qDebug() << "Received event desc: " << QString::fromStdString(event.getDescription());
   changeSprite(state);
 }
 
@@ -234,4 +239,6 @@ void BitBuddySpriteHandler::changeSpriteSmoothly(const QString &imagePath) {
   animation->start(QPropertyAnimation::DeleteWhenStopped);
 
 }
+
+
 
