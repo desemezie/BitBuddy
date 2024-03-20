@@ -80,6 +80,7 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
   nameLineEdit->setStyleSheet("border: 1px solid black;");
   nameLineEdit->setStyleSheet("QLineEdit { color: black !important; }");
 
+
   auto *hLayoutForLineEdit = new QHBoxLayout();
   hLayoutForLineEdit->addStretch(1); // Add a stretchable space on the left side to push everything else to the right
   hLayoutForLineEdit->addWidget(nameLineEdit); // Add the nameLineEdit to the QHBoxLayout
