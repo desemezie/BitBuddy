@@ -9,9 +9,10 @@
 #include <QApplication>
 #include <QGraphicsDropShadowEffect>
 #include <QLineEdit>
+#include <QTimer>
 
-constexpr int SCREEN_WIDTH = 1280;
-constexpr int SCREEN_HEIGHT = 720;
+constexpr int SCREEN_WIDTH = 1920;
+constexpr int SCREEN_HEIGHT = 1080;
 
 LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
 
@@ -79,6 +80,7 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
   nameLineEdit->setStyleSheet("border: 1px solid black;");
   nameLineEdit->setStyleSheet("QLineEdit { color: black !important; }");
 
+
   auto *hLayoutForLineEdit = new QHBoxLayout();
   hLayoutForLineEdit->addStretch(1); // Add a stretchable space on the left side to push everything else to the right
   hLayoutForLineEdit->addWidget(nameLineEdit); // Add the nameLineEdit to the QHBoxLayout
@@ -126,6 +128,16 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
  */
 void LauncherWindow::addImages() {
   QWidget * imageContainer = new QWidget(this);
+  QTimer *timer = new QTimer(this);
+  connect(timer, &QTimer::timeout, [imageContainer](){
+    static int colorIndex = 0;
+    QStringList backgroundColors = {"background-color:#eaaee3", "background-color:#c79dfb", "background-color:#fbfb9d", "background-color:#bbdddd"};
+    imageContainer->setStyleSheet(backgroundColors[colorIndex]);
+
+    colorIndex = (colorIndex + 1) % backgroundColors.size();
+  });
+  timer->start(250);
+
   imageContainer->setStyleSheet("background-color:#eaaee3");
 
   /*
@@ -150,10 +162,13 @@ void LauncherWindow::addImages() {
       {":assets/happy_bitbuddy.png", ":assets/angry_bitbuddy.png", ":assets/mad_bitbuddy.png",
        ":assets/sad_bitbuddy.png", ":assets/sick_bitbuddy.png", ":assets/sick_bitbuddy.png"};
 
+  std::vector<std::string> backgroundColours =
+      {"background-color:#eaaee3", "background-color:#c79dfb", "background-color:#fbfb9d", "background-color:#bbdddd"};
+
   // for loop for image placement
   for (int i = 0; i < numRows; ++i) {
     x = 0;
-    for (int j = 0; j < 13; j++) {
+    for (int j = 0; j < 20; j++) {
 
       int pos = count % 6;
       QLabel *imageLabel = new QLabel(imageContainer);

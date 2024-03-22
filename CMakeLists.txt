@@ -8,7 +8,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 list(APPEND CMAKE_PREFIX_PATH "/Users/ryanhecht/Qt/6.6.1/macos")
-list(APPEND CMAKE_PREFIX_PATH "/daniel/path")
+list(APPEND CMAKE_PREFIX_PATH "/Users/danielesemezie/Qt/6.6.2/macos")
 list(APPEND CMAKE_PREFIX_PATH "/shaylan/path")
 list(APPEND CMAKE_PREFIX_PATH "/annabel/path")
 list(APPEND CMAKE_PREFIX_PATH "/razvan/path")
@@ -54,6 +54,8 @@ add_executable(bitbuddy src/main.cpp
         include/service/BitBuddySpriteHandler.h
         src/LauncherWindow.cpp
         include/LauncherWindow.h
+        include/SettingsWindow.h
+        src/SettingsWindow.cpp
 
 )
 
