@@ -18,156 +18,75 @@ BitBuddySpriteHandler::BitBuddySpriteHandler(QLabel *displayLabel, QObject *pare
   temporaryLabel->hide();
 }
 
-// Correctly place the changeSprite method within the BitBuddySpriteHandler class
-void BitBuddySpriteHandler::changeSprite(const std::string &state) {
-  QString imageName;
 
+// Event handler for event dispatch
+void BitBuddySpriteHandler::handleEvent(const Event &event) {
+  // Casts as a SingleAttributeEvent
+  auto specificEvent = dynamic_cast<const SingleAttributeEvent*>(&event);
 
-  if (state.find("stomach rumbles loudly") != std::string::npos) {
-    auto value = bitBuddy->getAttributeValue(BitBuddyAttributeName::UniqueName::HUNGER);
-    qDebug() << "Found and identified for hungry for value: "<< value;
-    imageName = ":/assets/angry_bitbuddy.png";
-    if (value <= 8 and bitBuddy->currentSprite != ":/assets/angry_bitbuddy.png") {
-      changeSpriteSmoothly(imageName);
-      bitBuddy->currentSprite = ":/assets/angry_bitbuddy.png";
+  // Checks if it is a bitbuddy feeling or user action
+  if (specificEvent->getIncrement() < 0) {
+    BitBuddyAttributeName::UniqueName attributeName = specificEvent->getAttribute();
+    // Gets the value of the current attiribute
+    int value = bitBuddy->getAttributeValue(attributeName);
+    qDebug() << "Attribute: " << QString::fromStdString(BitBuddyAttributeName::toString(attributeName)) << " With Value: " << value;
+    qDebug() << "URL: " << QString::fromStdString(BitBuddyAttributeName::imageURL(attributeName));
+    qDebug() << "Value to change at: " << BitBuddyAttributeName::valueWhereChange(attributeName);
+    // Changes the sprite based on the URL and the attribute
+    if (value < BitBuddyAttributeName::valueWhereChange(attributeName)) {
+      changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(attributeName)));
     }
 
-  } else if (state.find("seems a bit withdrawn") != std::string::npos) {
-    auto value = bitBuddy->getAttributeValue(BitBuddyAttributeName::UniqueName::HAPPINESS);
-    qDebug() << "Found and identified for withdrawn for value: " << value;
-    imageName = ":/assets/mad_bitbuddy.png";
-    if (value <= 4 and bitBuddy->currentSprite != ":/assets/mad_bitbuddy.png") {
-      changeSpriteSmoothly(imageName);
-      bitBuddy->currentSprite = ":/assets/mad_bitbuddy.png";
-    }
+  } else {
+    spriteOrganizer(event);
+    qDebug() << "Clicked a Button";
+  }
 
+}
 
-  } else if (state.find("desperately thirsty") != std::string::npos) {
-    auto value = bitBuddy->getAttributeValue(BitBuddyAttributeName::UniqueName::THIRST);
-
-    qDebug() << "Found and identified for thirsty: " << value;
-    imageName = ":/assets/sad_bitbuddy.png";
-    if (value <= 7 and bitBuddy->currentSprite != ":/assets/sad_bitbuddy.png") {
-      changeSpriteSmoothly(imageName);
-      bitBuddy->currentSprite = ":/assets/sad_bitbuddy.png";
-    }
-
-  } else if (state.find("doesn't seem to be feeling well") != std::string::npos) {
-    auto value = bitBuddy->getAttributeValue(BitBuddyAttributeName::UniqueName::HEALTH);
-    qDebug() << "Found and identified for sick";
-    imageName = ":/assets/sad_bitbuddy.png";
-    if (value <= 6 and bitBuddy->currentSprite != ":/assets/sad_bitbuddy.png") {
-      changeSpriteSmoothly(imageName);
-      bitBuddy->currentSprite = ":/assets/sad_bitbuddy.png";
-    }
-
-  } else if (state.find("eyelids are drooping") != std::string::npos) {
-    auto value = bitBuddy->getAttributeValue(BitBuddyAttributeName::UniqueName::TIREDNESS);
-    qDebug() << "Found and identified for tired";
-    imageName = ":/assets/sad_bitbuddy.png";
-    if (value <= 7 and bitBuddy->currentSprite != ":/assets/sad_bitbuddy.png") {
-      changeSpriteSmoothly(imageName);
-      bitBuddy->currentSprite = ":/assets/sad_bitbuddy.png";
-    }
-
-  } else if (state.find("lets out a big yawn") != std::string::npos) {
-    auto value = bitBuddy->getAttributeValue(BitBuddyAttributeName::UniqueName::BOREDOM);
-    qDebug() << "Found and identified for bored";
-    imageName = ":/assets/sad_bitbuddy.png";
-    if (value <= 5 and bitBuddy->currentSprite != ":/assets/sad_bitbuddy.png") {
-      changeSpriteSmoothly(imageName);
-      bitBuddy->currentSprite = ":/assets/sad_bitbuddy.png";
-    }
-
-  } else if (state.find("could use a bath") != std::string::npos) {
-    auto value = bitBuddy->getAttributeValue(BitBuddyAttributeName::UniqueName::HYGIENE);
-    qDebug() << "Found and identified for bath";
-    imageName = ":/assets/angry_bitbuddy.png";
-    if (value <= 5 and bitBuddy->currentSprite != ":/assets/angry_bitbuddy.png") {
-      changeSpriteSmoothly(imageName);
-      bitBuddy->currentSprite = ":/assets/angry_bitbuddy.png";
-    }
-
-  } else if (state.find("Event for: Hunger") != std::string::npos) {
-    QString imagePath = ":/assets/tamagochi_feed.png";
-    displayTacoAndRemove(imagePath);
-
-  } else if (state.find("Event for: Hygiene") != std::string::npos) {
-    QString imagePath = ":/assets/tamagochi_bubble.png";
-    displayBubbles(imagePath);
-
-  } else if (state.find("Event for: Tiredness") != std::string::npos) {
-    QString imagePath = ":/assets/sleeping_bitbuddy.png";
-    changeSpriteSmoothly(imagePath);
-    QString zzzPath = ":/assets/tamagochi_zzz.png";
-    displayZZZ(zzzPath);
-
+void BitBuddySpriteHandler::spriteOrganizer(const Event &event){
+  auto specificEvent = dynamic_cast<const SingleAttributeEvent*>(&event);
+  auto attributeName = specificEvent->getAttribute();
+  if (specificEvent->getAttribute() == BitBuddyAttributeName::HUNGER){
+    displayTacoAndRemove(":/assets/tamagochi_feed.png");
+  }
+  if (specificEvent->getAttribute() == BitBuddyAttributeName::THIRST){
+    changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(attributeName)));
+    displayDrink(":/assets/tamagochi_drink_2.png");
+  }
+  if (specificEvent->getAttribute() == BitBuddyAttributeName::TIREDNESS) {
+    changeSpriteSmoothly(":/assets/sleeping_bitbuddy.png");
+    displayZZZ(":/assets/tamagochi_zzz.png");
     QTimer::singleShot(5000, this, [this]() {
       QString defaultImagePath = ":/assets/happy_bitbuddy.png"; // Path to your default sprite
       changeSpriteSmoothly(defaultImagePath);
     });
 
-  } else if (state.find("Event for: Thirst") != std::string::npos) {
-    qDebug() << "HERE";
-    QString imagePath = ":/assets/happy_bitbuddy.png";
-    changeSpriteSmoothly(imagePath);
-    QString drink = ":/assets/tamagochi_drink_2.png";
-    displayDrink(drink);
-  } else if (state.find("Event for: Health") != std::string::npos) {
-    QString imagePath = ":/assets/happy_bitbuddy.png";
-    changeSpriteSmoothly(imagePath);
-    QString pills = ":/assets/tamagochi_pills.png";
-    displayPills(pills);
   }
-
-}
-
-void BitBuddySpriteHandler::handleEvent(const Event &event) {
-  auto specificEvent = dynamic_cast<const SingleAttributeEvent*>(&event);
-  if (specificEvent) {
-    BitBuddyAttributeName::UniqueName attributeName = specificEvent->getAttribute();
-    int value = bitBuddy->getAttributeValue(attributeName);
-    switch(attributeName) {
-      case BitBuddyAttributeName::HUNGER:
-        qDebug() << "Handling HUNGER attribute with value:" << value;
-
-        break;
-      case BitBuddyAttributeName::HAPPINESS:
-        qDebug() << "Handling HAPPINESS attribute with value:" << value;
-
-        break;
-      case BitBuddyAttributeName::THIRST:
-        qDebug() << "Handling HAPPINESS attribute with value:" << value;
-        break;
-
-      case BitBuddyAttributeName::HYGIENE:
-        qDebug() << "Handling HYGIENE attribute with value:" << value;
-        break;
-
-      default:
-        qDebug() << "Unknown attribute";
-        break;
-    }
-  } else {
-    qDebug() << "Received event is not a SingleAttributeEvent";
+  if (specificEvent->getAttribute() == BitBuddyAttributeName::HYGIENE) {
+    displayBubbles(":/assets/tamagochi_bubble.png");
   }
-
-  /*
-  std::string state = event.getDescription();
-  qDebug() << "Received event desc: " << QString::fromStdString(event.getDescription());
-  changeSprite(state);
-   */
+  if (specificEvent->getAttribute() == BitBuddyAttributeName::HEALTH) {
+    displayPills(":/assets/tamagochi_pills.png");
+  }
 }
 
 void BitBuddySpriteHandler::displayPills(const QString &imagePath) {
   qDebug() << "load image for pill event.";
   QPixmap pixmap(imagePath);
   if (!pixmap.isNull()) {
-    QSize newSize(50, 50);
+    QSize newSize(50, 50); // Size of the pills image
 
-    temporaryLabel->setPixmap(pixmap.scaled(50, 50, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    // Set the pixmap with the new size
+    temporaryLabel->setPixmap(pixmap.scaled(newSize, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     temporaryLabel->resize(newSize);
-    temporaryLabel->move(607, 380);
+
+    // Dynamic positioning based on the parent widget's size
+    int xPosition = displayLabel->parentWidget()->width() - newSize.width() - 700; // 20 pixels from the right edge
+    int yPosition = displayLabel->parentWidget()->height() - newSize.height() - 335; // 20 pixels from the bottom edge
+
+    // Move the temporary label to the calculated position
+    temporaryLabel->move(xPosition, yPosition);
 
     temporaryLabel->show();
     // Use QTimer to wait 5 seconds before removing the image
@@ -176,12 +95,14 @@ void BitBuddySpriteHandler::displayPills(const QString &imagePath) {
       // Optionally reset to a default sprite or state here
     });
   } else {
-    qDebug() << "Failed to load image for pill event.";
+    qDebug() << "Failed to load image";
   }
 }
 
+
 void BitBuddySpriteHandler::displayTacoAndRemove(const QString &imagePath) {
   QPixmap pixmap(imagePath);
+
   if (!pixmap.isNull()) {
     QSize newSize(200, 200);
 
@@ -230,8 +151,9 @@ void BitBuddySpriteHandler::displayZZZ(const QString &imagePath) {
     // Use QTimer to wait 5 seconds before removing the image
     QTimer::singleShot(5000, this, [this]() {
       temporaryLabel->clear(); // Removes the pixmap from the label
-      // Optionally reset to a default sprite or state here
+
     });
+
   } else {
     qDebug() << "Failed to load image for taco event.";
   }

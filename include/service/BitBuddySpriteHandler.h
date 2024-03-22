@@ -51,6 +51,8 @@ private:
 
     void postUpdateCheck();
 
+  void spriteOrganizer();
+  void spriteOrganizer(const Event &event);
 };
 
 
