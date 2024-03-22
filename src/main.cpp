@@ -30,20 +30,21 @@
 int main(int argc, char *argv[]) {
 
 
-
-
   QApplication application(argc, argv);
-  QWidget window;
-  window.setWindowTitle("Simple Qt Application");
-  window.show();
-
-
-
   QCoreApplication::setApplicationName("BitBuddy");
   QCoreApplication::setApplicationVersion("1.0.0");
 
   LauncherWindow start;
   start.show();
+
+    /*
+    QApplication app(argc, argv);
+    QAudioEngine* engine = new QAudioEngine();
+    QAmbientSound* sound = new QAmbientSound(engine);
+    sound->setSource(QUrl("qrc:/sounds/bubbles.mp3"));
+    sound->setLoops(QAmbientSound::Infinite);
+    sound->play();
+    return app.exec();*/
 
 
   return QApplication::exec();
