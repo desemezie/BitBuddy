@@ -22,9 +22,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
   // Grid layout for the central widget
   auto *layout = new QGridLayout(centralWidget);
+
   centralWidget->setLayout(layout);
 
-  auto *bitBuddy = new BitBuddy("BitBuddy", this);
+  auto *bitBuddy = new BitBuddy("BitBuddy");
 
   auto *statusWidget = new BitBuddyStatusWidget(bitBuddy, this);
 
@@ -41,7 +42,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   layout->addItem(verticalSpacer, 1, 0, 1, 2);
 
   // Setting button icon
-  QIcon buttonIcon("./thumb.png");
+  QIcon buttonIcon("");
 
   auto *rowLayout1 = new QHBoxLayout;
   auto *rowLayout2 = new QHBoxLayout;
