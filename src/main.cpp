@@ -1,3 +1,7 @@
+//
+// Created by Ryan Hecht on 2024-02-24
+//
+
 #include <QApplication>
 #include "MainWindow.h"
 #include "service/GameService.h"
@@ -17,12 +21,6 @@ int main(int argc, char *argv[]) {
 
   LauncherWindow start;
   start.show();
-  /*
-  MainWindow mainWindow;
-  mainWindow.showNormal();
 
-  GameService::getInstance().startService();
-*/
   return QApplication::exec();
-
 }
