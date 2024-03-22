@@ -17,6 +17,8 @@ find_package(Qt6 COMPONENTS
         Core
         Gui
         Widgets
+        Multimedia
+        SpatialAudio
         REQUIRED)
 
 qt_standard_project_setup()
@@ -56,6 +58,8 @@ add_executable(bitbuddy src/main.cpp
         include/LauncherWindow.h
         include/SettingsWindow.h
         src/SettingsWindow.cpp
+        include/model/audio.h
+        src/model/audio.cpp
 
 )
 
@@ -64,4 +68,6 @@ target_link_libraries(bitbuddy
         Qt::Core
         Qt::Gui
         Qt::Widgets
+        Qt::Multimedia
+        Qt::SpatialAudio
 )
