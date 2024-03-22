@@ -70,9 +70,9 @@ void EventGeneratorService::generateEvent() {
 
   // Select a random event based on the distribution
   const auto &selectedEvent = PREDEFINED_EVENTS[eventDistribution(generator)];
-  QMetaObject::invokeMethod(&EventDispatcherService::getInstance(),
-                            "dispatchEvent",
-                            Qt::QueuedConnection,
-                            Q_ARG(const Event*, &selectedEvent));
+//  QMetaObject::invokeMethod(&EventDispatcherService::getInstance(),
+//                            "dispatchEvent",
+//                            Qt::QueuedConnection,
+//                            Q_ARG(const Event*, &selectedEvent));
 }
 

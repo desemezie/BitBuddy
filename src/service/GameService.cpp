@@ -3,8 +3,8 @@
 //
 
 #include "service/GameService.h"
-
 #include "service/EventGeneratorService.h"
+#include "service/MusicService.h"
 
 EventGeneratorService &GameService::eventGeneratorService = EventGeneratorService::getInstance();
 
@@ -15,8 +15,10 @@ GameService &GameService::getInstance() {
 
 void GameService::startService() {
   eventGeneratorService.startService();
+  MusicService::getInstance().startMusic();
 }
 
 void GameService::stopService() {
   eventGeneratorService.stopService();
+  MusicService::getInstance().stopMusic();
 }
