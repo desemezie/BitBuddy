@@ -7,6 +7,8 @@
 
 
 #include <QApplication>
+#include <QMediaPlayer>
+
 
 namespace Audio {
     void playSound(QString type);

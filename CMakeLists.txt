@@ -1,3 +1,4 @@
+
 cmake_minimum_required(VERSION 3.26)
 project(bitbuddy VERSION 1.0.0 LANGUAGES CXX)
 
@@ -8,7 +9,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 list(APPEND CMAKE_PREFIX_PATH "/Users/ryanhecht/Qt/6.6.1/macos")
-list(APPEND CMAKE_PREFIX_PATH "/Users/daniel/Qt/6.6.1/macos")
+list(APPEND CMAKE_PREFIX_PATH "/Users/danielesemezie/Qt/6.6.2/macos")
 list(APPEND CMAKE_PREFIX_PATH "/shaylan/path")
 list(APPEND CMAKE_PREFIX_PATH "/annabel/path")
 list(APPEND CMAKE_PREFIX_PATH "/razvan/path")
@@ -18,6 +19,7 @@ find_package(Qt6 COMPONENTS
         Gui
         Widgets
         Multimedia
+        spatialaudio
         REQUIRED)
 
 qt_standard_project_setup()
@@ -67,5 +69,6 @@ target_link_libraries(bitbuddy
         Qt::Gui
         Qt::Widgets
         Qt::Multimedia
+        Qt::SpatialAudio
 )
 
