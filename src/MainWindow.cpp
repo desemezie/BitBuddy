@@ -13,8 +13,8 @@
 #include "SettingsWindow.h"
 #include <iostream>
 
-constexpr int SCREEN_WIDTH = 1280;
-constexpr int SCREEN_HEIGHT = 720;
+constexpr int SCREEN_WIDTH = 1920;
+constexpr int SCREEN_HEIGHT = 1080;
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   auto *centralWidget = new QWidget(this);
@@ -28,6 +28,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
   auto *bitBuddy = new BitBuddy("BitBuddy");
 
+
   auto *statusWidget = new BitBuddyStatusWidget(bitBuddy, this);
 
   // Create spacers to push the status widget to the top-left corner
@@ -35,7 +36,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
   // connect spriteHandler to bitbuddy
   spriteLabel = new QLabel(centralWidget);
-  spriteHandler = new BitBuddySpriteHandler(spriteLabel, this);
+  spriteHandler = new BitBuddySpriteHandler(spriteLabel, this, bitBuddy);
 
   loadDefaultSprite();
 

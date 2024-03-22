@@ -16,6 +16,7 @@
 class BitBuddy : public QObject {
  Q_OBJECT
 
+
  public:
   /***
    * Constructor for the BitBuddy. Initializes the attribute maps.
@@ -40,6 +41,7 @@ class BitBuddy : public QObject {
   /**
    * Destructor for the BitBuddy
    */
+
   ~BitBuddy() override;
 
   BitBuddy(const BitBuddy &) = delete;
@@ -56,6 +58,8 @@ class BitBuddy : public QObject {
    * @param attribute
    * @param value
    */
+  std::string currentSprite;
+  int getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const;
   void incrementAttribute(BitBuddyAttributeName::UniqueName attribute, int value);
 
  signals:
@@ -78,6 +82,7 @@ class BitBuddy : public QObject {
   std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> attributes;
   std::chrono::system_clock::time_point creationTime;
   std::string name;
+
 
   void connectSignals() const;
 

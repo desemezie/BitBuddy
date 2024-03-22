@@ -64,3 +64,14 @@ void BitBuddy::connectSignals() const {
   connect(&EventDispatcherService::getInstance(), &EventDispatcherService::eventDispatched,
           this, &BitBuddy::onEvent);
 }
+
+int BitBuddy::getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const {
+
+  auto it = attributes.find(attributeName);
+  if (it != attributes.end()) {
+    auto value = it->second.getValue();
+    std::cout << "Found value: " << value << " for attribute " << BitBuddyAttributeName::toString(attributeName) << "\n";
+    return value;
+  }
+  return -1; // Or some error value
+}
