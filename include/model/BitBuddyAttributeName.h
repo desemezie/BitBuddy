@@ -30,6 +30,8 @@ class BitBuddyAttributeName {
    * @return the string representation of the attribute
    */
   static std::string toString(UniqueName attribute);
+  static std::string imageURL(UniqueName attribute);
+  static int valueWhereChange(UniqueName attribute);
 };
 
 #endif //BITBUDDY_BITBUDDYATTRIBUTE_H
