@@ -106,6 +106,7 @@ void BitBuddySpriteHandler::changeSprite(const std::string &state) {
       QString defaultImagePath = ":/assets/happy_bitbuddy.png"; // Path to your default sprite
       changeSpriteSmoothly(defaultImagePath);
     });
+
   } else if (state.find("Event for: Thirst") != std::string::npos) {
     qDebug() << "HERE";
     QString imagePath = ":/assets/happy_bitbuddy.png";
@@ -122,10 +123,40 @@ void BitBuddySpriteHandler::changeSprite(const std::string &state) {
 }
 
 void BitBuddySpriteHandler::handleEvent(const Event &event) {
+  auto specificEvent = dynamic_cast<const SingleAttributeEvent*>(&event);
+  if (specificEvent) {
+    BitBuddyAttributeName::UniqueName attributeName = specificEvent->getAttribute();
+    int value = bitBuddy->getAttributeValue(attributeName);
+    switch(attributeName) {
+      case BitBuddyAttributeName::HUNGER:
+        qDebug() << "Handling HUNGER attribute with value:" << value;
 
+        break;
+      case BitBuddyAttributeName::HAPPINESS:
+        qDebug() << "Handling HAPPINESS attribute with value:" << value;
+
+        break;
+      case BitBuddyAttributeName::THIRST:
+        qDebug() << "Handling HAPPINESS attribute with value:" << value;
+        break;
+
+      case BitBuddyAttributeName::HYGIENE:
+        qDebug() << "Handling HYGIENE attribute with value:" << value;
+        break;
+
+      default:
+        qDebug() << "Unknown attribute";
+        break;
+    }
+  } else {
+    qDebug() << "Received event is not a SingleAttributeEvent";
+  }
+
+  /*
   std::string state = event.getDescription();
   qDebug() << "Received event desc: " << QString::fromStdString(event.getDescription());
   changeSprite(state);
+   */
 }
 
 void BitBuddySpriteHandler::displayPills(const QString &imagePath) {
