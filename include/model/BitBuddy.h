@@ -6,7 +6,6 @@
 #define BITBUDDY_SRC_COMPONENT_BITBUDDY_H_
 
 #include <QObject>
-#include <QWidget>
 #include <map>
 #include "model/BitBuddyAttribute.h"
 #include "model/Event.h"
@@ -14,8 +13,9 @@
 /***
  * Bit Buddy!
  */
-class BitBuddy : public QWidget {
+class BitBuddy : public QObject {
  Q_OBJECT
+
 
  public:
   /***
@@ -24,7 +24,7 @@ class BitBuddy : public QWidget {
    * @param name The name of the BitBuddy
    * @param parent The parent widget of the BitBuddy, typically the MainWindow.
    */
-  explicit BitBuddy(std::string name, QWidget *parent = nullptr);
+  explicit BitBuddy(std::string name);
 
   /***
    * Constructor for the BitBuddy that takes all of BitBuddy's attributes as parameters.
@@ -35,13 +35,13 @@ class BitBuddy : public QWidget {
    * @param creationTime The time the BitBuddy was created
    */
   BitBuddy(std::string name,
-           QWidget *parent,
            const std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> &attributes,
            std::chrono::system_clock::time_point creationTime);
 
   /**
    * Destructor for the BitBuddy
    */
+
   ~BitBuddy() override;
 
   BitBuddy(const BitBuddy &) = delete;
@@ -58,6 +58,8 @@ class BitBuddy : public QWidget {
    * @param attribute
    * @param value
    */
+  std::string currentSprite;
+  int getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const;
   void incrementAttribute(BitBuddyAttributeName::UniqueName attribute, int value);
 
  signals:
@@ -80,6 +82,7 @@ class BitBuddy : public QWidget {
   std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> attributes;
   std::chrono::system_clock::time_point creationTime;
   std::string name;
+
 
   void connectSignals() const;
 

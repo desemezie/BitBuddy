@@ -36,12 +36,18 @@ class MainWindow : public QMainWindow {
 
   MainWindow &operator=(MainWindow &&) = delete;
 
+ private slots:
+  void openSettings();
+
  private:
-  BitBuddyActionButton *buttons[8];
   QLabel *spriteLabel;
   BitBuddySpriteHandler *spriteHandler;
+  QPushButton *settingsButton;
+
 
   void loadDefaultSprite();
 };
+
+
 
 #endif //BITBUDDY_MAINWINDOW_H

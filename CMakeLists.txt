@@ -52,6 +52,10 @@ add_executable(bitbuddy src/main.cpp
         include/component/BitBuddyActionButton.h
         src/service/BitBuddySpriteHandler.cpp
         include/service/BitBuddySpriteHandler.h
+        src/LauncherWindow.cpp
+        include/LauncherWindow.h
+        include/SettingsWindow.h
+        src/SettingsWindow.cpp
 
 )
 

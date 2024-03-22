@@ -12,12 +12,15 @@
 #include <QObject>
 #include "model/BitBuddyAttribute.h"
 #include "model/Event.h"
+#include "model/SingleAttributeEvent.h"
+#include "model/BitBuddy.h"
 
 class BitBuddySpriteHandler :public QObject{
     Q_OBJECT
 
 public:
-    explicit BitBuddySpriteHandler(QLabel* displayLabel, QObject* parent = nullptr);
+    explicit BitBuddySpriteHandler(QLabel* displayLabel, QObject* parent = nullptr, BitBuddy *bitBuddy = nullptr);
+
 
     void changeSprite(const std::string& state);
 
@@ -26,6 +29,7 @@ public slots:
 private:
     QLabel* displayLabel;
     QLabel* temporaryLabel;
+    BitBuddy * bitBuddy;
 
     void displayTacoAndRemove(const QString &imagePath);
 
@@ -42,6 +46,11 @@ private:
     void displayDrink(const QString &imagePath);
 
     void displayPills(const QString &imagePath);
+
+    void checkAndUpdateSprite();
+
+    void postUpdateCheck();
+
 };
 
 

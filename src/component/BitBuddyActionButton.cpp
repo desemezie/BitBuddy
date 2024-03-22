@@ -7,7 +7,6 @@
 #include "model/BitBuddyAttributeName.h"
 #include "model/BitBuddyEvents.h"
 #include "component/BitBuddyActionButton.h"
-
 BitBuddyActionButton::BitBuddyActionButton(const QIcon &icon,
                                            const QString &text,
                                            BitBuddyAttributeName::UniqueName attribute,
