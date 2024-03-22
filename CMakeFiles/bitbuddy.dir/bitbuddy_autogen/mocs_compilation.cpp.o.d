@@ -1,9 +1,9 @@
 CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.o: \
   /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/bitbuddy_autogen/mocs_compilation.cpp \
-  /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/bitbuddy_autogen/6YEA5652QU/moc_MainWindow.cpp \
-  /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/bitbuddy_autogen/6YEA5652QU/../../include/MainWindow.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
+  /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/bitbuddy_autogen/6YEA5652QU/moc_LauncherWindow.cpp \
+  /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/bitbuddy_autogen/6YEA5652QU/../../include/LauncherWindow.h \
+  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/QWidget \
+  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qwidget.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qtguiglobal.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qglobal.h \
@@ -501,7 +501,6 @@ CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.o: \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qtguiexports.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qtwidgets-config.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qtwidgetsexports.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qwidget.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qwindowdefs.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qobjectdefs.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qnamespace.h \
@@ -843,6 +842,14 @@ CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.o: \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qsizepolicy.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qcursor.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qbitmap.h \
+  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
+  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
+  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qabstractbutton.h \
+  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qtmochelpers.h \
+  /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/bitbuddy_autogen/6YEA5652QU/moc_MainWindow.cpp \
+  /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/bitbuddy_autogen/6YEA5652QU/../../include/MainWindow.h \
+  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/QMainWindow \
+  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qmainwindow.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qtabwidget.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/QLabel \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qlabel.h \
@@ -853,12 +860,8 @@ CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.o: \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qurl.h \
   /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/include/model/BitBuddyAttributeName.h \
   /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/include/component/BitBuddyActionButton.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/QPushButton \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qpushbutton.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qabstractbutton.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/QIcon \
   /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/include/service/BitBuddySpriteHandler.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/QWidget \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/QPixmap \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/QObject \
   /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/include/model/BitBuddyAttribute.h \
@@ -867,7 +870,6 @@ CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.o: \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qtextformat.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qpen.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qtextoption.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qtmochelpers.h \
   /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/bitbuddy_autogen/26E4343VLD/moc_BitBuddyActionButton.cpp \
   /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/bitbuddy_autogen/26E4343VLD/../../include/component/BitBuddyActionButton.h \
   /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/bitbuddy_autogen/26E4343VLD/moc_BitBuddyStatusWidget.cpp \

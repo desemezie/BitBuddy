@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
   player->play();*/
 
   GameService::getInstance().startService();
-*/
+
   return QApplication::exec();
 
 }

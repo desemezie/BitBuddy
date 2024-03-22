@@ -310,6 +310,9 @@ Qt6Widgets_DIR:PATH=/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6Widgets
 //The directory containing a CMake configuration file for Qt6.
 Qt6_DIR:PATH=/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6
 
+//The directory containing a CMake configuration file for Qt6spatialaudio.
+Qt6spatialaudio_DIR:PATH=/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6SpatialAudio
+
 //Path to a library.
 WrapOpenGL_AGL:FILEPATH=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/System/Library/Frameworks/AGL.framework
 

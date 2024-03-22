@@ -793,55 +793,6 @@ CMakeFiles/bitbuddy.dir/src/model/BitBuddy.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1/__tree \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qobject_impl.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qbindingstorage.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/QWidget \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qwidget.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qtwidgetsglobal.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qtguiglobal.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qtgui-config.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qtguiexports.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qtwidgets-config.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qtwidgetsexports.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qwindowdefs.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qmargins.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/q23utility.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qaction.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qkeysequence.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qicon.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qsize.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qpixmap.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qpaintdevice.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qrect.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qpoint.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qcolor.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qrgb.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qrgba64.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qshareddata.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qimage.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qpixelformat.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qtransform.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qpolygon.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qregion.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qline.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qvariant.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qdebug.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qtextstream.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qstringconverter_base.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qcontiguouscache.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qsharedpointer.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qsharedpointer_impl.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qmap.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qshareddata_impl.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qset.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qhash.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qvarlengtharray.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qpalette.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qbrush.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qfont.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qfontmetrics.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qfontinfo.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qsizepolicy.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qcursor.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qbitmap.h \
   /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/include/model/BitBuddyAttribute.h \
   /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/include/model/BitBuddyAttributeName.h \
   /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/include/model/Event.h \

@@ -56,7 +56,7 @@ add_executable(bitbuddy src/main.cpp
         src/service/BitBuddySpriteHandler.cpp
         include/service/BitBuddySpriteHandler.h
         src/model/audio.cpp
-        src/model/audio.h
+        include/model/audio.h
         src/LauncherWindow.cpp
         include/LauncherWindow.h
 

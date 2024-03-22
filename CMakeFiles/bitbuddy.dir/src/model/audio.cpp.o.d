@@ -849,4 +849,6 @@ CMakeFiles/bitbuddy.dir/src/model/audio.cpp.o: \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtMultimedia.framework/Headers/qtmultimediaexports.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtMultimedia.framework/Headers/qmediaenumdebug.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qmetaobject.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtMultimedia.framework/Headers/qaudio.h
+  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtMultimedia.framework/Headers/qaudio.h \
+  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtMultimedia.framework/Headers/QAudioOutput \
+  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtMultimedia.framework/Headers/qaudiooutput.h

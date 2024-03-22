@@ -864,24 +864,4 @@ CMakeFiles/bitbuddy.dir/src/service/BitBuddySpriteHandler.cpp.o: \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qvariantanimation.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qeasingcurve.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/QGraphicsOpacityEffect \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qgraphicseffect.h \
-  /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/include/model/audio.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/QApplication \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qapplication.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qcoreapplication.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qcoreevent.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qeventloop.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qnativeinterface.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qcoreapplication_platform.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qguiapplication.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qinputmethod.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qlocale.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Headers/qguiapplication_platform.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtMultimedia.framework/Headers/QMediaPlayer \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtMultimedia.framework/Headers/qmediaplayer.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtMultimedia.framework/Headers/qtmultimediaglobal.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtMultimedia.framework/Headers/qtmultimedia-config.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtMultimedia.framework/Headers/qtmultimediaexports.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtMultimedia.framework/Headers/qmediaenumdebug.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Headers/qmetaobject.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtMultimedia.framework/Headers/qaudio.h
+  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Headers/qgraphicseffect.h

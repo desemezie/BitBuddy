@@ -627,6 +627,7 @@ bitbuddy_autogen/timestamp: \
 	/Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/CMakeFiles/3.28.3/CMakeSystem.cmake \
 	/Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/CMakeLists.txt \
 	/Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/bitbuddy_autogen/moc_predefs.h \
+	/Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/include/LauncherWindow.h \
 	/Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/include/MainWindow.h \
 	/Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/include/component/BitBuddyActionButton.h \
 	/Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/include/component/BitBuddyStatusWidget.h \
@@ -643,6 +644,7 @@ bitbuddy_autogen/timestamp: \
 	/Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/include/service/EventGeneratorService.h \
 	/Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/include/service/GameService.h \
 	/Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/resources.qrc \
+	/Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/src/LauncherWindow.cpp \
 	/Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/src/MainWindow.cpp \
 	/Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/src/component/BitBuddyActionButton.cpp \
 	/Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/src/component/BitBuddyStatusWidget.cpp \
@@ -1046,6 +1048,14 @@ bitbuddy_autogen/timestamp: \
 	/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginConfig.cmake \
 	/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-relwithdebinfo.cmake \
 	/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets.cmake \
+	/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioAdditionalTargetInfo.cmake \
+	/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioConfigVersionImpl.cmake \
+	/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioDependencies.cmake \
+	/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioTargets-relwithdebinfo.cmake \
+	/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioTargets.cmake \
+	/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioVersionlessTargets.cmake \
+	/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6SpatialAudio/Qt6spatialaudioConfig.cmake \
+	/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6SpatialAudio/Qt6spatialaudioConfigVersion.cmake \
 	/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginAdditionalTargetInfo.cmake \
 	/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginConfig.cmake \
 	/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6Widgets/Qt6QMacStylePluginTargets-relwithdebinfo.cmake \

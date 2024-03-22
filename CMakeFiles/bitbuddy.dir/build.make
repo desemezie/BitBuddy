@@ -69,10 +69,42 @@ include CMakeFiles/bitbuddy.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/bitbuddy.dir/flags.make
 
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: resources.qrc
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: CMakeFiles/bitbuddy_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/bubbles.mp3
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/yay.mp3
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/tamagochi_zzz.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/tamagochi_soap.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/happy_bitbuddy.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/munchin.mp3
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/mad_bitbuddy.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/background.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/drink.mp3
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/tamagochi_disc2.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/tamagochi_dead.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/angry_bitbuddy.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/tamagochi_turd.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/snore.mp3
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/sad_bitbuddy.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/tamagochi_bubble.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/tamagochi_feed.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/tamagochi_pills.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/tamagochi_drink_2.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/sick_bitbuddy.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/sleeping_bitbuddy.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/tamagochi_birthdayHat.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/background.mp3
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/tamagochi_drink.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/tamagochi_health.png
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: assets/coughs.mp3
+bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp: /Users/danielesemezie/Qt/6.6.2/macos/./libexec/rcc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic RCC for resources.qrc"
+	/opt/homebrew/Cellar/cmake/3.28.3/bin/cmake -E cmake_autorcc /Users/danielesemezie/Computer\ science/3rd\ year/CS3307/CS3307/group17/CMakeFiles/bitbuddy_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json 
+
 CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
 CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.o: bitbuddy_autogen/mocs_compilation.cpp
 CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.o -MF CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/bitbuddy_autogen/mocs_compilation.cpp"
 
 CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.i: cmake_force
@@ -83,22 +115,295 @@ CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/bitbuddy_autogen/mocs_compilation.cpp" -o CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.s
 
+CMakeFiles/bitbuddy.dir/src/main.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
+CMakeFiles/bitbuddy.dir/src/main.cpp.o: src/main.cpp
+CMakeFiles/bitbuddy.dir/src/main.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/bitbuddy.dir/src/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/src/main.cpp.o -MF CMakeFiles/bitbuddy.dir/src/main.cpp.o.d -o CMakeFiles/bitbuddy.dir/src/main.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/main.cpp"
+
+CMakeFiles/bitbuddy.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bitbuddy.dir/src/main.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/main.cpp" > CMakeFiles/bitbuddy.dir/src/main.cpp.i
+
+CMakeFiles/bitbuddy.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/src/main.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/main.cpp" -o CMakeFiles/bitbuddy.dir/src/main.cpp.s
+
+CMakeFiles/bitbuddy.dir/src/MainWindow.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
+CMakeFiles/bitbuddy.dir/src/MainWindow.cpp.o: src/MainWindow.cpp
+CMakeFiles/bitbuddy.dir/src/MainWindow.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/bitbuddy.dir/src/MainWindow.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/src/MainWindow.cpp.o -MF CMakeFiles/bitbuddy.dir/src/MainWindow.cpp.o.d -o CMakeFiles/bitbuddy.dir/src/MainWindow.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/MainWindow.cpp"
+
+CMakeFiles/bitbuddy.dir/src/MainWindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bitbuddy.dir/src/MainWindow.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/MainWindow.cpp" > CMakeFiles/bitbuddy.dir/src/MainWindow.cpp.i
+
+CMakeFiles/bitbuddy.dir/src/MainWindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/src/MainWindow.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/MainWindow.cpp" -o CMakeFiles/bitbuddy.dir/src/MainWindow.cpp.s
+
+CMakeFiles/bitbuddy.dir/src/model/Event.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
+CMakeFiles/bitbuddy.dir/src/model/Event.cpp.o: src/model/Event.cpp
+CMakeFiles/bitbuddy.dir/src/model/Event.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/bitbuddy.dir/src/model/Event.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/src/model/Event.cpp.o -MF CMakeFiles/bitbuddy.dir/src/model/Event.cpp.o.d -o CMakeFiles/bitbuddy.dir/src/model/Event.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/Event.cpp"
+
+CMakeFiles/bitbuddy.dir/src/model/Event.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bitbuddy.dir/src/model/Event.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/Event.cpp" > CMakeFiles/bitbuddy.dir/src/model/Event.cpp.i
+
+CMakeFiles/bitbuddy.dir/src/model/Event.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/src/model/Event.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/Event.cpp" -o CMakeFiles/bitbuddy.dir/src/model/Event.cpp.s
+
+CMakeFiles/bitbuddy.dir/src/model/SingleAttributeEvent.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
+CMakeFiles/bitbuddy.dir/src/model/SingleAttributeEvent.cpp.o: src/model/SingleAttributeEvent.cpp
+CMakeFiles/bitbuddy.dir/src/model/SingleAttributeEvent.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/bitbuddy.dir/src/model/SingleAttributeEvent.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/src/model/SingleAttributeEvent.cpp.o -MF CMakeFiles/bitbuddy.dir/src/model/SingleAttributeEvent.cpp.o.d -o CMakeFiles/bitbuddy.dir/src/model/SingleAttributeEvent.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/SingleAttributeEvent.cpp"
+
+CMakeFiles/bitbuddy.dir/src/model/SingleAttributeEvent.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bitbuddy.dir/src/model/SingleAttributeEvent.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/SingleAttributeEvent.cpp" > CMakeFiles/bitbuddy.dir/src/model/SingleAttributeEvent.cpp.i
+
+CMakeFiles/bitbuddy.dir/src/model/SingleAttributeEvent.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/src/model/SingleAttributeEvent.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/SingleAttributeEvent.cpp" -o CMakeFiles/bitbuddy.dir/src/model/SingleAttributeEvent.cpp.s
+
+CMakeFiles/bitbuddy.dir/src/service/EventGeneratorService.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
+CMakeFiles/bitbuddy.dir/src/service/EventGeneratorService.cpp.o: src/service/EventGeneratorService.cpp
+CMakeFiles/bitbuddy.dir/src/service/EventGeneratorService.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/bitbuddy.dir/src/service/EventGeneratorService.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/src/service/EventGeneratorService.cpp.o -MF CMakeFiles/bitbuddy.dir/src/service/EventGeneratorService.cpp.o.d -o CMakeFiles/bitbuddy.dir/src/service/EventGeneratorService.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/service/EventGeneratorService.cpp"
+
+CMakeFiles/bitbuddy.dir/src/service/EventGeneratorService.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bitbuddy.dir/src/service/EventGeneratorService.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/service/EventGeneratorService.cpp" > CMakeFiles/bitbuddy.dir/src/service/EventGeneratorService.cpp.i
+
+CMakeFiles/bitbuddy.dir/src/service/EventGeneratorService.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/src/service/EventGeneratorService.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/service/EventGeneratorService.cpp" -o CMakeFiles/bitbuddy.dir/src/service/EventGeneratorService.cpp.s
+
+CMakeFiles/bitbuddy.dir/src/service/EventDispatcherService.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
+CMakeFiles/bitbuddy.dir/src/service/EventDispatcherService.cpp.o: src/service/EventDispatcherService.cpp
+CMakeFiles/bitbuddy.dir/src/service/EventDispatcherService.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/bitbuddy.dir/src/service/EventDispatcherService.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/src/service/EventDispatcherService.cpp.o -MF CMakeFiles/bitbuddy.dir/src/service/EventDispatcherService.cpp.o.d -o CMakeFiles/bitbuddy.dir/src/service/EventDispatcherService.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/service/EventDispatcherService.cpp"
+
+CMakeFiles/bitbuddy.dir/src/service/EventDispatcherService.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bitbuddy.dir/src/service/EventDispatcherService.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/service/EventDispatcherService.cpp" > CMakeFiles/bitbuddy.dir/src/service/EventDispatcherService.cpp.i
+
+CMakeFiles/bitbuddy.dir/src/service/EventDispatcherService.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/src/service/EventDispatcherService.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/service/EventDispatcherService.cpp" -o CMakeFiles/bitbuddy.dir/src/service/EventDispatcherService.cpp.s
+
+CMakeFiles/bitbuddy.dir/src/service/GameService.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
+CMakeFiles/bitbuddy.dir/src/service/GameService.cpp.o: src/service/GameService.cpp
+CMakeFiles/bitbuddy.dir/src/service/GameService.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/bitbuddy.dir/src/service/GameService.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/src/service/GameService.cpp.o -MF CMakeFiles/bitbuddy.dir/src/service/GameService.cpp.o.d -o CMakeFiles/bitbuddy.dir/src/service/GameService.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/service/GameService.cpp"
+
+CMakeFiles/bitbuddy.dir/src/service/GameService.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bitbuddy.dir/src/service/GameService.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/service/GameService.cpp" > CMakeFiles/bitbuddy.dir/src/service/GameService.cpp.i
+
+CMakeFiles/bitbuddy.dir/src/service/GameService.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/src/service/GameService.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/service/GameService.cpp" -o CMakeFiles/bitbuddy.dir/src/service/GameService.cpp.s
+
+CMakeFiles/bitbuddy.dir/src/model/BitBuddyEvents.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
+CMakeFiles/bitbuddy.dir/src/model/BitBuddyEvents.cpp.o: src/model/BitBuddyEvents.cpp
+CMakeFiles/bitbuddy.dir/src/model/BitBuddyEvents.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/bitbuddy.dir/src/model/BitBuddyEvents.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/src/model/BitBuddyEvents.cpp.o -MF CMakeFiles/bitbuddy.dir/src/model/BitBuddyEvents.cpp.o.d -o CMakeFiles/bitbuddy.dir/src/model/BitBuddyEvents.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/BitBuddyEvents.cpp"
+
+CMakeFiles/bitbuddy.dir/src/model/BitBuddyEvents.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bitbuddy.dir/src/model/BitBuddyEvents.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/BitBuddyEvents.cpp" > CMakeFiles/bitbuddy.dir/src/model/BitBuddyEvents.cpp.i
+
+CMakeFiles/bitbuddy.dir/src/model/BitBuddyEvents.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/src/model/BitBuddyEvents.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/BitBuddyEvents.cpp" -o CMakeFiles/bitbuddy.dir/src/model/BitBuddyEvents.cpp.s
+
+CMakeFiles/bitbuddy.dir/src/component/BitBuddyStatusWidget.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
+CMakeFiles/bitbuddy.dir/src/component/BitBuddyStatusWidget.cpp.o: src/component/BitBuddyStatusWidget.cpp
+CMakeFiles/bitbuddy.dir/src/component/BitBuddyStatusWidget.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/bitbuddy.dir/src/component/BitBuddyStatusWidget.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/src/component/BitBuddyStatusWidget.cpp.o -MF CMakeFiles/bitbuddy.dir/src/component/BitBuddyStatusWidget.cpp.o.d -o CMakeFiles/bitbuddy.dir/src/component/BitBuddyStatusWidget.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/component/BitBuddyStatusWidget.cpp"
+
+CMakeFiles/bitbuddy.dir/src/component/BitBuddyStatusWidget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bitbuddy.dir/src/component/BitBuddyStatusWidget.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/component/BitBuddyStatusWidget.cpp" > CMakeFiles/bitbuddy.dir/src/component/BitBuddyStatusWidget.cpp.i
+
+CMakeFiles/bitbuddy.dir/src/component/BitBuddyStatusWidget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/src/component/BitBuddyStatusWidget.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/component/BitBuddyStatusWidget.cpp" -o CMakeFiles/bitbuddy.dir/src/component/BitBuddyStatusWidget.cpp.s
+
+CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttributeName.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
+CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttributeName.cpp.o: src/model/BitBuddyAttributeName.cpp
+CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttributeName.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttributeName.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttributeName.cpp.o -MF CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttributeName.cpp.o.d -o CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttributeName.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/BitBuddyAttributeName.cpp"
+
+CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttributeName.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttributeName.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/BitBuddyAttributeName.cpp" > CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttributeName.cpp.i
+
+CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttributeName.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttributeName.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/BitBuddyAttributeName.cpp" -o CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttributeName.cpp.s
+
+CMakeFiles/bitbuddy.dir/src/model/BitBuddy.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
+CMakeFiles/bitbuddy.dir/src/model/BitBuddy.cpp.o: src/model/BitBuddy.cpp
+CMakeFiles/bitbuddy.dir/src/model/BitBuddy.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/bitbuddy.dir/src/model/BitBuddy.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/src/model/BitBuddy.cpp.o -MF CMakeFiles/bitbuddy.dir/src/model/BitBuddy.cpp.o.d -o CMakeFiles/bitbuddy.dir/src/model/BitBuddy.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/BitBuddy.cpp"
+
+CMakeFiles/bitbuddy.dir/src/model/BitBuddy.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bitbuddy.dir/src/model/BitBuddy.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/BitBuddy.cpp" > CMakeFiles/bitbuddy.dir/src/model/BitBuddy.cpp.i
+
+CMakeFiles/bitbuddy.dir/src/model/BitBuddy.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/src/model/BitBuddy.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/BitBuddy.cpp" -o CMakeFiles/bitbuddy.dir/src/model/BitBuddy.cpp.s
+
+CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttribute.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
+CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttribute.cpp.o: src/model/BitBuddyAttribute.cpp
+CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttribute.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttribute.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttribute.cpp.o -MF CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttribute.cpp.o.d -o CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttribute.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/BitBuddyAttribute.cpp"
+
+CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttribute.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttribute.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/BitBuddyAttribute.cpp" > CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttribute.cpp.i
+
+CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttribute.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttribute.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/BitBuddyAttribute.cpp" -o CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttribute.cpp.s
+
+CMakeFiles/bitbuddy.dir/src/component/BitBuddyActionButton.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
+CMakeFiles/bitbuddy.dir/src/component/BitBuddyActionButton.cpp.o: src/component/BitBuddyActionButton.cpp
+CMakeFiles/bitbuddy.dir/src/component/BitBuddyActionButton.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/bitbuddy.dir/src/component/BitBuddyActionButton.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/src/component/BitBuddyActionButton.cpp.o -MF CMakeFiles/bitbuddy.dir/src/component/BitBuddyActionButton.cpp.o.d -o CMakeFiles/bitbuddy.dir/src/component/BitBuddyActionButton.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/component/BitBuddyActionButton.cpp"
+
+CMakeFiles/bitbuddy.dir/src/component/BitBuddyActionButton.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bitbuddy.dir/src/component/BitBuddyActionButton.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/component/BitBuddyActionButton.cpp" > CMakeFiles/bitbuddy.dir/src/component/BitBuddyActionButton.cpp.i
+
+CMakeFiles/bitbuddy.dir/src/component/BitBuddyActionButton.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/src/component/BitBuddyActionButton.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/component/BitBuddyActionButton.cpp" -o CMakeFiles/bitbuddy.dir/src/component/BitBuddyActionButton.cpp.s
+
+CMakeFiles/bitbuddy.dir/src/service/BitBuddySpriteHandler.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
+CMakeFiles/bitbuddy.dir/src/service/BitBuddySpriteHandler.cpp.o: src/service/BitBuddySpriteHandler.cpp
+CMakeFiles/bitbuddy.dir/src/service/BitBuddySpriteHandler.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/bitbuddy.dir/src/service/BitBuddySpriteHandler.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/src/service/BitBuddySpriteHandler.cpp.o -MF CMakeFiles/bitbuddy.dir/src/service/BitBuddySpriteHandler.cpp.o.d -o CMakeFiles/bitbuddy.dir/src/service/BitBuddySpriteHandler.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/service/BitBuddySpriteHandler.cpp"
+
+CMakeFiles/bitbuddy.dir/src/service/BitBuddySpriteHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bitbuddy.dir/src/service/BitBuddySpriteHandler.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/service/BitBuddySpriteHandler.cpp" > CMakeFiles/bitbuddy.dir/src/service/BitBuddySpriteHandler.cpp.i
+
+CMakeFiles/bitbuddy.dir/src/service/BitBuddySpriteHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/src/service/BitBuddySpriteHandler.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/service/BitBuddySpriteHandler.cpp" -o CMakeFiles/bitbuddy.dir/src/service/BitBuddySpriteHandler.cpp.s
+
+CMakeFiles/bitbuddy.dir/src/model/audio.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
+CMakeFiles/bitbuddy.dir/src/model/audio.cpp.o: src/model/audio.cpp
+CMakeFiles/bitbuddy.dir/src/model/audio.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/bitbuddy.dir/src/model/audio.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/src/model/audio.cpp.o -MF CMakeFiles/bitbuddy.dir/src/model/audio.cpp.o.d -o CMakeFiles/bitbuddy.dir/src/model/audio.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/audio.cpp"
+
+CMakeFiles/bitbuddy.dir/src/model/audio.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bitbuddy.dir/src/model/audio.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/audio.cpp" > CMakeFiles/bitbuddy.dir/src/model/audio.cpp.i
+
+CMakeFiles/bitbuddy.dir/src/model/audio.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/src/model/audio.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/audio.cpp" -o CMakeFiles/bitbuddy.dir/src/model/audio.cpp.s
+
+CMakeFiles/bitbuddy.dir/src/LauncherWindow.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
+CMakeFiles/bitbuddy.dir/src/LauncherWindow.cpp.o: src/LauncherWindow.cpp
+CMakeFiles/bitbuddy.dir/src/LauncherWindow.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/bitbuddy.dir/src/LauncherWindow.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/src/LauncherWindow.cpp.o -MF CMakeFiles/bitbuddy.dir/src/LauncherWindow.cpp.o.d -o CMakeFiles/bitbuddy.dir/src/LauncherWindow.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/LauncherWindow.cpp"
+
+CMakeFiles/bitbuddy.dir/src/LauncherWindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bitbuddy.dir/src/LauncherWindow.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/LauncherWindow.cpp" > CMakeFiles/bitbuddy.dir/src/LauncherWindow.cpp.i
+
+CMakeFiles/bitbuddy.dir/src/LauncherWindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/src/LauncherWindow.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/LauncherWindow.cpp" -o CMakeFiles/bitbuddy.dir/src/LauncherWindow.cpp.s
+
+CMakeFiles/bitbuddy.dir/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp.o: CMakeFiles/bitbuddy.dir/flags.make
+CMakeFiles/bitbuddy.dir/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp.o: bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp
+CMakeFiles/bitbuddy.dir/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp.o: CMakeFiles/bitbuddy.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/bitbuddy.dir/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bitbuddy.dir/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp.o -MF CMakeFiles/bitbuddy.dir/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp.o.d -o CMakeFiles/bitbuddy.dir/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp.o -c "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp"
+
+CMakeFiles/bitbuddy.dir/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bitbuddy.dir/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp" > CMakeFiles/bitbuddy.dir/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp.i
+
+CMakeFiles/bitbuddy.dir/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bitbuddy.dir/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp" -o CMakeFiles/bitbuddy.dir/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp.s
+
 # Object files for target bitbuddy
 bitbuddy_OBJECTS = \
-"CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.o"
+"CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.o" \
+"CMakeFiles/bitbuddy.dir/src/main.cpp.o" \
+"CMakeFiles/bitbuddy.dir/src/MainWindow.cpp.o" \
+"CMakeFiles/bitbuddy.dir/src/model/Event.cpp.o" \
+"CMakeFiles/bitbuddy.dir/src/model/SingleAttributeEvent.cpp.o" \
+"CMakeFiles/bitbuddy.dir/src/service/EventGeneratorService.cpp.o" \
+"CMakeFiles/bitbuddy.dir/src/service/EventDispatcherService.cpp.o" \
+"CMakeFiles/bitbuddy.dir/src/service/GameService.cpp.o" \
+"CMakeFiles/bitbuddy.dir/src/model/BitBuddyEvents.cpp.o" \
+"CMakeFiles/bitbuddy.dir/src/component/BitBuddyStatusWidget.cpp.o" \
+"CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttributeName.cpp.o" \
+"CMakeFiles/bitbuddy.dir/src/model/BitBuddy.cpp.o" \
+"CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttribute.cpp.o" \
+"CMakeFiles/bitbuddy.dir/src/component/BitBuddyActionButton.cpp.o" \
+"CMakeFiles/bitbuddy.dir/src/service/BitBuddySpriteHandler.cpp.o" \
+"CMakeFiles/bitbuddy.dir/src/model/audio.cpp.o" \
+"CMakeFiles/bitbuddy.dir/src/LauncherWindow.cpp.o" \
+"CMakeFiles/bitbuddy.dir/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp.o"
 
 # External object files for target bitbuddy
 bitbuddy_EXTERNAL_OBJECTS =
 
 bitbuddy: CMakeFiles/bitbuddy.dir/bitbuddy_autogen/mocs_compilation.cpp.o
+bitbuddy: CMakeFiles/bitbuddy.dir/src/main.cpp.o
+bitbuddy: CMakeFiles/bitbuddy.dir/src/MainWindow.cpp.o
+bitbuddy: CMakeFiles/bitbuddy.dir/src/model/Event.cpp.o
+bitbuddy: CMakeFiles/bitbuddy.dir/src/model/SingleAttributeEvent.cpp.o
+bitbuddy: CMakeFiles/bitbuddy.dir/src/service/EventGeneratorService.cpp.o
+bitbuddy: CMakeFiles/bitbuddy.dir/src/service/EventDispatcherService.cpp.o
+bitbuddy: CMakeFiles/bitbuddy.dir/src/service/GameService.cpp.o
+bitbuddy: CMakeFiles/bitbuddy.dir/src/model/BitBuddyEvents.cpp.o
+bitbuddy: CMakeFiles/bitbuddy.dir/src/component/BitBuddyStatusWidget.cpp.o
+bitbuddy: CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttributeName.cpp.o
+bitbuddy: CMakeFiles/bitbuddy.dir/src/model/BitBuddy.cpp.o
+bitbuddy: CMakeFiles/bitbuddy.dir/src/model/BitBuddyAttribute.cpp.o
+bitbuddy: CMakeFiles/bitbuddy.dir/src/component/BitBuddyActionButton.cpp.o
+bitbuddy: CMakeFiles/bitbuddy.dir/src/service/BitBuddySpriteHandler.cpp.o
+bitbuddy: CMakeFiles/bitbuddy.dir/src/model/audio.cpp.o
+bitbuddy: CMakeFiles/bitbuddy.dir/src/LauncherWindow.cpp.o
+bitbuddy: CMakeFiles/bitbuddy.dir/bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp.o
 bitbuddy: CMakeFiles/bitbuddy.dir/build.make
 bitbuddy: /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Versions/A/QtWidgets
+bitbuddy: /Users/danielesemezie/Qt/6.6.2/macos/lib/QtSpatialAudio.framework/Versions/A/QtSpatialAudio
 bitbuddy: /Users/danielesemezie/Qt/6.6.2/macos/lib/QtMultimedia.framework/Versions/A/QtMultimedia
 bitbuddy: /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/QtGui
 bitbuddy: /Users/danielesemezie/Qt/6.6.2/macos/lib/QtNetwork.framework/Versions/A/QtNetwork
 bitbuddy: /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/QtCore
 bitbuddy: CMakeFiles/bitbuddy.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bitbuddy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable bitbuddy"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bitbuddy.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -109,7 +414,7 @@ CMakeFiles/bitbuddy.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/bitbuddy.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/bitbuddy.dir/clean
 
-CMakeFiles/bitbuddy.dir/depend:
+CMakeFiles/bitbuddy.dir/depend: bitbuddy_autogen/EWIEGA46WW/qrc_resources.cpp
 	cd "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17" "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17" "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17" "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17" "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles/bitbuddy.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/bitbuddy.dir/depend
 

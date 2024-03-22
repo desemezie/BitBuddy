@@ -631,7 +631,6 @@
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/q20functional.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/q20memory.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/q20type_traits.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/q23utility.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qalgorithms.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qanystringview.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qarraydata.h \
@@ -655,10 +654,8 @@
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qcontainerfwd.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qcontainerinfo.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qcontainertools_impl.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qcontiguouscache.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qdarwinhelpers.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qdatastream.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qdebug.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qexceptionhandling.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qflags.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qfloat16.h \
@@ -668,18 +665,14 @@
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qgenericatomic.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qglobal.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qglobalstatic.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qhash.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qhashfunctions.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qiodevicebase.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qiterable.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qiterator.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qlatin1stringview.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qline.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qlist.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qlogging.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qmalloc.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qmap.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qmargins.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qmath.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qmetacontainer.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qmetatype.h \
@@ -692,22 +685,13 @@
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qobjectdefs_impl.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qoverload.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qpair.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qpoint.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qprocessordetection.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qrect.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qrefcount.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qscopedpointer.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qscopeguard.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qset.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qshareddata.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qshareddata_impl.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qsharedpointer.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qsharedpointer_impl.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qsize.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qstring.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qstringalgorithms.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qstringbuilder.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qstringconverter_base.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qstringfwd.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qstringlist.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qstringliteral.h \
@@ -725,7 +709,6 @@
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qtcoreexports.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qtdeprecationmarkers.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qtenvironmentvariables.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qtextstream.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qtmetamacros.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qtnoop.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qtpreprocessorsupport.h \
@@ -737,37 +720,5 @@
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qtypeinfo.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qtypes.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qutf8stringview.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qvariant.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qvarlengtharray.h \
   /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qversiontagging.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qaction.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qbitmap.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qbrush.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qcolor.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qcursor.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qfont.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qfontinfo.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qfontmetrics.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qicon.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qimage.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qkeysequence.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qpaintdevice.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qpalette.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qpixelformat.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qpixmap.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qpolygon.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qregion.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qrgb.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qrgba64.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qtgui-config.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qtguiexports.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qtguiglobal.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qtransform.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtGui.framework/Versions/A/Headers/qwindowdefs.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Versions/A/Headers/QWidget \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qsizepolicy.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgets-config.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsexports.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qtwidgetsglobal.h \
-  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtWidgets.framework/Versions/A/Headers/qwidget.h
+  /Users/danielesemezie/Qt/6.6.2/macos/lib/QtCore.framework/Versions/A/Headers/qxptype_traits.h

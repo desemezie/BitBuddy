@@ -341,12 +341,120 @@
 		"/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets.cmake",
 		"/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginTargets-relwithdebinfo.cmake",
 		"/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6Multimedia/Qt6QFFmpegMediaPluginAdditionalTargetInfo.cmake",
-		"/opt/homebrew/Cellar/cmake/3.28.3/share/cmake/Modules/GNUInstallDirs.cmake"
+		"/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6SpatialAudio/Qt6spatialaudioConfigVersion.cmake",
+		"/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioConfigVersionImpl.cmake",
+		"/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6SpatialAudio/Qt6spatialaudioConfig.cmake",
+		"/opt/homebrew/Cellar/cmake/3.28.3/share/cmake/Modules/CMakeFindDependencyMacro.cmake",
+		"/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioDependencies.cmake",
+		"/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioTargets.cmake",
+		"/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioTargets-relwithdebinfo.cmake",
+		"/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioAdditionalTargetInfo.cmake",
+		"/Users/danielesemezie/Qt/6.6.2/macos/lib/cmake/Qt6SpatialAudio/Qt6SpatialAudioVersionlessTargets.cmake",
+		"/opt/homebrew/Cellar/cmake/3.28.3/share/cmake/Modules/GNUInstallDirs.cmake",
+		"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/resources.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17",
 	"DEP_FILE" : "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/bitbuddy_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "bitbuddy_autogen/timestamp",
-	"HEADERS" : [],
+	"HEADERS" : 
+	[
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/include/LauncherWindow.h",
+			"MU",
+			"6YEA5652QU/moc_LauncherWindow.cpp",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/include/MainWindow.h",
+			"MU",
+			"6YEA5652QU/moc_MainWindow.cpp",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/include/component/BitBuddyActionButton.h",
+			"MU",
+			"26E4343VLD/moc_BitBuddyActionButton.cpp",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/include/component/BitBuddyStatusWidget.h",
+			"MU",
+			"26E4343VLD/moc_BitBuddyStatusWidget.cpp",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/include/model/BitBuddy.h",
+			"MU",
+			"Q6AU6LSD6J/moc_BitBuddy.cpp",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/include/model/BitBuddyAttribute.h",
+			"MU",
+			"Q6AU6LSD6J/moc_BitBuddyAttribute.cpp",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/include/model/BitBuddyAttributeName.h",
+			"MU",
+			"Q6AU6LSD6J/moc_BitBuddyAttributeName.cpp",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/include/model/BitBuddyEvents.h",
+			"MU",
+			"Q6AU6LSD6J/moc_BitBuddyEvents.cpp",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/include/model/DeprecatedEventListener.h",
+			"MU",
+			"Q6AU6LSD6J/moc_DeprecatedEventListener.cpp",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/include/model/Event.h",
+			"MU",
+			"Q6AU6LSD6J/moc_Event.cpp",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/include/model/SingleAttributeEvent.h",
+			"MU",
+			"Q6AU6LSD6J/moc_SingleAttributeEvent.cpp",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/include/model/audio.h",
+			"MU",
+			"Q6AU6LSD6J/moc_audio.cpp",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/include/service/BitBuddySpriteHandler.h",
+			"MU",
+			"OBZ36IEKUH/moc_BitBuddySpriteHandler.cpp",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/include/service/EventDispatcherService.h",
+			"MU",
+			"OBZ36IEKUH/moc_EventDispatcherService.cpp",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/include/service/EventGeneratorService.h",
+			"MU",
+			"OBZ36IEKUH/moc_EventGeneratorService.cpp",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/include/service/GameService.h",
+			"MU",
+			"OBZ36IEKUH/moc_GameService.cpp",
+			null
+		]
+	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/bitbuddy_autogen/include",
 	"MOC_COMPILATION_FILE" : "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/bitbuddy_autogen/mocs_compilation.cpp",
@@ -357,6 +465,7 @@
 		"QT_MULTIMEDIA_LIB",
 		"QT_NETWORK_LIB",
 		"QT_NO_DEBUG",
+		"QT_SPATIALAUDIO_LIB",
 		"QT_WIDGETS_LIB"
 	],
 	"MOC_DEPEND_FILTERS" : 
@@ -381,6 +490,8 @@
 		"/Users/danielesemezie/Qt/6.6.2/macos/lib/QtMultimedia.framework",
 		"/Users/danielesemezie/Qt/6.6.2/macos/lib/QtNetwork.framework/Headers",
 		"/Users/danielesemezie/Qt/6.6.2/macos/lib/QtNetwork.framework",
+		"/Users/danielesemezie/Qt/6.6.2/macos/lib/QtSpatialAudio.framework/Headers",
+		"/Users/danielesemezie/Qt/6.6.2/macos/lib/QtSpatialAudio.framework",
 		"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include/c++/v1",
 		"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/14.0.3/include",
 		"/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk/usr/include",
@@ -416,7 +527,89 @@
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 6,
 	"SETTINGS_FILE" : "/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles/bitbuddy_autogen.dir/AutogenUsed.txt",
-	"SOURCES" : [],
+	"SOURCES" : 
+	[
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/LauncherWindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/MainWindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/component/BitBuddyActionButton.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/component/BitBuddyStatusWidget.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/main.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/BitBuddy.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/BitBuddyAttribute.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/BitBuddyAttributeName.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/BitBuddyEvents.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/Event.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/SingleAttributeEvent.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/model/audio.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/service/BitBuddySpriteHandler.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/service/EventDispatcherService.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/service/EventGeneratorService.cpp",
+			"MU",
+			null
+		],
+		[
+			"/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/src/service/GameService.cpp",
+			"MU",
+			null
+		]
+	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : [],
