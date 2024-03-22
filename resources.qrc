@@ -28,6 +28,7 @@
         <file>assets/munchin.mp3</file>
         <file>assets/snore.mp3</file>
         <file>assets/yay.mp3</file>
+        <file>assets/settings.png</file>
 
     </qresource>
 </RCC>

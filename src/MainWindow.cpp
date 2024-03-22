@@ -10,6 +10,7 @@
 #include "model/BitBuddy.h"
 #include "component/BitBuddyActionButton.h"
 #include "service/EventDispatcherService.h"
+#include "SettingsWindow.h"
 #include <iostream>
 
 constexpr int SCREEN_WIDTH = 1280;
@@ -43,6 +44,17 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
   // Setting button icon
   QIcon buttonIcon("");
+
+  // Add the settings button
+  QIcon settingsIcon(":/assets/settings.png");
+  settingsButton = new QPushButton();
+  settingsButton->setIcon(settingsIcon);
+  settingsButton->setIconSize(QSize(40, 40));
+  layout->addWidget(settingsButton, 0, 1, Qt::AlignTop | Qt::AlignRight);
+  connect(settingsButton, &QPushButton::clicked, this, &MainWindow::openSettings);
+
+
+
 
   auto *rowLayout1 = new QHBoxLayout;
   auto *rowLayout2 = new QHBoxLayout;
@@ -89,4 +101,12 @@ void MainWindow::loadDefaultSprite() {
       qDebug() << "Failed to create a pixmap from image.";
     }
   }
+}
+
+
+
+void MainWindow::openSettings() {
+  SettingsWindow settingsDialog(this);
+  settingsDialog.exec();
+
 }
