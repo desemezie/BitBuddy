@@ -29,12 +29,15 @@ int main(int argc, char *argv[]) {
 
 
   QApplication application(argc, argv);
+  QWidget window;
+  window.setWindowTitle("Simple Qt Application");
+  window.show();
 
-  QCoreApplication::setApplicationName("BitBuddy");
-  QCoreApplication::setApplicationVersion("1.0.0");
+  //QCoreApplication::setApplicationName("BitBuddy");
+  //QCoreApplication::setApplicationVersion("1.0.0");
 
-  LauncherWindow start;
-  start.show();
+  //LauncherWindow start;
+  //start.show();
   /*
   MainWindow mainWindow;
   mainWindow.showNormal();
@@ -45,10 +48,29 @@ int main(int argc, char *argv[]) {
   player->setLoops(QAmbientSound::Infinite);
   player->setSource(QUrl("qrc:/assets/bubbles.mp3"));
   //player;
-  player->play();*/
+  player->play();
 
   GameService::getInstance().startService();
 
   return QApplication::exec();
+  MainWindow mainWindow;
+  mainWindow.showNormal();
+
+  QAudioEngine* engine = new QAudioEngine();
+  QAmbientSound* player = new QAmbientSound(engine) ;
+  player->setLoops(QAmbientSound::Infinite);
+  player->setSource(QUrl("qrc:/assets/bubbles.mp3"));
+  //player;
+  player->play();*/
+  QAudioEngine* engine = new QAudioEngine();
+  QAmbientSound* player = new QAmbientSound(engine) ;
+  player->setSource(QUrl("qrc:/assets/bubbles.mp3"));
+  player->setLoops(QAmbientSound::Infinite);
+
+  //player;
+  player->play();
+
+
+  return application.exec();
 
 }
