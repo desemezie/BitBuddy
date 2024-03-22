@@ -11,6 +11,7 @@
 #include "component/BitBuddyActionButton.h"
 #include "service/EventDispatcherService.h"
 #include "SettingsWindow.h"
+#include "component/lightButton.h"
 #include <iostream>
 
 constexpr int SCREEN_WIDTH = 1280;
@@ -53,6 +54,12 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   layout->addWidget(settingsButton, 0, 1, Qt::AlignTop | Qt::AlignRight);
   connect(settingsButton, &QPushButton::clicked, this, &MainWindow::openSettings);
 
+  // Add the light switch button
+  lightSwitch = new lightButton();
+  layout->addWidget(lightSwitch, 1, 1, Qt::AlignTop | Qt::AlignCenter);
+  connect(lightSwitch, &lightButton::themeChange, this, &MainWindow::updateTheme);
+  connect(lightSwitch, &lightButton::textChange, statusWidget, &BitBuddyStatusWidget::updateDarkMode);
+
 
 
 
@@ -82,9 +89,17 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   connect(&EventDispatcherService::getInstance(), &EventDispatcherService::eventDispatched,
           spriteHandler, &BitBuddySpriteHandler::handleEvent);
 
+
+
+
 }
 
 MainWindow::~MainWindow() = default;
+
+void MainWindow::updateTheme(const QString& newStyle) {
+  this->setStyleSheet(newStyle);
+
+}
 
 void MainWindow::loadDefaultSprite() {
   QImage image(":/assets/happy_bitbuddy.png");

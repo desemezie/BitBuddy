@@ -10,6 +10,8 @@
 #include "model/BitBuddyAttributeName.h"
 #include "component/BitBuddyActionButton.h"
 #include "service/BitBuddySpriteHandler.h"
+#include "component/lightButton.h"
+
 
 /***
  * The main window of the application
@@ -38,11 +40,13 @@ class MainWindow : public QMainWindow {
 
  private slots:
   void openSettings();
+  void updateTheme(const QString& newStyle);
 
  private:
   QLabel *spriteLabel;
   BitBuddySpriteHandler *spriteHandler;
   QPushButton *settingsButton;
+  lightButton *lightSwitch;
 
 
   void loadDefaultSprite();

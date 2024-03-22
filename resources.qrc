@@ -29,6 +29,9 @@
         <file>assets/snore.mp3</file>
         <file>assets/yay.mp3</file>
         <file>assets/settings.png</file>
+        <file>assets/light.png</file>
+        <file>assets/night.png</file>
+        <file>assets/black.jpeg</file>
 
     </qresource>
 </RCC>

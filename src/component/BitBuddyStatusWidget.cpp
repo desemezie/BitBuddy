@@ -55,3 +55,14 @@ void BitBuddyStatusWidget::onAttributeUpdated(const BitBuddyAttribute &attribute
             << " with value: " << attribute.getValue() << std::endl;
   setAttributeLevel(attribute.getAttributeName(), attribute.getValue());
 }
+
+void BitBuddyStatusWidget::updateDarkMode(bool isDarkMode) {
+  if (isDarkMode) {
+    this->setStyleSheet("QLabel { color: white; }");
+  } else {
+    this->setStyleSheet("QLabel { color: black; }");
+  }
+
+
+
+}

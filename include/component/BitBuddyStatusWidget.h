@@ -36,6 +36,7 @@ class BitBuddyStatusWidget : public QWidget {
    * @param attribute The attribute that was updated
    */
   void onAttributeUpdated(const BitBuddyAttribute &attribute);
+  void updateDarkMode(bool isDarkMode);
 
  private:
   /**

@@ -56,6 +56,8 @@ add_executable(bitbuddy src/main.cpp
         include/LauncherWindow.h
         include/SettingsWindow.h
         src/SettingsWindow.cpp
+        include/component/lightButton.h
+        src/component/lightButton.cpp
 
 )
 
