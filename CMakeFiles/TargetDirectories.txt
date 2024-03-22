@@ -1,5 +1,0 @@
-/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles/bitbuddy.dir
-/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles/edit_cache.dir
-/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles/rebuild_cache.dir
-/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles/bitbuddy_autogen_timestamp_deps.dir
-/Users/danielesemezie/Computer science/3rd year/CS3307/CS3307/group17/CMakeFiles/bitbuddy_autogen.dir

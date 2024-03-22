@@ -1,4 +1,3 @@
-
 cmake_minimum_required(VERSION 3.26)
 project(bitbuddy VERSION 1.0.0 LANGUAGES CXX)
 
@@ -9,7 +8,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
 list(APPEND CMAKE_PREFIX_PATH "/Users/ryanhecht/Qt/6.6.1/macos")
-list(APPEND CMAKE_PREFIX_PATH "/Users/danielesemezie/Qt/6.6.2/macos")
+list(APPEND CMAKE_PREFIX_PATH "/daniel/path")
 list(APPEND CMAKE_PREFIX_PATH "/shaylan/path")
 list(APPEND CMAKE_PREFIX_PATH "/annabel/path")
 list(APPEND CMAKE_PREFIX_PATH "/razvan/path")
@@ -18,8 +17,6 @@ find_package(Qt6 COMPONENTS
         Core
         Gui
         Widgets
-        Multimedia
-        spatialaudio
         REQUIRED)
 
 qt_standard_project_setup()
@@ -55,11 +52,8 @@ add_executable(bitbuddy src/main.cpp
         include/component/BitBuddyActionButton.h
         src/service/BitBuddySpriteHandler.cpp
         include/service/BitBuddySpriteHandler.h
-        src/model/audio.cpp
-        include/model/audio.h
         src/LauncherWindow.cpp
         include/LauncherWindow.h
-
 
 )
 
@@ -68,7 +62,4 @@ target_link_libraries(bitbuddy
         Qt::Core
         Qt::Gui
         Qt::Widgets
-        Qt::Multimedia
-        Qt::SpatialAudio
 )
-

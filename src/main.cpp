@@ -32,8 +32,15 @@ int main(int argc, char *argv[]) {
   QWidget window;
   window.setWindowTitle("Simple Qt Application");
   window.show();
+  QAudioEngine* engine = new QAudioEngine();
+  QAmbientSound* player = new QAmbientSound(engine) ;
+  player->setSource(QUrl("qrc:/assets/bubbles.mp3"));
+  player->setLoops(QAmbientSound::Infinite);
+  player->play()
+  return application.exec();
 
-  //QCoreApplication::setApplicationName("BitBuddy");
+
+    //QCoreApplication::setApplicationName("BitBuddy");
   //QCoreApplication::setApplicationVersion("1.0.0");
 
   //LauncherWindow start;
@@ -66,11 +73,8 @@ int main(int argc, char *argv[]) {
   QAmbientSound* player = new QAmbientSound(engine) ;
   player->setSource(QUrl("qrc:/assets/bubbles.mp3"));
   player->setLoops(QAmbientSound::Infinite);
-
   //player;
-  player->play();
-
-
+  player->play()
   return application.exec();
 
 }
