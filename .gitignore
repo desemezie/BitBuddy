@@ -5,6 +5,8 @@ cmake-build-release/
 
 .vscode/
 
+build/
+
 # Compiled Object files
 *.slo
 *.lo
