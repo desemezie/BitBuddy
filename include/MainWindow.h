@@ -11,6 +11,7 @@
 #include "component/BitBuddyActionButton.h"
 #include "service/BitBuddySpriteHandler.h"
 #include "component/lightButton.h"
+#include "component/StatsButton.h"
 
 
 /***
@@ -47,6 +48,7 @@ class MainWindow : public QMainWindow {
   BitBuddySpriteHandler *spriteHandler;
   QPushButton *settingsButton;
   lightButton *lightSwitch;
+  StatsButton *stats;
 
 
   void loadDefaultSprite();

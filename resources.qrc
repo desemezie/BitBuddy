@@ -32,6 +32,7 @@
         <file>assets/light.png</file>
         <file>assets/night.png</file>
         <file>assets/black.jpeg</file>
+        <file>assets/info.png</file>
 
     </qresource>
 </RCC>

@@ -12,6 +12,7 @@
 #include "service/EventDispatcherService.h"
 #include "SettingsWindow.h"
 #include "component/lightButton.h"
+#include "component/StatsButton.h"
 #include <iostream>
 
 constexpr int SCREEN_WIDTH = 1280;
@@ -59,6 +60,11 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   layout->addWidget(lightSwitch, 1, 1, Qt::AlignTop | Qt::AlignCenter);
   connect(lightSwitch, &lightButton::themeChange, this, &MainWindow::updateTheme);
   connect(lightSwitch, &lightButton::textChange, statusWidget, &BitBuddyStatusWidget::updateDarkMode);
+
+  // Add the stats button
+  stats = new StatsButton();
+  layout->addWidget(stats, 0, 1, Qt::AlignCenter | Qt::AlignRight);
+
 
 
 

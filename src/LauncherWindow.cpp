@@ -73,7 +73,7 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
   );
 
   // add the place to insert a name for your bitbuddy
-  auto *nameLineEdit = new QLineEdit(this);
+  nameLineEdit = new QLineEdit(this);
   nameLineEdit->setPlaceholderText("Enter your name");
   nameLineEdit->setFixedSize(200, 30); // Set the width and height according to your preference
   nameLineEdit->setStyleSheet("border: 1px solid black;");
@@ -111,6 +111,7 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
 
   // connect the playButton to an action
   connect(playButton, &QPushButton::clicked, this, [this]() {
+    QString name = this->nameLineEdit->text().trimmed(); // Get the name from the QLineEdit
     this->hide();
     auto *mainWindow = new MainWindow();
     mainWindow->setAttribute(Qt::WA_DeleteOnClose);

@@ -7,6 +7,7 @@
 
 #include <QWidget>
 #include <QPushButton>
+#include <QLineEdit>
 
 class LauncherWindow : public QWidget{
   Q_OBJECT
@@ -15,6 +16,12 @@ class LauncherWindow : public QWidget{
   explicit LauncherWindow(QWidget *parent = nullptr);
 
   void addImages();
+
+ private:
+  QLineEdit *nameLineEdit;
+
 };
+
+
 
 #endif //BITBUDDY_GROUP17_SRC_LAUNCHERWINDOW_H_

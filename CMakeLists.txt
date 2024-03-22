@@ -58,6 +58,10 @@ add_executable(bitbuddy src/main.cpp
         src/SettingsWindow.cpp
         include/component/lightButton.h
         src/component/lightButton.cpp
+        include/component/StatsButton.h
+        src/component/StatsButton.cpp
+        include/StatsWindow.h
+        src/StatsWindow.cpp
 
 )
 
