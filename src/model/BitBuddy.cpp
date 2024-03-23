@@ -38,6 +38,37 @@ BitBuddy::~BitBuddy() {
   attributes.clear();
 }
 
+QJsonObject BitBuddy::toJson() const {
+  QJsonObject obj;
+  obj["name"] = QString::fromStdString(name);
+  obj["creationTime"] = QString::number(creationTime.time_since_epoch().count());
+
+  QJsonObject attributesObj;
+  for (const auto &attribute : attributes) {
+    attributesObj[QString::number(attribute.first)] =
+        attribute.second.toJson(); // You'll need to implement toJson for BitBuddyAttribute as well
+  }
+  obj["attributes"] = attributesObj;
+
+  return obj;
+}
+
+BitBuddy BitBuddy::fromJson(const QJsonObject &obj) {
+  std::string name = obj["name"].toString().toStdString();
+  auto creationTime =
+      std::chrono::system_clock::time_point(std::chrono::system_clock::duration(obj["creationTime"].toString()
+                                                                                    .toLongLong()));
+
+  std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> attributes;
+  QJsonObject attributesObj = obj["attributes"].toObject();
+  for (auto it = attributesObj.begin(); it != attributesObj.end(); ++it) {
+    attributes[static_cast<BitBuddyAttributeName::UniqueName>(it.key().toInt())] =
+        BitBuddyAttribute::fromJson(it.value().toObject()); // Implement fromJson for BitBuddyAttribute
+  }
+
+  return BitBuddy(name, attributes, creationTime);
+}
+
 int BitBuddy::getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const {
 
   auto it = attributes.find(attributeName);
