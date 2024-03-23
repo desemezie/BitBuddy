@@ -40,8 +40,6 @@ class MusicService : public QObject {
    */
   void stopMusic();
 
- public slots:
-
   /***
    * Sets the volume of the music
    *
