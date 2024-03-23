@@ -37,15 +37,6 @@ int main(int argc, char *argv[]) {
   LauncherWindow start;
   start.show();
 
-    /*
-    QApplication app(argc, argv);
-    QAudioEngine* engine = new QAudioEngine();
-    QAmbientSound* sound = new QAmbientSound(engine);
-    sound->setSource(QUrl("qrc:/sounds/bubbles.mp3"));
-    sound->setLoops(QAmbientSound::Infinite);
-    sound->play();
-    return app.exec();*/
-
 
   return QApplication::exec();
 
