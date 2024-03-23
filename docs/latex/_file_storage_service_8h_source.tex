@@ -1,0 +1,39 @@
+\doxysection{File\+Storage\+Service.\+h}
+\hypertarget{_file_storage_service_8h_source}{}\label{_file_storage_service_8h_source}\index{game/include/service/FileStorageService.h@{game/include/service/FileStorageService.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ Ryan\ Hecht\ \ on\ 2024-\/03-\/23.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ BITBUDDY\_SRC\_SERVICE\_FILESTORAGESERVICE\_H\_}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ BITBUDDY\_SRC\_SERVICE\_FILESTORAGESERVICE\_H\_}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}model/BitBuddy.h"{}}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{const}\ QString\ SAVE\_DIRECTORY\_NAME\ =\ \textcolor{stringliteral}{"{}bitbuddySaveFiles"{}};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{const}\ QString\ BITBUDDY\_FILE\_NAME\ =\ \textcolor{stringliteral}{"{}bitBuddy.json"{}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_file_storage_service}{FileStorageService}}\ \{}
+\DoxyCodeLine{00022\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_file_storage_service}{FileStorageService}}\ \&\mbox{\hyperlink{class_file_storage_service_ad3607b6d6fe1d18a736fe491e0d6baf6}{getInstance}}();}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \textcolor{comment}{//\ Deleted\ copy/move\ constructors\ and\ assignment\ operators.}}
+\DoxyCodeLine{00031\ \ \ \mbox{\hyperlink{class_file_storage_service}{FileStorageService}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_file_storage_service}{FileStorageService}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00032\ \ \ \mbox{\hyperlink{class_file_storage_service}{FileStorageService}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_file_storage_service}{FileStorageService}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00033\ \ \ \mbox{\hyperlink{class_file_storage_service}{FileStorageService}}(\mbox{\hyperlink{class_file_storage_service}{FileStorageService}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00034\ \ \ \mbox{\hyperlink{class_file_storage_service}{FileStorageService}}\ \&operator=(\mbox{\hyperlink{class_file_storage_service}{FileStorageService}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_file_storage_service_a105834676c2e2b3175509ab5aeb113c0}{saveBitBuddy}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bit_buddy}{BitBuddy}}\ \&bitBuddy);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00051\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_bit_buddy}{BitBuddy}}\ *\mbox{\hyperlink{class_file_storage_service_ac92bc9610af677b3b1d51c1f7943cc42}{loadBitBuddy}}(std::string\ fallBackName);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00054\ \ \ \mbox{\hyperlink{class_file_storage_service}{FileStorageService}}();}
+\DoxyCodeLine{00055\ \ \ \mbox{\hyperlink{class_file_storage_service}{\string~FileStorageService}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00056\ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BITBUDDY\_SRC\_SERVICE\_FILESTORAGESERVICE\_H\_}}
+
+\end{DoxyCode}

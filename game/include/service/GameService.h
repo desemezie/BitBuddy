@@ -7,13 +7,13 @@
 
 #include "service/EventGeneratorService.h"
 
-/***
+/**
  * Service that manages all core game logic and starts and stops other services
  */
 class GameService {
 
  public:
-  /***
+  /**
    * Singleton instance getter
    * @return the instance
    */
@@ -27,12 +27,12 @@ class GameService {
 
   GameService &operator=(GameService &&) = delete;
 
-  /***
+  /**
    * Starts the game service and all other services
    */
   static void startService();
 
-  /***
+  /**
    * Stops the game service and all other services
    */
   static void stopService();

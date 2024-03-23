@@ -1,0 +1,102 @@
+\doxysection{Event\+Generator\+Service Class Reference}
+\hypertarget{class_event_generator_service}{}\label{class_event_generator_service}\index{EventGeneratorService@{EventGeneratorService}}
+
+
+{\ttfamily \#include $<$Event\+Generator\+Service.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_event_generator_service_a79f2ab067dfc812fbd919a38fc573128}\label{class_event_generator_service_a79f2ab067dfc812fbd919a38fc573128} 
+{\bfseries Event\+Generator\+Service} (const \mbox{\hyperlink{class_event_generator_service}{Event\+Generator\+Service}} \&)=delete
+\item 
+\Hypertarget{class_event_generator_service_a39eed10f433e00cfb6e156c3421f7748}\label{class_event_generator_service_a39eed10f433e00cfb6e156c3421f7748} 
+\mbox{\hyperlink{class_event_generator_service}{Event\+Generator\+Service}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_event_generator_service}{Event\+Generator\+Service}} \&)=delete
+\item 
+\Hypertarget{class_event_generator_service_aca4da06136a2ffd156bef4a02bee1d01}\label{class_event_generator_service_aca4da06136a2ffd156bef4a02bee1d01} 
+{\bfseries Event\+Generator\+Service} (\mbox{\hyperlink{class_event_generator_service}{Event\+Generator\+Service}} \&\&)=delete
+\item 
+\Hypertarget{class_event_generator_service_adc5fe3f15657017018e370c85e0e74b4}\label{class_event_generator_service_adc5fe3f15657017018e370c85e0e74b4} 
+\mbox{\hyperlink{class_event_generator_service}{Event\+Generator\+Service}} \& {\bfseries operator=} (\mbox{\hyperlink{class_event_generator_service}{Event\+Generator\+Service}} \&\&)=delete
+\item 
+void \mbox{\hyperlink{class_event_generator_service_adec5843f9f5d10afd7bc4d898a9e3290}{start\+Service}} ()
+\item 
+void \mbox{\hyperlink{class_event_generator_service_a262888acaa4fab3525f294309b30d04b}{stop\+Service}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_event_generator_service}{Event\+Generator\+Service}} \& \mbox{\hyperlink{class_event_generator_service_ad94dd25656a05345ccd988a5f5d979af}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_event_generator_service_a6815fef4f2b20772666c206b557420b1}{resume\+Service}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_event_generator_service_a2e3727078583aec0197aa6308e7e6e8d}{generate\+Event}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_event_generator_service_a849687c937012f22be04d3e56df56158}\label{class_event_generator_service_a849687c937012f22be04d3e56df56158} 
+std\+::thread {\bfseries event\+Generator\+Service\+Thread}
+\item 
+\Hypertarget{class_event_generator_service_a51aacf2a25356fb614ab4e3ed51d5c8e}\label{class_event_generator_service_a51aacf2a25356fb614ab4e3ed51d5c8e} 
+std\+::atomic$<$ bool $>$ {\bfseries running} \{false\}
+\item 
+\Hypertarget{class_event_generator_service_aea42ff8955bd0caea19c9e5acc597a97}\label{class_event_generator_service_aea42ff8955bd0caea19c9e5acc597a97} 
+std\+::atomic$<$ bool $>$ {\bfseries paused} \{false\}
+\item 
+\Hypertarget{class_event_generator_service_ae90c6597706c8ad12c30c532fdd916ca}\label{class_event_generator_service_ae90c6597706c8ad12c30c532fdd916ca} 
+std\+::mutex {\bfseries pause\+Mutex}
+\item 
+\Hypertarget{class_event_generator_service_a552c9c92650c8a188678d8e82591ba21}\label{class_event_generator_service_a552c9c92650c8a188678d8e82591ba21} 
+std\+::condition\+\_\+variable {\bfseries pause\+Condition}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service that generates events on its own thread 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_event_generator_service_a2e3727078583aec0197aa6308e7e6e8d}\label{class_event_generator_service_a2e3727078583aec0197aa6308e7e6e8d} 
+\index{EventGeneratorService@{EventGeneratorService}!generateEvent@{generateEvent}}
+\index{generateEvent@{generateEvent}!EventGeneratorService@{EventGeneratorService}}
+\doxysubsubsection{\texorpdfstring{generateEvent()}{generateEvent()}}
+{\footnotesize\ttfamily static void Event\+Generator\+Service\+::generate\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+Generates a random event from the PREDEFINED\+\_\+\+EVENTS list and passes it to the \doxylink{class_event_dispatcher_service}{Event\+Dispatcher\+Service} to be dispatched \Hypertarget{class_event_generator_service_ad94dd25656a05345ccd988a5f5d979af}\label{class_event_generator_service_ad94dd25656a05345ccd988a5f5d979af} 
+\index{EventGeneratorService@{EventGeneratorService}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!EventGeneratorService@{EventGeneratorService}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_event_generator_service}{Event\+Generator\+Service}} \& Event\+Generator\+Service\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Singleton instance getter \begin{DoxyReturn}{Returns}
+the instance 
+\end{DoxyReturn}
+\Hypertarget{class_event_generator_service_a6815fef4f2b20772666c206b557420b1}\label{class_event_generator_service_a6815fef4f2b20772666c206b557420b1} 
+\index{EventGeneratorService@{EventGeneratorService}!resumeService@{resumeService}}
+\index{resumeService@{resumeService}!EventGeneratorService@{EventGeneratorService}}
+\doxysubsubsection{\texorpdfstring{resumeService()}{resumeService()}}
+{\footnotesize\ttfamily void Event\+Generator\+Service\+::resume\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Resumes the event generation service if it\textquotesingle{}s already been started and is currently paused \Hypertarget{class_event_generator_service_adec5843f9f5d10afd7bc4d898a9e3290}\label{class_event_generator_service_adec5843f9f5d10afd7bc4d898a9e3290} 
+\index{EventGeneratorService@{EventGeneratorService}!startService@{startService}}
+\index{startService@{startService}!EventGeneratorService@{EventGeneratorService}}
+\doxysubsubsection{\texorpdfstring{startService()}{startService()}}
+{\footnotesize\ttfamily void Event\+Generator\+Service\+::start\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Starts the event generation service which generates events on its own thread at normally distributed random time intervals \Hypertarget{class_event_generator_service_a262888acaa4fab3525f294309b30d04b}\label{class_event_generator_service_a262888acaa4fab3525f294309b30d04b} 
+\index{EventGeneratorService@{EventGeneratorService}!stopService@{stopService}}
+\index{stopService@{stopService}!EventGeneratorService@{EventGeneratorService}}
+\doxysubsubsection{\texorpdfstring{stopService()}{stopService()}}
+{\footnotesize\ttfamily void Event\+Generator\+Service\+::stop\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Stops (pauses) the event generation service 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+game/include/service/Event\+Generator\+Service.\+h\end{DoxyCompactItemize}

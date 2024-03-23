@@ -1,0 +1,239 @@
+\doxysection{Bit\+Buddy Class Reference}
+\hypertarget{class_bit_buddy}{}\label{class_bit_buddy}\index{BitBuddy@{BitBuddy}}
+
+
+{\ttfamily \#include $<$Bit\+Buddy.\+h$>$}
+
+Inheritance diagram for Bit\+Buddy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bit_buddy}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_bit_buddy_a16d803f967d6313d49177da34a9e9254}{on\+Event}} (const \mbox{\hyperlink{class_event}{Event}} \&event)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_bit_buddy_a9314b015b8cb9cc9296144b5c1b93df4}{attribute\+Updated}} (const \mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} \&attribute)
+\item 
+void \mbox{\hyperlink{class_bit_buddy_a2853d9ff7f0f659b79ba99b9837aa226}{died}} (const \mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} \&attribute)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bit_buddy_a255ca7c8e2d1851aab1dabdb0e3c7be8}{Bit\+Buddy}} (std\+::string name)
+\item 
+\mbox{\hyperlink{class_bit_buddy_a27ae00c7659a1adbdf1ee09cfcab0fce}{Bit\+Buddy}} (std\+::string name, const std\+::map$<$ Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name, \mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} $>$ \&attributes, std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point creation\+Time, bool dead, QUuid id)
+\item 
+\mbox{\hyperlink{class_bit_buddy_a757cab92ab30d3818680e2a008bf13d9}{\texorpdfstring{$\sim$}{\string~}\+Bit\+Buddy}} () override
+\item 
+\Hypertarget{class_bit_buddy_ad8a4bcffa7586bf75216b0175f4bb9e1}\label{class_bit_buddy_ad8a4bcffa7586bf75216b0175f4bb9e1} 
+{\bfseries Bit\+Buddy} (const \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \&)=delete
+\item 
+\Hypertarget{class_bit_buddy_abe80f8394e5f7fcfaf4d961e51c01f90}\label{class_bit_buddy_abe80f8394e5f7fcfaf4d961e51c01f90} 
+\mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \&)=delete
+\item 
+\Hypertarget{class_bit_buddy_a825bef085866e28dfbf83703e23acf6e}\label{class_bit_buddy_a825bef085866e28dfbf83703e23acf6e} 
+{\bfseries Bit\+Buddy} (\mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \&\&)=delete
+\item 
+\Hypertarget{class_bit_buddy_ad47079fa99762980874c1f386fe48000}\label{class_bit_buddy_ad47079fa99762980874c1f386fe48000} 
+\mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \& {\bfseries operator=} (\mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \&\&)=delete
+\item 
+\Hypertarget{class_bit_buddy_a32eeba045102eb8a821bf7c9d914bc01}\label{class_bit_buddy_a32eeba045102eb8a821bf7c9d914bc01} 
+QJson\+Object {\bfseries to\+Json} () const
+\item 
+int \mbox{\hyperlink{class_bit_buddy_abe04ae96d1ecb59377bda913ac437351}{get\+Attribute\+Value}} (Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name attribute\+Name) const
+\item 
+void \mbox{\hyperlink{class_bit_buddy_a44f91ebd4db8506aa8294c8517575f95}{increment\+Attribute}} (Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name attribute, int value)
+\item 
+long \mbox{\hyperlink{class_bit_buddy_a3a8c3b9668a502627ece3811aa0cddb8}{get\+Age\+In\+Game\+Years}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bit_buddy_a832af270f42384b449ea3b96e1a969cf}\label{class_bit_buddy_a832af270f42384b449ea3b96e1a969cf} 
+static \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*} {\bfseries from\+Json} (const QJson\+Object \&json)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bit_buddy_a21f775595b68d34ca2469481eaaf0a52}\label{class_bit_buddy_a21f775595b68d34ca2469481eaaf0a52} 
+std\+::string {\bfseries current\+Sprite}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_bit_buddy_a1a728f0ca9d11146ed4db6be2fe3c04a}{connect\+Signals}} () const
+\item 
+void \mbox{\hyperlink{class_bit_buddy_a65dec472b5ed4f6b754644267fc9967f}{die}} (const \mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} \&attribute)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bit_buddy_abd80b3ba21f24c3760ecaf0a62e34869}\label{class_bit_buddy_abd80b3ba21f24c3760ecaf0a62e34869} 
+QUuid {\bfseries id}
+\item 
+\Hypertarget{class_bit_buddy_a772eaffa55811d274725b5dc9ce1a22e}\label{class_bit_buddy_a772eaffa55811d274725b5dc9ce1a22e} 
+std\+::map$<$ Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name, \mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} $>$ {\bfseries attributes}
+\item 
+\Hypertarget{class_bit_buddy_affeb609f4fa9f0057d76fe07409dc337}\label{class_bit_buddy_affeb609f4fa9f0057d76fe07409dc337} 
+std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point {\bfseries creation\+Time}
+\item 
+\Hypertarget{class_bit_buddy_a633e691813f830dc08f8f4619f22ef05}\label{class_bit_buddy_a633e691813f830dc08f8f4619f22ef05} 
+std\+::string {\bfseries name}
+\item 
+\Hypertarget{class_bit_buddy_a724ed69827e8187965b94e6278d62504}\label{class_bit_buddy_a724ed69827e8187965b94e6278d62504} 
+bool {\bfseries dead}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Bit Buddy! 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_bit_buddy_a255ca7c8e2d1851aab1dabdb0e3c7be8}\label{class_bit_buddy_a255ca7c8e2d1851aab1dabdb0e3c7be8} 
+\index{BitBuddy@{BitBuddy}!BitBuddy@{BitBuddy}}
+\index{BitBuddy@{BitBuddy}!BitBuddy@{BitBuddy}}
+\doxysubsubsection{\texorpdfstring{BitBuddy()}{BitBuddy()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Bit\+Buddy\+::\+Bit\+Buddy (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor for the \doxylink{class_bit_buddy}{Bit\+Buddy}. Initializes the attribute maps.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the \doxylink{class_bit_buddy}{Bit\+Buddy} \\
+\hline
+{\em parent} & The parent widget of the \doxylink{class_bit_buddy}{Bit\+Buddy}, typically the \doxylink{class_main_window}{Main\+Window}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bit_buddy_a27ae00c7659a1adbdf1ee09cfcab0fce}\label{class_bit_buddy_a27ae00c7659a1adbdf1ee09cfcab0fce} 
+\index{BitBuddy@{BitBuddy}!BitBuddy@{BitBuddy}}
+\index{BitBuddy@{BitBuddy}!BitBuddy@{BitBuddy}}
+\doxysubsubsection{\texorpdfstring{BitBuddy()}{BitBuddy()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Bit\+Buddy\+::\+Bit\+Buddy (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{const std\+::map$<$ Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name, \mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} $>$ \&}]{attributes,  }\item[{std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point}]{creation\+Time,  }\item[{bool}]{dead,  }\item[{QUuid}]{id }\end{DoxyParamCaption})}
+
+Constructor for the \doxylink{class_bit_buddy}{Bit\+Buddy} that takes all of \doxylink{class_bit_buddy}{Bit\+Buddy}\textquotesingle{}s attributes as parameters.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the \doxylink{class_bit_buddy}{Bit\+Buddy} \\
+\hline
+{\em parent} & The parent widget of the \doxylink{class_bit_buddy}{Bit\+Buddy}, typically the \doxylink{class_main_window}{Main\+Window}. \\
+\hline
+{\em attributes} & A map of the \doxylink{class_bit_buddy}{Bit\+Buddy}\textquotesingle{}s attributes where the key is the attribute\textquotesingle{}s unique name and the value is the attribute \\
+\hline
+{\em creation\+Time} & The time the \doxylink{class_bit_buddy}{Bit\+Buddy} was created \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bit_buddy_a757cab92ab30d3818680e2a008bf13d9}\label{class_bit_buddy_a757cab92ab30d3818680e2a008bf13d9} 
+\index{BitBuddy@{BitBuddy}!````~BitBuddy@{\texorpdfstring{$\sim$}{\string~}BitBuddy}}
+\index{````~BitBuddy@{\texorpdfstring{$\sim$}{\string~}BitBuddy}!BitBuddy@{BitBuddy}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}BitBuddy()}{\string~BitBuddy()}}
+{\footnotesize\ttfamily Bit\+Buddy\+::\texorpdfstring{$\sim$}{\string~}\+Bit\+Buddy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Destructor for the \doxylink{class_bit_buddy}{Bit\+Buddy} 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_bit_buddy_a9314b015b8cb9cc9296144b5c1b93df4}\label{class_bit_buddy_a9314b015b8cb9cc9296144b5c1b93df4} 
+\index{BitBuddy@{BitBuddy}!attributeUpdated@{attributeUpdated}}
+\index{attributeUpdated@{attributeUpdated}!BitBuddy@{BitBuddy}}
+\doxysubsubsection{\texorpdfstring{attributeUpdated}{attributeUpdated}}
+{\footnotesize\ttfamily void Bit\+Buddy\+::attribute\+Updated (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} \&}]{attribute }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Signal emitted when an attribute is updated
+
+
+\begin{DoxyParams}{Parameters}
+{\em attribute} & The attribute that was updated \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bit_buddy_a1a728f0ca9d11146ed4db6be2fe3c04a}\label{class_bit_buddy_a1a728f0ca9d11146ed4db6be2fe3c04a} 
+\index{BitBuddy@{BitBuddy}!connectSignals@{connectSignals}}
+\index{connectSignals@{connectSignals}!BitBuddy@{BitBuddy}}
+\doxysubsubsection{\texorpdfstring{connectSignals()}{connectSignals()}}
+{\footnotesize\ttfamily void Bit\+Buddy\+::connect\+Signals (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+Connects the signals to the slots \Hypertarget{class_bit_buddy_a65dec472b5ed4f6b754644267fc9967f}\label{class_bit_buddy_a65dec472b5ed4f6b754644267fc9967f} 
+\index{BitBuddy@{BitBuddy}!die@{die}}
+\index{die@{die}!BitBuddy@{BitBuddy}}
+\doxysubsubsection{\texorpdfstring{die()}{die()}}
+{\footnotesize\ttfamily void Bit\+Buddy\+::die (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} \&}]{attribute }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Kills the \doxylink{class_bit_buddy}{Bit\+Buddy}
+
+
+\begin{DoxyParams}{Parameters}
+{\em attribute} & The attribute that caused the \doxylink{class_bit_buddy}{Bit\+Buddy} to die \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bit_buddy_a2853d9ff7f0f659b79ba99b9837aa226}\label{class_bit_buddy_a2853d9ff7f0f659b79ba99b9837aa226} 
+\index{BitBuddy@{BitBuddy}!died@{died}}
+\index{died@{died}!BitBuddy@{BitBuddy}}
+\doxysubsubsection{\texorpdfstring{died}{died}}
+{\footnotesize\ttfamily void Bit\+Buddy\+::died (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} \&}]{attribute }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Signal emitted when the \doxylink{class_bit_buddy}{Bit\+Buddy} dies\hypertarget{class_bit_buddy_attribute}{}\doxyparagraph{\texorpdfstring{The attribute that caused the Bit\+Buddy to die}{The attribute that caused the Bit\+Buddy to die}}\label{class_bit_buddy_attribute}
+\Hypertarget{class_bit_buddy_a3a8c3b9668a502627ece3811aa0cddb8}\label{class_bit_buddy_a3a8c3b9668a502627ece3811aa0cddb8} 
+\index{BitBuddy@{BitBuddy}!getAgeInGameYears@{getAgeInGameYears}}
+\index{getAgeInGameYears@{getAgeInGameYears}!BitBuddy@{BitBuddy}}
+\doxysubsubsection{\texorpdfstring{getAgeInGameYears()}{getAgeInGameYears()}}
+{\footnotesize\ttfamily long Bit\+Buddy\+::get\+Age\+In\+Game\+Years (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Gets the age of the \doxylink{class_bit_buddy}{Bit\+Buddy} represented in \textquotesingle{}in-\/game-\/years\textquotesingle{}
+
+\begin{DoxyReturn}{Returns}
+The age of the \doxylink{class_bit_buddy}{Bit\+Buddy} in \textquotesingle{}in-\/game-\/years\textquotesingle{} 
+\end{DoxyReturn}
+\Hypertarget{class_bit_buddy_abe04ae96d1ecb59377bda913ac437351}\label{class_bit_buddy_abe04ae96d1ecb59377bda913ac437351} 
+\index{BitBuddy@{BitBuddy}!getAttributeValue@{getAttributeValue}}
+\index{getAttributeValue@{getAttributeValue}!BitBuddy@{BitBuddy}}
+\doxysubsubsection{\texorpdfstring{getAttributeValue()}{getAttributeValue()}}
+{\footnotesize\ttfamily int Bit\+Buddy\+::get\+Attribute\+Value (\begin{DoxyParamCaption}\item[{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}]{attribute\+Name }\end{DoxyParamCaption}) const}
+
+Gets the attribute value for the given attribute name
+
+
+\begin{DoxyParams}{Parameters}
+{\em attribute\+Name} & The name of the attribute to get the value for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value of the attribute 
+\end{DoxyReturn}
+\Hypertarget{class_bit_buddy_a44f91ebd4db8506aa8294c8517575f95}\label{class_bit_buddy_a44f91ebd4db8506aa8294c8517575f95} 
+\index{BitBuddy@{BitBuddy}!incrementAttribute@{incrementAttribute}}
+\index{incrementAttribute@{incrementAttribute}!BitBuddy@{BitBuddy}}
+\doxysubsubsection{\texorpdfstring{incrementAttribute()}{incrementAttribute()}}
+{\footnotesize\ttfamily void Bit\+Buddy\+::increment\+Attribute (\begin{DoxyParamCaption}\item[{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}]{attribute,  }\item[{int}]{value }\end{DoxyParamCaption})}
+
+Increments the value of the attribute with the given value
+
+
+\begin{DoxyParams}{Parameters}
+{\em attribute} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bit_buddy_a16d803f967d6313d49177da34a9e9254}\label{class_bit_buddy_a16d803f967d6313d49177da34a9e9254} 
+\index{BitBuddy@{BitBuddy}!onEvent@{onEvent}}
+\index{onEvent@{onEvent}!BitBuddy@{BitBuddy}}
+\doxysubsubsection{\texorpdfstring{onEvent}{onEvent}}
+{\footnotesize\ttfamily void Bit\+Buddy\+::on\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_event}{Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Slot that listens for Events from the event dispatch service and updates the \doxylink{class_bit_buddy}{Bit\+Buddy}\textquotesingle{}s attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event to process \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+game/include/model/Bit\+Buddy.\+h\end{DoxyCompactItemize}

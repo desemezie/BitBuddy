@@ -8,13 +8,13 @@
 #include "model/Event.h"
 #include "BitBuddyAttributeName.h"
 
-/***
+/**
  * Class that represents a single attribute event.
  */
 class SingleAttributeEvent : public Event {
 
  public:
-  /***
+  /**
    * Constructor for a single attribute event.
    *
    * @param increment The increment of the event, can be positive or negative.
@@ -37,14 +37,14 @@ class SingleAttributeEvent : public Event {
 
   SingleAttributeEvent &operator=(SingleAttributeEvent &&) = delete;
 
-  /***
+  /**
    * Returns the increment of the event.
    *
    * @return The increment as an int.
    */
   [[nodiscard]] int getIncrement() const;
 
-  /***
+  /**
    * Returns the attribute of the event.
    *
    * @return The attribute as a BitBuddyAttributeName::UniqueName.

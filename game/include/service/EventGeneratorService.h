@@ -10,12 +10,12 @@
 #include <thread>
 #include <atomic>
 
-/***
+/**
  * Service that generates events on its own thread
  */
 class EventGeneratorService {
  public:
-  /***
+  /**
    * Singleton instance getter
    * @return the instance
    */
@@ -29,13 +29,13 @@ class EventGeneratorService {
 
   EventGeneratorService &operator=(EventGeneratorService &&) = delete;
 
-  /***
+  /**
    * Starts the event generation service which generates events on its own thread at normally distributed random time
    * intervals
    */
   void startService();
 
-  /***
+  /**
    * Stops (pauses) the event generation service
    */
   void stopService();
@@ -45,12 +45,12 @@ class EventGeneratorService {
 
   ~EventGeneratorService();
 
-  /***
+  /**
    * Resumes the event generation service if it's already been started and is currently paused
    */
   void resumeService();
 
-  /***
+  /**
    * Generates a random event from the PREDEFINED_EVENTS list and passes it to the EventDispatcherService to be dispatched
    */
   static void generateEvent();

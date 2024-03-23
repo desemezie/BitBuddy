@@ -1,0 +1,51 @@
+\doxysection{Event\+Generator\+Service.\+h}
+\hypertarget{_event_generator_service_8h_source}{}\label{_event_generator_service_8h_source}\index{game/include/service/EventGeneratorService.h@{game/include/service/EventGeneratorService.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ Ryan\ Hecht\ \ on\ 2024-\/03-\/04.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ BITBUDDY\_EVENTGENERATORSERVICE\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ BITBUDDY\_EVENTGENERATORSERVICE\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}service/EventDispatcherService.h"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <atomic>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \{}
+\DoxyCodeLine{00017\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&\mbox{\hyperlink{class_event_generator_service_ad94dd25656a05345ccd988a5f5d979af}{getInstance}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}(\mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&operator=(\mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_generator_service_adec5843f9f5d10afd7bc4d898a9e3290}{startService}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_generator_service_a262888acaa4fab3525f294309b30d04b}{stopService}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00044\ \ \ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \mbox{\hyperlink{class_event_generator_service}{\string~EventGeneratorService}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_generator_service_a6815fef4f2b20772666c206b557420b1}{resumeService}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_generator_service_a2e3727078583aec0197aa6308e7e6e8d}{generateEvent}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ std::thread\ eventGeneratorServiceThread;}
+\DoxyCodeLine{00059\ \ \ std::atomic<bool>\ running\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{00060\ \ \ std::atomic<bool>\ paused\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{00061\ \ \ std::mutex\ pauseMutex;}
+\DoxyCodeLine{00062\ \ \ std::condition\_variable\ pauseCondition;}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BITBUDDY\_EVENTGENERATORSERVICE\_H}}
+
+\end{DoxyCode}

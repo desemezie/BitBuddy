@@ -1,0 +1,71 @@
+\doxysection{Bit\+Buddy.\+h}
+\hypertarget{_bit_buddy_8h_source}{}\label{_bit_buddy_8h_source}\index{game/include/model/BitBuddy.h@{game/include/model/BitBuddy.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ Ryan\ Hecht\ \ on\ 2024-\/03-\/04.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ BITBUDDY\_SRC\_COMPONENT\_BITBUDDY\_H\_}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ BITBUDDY\_SRC\_COMPONENT\_BITBUDDY\_H\_}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}model/BitBuddyAttribute.h"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}model/Event.h"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QUuid>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ IN\_GAME\_YEAR\_LENGTH\_IN\_MINUTES\ =\ 1;\ \textcolor{comment}{//\ 1\ minute\ represents\ 1\ in-\/game\ year}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bit_buddy}{BitBuddy}}\ :\ \textcolor{keyword}{public}\ QObject\ \{}
+\DoxyCodeLine{00020\ \ Q\_OBJECT}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_bit_buddy_a255ca7c8e2d1851aab1dabdb0e3c7be8}{BitBuddy}}(std::string\ name);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00039\ \ \ \mbox{\hyperlink{class_bit_buddy_a27ae00c7659a1adbdf1ee09cfcab0fce}{BitBuddy}}(std::string\ name,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::map<BitBuddyAttributeName::UniqueName,\ BitBuddyAttribute>\ \&attributes,}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ std::chrono::system\_clock::time\_point\ creationTime,\ \textcolor{keywordtype}{bool}\ dead,\ QUuid\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \ \ \mbox{\hyperlink{class_bit_buddy_a757cab92ab30d3818680e2a008bf13d9}{\string~BitBuddy}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \mbox{\hyperlink{class_bit_buddy_a255ca7c8e2d1851aab1dabdb0e3c7be8}{BitBuddy}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bit_buddy}{BitBuddy}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00049\ \ \ \mbox{\hyperlink{class_bit_buddy}{BitBuddy}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bit_buddy}{BitBuddy}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00050\ \ \ \mbox{\hyperlink{class_bit_buddy_a255ca7c8e2d1851aab1dabdb0e3c7be8}{BitBuddy}}(\mbox{\hyperlink{class_bit_buddy}{BitBuddy}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00051\ \ \ \mbox{\hyperlink{class_bit_buddy}{BitBuddy}}\ \&operator=(\mbox{\hyperlink{class_bit_buddy}{BitBuddy}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ [[nodiscard]]\ QJsonObject\ toJson()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_bit_buddy}{BitBuddy}}\ *fromJson(\textcolor{keyword}{const}\ QJsonObject\ \&json);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00063\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_bit_buddy_abe04ae96d1ecb59377bda913ac437351}{getAttributeValue}}(BitBuddyAttributeName::UniqueName\ attributeName)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00071\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buddy_a44f91ebd4db8506aa8294c8517575f95}{incrementAttribute}}(BitBuddyAttributeName::UniqueName\ attribute,\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00078\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{class_bit_buddy_a3a8c3b9668a502627ece3811aa0cddb8}{getAgeInGameYears}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ std::string\ currentSprite;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ signals:}
+\DoxyCodeLine{00088\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buddy_a9314b015b8cb9cc9296144b5c1b93df4}{attributeUpdated}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \&attribute);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00095\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buddy_a2853d9ff7f0f659b79ba99b9837aa226}{died}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \&attribute);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00103\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buddy_a16d803f967d6313d49177da34a9e9254}{onEvent}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_event}{Event}}\ \&event);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00106\ \ \ QUuid\ id;}
+\DoxyCodeLine{00107\ \ \ std::map<BitBuddyAttributeName::UniqueName,\ BitBuddyAttribute>\ attributes;}
+\DoxyCodeLine{00108\ \ \ std::chrono::system\_clock::time\_point\ creationTime;}
+\DoxyCodeLine{00109\ \ \ std::string\ name;}
+\DoxyCodeLine{00110\ \ \ \textcolor{keywordtype}{bool}\ dead;}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00115\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buddy_a1a728f0ca9d11146ed4db6be2fe3c04a}{connectSignals}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00122\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buddy_a65dec472b5ed4f6b754644267fc9967f}{die}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \&attribute);}
+\DoxyCodeLine{00123\ \};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BITBUDDY\_SRC\_COMPONENT\_BITBUDDY\_H\_}}
+
+\end{DoxyCode}

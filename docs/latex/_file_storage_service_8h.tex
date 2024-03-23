@@ -1,0 +1,33 @@
+\doxysection{game/include/service/\+File\+Storage\+Service.h File Reference}
+\hypertarget{_file_storage_service_8h}{}\label{_file_storage_service_8h}\index{game/include/service/FileStorageService.h@{game/include/service/FileStorageService.h}}
+
+
+Defines the \doxylink{class_file_storage_service}{File\+Storage\+Service} class, responsible for saving and loading \doxylink{class_bit_buddy}{Bit\+Buddy} objects.  
+
+
+{\ttfamily \#include $<$QString$>$}\newline
+{\ttfamily \#include "{}model/\+Bit\+Buddy.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_file_storage_service}{File\+Storage\+Service}}
+\begin{DoxyCompactList}\small\item\em Provides functionality to save and load \doxylink{class_bit_buddy}{Bit\+Buddy} instances to and from files. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_file_storage_service_8h_af7e7278755a139b669e36ed5c79539aa}\label{_file_storage_service_8h_af7e7278755a139b669e36ed5c79539aa} 
+const QString {\bfseries SAVE\+\_\+\+DIRECTORY\+\_\+\+NAME} = "{}bitbuddy\+Save\+Files"{}
+\item 
+\Hypertarget{_file_storage_service_8h_a345849fc3182480a2b52d5a9f9a9e7a1}\label{_file_storage_service_8h_a345849fc3182480a2b52d5a9f9a9e7a1} 
+const QString {\bfseries BITBUDDY\+\_\+\+FILE\+\_\+\+NAME} = "{}bit\+Buddy.\+json"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the \doxylink{class_file_storage_service}{File\+Storage\+Service} class, responsible for saving and loading \doxylink{class_bit_buddy}{Bit\+Buddy} objects. 
+
+Provides functionality to save the current state of a \doxylink{class_bit_buddy}{Bit\+Buddy} object to a JSON file and to load a \doxylink{class_bit_buddy}{Bit\+Buddy} object from a JSON file. It implements the Singleton design pattern to ensure only one instance of the service is created and used throughout the application.
+
+\begin{DoxyAuthor}{Author}
+Ryan Hecht 
+\end{DoxyAuthor}

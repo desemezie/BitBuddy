@@ -13,14 +13,14 @@
 
 constexpr int IN_GAME_YEAR_LENGTH_IN_MINUTES = 1; // 1 minute represents 1 in-game year
 
-/***
+/**
  * Bit Buddy!
  */
 class BitBuddy : public QObject {
  Q_OBJECT
 
  public:
-  /***
+  /**
    * Constructor for the BitBuddy. Initializes the attribute maps.
    *
    * @param name The name of the BitBuddy
@@ -28,7 +28,7 @@ class BitBuddy : public QObject {
    */
   explicit BitBuddy(std::string name);
 
-  /***
+  /**
    * Constructor for the BitBuddy that takes all of BitBuddy's attributes as parameters.
    *
    * @param name The name of the BitBuddy
@@ -54,7 +54,7 @@ class BitBuddy : public QObject {
 
   static BitBuddy *fromJson(const QJsonObject &json);
 
-  /***
+  /**
    * Gets the attribute value for the given attribute name
    *
    * @param attributeName The name of the attribute to get the value for
@@ -62,7 +62,7 @@ class BitBuddy : public QObject {
    */
   [[nodiscard]] int getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const;
 
-  /***
+  /**
    * Increments the value of the attribute with the given value
    *
    * @param attribute
@@ -70,7 +70,7 @@ class BitBuddy : public QObject {
    */
   void incrementAttribute(BitBuddyAttributeName::UniqueName attribute, int value);
 
-  /***
+  /**
    * Gets the age of the BitBuddy represented in 'in-game-years'
    *
    * @return The age of the BitBuddy in 'in-game-years'
@@ -80,14 +80,14 @@ class BitBuddy : public QObject {
   std::string currentSprite;
 
  signals:
-  /***
+  /**
    * Signal emitted when an attribute is updated
    *
    * @param attribute The attribute that was updated
    */
   void attributeUpdated(const BitBuddyAttribute &attribute);
 
-  /***
+  /**
    * Signal emitted when the BitBuddy dies
    *
    * @paragraph attribute The attribute that caused the BitBuddy to die
@@ -95,7 +95,7 @@ class BitBuddy : public QObject {
   void died(const BitBuddyAttribute &attribute);
 
  public slots:
-  /***
+  /**
    * Slot that listens for Events from the event dispatch service and updates the BitBuddy's attributes.
    *
    * @param event The event to process
@@ -109,12 +109,12 @@ class BitBuddy : public QObject {
   std::string name;
   bool dead;
 
-  /***
+  /**
    * Connects the signals to the slots
    */
   void connectSignals() const;
 
-  /***
+  /**
    * Kills the BitBuddy
    *
    * @param attribute The attribute that caused the BitBuddy to die

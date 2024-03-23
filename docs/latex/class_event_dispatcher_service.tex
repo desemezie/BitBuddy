@@ -1,0 +1,90 @@
+\doxysection{Event\+Dispatcher\+Service Class Reference}
+\hypertarget{class_event_dispatcher_service}{}\label{class_event_dispatcher_service}\index{EventDispatcherService@{EventDispatcherService}}
+
+
+{\ttfamily \#include $<$Event\+Dispatcher\+Service.\+h$>$}
+
+Inheritance diagram for Event\+Dispatcher\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_event_dispatcher_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_event_dispatcher_service_a10e18521e3e73c6401cc125f8d644372}{dispatch\+Event}} (const \mbox{\hyperlink{class_event}{Event}} \texorpdfstring{$\ast$}{*}event)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_event_dispatcher_service_a24f6ab3b915775f1fe202831203d94df}{event\+Dispatched}} (const \mbox{\hyperlink{class_event}{Event}} \&event)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_event_dispatcher_service_a90646cb8fad217fe6b7989cf6708479a}\label{class_event_dispatcher_service_a90646cb8fad217fe6b7989cf6708479a} 
+{\bfseries Event\+Dispatcher\+Service} (const \mbox{\hyperlink{class_event_dispatcher_service}{Event\+Dispatcher\+Service}} \&)=delete
+\item 
+\Hypertarget{class_event_dispatcher_service_ab3cbae722de34eee0db680c228c4899b}\label{class_event_dispatcher_service_ab3cbae722de34eee0db680c228c4899b} 
+\mbox{\hyperlink{class_event_dispatcher_service}{Event\+Dispatcher\+Service}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_event_dispatcher_service}{Event\+Dispatcher\+Service}} \&)=delete
+\item 
+\Hypertarget{class_event_dispatcher_service_acc57ee7cd04c8fd6f744ccd24820bb90}\label{class_event_dispatcher_service_acc57ee7cd04c8fd6f744ccd24820bb90} 
+{\bfseries Event\+Dispatcher\+Service} (\mbox{\hyperlink{class_event_dispatcher_service}{Event\+Dispatcher\+Service}} \&\&)=delete
+\item 
+\Hypertarget{class_event_dispatcher_service_a0762dbd0e6a30b2e0eb75e9c7b9195a5}\label{class_event_dispatcher_service_a0762dbd0e6a30b2e0eb75e9c7b9195a5} 
+\mbox{\hyperlink{class_event_dispatcher_service}{Event\+Dispatcher\+Service}} \& {\bfseries operator=} (\mbox{\hyperlink{class_event_dispatcher_service}{Event\+Dispatcher\+Service}} \&\&)=delete
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_event_dispatcher_service}{Event\+Dispatcher\+Service}} \& \mbox{\hyperlink{class_event_dispatcher_service_ade04effcba931646506693d7abe17da7}{get\+Instance}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service that dispatches events to listeners 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_event_dispatcher_service_a10e18521e3e73c6401cc125f8d644372}\label{class_event_dispatcher_service_a10e18521e3e73c6401cc125f8d644372} 
+\index{EventDispatcherService@{EventDispatcherService}!dispatchEvent@{dispatchEvent}}
+\index{dispatchEvent@{dispatchEvent}!EventDispatcherService@{EventDispatcherService}}
+\doxysubsubsection{\texorpdfstring{dispatchEvent}{dispatchEvent}}
+{\footnotesize\ttfamily void Event\+Dispatcher\+Service\+::dispatch\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_event}{Event}} \texorpdfstring{$\ast$}{*}}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+Slot that dispatches the event passed as an argumetn to all listeners. Use this if you want to send an event to \doxylink{class_bit_buddy}{Bit\+Buddy} and any other listeners.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event to dispatch to all listeners \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_event_dispatcher_service_a24f6ab3b915775f1fe202831203d94df}\label{class_event_dispatcher_service_a24f6ab3b915775f1fe202831203d94df} 
+\index{EventDispatcherService@{EventDispatcherService}!eventDispatched@{eventDispatched}}
+\index{eventDispatched@{eventDispatched}!EventDispatcherService@{EventDispatcherService}}
+\doxysubsubsection{\texorpdfstring{eventDispatched}{eventDispatched}}
+{\footnotesize\ttfamily void Event\+Dispatcher\+Service\+::event\+Dispatched (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_event}{Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+Signal emitted when an event is dispatched
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The event that was dispatched \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_event_dispatcher_service_ade04effcba931646506693d7abe17da7}\label{class_event_dispatcher_service_ade04effcba931646506693d7abe17da7} 
+\index{EventDispatcherService@{EventDispatcherService}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!EventDispatcherService@{EventDispatcherService}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_event_dispatcher_service}{Event\+Dispatcher\+Service}} \& Event\+Dispatcher\+Service\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Singleton instance getter
+
+\begin{DoxyReturn}{Returns}
+the instance 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+game/include/service/Event\+Dispatcher\+Service.\+h\end{DoxyCompactItemize}
