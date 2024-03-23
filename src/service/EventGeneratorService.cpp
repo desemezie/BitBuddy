@@ -8,6 +8,7 @@
 
 #include <random>
 #include <chrono>
+#include <iostream>
 
 // Constants for event generation timing
 constexpr int TARGET_MEAN_SECONDS = 10; // Target mean time for event generation
