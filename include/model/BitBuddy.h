@@ -45,12 +45,13 @@ class BitBuddy : public QObject {
   ~BitBuddy() override;
 
   BitBuddy(const BitBuddy &) = delete;
-
   BitBuddy &operator=(const BitBuddy &) = delete;
-
   BitBuddy(BitBuddy &&) = delete;
-
   BitBuddy &operator=(BitBuddy &&) = delete;
+
+  [[nodiscard]] QJsonObject toJson() const;
+
+  static BitBuddy fromJson(const QJsonObject &json);
 
   /***
    * Gets the attribute value for the given attribute name
