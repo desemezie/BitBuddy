@@ -9,6 +9,8 @@
 #include "model/SingleAttributeEvent.h"
 
 #include <iostream>
+#include <QFile>
+#include <QTextStream>
 
 BitBuddy::BitBuddy(std::string name)
     : name(std::move(name)), creationTime(std::chrono::system_clock::now()) {
@@ -36,6 +38,19 @@ BitBuddy::~BitBuddy() {
   attributes.clear();
 }
 
+int BitBuddy::getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const {
+
+  auto it = attributes.find(attributeName);
+  if (it == attributes.end()) {
+    std::cerr << "BitBuddy does not contain the attribute: " << BitBuddyAttributeName::toString(attributeName)
+              << std::endl;
+    return -1;
+  }
+
+  auto value = it->second.getValue();
+  return value;
+}
+
 void BitBuddy::incrementAttribute(BitBuddyAttributeName::UniqueName attribute, int value) {
   if (!attributes.contains(attribute)) {
     std::cerr << "BitBuddy does not contain the attribute: " << BitBuddyAttributeName::toString(attribute)
@@ -49,6 +64,14 @@ void BitBuddy::incrementAttribute(BitBuddyAttributeName::UniqueName attribute, i
   emit attributeUpdated(attributeToUpdate);
 }
 
+long BitBuddy::getAgeInGameYears() const {
+  auto currentTime = std::chrono::system_clock::now();
+  long ageInGameYearUnits = std::chrono::duration_cast<std::chrono::minutes>(currentTime - creationTime).count();
+  long ageInGameYears = ageInGameYearUnits / IN_GAME_YEAR_LENGTH_IN_MINUTES;
+
+  return ageInGameYears;
+}
+
 void BitBuddy::onEvent(const Event &event) {
   const auto *specificEvent = dynamic_cast<const SingleAttributeEvent *>(&event);
   BitBuddyAttributeName::UniqueName attributeKey = specificEvent->getAttribute();
@@ -59,17 +82,4 @@ void BitBuddy::onEvent(const Event &event) {
 void BitBuddy::connectSignals() const {
   connect(&EventDispatcherService::getInstance(), &EventDispatcherService::eventDispatched,
           this, &BitBuddy::onEvent);
-}
-
-int BitBuddy::getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const {
-
-  auto it = attributes.find(attributeName);
-  if (it == attributes.end()) {
-    std::cerr << "BitBuddy does not contain the attribute: " << BitBuddyAttributeName::toString(attributeName)
-              << std::endl;
-    return -1;
-  }
-
-  auto value = it->second.getValue();
-  return value;
 }
