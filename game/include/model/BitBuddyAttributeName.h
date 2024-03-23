@@ -9,7 +9,7 @@
 
 inline constexpr int NUMBER_OF_ATTRIBUTES = 7;
 
-/***
+/**
  * Class that represents a BitBuddyWidget attribute
  */
 class BitBuddyAttributeName {
@@ -24,7 +24,7 @@ class BitBuddyAttributeName {
     HYGIENE
   };
 
-  /***
+  /**
    * Converts an attribute to a string
    * @param attribute the attribute to convert
    * @return the string representation of the attribute

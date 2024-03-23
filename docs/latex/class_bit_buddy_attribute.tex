@@ -1,0 +1,100 @@
+\doxysection{Bit\+Buddy\+Attribute Class Reference}
+\hypertarget{class_bit_buddy_attribute}{}\label{class_bit_buddy_attribute}\index{BitBuddyAttribute@{BitBuddyAttribute}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bit_buddy_attribute_a6b5e1b4b779f3a813caa46a3ddbf80f4}{Bit\+Buddy\+Attribute}} (Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name attribute\+Name, int value=MAX\+\_\+\+ATTRIBUTE\+\_\+\+VALUE)
+\item 
+QJson\+Object \mbox{\hyperlink{class_bit_buddy_attribute_a7c455272cbadbb11d1b1833c2f71cfb7}{to\+Json}} () const
+\item 
+\Hypertarget{class_bit_buddy_attribute_a13b2a70d5320ca52a57aa84a4ed20fe1}\label{class_bit_buddy_attribute_a13b2a70d5320ca52a57aa84a4ed20fe1} 
+{\bfseries Bit\+Buddy\+Attribute} (const \mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} \&)
+\item 
+\Hypertarget{class_bit_buddy_attribute_a6bf946ea7956f6151376af4a2346a7b1}\label{class_bit_buddy_attribute_a6bf946ea7956f6151376af4a2346a7b1} 
+\mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} \&)
+\item 
+\Hypertarget{class_bit_buddy_attribute_aca92061c29d74a291193a7e7c7c1d6f8}\label{class_bit_buddy_attribute_aca92061c29d74a291193a7e7c7c1d6f8} 
+{\bfseries Bit\+Buddy\+Attribute} (\mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} \&\&) noexcept
+\item 
+\Hypertarget{class_bit_buddy_attribute_afc3d2b6df0143fec73f74dcdabb783c9}\label{class_bit_buddy_attribute_afc3d2b6df0143fec73f74dcdabb783c9} 
+\mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} \& {\bfseries operator=} (\mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} \&\&) noexcept
+\item 
+\Hypertarget{class_bit_buddy_attribute_a4d9f9fdf971c8f0ce2e716265d6feb15}\label{class_bit_buddy_attribute_a4d9f9fdf971c8f0ce2e716265d6feb15} 
+Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name {\bfseries get\+Attribute\+Name} () const
+\item 
+\Hypertarget{class_bit_buddy_attribute_a86177bb6dde636fc1aace354927b70a2}\label{class_bit_buddy_attribute_a86177bb6dde636fc1aace354927b70a2} 
+void {\bfseries set\+Attribute\+Name} (Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name attribute\+\_\+name)
+\item 
+\Hypertarget{class_bit_buddy_attribute_a06056e543d6b3bc0bec910e4f6e4fb0a}\label{class_bit_buddy_attribute_a06056e543d6b3bc0bec910e4f6e4fb0a} 
+int {\bfseries get\+Value} () const
+\item 
+\Hypertarget{class_bit_buddy_attribute_a54f5fa4652226ba557f4ae3ccb3fde7e}\label{class_bit_buddy_attribute_a54f5fa4652226ba557f4ae3ccb3fde7e} 
+void {\bfseries increment\+Value} (int value)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} \mbox{\hyperlink{class_bit_buddy_attribute_a715cafe0ade5ef334bf3c0d6e9ba49d2}{from\+Json}} (const QJson\+Object \&json)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bit_buddy_attribute_a01a239b5c8ef2fff653ffd2ab0959ba3}\label{class_bit_buddy_attribute_a01a239b5c8ef2fff653ffd2ab0959ba3} 
+Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name {\bfseries attribute\+Name}
+\item 
+\Hypertarget{class_bit_buddy_attribute_a896051d21c91fde58b6ade7c6c315e64}\label{class_bit_buddy_attribute_a896051d21c91fde58b6ade7c6c315e64} 
+int {\bfseries value}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_bit_buddy_attribute_a6b5e1b4b779f3a813caa46a3ddbf80f4}\label{class_bit_buddy_attribute_a6b5e1b4b779f3a813caa46a3ddbf80f4} 
+\index{BitBuddyAttribute@{BitBuddyAttribute}!BitBuddyAttribute@{BitBuddyAttribute}}
+\index{BitBuddyAttribute@{BitBuddyAttribute}!BitBuddyAttribute@{BitBuddyAttribute}}
+\doxysubsubsection{\texorpdfstring{BitBuddyAttribute()}{BitBuddyAttribute()}}
+{\footnotesize\ttfamily Bit\+Buddy\+Attribute\+::\+Bit\+Buddy\+Attribute (\begin{DoxyParamCaption}\item[{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}]{attribute\+Name,  }\item[{int}]{value = {\ttfamily MAX\+\_\+ATTRIBUTE\+\_\+VALUE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor for the \doxylink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}
+
+
+\begin{DoxyParams}{Parameters}
+{\em attribute\+Name} & The name of the attribute \\
+\hline
+{\em value} & The value of the attribute between 0 and MAX\+\_\+\+ATTRIBUTE\+\_\+\+VALUE \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_bit_buddy_attribute_a715cafe0ade5ef334bf3c0d6e9ba49d2}\label{class_bit_buddy_attribute_a715cafe0ade5ef334bf3c0d6e9ba49d2} 
+\index{BitBuddyAttribute@{BitBuddyAttribute}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!BitBuddyAttribute@{BitBuddyAttribute}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} Bit\+Buddy\+Attribute\+::from\+Json (\begin{DoxyParamCaption}\item[{const QJson\+Object \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Converts a JSON object to a \doxylink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}
+
+
+\begin{DoxyParams}{Parameters}
+{\em json} & The JSON object to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute} created from the JSON object 
+\end{DoxyReturn}
+\Hypertarget{class_bit_buddy_attribute_a7c455272cbadbb11d1b1833c2f71cfb7}\label{class_bit_buddy_attribute_a7c455272cbadbb11d1b1833c2f71cfb7} 
+\index{BitBuddyAttribute@{BitBuddyAttribute}!toJson@{toJson}}
+\index{toJson@{toJson}!BitBuddyAttribute@{BitBuddyAttribute}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily QJson\+Object Bit\+Buddy\+Attribute\+::to\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Converts the \doxylink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute} to a JSON object
+
+\begin{DoxyReturn}{Returns}
+The JSON object representation of the \doxylink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+game/include/model/Bit\+Buddy\+Attribute.\+h\end{DoxyCompactItemize}

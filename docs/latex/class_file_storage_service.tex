@@ -1,0 +1,99 @@
+\doxysection{File\+Storage\+Service Class Reference}
+\hypertarget{class_file_storage_service}{}\label{class_file_storage_service}\index{FileStorageService@{FileStorageService}}
+
+
+Provides functionality to save and load \doxylink{class_bit_buddy}{Bit\+Buddy} instances to and from files.  
+
+
+
+
+{\ttfamily \#include $<$File\+Storage\+Service.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_file_storage_service_a161dd8aab789b00fa2a5224d45efbdd4}\label{class_file_storage_service_a161dd8aab789b00fa2a5224d45efbdd4} 
+{\bfseries File\+Storage\+Service} (const \mbox{\hyperlink{class_file_storage_service}{File\+Storage\+Service}} \&)=delete
+\item 
+\Hypertarget{class_file_storage_service_a4670056b5704804e1bb06727ed50b6b6}\label{class_file_storage_service_a4670056b5704804e1bb06727ed50b6b6} 
+\mbox{\hyperlink{class_file_storage_service}{File\+Storage\+Service}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_file_storage_service}{File\+Storage\+Service}} \&)=delete
+\item 
+\Hypertarget{class_file_storage_service_a7e82355cd8e80cc6000754df8029e882}\label{class_file_storage_service_a7e82355cd8e80cc6000754df8029e882} 
+{\bfseries File\+Storage\+Service} (\mbox{\hyperlink{class_file_storage_service}{File\+Storage\+Service}} \&\&)=delete
+\item 
+\Hypertarget{class_file_storage_service_af17cd1e99fdd7c478efedcd5d0f7890c}\label{class_file_storage_service_af17cd1e99fdd7c478efedcd5d0f7890c} 
+\mbox{\hyperlink{class_file_storage_service}{File\+Storage\+Service}} \& {\bfseries operator=} (\mbox{\hyperlink{class_file_storage_service}{File\+Storage\+Service}} \&\&)=delete
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_file_storage_service}{File\+Storage\+Service}} \& \mbox{\hyperlink{class_file_storage_service_ad3607b6d6fe1d18a736fe491e0d6baf6}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Gets the singleton instance of the \doxylink{class_file_storage_service}{File\+Storage\+Service}. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_file_storage_service_a105834676c2e2b3175509ab5aeb113c0}{save\+Bit\+Buddy}} (const \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \&bit\+Buddy)
+\begin{DoxyCompactList}\small\item\em Saves the \doxylink{class_bit_buddy}{Bit\+Buddy} to a file. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_file_storage_service_ac92bc9610af677b3b1d51c1f7943cc42}{load\+Bit\+Buddy}} (std\+::string fall\+Back\+Name)
+\begin{DoxyCompactList}\small\item\em Loads the \doxylink{class_bit_buddy}{Bit\+Buddy} from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides functionality to save and load \doxylink{class_bit_buddy}{Bit\+Buddy} instances to and from files. 
+
+\begin{DoxyAuthor}{Author}
+Ryan Hecht
+\end{DoxyAuthor}
+\doxylink{class_file_storage_service}{File\+Storage\+Service} is implemented as a singleton to ensure only one instance manages file storage operations. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_file_storage_service_ad3607b6d6fe1d18a736fe491e0d6baf6}\label{class_file_storage_service_ad3607b6d6fe1d18a736fe491e0d6baf6} 
+\index{FileStorageService@{FileStorageService}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!FileStorageService@{FileStorageService}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_file_storage_service}{File\+Storage\+Service}} \& File\+Storage\+Service\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the singleton instance of the \doxylink{class_file_storage_service}{File\+Storage\+Service}. 
+
+\begin{DoxyReturn}{Returns}
+The instance of the \doxylink{class_file_storage_service}{File\+Storage\+Service}. 
+\end{DoxyReturn}
+\Hypertarget{class_file_storage_service_ac92bc9610af677b3b1d51c1f7943cc42}\label{class_file_storage_service_ac92bc9610af677b3b1d51c1f7943cc42} 
+\index{FileStorageService@{FileStorageService}!loadBitBuddy@{loadBitBuddy}}
+\index{loadBitBuddy@{loadBitBuddy}!FileStorageService@{FileStorageService}}
+\doxysubsubsection{\texorpdfstring{loadBitBuddy()}{loadBitBuddy()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*} File\+Storage\+Service\+::load\+Bit\+Buddy (\begin{DoxyParamCaption}\item[{std\+::string}]{fall\+Back\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Loads the \doxylink{class_bit_buddy}{Bit\+Buddy} from a file. 
+
+If the \doxylink{class_bit_buddy}{Bit\+Buddy} cannot be loaded, a new \doxylink{class_bit_buddy}{Bit\+Buddy} is created using the provided fallback name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fall\+Back\+Name} & The name to use for the creation of a new \doxylink{class_bit_buddy}{Bit\+Buddy} if loading fails. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the loaded or newly created \doxylink{class_bit_buddy}{Bit\+Buddy} instance. 
+\end{DoxyReturn}
+\Hypertarget{class_file_storage_service_a105834676c2e2b3175509ab5aeb113c0}\label{class_file_storage_service_a105834676c2e2b3175509ab5aeb113c0} 
+\index{FileStorageService@{FileStorageService}!saveBitBuddy@{saveBitBuddy}}
+\index{saveBitBuddy@{saveBitBuddy}!FileStorageService@{FileStorageService}}
+\doxysubsubsection{\texorpdfstring{saveBitBuddy()}{saveBitBuddy()}}
+{\footnotesize\ttfamily static void File\+Storage\+Service\+::save\+Bit\+Buddy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \&}]{bit\+Buddy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Saves the \doxylink{class_bit_buddy}{Bit\+Buddy} to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Buddy} & The \doxylink{class_bit_buddy}{Bit\+Buddy} instance to save. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+game/include/service/File\+Storage\+Service.\+h\end{DoxyCompactItemize}

@@ -8,14 +8,14 @@
 #include <QObject>
 #include <QMediaPlayer>
 
-/***
+/**
  * Service that plays music
  */
 class MusicService : public QObject {
  Q_OBJECT
 
  public:
-  /***
+  /**
    * Singleton instance getter
    *
    * @return The instance of the MusicService
@@ -30,24 +30,24 @@ class MusicService : public QObject {
 
   MusicService &operator=(MusicService &&) = delete;
 
-  /***
+  /**
    * Starts the music
    */
   void startMusic();
 
-  /***
+  /**
    * Stops the music
    */
   void stopMusic();
 
-  /***
+  /**
    * Sets the volume of the music
    *
    * @param volume The volume to set from 0.0f to 1.0f
    */
   void setVolume(float volume);
 
-  /***
+  /**
    * Gets the volume of the music
    *
    * @return The volume of the music

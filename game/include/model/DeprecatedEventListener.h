@@ -7,7 +7,7 @@
 
 #include "model/Event.h"
 
-/***
+/**
  * @deprecated Use QT's signal/slot pattern instead as it is thread safe with QT.
  * Interface for classes that want to listen to events
  */
@@ -17,7 +17,7 @@ class DeprecatedEventListener {
   [[deprecated]]
   virtual ~DeprecatedEventListener() = default;
 
-  /***
+  /**
    * Called when an event is dispatched. Implement this method to handle the event.
    * @param event the event
    */

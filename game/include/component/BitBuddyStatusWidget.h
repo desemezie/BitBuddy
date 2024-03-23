@@ -16,14 +16,14 @@
 #include <QLabel>
 #include <QPair>
 
-/***
+/**
  * Widget that displays the status of the BitBuddy's attributes.
  */
 class BitBuddyStatusWidget : public QWidget {
  Q_OBJECT
 
  public:
-  /***
+  /**
    * Constructor for the BitBuddyStatusWidget
    * @param parent The parent widget of the BitBuddyStatusWidget, typically the MainWindow.
    */

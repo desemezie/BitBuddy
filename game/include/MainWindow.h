@@ -11,7 +11,7 @@
 #include "component/BitBuddyActionButton.h"
 #include "service/BitBuddySpriteHandler.h"
 
-/***
+/**
  * The main window of the application
  */
 class MainWindow : public QMainWindow {

@@ -1,0 +1,35 @@
+\doxysection{Bit\+Buddy\+Action\+Button.\+h}
+\hypertarget{_bit_buddy_action_button_8h_source}{}\label{_bit_buddy_action_button_8h_source}\index{game/include/component/BitBuddyActionButton.h@{game/include/component/BitBuddyActionButton.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ Annabel\ Irani\ on\ 2024-\/03-\/04.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ BITBUDDY\_BITBUDDYACTIONBUTTON\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ BITBUDDY\_BITBUDDYACTIONBUTTON\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QIcon>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bit_buddy_action_button}{BitBuddyActionButton}}:\ \textcolor{keyword}{public}\ QPushButton\{}
+\DoxyCodeLine{00013\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//BitBuddyActionButton(QIcon\ icon,\ const\ QString\ \&text,\ BitBuddyAttributeName::UniqueName\ name,\ QWidget\ *pWidget);}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_bit_buddy_action_button}{BitBuddyActionButton}}(\textcolor{keyword}{const}\ QIcon\ \&icon,\ \textcolor{keyword}{const}\ QString\ \&text,BitBuddyAttributeName::UniqueName\ attribute,\ QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ handleButtonClicked();}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ \ \ \ \ BitBuddyAttributeName::UniqueName\ attribute;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BITBUDDY\_BITBUDDYACTIONBUTTON\_H}}
+
+\end{DoxyCode}

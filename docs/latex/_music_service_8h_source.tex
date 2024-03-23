@@ -1,0 +1,49 @@
+\doxysection{Music\+Service.\+h}
+\hypertarget{_music_service_8h_source}{}\label{_music_service_8h_source}\index{game/include/service/MusicService.h@{game/include/service/MusicService.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ Ryan\ Hecht\ \ on\ 2024-\/03-\/22.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ BITBUDDY\_SRC\_SERVICE\_MUSICSERVICE\_H\_}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ BITBUDDY\_SRC\_SERVICE\_MUSICSERVICE\_H\_}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QMediaPlayer>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_music_service}{MusicService}}\ :\ \textcolor{keyword}{public}\ QObject\ \{}
+\DoxyCodeLine{00015\ \ Q\_OBJECT}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_music_service}{MusicService}}\ \&\mbox{\hyperlink{class_music_service_aa1d70ce5ede888826c6e00c8f1111633}{getInstance}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \mbox{\hyperlink{class_music_service}{MusicService}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_music_service}{MusicService}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \mbox{\hyperlink{class_music_service}{MusicService}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_music_service}{MusicService}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \mbox{\hyperlink{class_music_service}{MusicService}}(\mbox{\hyperlink{class_music_service}{MusicService}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \mbox{\hyperlink{class_music_service}{MusicService}}\ \&operator=(\mbox{\hyperlink{class_music_service}{MusicService}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_music_service_a33291a64c5d69606289fe56ef30f15ba}{startMusic}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_music_service_a23470ace0df023a96289b2cd03184138}{stopMusic}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_music_service_aec89cfd60a991c17dcbb75cae28b3d14}{setVolume}}(\textcolor{keywordtype}{float}\ volume);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_music_service_aeba8009cfaa095334edabf9e9c21b130}{getVolume}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00058\ \ \ \mbox{\hyperlink{class_music_service}{MusicService}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \mbox{\hyperlink{class_music_service}{\string~MusicService}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ QMediaPlayer\ *musicPlayer;}
+\DoxyCodeLine{00063\ \ \ QAudioOutput\ *audioOutput;}
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{float}\ currentVolume;}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BITBUDDY\_SRC\_SERVICE\_MUSICSERVICE\_H\_}}
+
+\end{DoxyCode}
