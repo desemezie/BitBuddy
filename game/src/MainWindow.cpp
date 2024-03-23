@@ -120,6 +120,9 @@ void MainWindow::resizeEvent(QResizeEvent *event) {
   QWidget::resizeEvent(event);
   if (spriteHandler){
     spriteHandler->updatePillsPosition();
-
+    spriteHandler->updateDrinkPosition();
+    spriteHandler->updateTacoPosition();
+    spriteHandler->updateBubblePosition();
+    spriteHandler->updateZZZPosition();
   }
 }
