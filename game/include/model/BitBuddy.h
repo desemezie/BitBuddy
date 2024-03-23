@@ -9,6 +9,7 @@
 #include <map>
 #include "model/BitBuddyAttribute.h"
 #include "model/Event.h"
+#include <QUuid>
 
 constexpr int IN_GAME_YEAR_LENGTH_IN_MINUTES = 1; // 1 minute represents 1 in-game year
 
@@ -37,7 +38,7 @@ class BitBuddy : public QObject {
    */
   BitBuddy(std::string name,
            const std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> &attributes,
-           std::chrono::system_clock::time_point creationTime);
+           std::chrono::system_clock::time_point creationTime, bool dead, QUuid id);
 
   /**
    * Destructor for the BitBuddy
@@ -86,6 +87,13 @@ class BitBuddy : public QObject {
    */
   void attributeUpdated(const BitBuddyAttribute &attribute);
 
+  /***
+   * Signal emitted when the BitBuddy dies
+   *
+   * @paragraph attribute The attribute that caused the BitBuddy to die
+   */
+  void died(const BitBuddyAttribute &attribute);
+
  public slots:
   /***
    * Slot that listens for Events from the event dispatch service and updates the BitBuddy's attributes.
@@ -95,11 +103,23 @@ class BitBuddy : public QObject {
   void onEvent(const Event &event);
 
  private:
+  QUuid id;
   std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> attributes;
   std::chrono::system_clock::time_point creationTime;
   std::string name;
+  bool dead;
 
+  /***
+   * Connects the signals to the slots
+   */
   void connectSignals() const;
+
+  /***
+   * Kills the BitBuddy
+   *
+   * @param attribute The attribute that caused the BitBuddy to die
+   */
+  void die(const BitBuddyAttribute &attribute);
 };
 
 #endif //BITBUDDY_SRC_COMPONENT_BITBUDDY_H_

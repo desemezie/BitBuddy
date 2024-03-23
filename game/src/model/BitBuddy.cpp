@@ -13,7 +13,7 @@
 #include <QJsonObject>
 
 BitBuddy::BitBuddy(std::string name)
-    : name(std::move(name)), creationTime(std::chrono::system_clock::now()) {
+    : name(std::move(name)), creationTime(std::chrono::system_clock::now()), dead(false), id(QUuid::createUuid()) {
   for (int i = 0; i < NUMBER_OF_ATTRIBUTES; i++) {
     // Constructs a map of the form {HUNGER -> <BitBuddyAttribute> with name HUNGER and value 10}
     attributes.emplace(
@@ -28,8 +28,8 @@ BitBuddy::BitBuddy(std::string name)
 
 BitBuddy::BitBuddy(std::string name, const std::map<BitBuddyAttributeName::UniqueName,
                                                     BitBuddyAttribute> &attributes,
-                   std::chrono::system_clock::time_point creationTime)
-    : name(std::move(name)), attributes(attributes), creationTime(creationTime) {
+                   std::chrono::system_clock::time_point creationTime, bool dead, QUuid id)
+    : name(std::move(name)), attributes(attributes), creationTime(creationTime), dead(dead), id(id) {
   connectSignals();
 }
 
@@ -39,8 +39,10 @@ BitBuddy::~BitBuddy() {
 
 QJsonObject BitBuddy::toJson() const {
   QJsonObject obj;
+  obj["id"] = id.toString();
   obj["name"] = QString::fromStdString(name);
   obj["creationTime"] = QString::number(creationTime.time_since_epoch().count());
+  obj["dead"] = dead;
 
   QJsonObject attributesObj;
   for (const auto &attribute : attributes) {
@@ -57,6 +59,8 @@ BitBuddy *BitBuddy::fromJson(const QJsonObject &obj) {
   auto creationTime =
       std::chrono::system_clock::time_point(std::chrono::system_clock::duration(obj["creationTime"].toString()
                                                                                     .toLongLong()));
+  bool dead = obj["dead"].toBool();
+  QUuid id = obj["id"].toString().isEmpty() ? QUuid::createUuid() : QUuid(obj["id"].toString());
 
   std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> attributes;
   QJsonObject attributesObj = obj["attributes"].toObject();
@@ -66,7 +70,7 @@ BitBuddy *BitBuddy::fromJson(const QJsonObject &obj) {
                        std::forward_as_tuple(BitBuddyAttribute::fromJson(it.value().toObject())));
   }
 
-  return new BitBuddy(name, attributes, creationTime);
+  return new BitBuddy(name, attributes, creationTime, dead, id);
 }
 
 int BitBuddy::getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const {
@@ -84,7 +88,7 @@ int BitBuddy::getAttributeValue(BitBuddyAttributeName::UniqueName attributeName)
 
 void BitBuddy::incrementAttribute(BitBuddyAttributeName::UniqueName attribute, int value) {
   if (!attributes.contains(attribute)) {
-    std::cerr << "BitBuddy does not contain the zattribute: " << BitBuddyAttributeName::toString(attribute)
+    std::cerr << "BitBuddy does not contain the attribute: " << BitBuddyAttributeName::toString(attribute)
               << std::endl;
     return;
   }
@@ -93,6 +97,10 @@ void BitBuddy::incrementAttribute(BitBuddyAttributeName::UniqueName attribute, i
   attributeToUpdate.incrementValue(value);
 
   emit attributeUpdated(attributeToUpdate);
+
+  if (attributeToUpdate.getValue() <= 0) {
+    die(attributeToUpdate);
+  }
 }
 
 long BitBuddy::getAgeInGameYears() const {
@@ -104,6 +112,10 @@ long BitBuddy::getAgeInGameYears() const {
 }
 
 void BitBuddy::onEvent(const Event &event) {
+  if (dead) {
+    return;
+  }
+
   const auto *specificEvent = dynamic_cast<const SingleAttributeEvent *>(&event);
   BitBuddyAttributeName::UniqueName attributeKey = specificEvent->getAttribute();
   int increment = specificEvent->getIncrement();
@@ -113,4 +125,12 @@ void BitBuddy::onEvent(const Event &event) {
 void BitBuddy::connectSignals() const {
   connect(&EventDispatcherService::getInstance(), &EventDispatcherService::eventDispatched,
           this, &BitBuddy::onEvent);
+}
+
+void BitBuddy::die(const BitBuddyAttribute &attribute) {
+  dead = true;
+  std::cerr << "BitBuddy has died due to: " << BitBuddyAttributeName::toString(attribute.getAttributeName())
+            << std::endl;
+
+  emit died(attribute);
 }
