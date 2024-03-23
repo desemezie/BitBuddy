@@ -6,7 +6,9 @@
 #include <QMediaPlayer>
 #include <QAudioOutput>
 
-const QString MUSIC_SOURCE = "qrc:/assets/yay.mp3";
+const QString MUSIC_SOURCE = "qrc:/assets/music/bye_bye_brain.mp3";
+const float MINIMUM_VOLUME = 0.0f;
+const float MAXIMUM_VOLUME = 1.0f;
 
 MusicService &MusicService::getInstance() {
   static MusicService instance;
@@ -14,40 +16,43 @@ MusicService &MusicService::getInstance() {
 }
 
 void MusicService::startMusic() {
-  if (musicPlayer) {
-    running = true;
-    musicPlayer->play(); // Start playing music
+  if (!musicPlayer) {
+    throw std::runtime_error("Music player is not initialized");
   }
+
+  musicPlayer->setLoops(QMediaPlayer::Infinite);
+  musicPlayer->play();
 }
 
 void MusicService::stopMusic() {
-  if (musicPlayer) {
-    running = false;
-    musicPlayer->stop(); // Stop playing music
+  if (!musicPlayer) {
+    throw std::runtime_error("Music player is not initialized");
   }
+
+  musicPlayer->stop();
 }
 
-MusicService::MusicService() {
+void MusicService::setVolume(float volume) {
+  if (!audioOutput) {
+    throw std::runtime_error("Audio output is not initialized");
+  }
+
+  currentVolume = std::clamp(volume, MINIMUM_VOLUME, MAXIMUM_VOLUME);
+  audioOutput->setVolume(currentVolume);
+}
+
+float MusicService::getVolume() const {
+  return currentVolume;
+}
+
+MusicService::MusicService() : currentVolume(MAXIMUM_VOLUME) {
   musicPlayer = new QMediaPlayer;
-  auto *audioOutput = new QAudioOutput;
+  audioOutput = new QAudioOutput;
   musicPlayer->setAudioOutput(audioOutput);
   musicPlayer->setSource(QUrl(MUSIC_SOURCE));
-
-  connect(musicPlayer, &QMediaPlayer::mediaStatusChanged, this, &MusicService::onMediaStatusChanged);
+  setVolume(currentVolume);
 }
 
 MusicService::~MusicService() {
   delete musicPlayer;
 }
-
-void MusicService::onMediaStatusChanged(QMediaPlayer::MediaStatus status) {
-  if (!running) {
-    return;
-  }
-
-  if (status == QMediaPlayer::EndOfMedia) {
-    musicPlayer->setPosition(0); // Reset the position to the start of the music
-    musicPlayer->play();
-  }
-}
-

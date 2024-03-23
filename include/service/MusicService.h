@@ -40,23 +40,30 @@ class MusicService : public QObject {
    */
   void stopMusic();
 
+ public slots:
+
+  /***
+   * Sets the volume of the music
+   *
+   * @param volume The volume to set from 0.0f to 1.0f
+   */
+  void setVolume(float volume);
+
+  /***
+   * Gets the volume of the music
+   *
+   * @return The volume of the music
+   */
+  float getVolume() const;
+
  private:
   MusicService();
 
   ~MusicService() override;
 
   QMediaPlayer *musicPlayer;
-
-  bool running = false;
-
- private slots:
-  /***
-   * Private slot that's called when the song ends to restart the song. This is a workaround to achieve a looping
-   * effect since QMediaPlaylist was removed in Qt 6.
-   *
-   * @param status The status of the media player
-   */
-  void onMediaStatusChanged(QMediaPlayer::MediaStatus status);
+  QAudioOutput *audioOutput;
+  float currentVolume;
 };
 
 #endif //BITBUDDY_SRC_SERVICE_MUSICSERVICE_H_
