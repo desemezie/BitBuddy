@@ -20,8 +20,8 @@ void StatsButton::setImage(QString imagePath) {
 }
 
 void StatsButton::statsClicked() {
-  StatsWindow *window = new StatsWindow();
-  window->setAttribute(Qt::WA_DeleteOnClose);
-  window->exec();
+  //StatsWindow *window = new StatsWindow();
+  //window->setAttribute(Qt::WA_DeleteOnClose);
+  //window->exec();
 }
 

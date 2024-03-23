@@ -5,7 +5,8 @@
 #include "StatsWindow.h"
 #include <QVBoxLayout>
 
-StatsWindow::StatsWindow(const QString &name, QWidget *parent) : QDialog(parent) {
+StatsWindow::StatsWindow(const QString &thename, QWidget *parent) : QDialog(parent) {
+  name = thename;
   setupUi();
 }
 
@@ -26,4 +27,6 @@ void StatsWindow::setupUi() {
 
   setLayout(layout);
 }
+
+
 

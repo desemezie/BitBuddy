@@ -48,10 +48,14 @@ class MainWindow : public QMainWindow {
   BitBuddySpriteHandler *spriteHandler;
   QPushButton *settingsButton;
   lightButton *lightSwitch;
-  StatsButton *stats;
+  QPushButton *stats;
+  QString bitBuddyName;
 
 
   void loadDefaultSprite();
+
+ public:
+  void setName(const QString &name);
 };
 
 

@@ -20,6 +20,8 @@ class LauncherWindow : public QWidget{
  private:
   QLineEdit *nameLineEdit;
 
+
+
 };
 
 

@@ -12,7 +12,7 @@ class StatsWindow : public QDialog {
  Q_OBJECT
 
  public:
-  explicit StatsWindow(const QString &name, QWidget *parent = nullptr);
+  explicit StatsWindow(const QString &thename, QWidget *parent = nullptr);
   ~StatsWindow();
 
  private:
@@ -20,6 +20,7 @@ class StatsWindow : public QDialog {
   QLabel *ageLabel;
   QString name;
   void setupUi();
+
 };
 
 #endif //BITBUDDY_INCLUDE_STATSWINDOW_H_

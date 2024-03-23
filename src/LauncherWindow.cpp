@@ -115,6 +115,7 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
     this->hide();
     auto *mainWindow = new MainWindow();
     mainWindow->setAttribute(Qt::WA_DeleteOnClose);
+    mainWindow->setName(name);
     mainWindow->show();
 
     GameService::getInstance().startService();

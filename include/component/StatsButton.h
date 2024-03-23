@@ -12,7 +12,7 @@ class StatsButton: public QPushButton{
  Q_OBJECT
 
  public:
-  explicit StatsButton(QWidget *parent = nullptr);
+  explicit StatsButton(QWidget *parent = nullptr );
 
 
  private slots:

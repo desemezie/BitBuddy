@@ -12,13 +12,15 @@
 #include "service/EventDispatcherService.h"
 #include "SettingsWindow.h"
 #include "component/lightButton.h"
-#include "component/StatsButton.h"
+#include "StatsWindow.h"
+
 #include <iostream>
 
 constexpr int SCREEN_WIDTH = 1280;
 constexpr int SCREEN_HEIGHT = 720;
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
+
   auto *centralWidget = new QWidget(this);
   setCentralWidget(centralWidget);
   resize(SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -62,11 +64,16 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   connect(lightSwitch, &lightButton::textChange, statusWidget, &BitBuddyStatusWidget::updateDarkMode);
 
   // Add the stats button
-  stats = new StatsButton();
+  QIcon statsIcon(":/assets/info.png");
+  stats = new QPushButton();
+  stats->setIcon(statsIcon);
+  stats->setIconSize(QSize(40, 40));
+  connect(stats, &QPushButton::clicked, this, [this]() {
+    auto *statsWindow = new StatsWindow(bitBuddyName, this);
+    statsWindow->setAttribute(Qt::WA_DeleteOnClose);
+    statsWindow->show();
+  });
   layout->addWidget(stats, 0, 1, Qt::AlignCenter | Qt::AlignRight);
-
-
-
 
 
   auto *rowLayout1 = new QHBoxLayout;
@@ -131,3 +138,9 @@ void MainWindow::openSettings() {
   settingsDialog.exec();
 
 }
+
+void MainWindow::setName(const QString &name){
+  bitBuddyName = name;
+}
+
+
