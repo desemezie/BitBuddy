@@ -5,7 +5,7 @@
 #include "service/GameService.h"
 #include "service/EventGeneratorService.h"
 #include "service/MusicService.h"
-#include "FileStorageService.h"
+#include "service/FileStorageService.h"
 
 EventGeneratorService &GameService::eventGeneratorService = EventGeneratorService::getInstance();
 
