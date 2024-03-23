@@ -84,7 +84,7 @@ int BitBuddy::getAttributeValue(BitBuddyAttributeName::UniqueName attributeName)
 
 void BitBuddy::incrementAttribute(BitBuddyAttributeName::UniqueName attribute, int value) {
   if (!attributes.contains(attribute)) {
-    std::cerr << "BitBuddy does not contain the attribute: " << BitBuddyAttributeName::toString(attribute)
+    std::cerr << "BitBuddy does not contain the zattribute: " << BitBuddyAttributeName::toString(attribute)
               << std::endl;
     return;
   }
