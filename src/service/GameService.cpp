@@ -17,14 +17,13 @@ GameService &GameService::getInstance() {
 void GameService::startService() {
   eventGeneratorService.startService();
   MusicService::getInstance().startMusic();
-  FileStorageService::loadBitBuddyName();
 }
 
 void GameService::stopService() {
-  eventGeneratorService.stopService();
   MusicService::getInstance().stopMusic();
+  eventGeneratorService.stopService();
 }
 
 GameService::~GameService() {
-  FileStorageService::saveBitBuddyName("George");
+  stopService();
 }

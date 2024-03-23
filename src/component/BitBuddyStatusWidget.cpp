@@ -8,14 +8,13 @@
 #include "model/BitBuddy.h"
 #include "model/audio.h"
 
-
 #include <QVBoxLayout>
 #include <iostream>
 
 const int LABEL_WIDTH = 80;
 const int PROGRESS_BAR_WIDTH = 120;
 
-BitBuddyStatusWidget::BitBuddyStatusWidget(BitBuddy *bitBuddyWidgetInstance, QWidget *parent) : QWidget(parent) {
+BitBuddyStatusWidget::BitBuddyStatusWidget(BitBuddy *bitBuddy, QWidget *parent) : QWidget(parent) {
   auto *layout = new QVBoxLayout(this);
   layout->setAlignment(Qt::AlignTop);
 
@@ -39,10 +38,10 @@ BitBuddyStatusWidget::BitBuddyStatusWidget(BitBuddy *bitBuddyWidgetInstance, QWi
     layout->addLayout(hLayout); // Add the horizontal layout to the main vertical layout
 
     attributeBars.insert(attribute, bar);
-    setAttributeLevel(attribute, MAX_ATTRIBUTE_VALUE);
+    setAttributeLevel(attribute, bitBuddy->getAttributeValue(attribute));
   }
 
-  connect(bitBuddyWidgetInstance, &BitBuddy::attributeUpdated, this, &BitBuddyStatusWidget::onAttributeUpdated);
+  connect(bitBuddy, &BitBuddy::attributeUpdated, this, &BitBuddyStatusWidget::onAttributeUpdated);
 }
 
 void BitBuddyStatusWidget::setAttributeLevel(BitBuddyAttributeName::UniqueName attributeName, int level) {

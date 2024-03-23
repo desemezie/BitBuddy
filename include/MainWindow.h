@@ -43,11 +43,9 @@ class MainWindow : public QMainWindow {
   QLabel *spriteLabel;
   BitBuddySpriteHandler *spriteHandler;
   QPushButton *settingsButton;
-
+  BitBuddy *bitBuddy;
 
   void loadDefaultSprite();
 };
-
-
 
 #endif //BITBUDDY_MAINWINDOW_H

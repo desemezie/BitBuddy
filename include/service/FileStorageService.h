@@ -6,8 +6,10 @@
 #define BITBUDDY_SRC_SERVICE_FILESTORAGESERVICE_H_
 
 #include <QString>
+#include "model/BitBuddy.h"
 
 const QString SAVE_DIRECTORY_NAME = "bitbuddySaveFiles";
+const QString BITBUDDY_FILE_NAME = "bitBuddy.json";
 
 class FileStorageService {
  public:
@@ -22,9 +24,9 @@ class FileStorageService {
   FileStorageService(FileStorageService &&) = delete;
   FileStorageService &operator=(FileStorageService &&) = delete;
 
-  static void saveBitBuddyName(const QString &name);
+  static void saveBitBuddy(const BitBuddy &bitBuddy);
 
-  static QString loadBitBuddyName();
+  static BitBuddy *loadBitBuddy(std::string fallBackName);
 
  private:
   FileStorageService();

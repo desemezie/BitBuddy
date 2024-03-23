@@ -54,5 +54,8 @@ MusicService::MusicService() : currentVolume(MAXIMUM_VOLUME) {
 }
 
 MusicService::~MusicService() {
+  stopMusic();
+
   delete musicPlayer;
+  delete audioOutput;
 }
