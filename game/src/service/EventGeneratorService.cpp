@@ -22,38 +22,47 @@ EventGeneratorService &EventGeneratorService::getInstance() {
 }
 
 void EventGeneratorService::startService() {
-  if (!running.load()) { // Check if the service is not already running
+  if (!running.load()) {
     running.store(true);
+    paused.store(false); // Make sure paused is false when starting
     eventGeneratorServiceThread = std::thread([this]() {
       std::mt19937 generator(std::random_device{}());
-      // Normal distribution centered around TARGET_MEAN_SECONDS with a spread of TIME_SPREAD_SECONDS
       std::normal_distribution<> normalDistribution(TARGET_MEAN_SECONDS, TIME_SPREAD_SECONDS);
 
       while (running.load()) {
+        // Check if paused
+        {
+          std::unique_lock<std::mutex> lock(pauseMutex);
+          pauseCondition.wait(lock, [this] { return !paused.load(); });
+        }
+
         generateEvent();
 
-        // Generate a weighted random delay
         int delaySeconds = static_cast<int>(std::round(normalDistribution(generator)));
-        // Clamp the delay between MIN_DELAY_SECONDS and MAX_DELAY_SECONDS
         delaySeconds = std::max(MIN_DELAY_SECONDS, std::min(delaySeconds, MAX_DELAY_SECONDS));
-
         std::this_thread::sleep_for(std::chrono::seconds(delaySeconds));
       }
     });
+  } else if (paused.load()) { // If the service is running but paused, resume it
+    resumeService();
   }
 }
 
 void EventGeneratorService::stopService() {
-  if (running.load()) {
-    running.store(false);
-    if (eventGeneratorServiceThread.joinable()) {
-      eventGeneratorServiceThread.join();
-    }
-  }
+  paused.store(true);
 }
 
 EventGeneratorService::~EventGeneratorService() {
-  stopService();
+  running.store(false);
+  resumeService(); // Ensure the thread isn't waiting on the condition variable
+  if (eventGeneratorServiceThread.joinable()) {
+    eventGeneratorServiceThread.join();
+  }
+}
+
+void EventGeneratorService::resumeService() {
+  paused.store(false);
+  pauseCondition.notify_one();
 }
 
 void EventGeneratorService::generateEvent() {

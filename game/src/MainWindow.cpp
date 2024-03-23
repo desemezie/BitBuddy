@@ -11,6 +11,8 @@
 #include "component/BitBuddyActionButton.h"
 #include "service/EventDispatcherService.h"
 #include "SettingsWindow.h"
+#include "service/GameService.h"
+#include "service/FileStorageService.h"
 #include <iostream>
 
 constexpr int SCREEN_WIDTH = 1920;
@@ -26,8 +28,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
   centralWidget->setLayout(layout);
 
-  auto *bitBuddy = new BitBuddy("BitBuddy");
-
+  bitBuddy = FileStorageService::loadBitBuddy("BitBuddy");
 
   auto *statusWidget = new BitBuddyStatusWidget(bitBuddy, this);
 
@@ -54,9 +55,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   layout->addWidget(settingsButton, 0, 1, Qt::AlignTop | Qt::AlignRight);
   connect(settingsButton, &QPushButton::clicked, this, &MainWindow::openSettings);
 
-
-
-
   auto *rowLayout1 = new QHBoxLayout;
   auto *rowLayout2 = new QHBoxLayout;
 
@@ -78,14 +76,23 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   layout->addWidget(spriteLabel, 0, 0, 2, 2, Qt::AlignCenter);
   layout->addLayout(rowLayout1, 2, 0, 2, 2);
   layout->addLayout(rowLayout2, 4, 0, 2, 2);
-
   layout->setAlignment(Qt::AlignBottom);
+
   connect(&EventDispatcherService::getInstance(), &EventDispatcherService::eventDispatched,
           spriteHandler, &BitBuddySpriteHandler::handleEvent);
 
+  GameService::startService();
 }
 
-MainWindow::~MainWindow() = default;
+MainWindow::~MainWindow() {
+  FileStorageService::saveBitBuddy(*bitBuddy);
+  GameService::stopService();
+
+  delete bitBuddy;
+  delete spriteHandler;
+  delete spriteLabel;
+  delete settingsButton;
+}
 
 void MainWindow::loadDefaultSprite() {
   QImage image(":/assets/happy_bitbuddy.png");
@@ -103,8 +110,6 @@ void MainWindow::loadDefaultSprite() {
     }
   }
 }
-
-
 
 void MainWindow::openSettings() {
   SettingsWindow settingsDialog(this);

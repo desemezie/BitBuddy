@@ -4,13 +4,23 @@
 
 #include "model/BitBuddyAttribute.h"
 
-#include <algorithm>
+#include <QJsonObject>
 
 BitBuddyAttribute::BitBuddyAttribute(BitBuddyAttributeName::UniqueName attributeName, int value)
     : attributeName(attributeName), value(value) {}
 
-BitBuddyAttribute::~BitBuddyAttribute() {
+QJsonObject BitBuddyAttribute::toJson() const {
+  QJsonObject obj;
+  obj["attributeName"] = static_cast<int>(attributeName);
+  obj["value"] = value;
+  return obj;
+}
 
+BitBuddyAttribute BitBuddyAttribute::fromJson(const QJsonObject &obj) {
+  BitBuddyAttributeName::UniqueName
+      attributeName = static_cast<BitBuddyAttributeName::UniqueName>(obj["attributeName"].toInt());
+  int value = obj["value"].toInt();
+  return BitBuddyAttribute(attributeName, value);
 }
 
 BitBuddyAttribute::BitBuddyAttribute(const BitBuddyAttribute &other) = default;

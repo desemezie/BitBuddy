@@ -12,9 +12,9 @@
 #include "model/audio.h"
 #include <QMediaPlayer>
 #include <QAudioOutput>
-#include "QtSpatialAudio/QAmbientSound"
+#include "QAmbientSound"
 #include "QAudio"
-#include <QtSpatialAudio/QAudioEngine>
+#include <QAudioEngine>
 
 
 

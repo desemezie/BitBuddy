@@ -46,12 +46,20 @@ class EventGeneratorService {
   ~EventGeneratorService();
 
   /***
+   * Resumes the event generation service if it's already been started and is currently paused
+   */
+  void resumeService();
+
+  /***
    * Generates a random event from the PREDEFINED_EVENTS list and passes it to the EventDispatcherService to be dispatched
    */
   static void generateEvent();
 
   std::thread eventGeneratorServiceThread;
-  std::atomic<bool> running{false}; // Controls the event generation loop
+  std::atomic<bool> running{false};
+  std::atomic<bool> paused{false};
+  std::mutex pauseMutex;
+  std::condition_variable pauseCondition;
 };
 
 #endif //BITBUDDY_EVENTGENERATORSERVICE_H

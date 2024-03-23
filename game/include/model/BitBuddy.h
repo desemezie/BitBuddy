@@ -51,7 +51,7 @@ class BitBuddy : public QObject {
 
   [[nodiscard]] QJsonObject toJson() const;
 
-  static BitBuddy fromJson(const QJsonObject &json);
+  static BitBuddy *fromJson(const QJsonObject &json);
 
   /***
    * Gets the attribute value for the given attribute name

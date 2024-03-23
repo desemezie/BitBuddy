@@ -3,7 +3,6 @@
 //
 
 #include "model/BitBuddy.h"
-
 #include "model/BitBuddyAttributeName.h"
 #include "service/EventDispatcherService.h"
 #include "model/SingleAttributeEvent.h"
@@ -11,6 +10,7 @@
 #include <iostream>
 #include <QFile>
 #include <QTextStream>
+#include <QJsonObject>
 
 BitBuddy::BitBuddy(std::string name)
     : name(std::move(name)), creationTime(std::chrono::system_clock::now()) {
@@ -26,7 +26,6 @@ BitBuddy::BitBuddy(std::string name)
   BitBuddy::connectSignals();
 }
 
-// Used for creating the bit buddy when loading from a file
 BitBuddy::BitBuddy(std::string name, const std::map<BitBuddyAttributeName::UniqueName,
                                                     BitBuddyAttribute> &attributes,
                    std::chrono::system_clock::time_point creationTime)
@@ -46,14 +45,14 @@ QJsonObject BitBuddy::toJson() const {
   QJsonObject attributesObj;
   for (const auto &attribute : attributes) {
     attributesObj[QString::number(attribute.first)] =
-        attribute.second.toJson(); // You'll need to implement toJson for BitBuddyAttribute as well
+        attribute.second.toJson();
   }
   obj["attributes"] = attributesObj;
 
   return obj;
 }
 
-BitBuddy BitBuddy::fromJson(const QJsonObject &obj) {
+BitBuddy *BitBuddy::fromJson(const QJsonObject &obj) {
   std::string name = obj["name"].toString().toStdString();
   auto creationTime =
       std::chrono::system_clock::time_point(std::chrono::system_clock::duration(obj["creationTime"].toString()
@@ -62,11 +61,12 @@ BitBuddy BitBuddy::fromJson(const QJsonObject &obj) {
   std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> attributes;
   QJsonObject attributesObj = obj["attributes"].toObject();
   for (auto it = attributesObj.begin(); it != attributesObj.end(); ++it) {
-    attributes[static_cast<BitBuddyAttributeName::UniqueName>(it.key().toInt())] =
-        BitBuddyAttribute::fromJson(it.value().toObject()); // Implement fromJson for BitBuddyAttribute
+    attributes.emplace(std::piecewise_construct,
+                       std::forward_as_tuple(static_cast<BitBuddyAttributeName::UniqueName>(it.key().toInt())),
+                       std::forward_as_tuple(BitBuddyAttribute::fromJson(it.value().toObject())));
   }
 
-  return BitBuddy(name, attributes, creationTime);
+  return new BitBuddy(name, attributes, creationTime);
 }
 
 int BitBuddy::getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const {
@@ -84,7 +84,7 @@ int BitBuddy::getAttributeValue(BitBuddyAttributeName::UniqueName attributeName)
 
 void BitBuddy::incrementAttribute(BitBuddyAttributeName::UniqueName attribute, int value) {
   if (!attributes.contains(attribute)) {
-    std::cerr << "BitBuddy does not contain the attribute: " << BitBuddyAttributeName::toString(attribute)
+    std::cerr << "BitBuddy does not contain the zattribute: " << BitBuddyAttributeName::toString(attribute)
               << std::endl;
     return;
   }
