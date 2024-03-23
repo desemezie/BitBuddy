@@ -1,0 +1,136 @@
+//
+// Created by Ryan Hecht  on 2024-03-04.
+//
+
+#include "model/BitBuddy.h"
+#include "model/BitBuddyAttributeName.h"
+#include "service/EventDispatcherService.h"
+#include "model/SingleAttributeEvent.h"
+
+#include <iostream>
+#include <QFile>
+#include <QTextStream>
+#include <QJsonObject>
+
+BitBuddy::BitBuddy(std::string name)
+    : name(std::move(name)), creationTime(std::chrono::system_clock::now()), dead(false), id(QUuid::createUuid()) {
+  for (int i = 0; i < NUMBER_OF_ATTRIBUTES; i++) {
+    // Constructs a map of the form {HUNGER -> <BitBuddyAttribute> with name HUNGER and value 10}
+    attributes.emplace(
+        std::piecewise_construct,
+        std::forward_as_tuple(static_cast<BitBuddyAttributeName::UniqueName>(i)),
+        std::forward_as_tuple(static_cast<BitBuddyAttributeName::UniqueName>(i))
+    );
+  }
+
+  BitBuddy::connectSignals();
+}
+
+BitBuddy::BitBuddy(std::string name, const std::map<BitBuddyAttributeName::UniqueName,
+                                                    BitBuddyAttribute> &attributes,
+                   std::chrono::system_clock::time_point creationTime, bool dead, QUuid id)
+    : name(std::move(name)), attributes(attributes), creationTime(creationTime), dead(dead), id(id) {
+  connectSignals();
+}
+
+BitBuddy::~BitBuddy() {
+  attributes.clear();
+}
+
+QJsonObject BitBuddy::toJson() const {
+  QJsonObject obj;
+  obj["id"] = id.toString();
+  obj["name"] = QString::fromStdString(name);
+  obj["creationTime"] = QString::number(creationTime.time_since_epoch().count());
+  obj["dead"] = dead;
+
+  QJsonObject attributesObj;
+  for (const auto &attribute : attributes) {
+    attributesObj[QString::number(attribute.first)] =
+        attribute.second.toJson();
+  }
+  obj["attributes"] = attributesObj;
+
+  return obj;
+}
+
+BitBuddy *BitBuddy::fromJson(const QJsonObject &obj) {
+  std::string name = obj["name"].toString().toStdString();
+  auto creationTime =
+      std::chrono::system_clock::time_point(std::chrono::system_clock::duration(obj["creationTime"].toString()
+                                                                                    .toLongLong()));
+  bool dead = obj["dead"].toBool();
+  QUuid id = obj["id"].toString().isEmpty() ? QUuid::createUuid() : QUuid(obj["id"].toString());
+
+  std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> attributes;
+  QJsonObject attributesObj = obj["attributes"].toObject();
+  for (auto it = attributesObj.begin(); it != attributesObj.end(); ++it) {
+    attributes.emplace(std::piecewise_construct,
+                       std::forward_as_tuple(static_cast<BitBuddyAttributeName::UniqueName>(it.key().toInt())),
+                       std::forward_as_tuple(BitBuddyAttribute::fromJson(it.value().toObject())));
+  }
+
+  return new BitBuddy(name, attributes, creationTime, dead, id);
+}
+
+int BitBuddy::getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const {
+
+  auto it = attributes.find(attributeName);
+  if (it == attributes.end()) {
+    std::cerr << "BitBuddy does not contain the attribute: " << BitBuddyAttributeName::toString(attributeName)
+              << std::endl;
+    return -1;
+  }
+
+  auto value = it->second.getValue();
+  return value;
+}
+
+void BitBuddy::incrementAttribute(BitBuddyAttributeName::UniqueName attribute, int value) {
+  if (!attributes.contains(attribute)) {
+    std::cerr << "BitBuddy does not contain the attribute: " << BitBuddyAttributeName::toString(attribute)
+              << std::endl;
+    return;
+  }
+
+  BitBuddyAttribute &attributeToUpdate = attributes.at(attribute);
+  attributeToUpdate.incrementValue(value);
+
+  emit attributeUpdated(attributeToUpdate);
+
+  if (attributeToUpdate.getValue() <= 0) {
+    die(attributeToUpdate);
+  }
+}
+
+long BitBuddy::getAgeInGameYears() const {
+  auto currentTime = std::chrono::system_clock::now();
+  long ageInGameYearUnits = std::chrono::duration_cast<std::chrono::minutes>(currentTime - creationTime).count();
+  long ageInGameYears = ageInGameYearUnits / IN_GAME_YEAR_LENGTH_IN_MINUTES;
+
+  return ageInGameYears;
+}
+
+void BitBuddy::onEvent(const Event &event) {
+  if (dead) {
+    return;
+  }
+
+  const auto *specificEvent = dynamic_cast<const SingleAttributeEvent *>(&event);
+  BitBuddyAttributeName::UniqueName attributeKey = specificEvent->getAttribute();
+  int increment = specificEvent->getIncrement();
+  incrementAttribute(attributeKey, increment);
+}
+
+void BitBuddy::connectSignals() const {
+  connect(&EventDispatcherService::getInstance(), &EventDispatcherService::eventDispatched,
+          this, &BitBuddy::onEvent);
+}
+
+void BitBuddy::die(const BitBuddyAttribute &attribute) {
+  dead = true;
+  std::cerr << "BitBuddy has died due to: " << BitBuddyAttributeName::toString(attribute.getAttributeName())
+            << std::endl;
+
+  emit died(attribute);
+}
