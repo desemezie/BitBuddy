@@ -23,6 +23,7 @@ public:
 
 
     void changeSprite(const std::string& state);
+    void updatePillsPosition();
 
 public slots:
     void handleEvent(const Event& event);
@@ -50,6 +51,9 @@ private:
     void checkAndUpdateSprite();
 
     void postUpdateCheck();
+
+  void spriteOrganizer();
+  void spriteOrganizer(const Event &event);
 
 };
 

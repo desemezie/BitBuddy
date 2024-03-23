@@ -14,7 +14,7 @@
 #include "service/GameService.h"
 #include "service/FileStorageService.h"
 #include <iostream>
-
+//1920
 constexpr int SCREEN_WIDTH = 1920;
 constexpr int SCREEN_HEIGHT = 1080;
 
@@ -115,4 +115,11 @@ void MainWindow::openSettings() {
   SettingsWindow settingsDialog(this);
   settingsDialog.exec();
 
+}
+void MainWindow::resizeEvent(QResizeEvent *event) {
+  QWidget::resizeEvent(event);
+  if (spriteHandler){
+    spriteHandler->updatePillsPosition();
+
+  }
 }
