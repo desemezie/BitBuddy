@@ -5,6 +5,7 @@
 #include "service/GameService.h"
 #include "service/EventGeneratorService.h"
 #include "service/MusicService.h"
+#include "service/FileStorageService.h"
 
 EventGeneratorService &GameService::eventGeneratorService = EventGeneratorService::getInstance();
 
@@ -16,9 +17,14 @@ GameService &GameService::getInstance() {
 void GameService::startService() {
   eventGeneratorService.startService();
   MusicService::getInstance().startMusic();
+  FileStorageService::loadBitBuddyName();
 }
 
 void GameService::stopService() {
   eventGeneratorService.stopService();
   MusicService::getInstance().stopMusic();
+}
+
+GameService::~GameService() {
+  FileStorageService::saveBitBuddyName("George");
 }

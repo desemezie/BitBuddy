@@ -40,7 +40,7 @@ class GameService {
  private:
   GameService() = default;
 
-  ~GameService() = default;
+  ~GameService();
 
   static EventGeneratorService &eventGeneratorService;
 };
