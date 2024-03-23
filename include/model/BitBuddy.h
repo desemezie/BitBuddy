@@ -10,12 +10,13 @@
 #include "model/BitBuddyAttribute.h"
 #include "model/Event.h"
 
+constexpr int IN_GAME_YEAR_LENGTH_IN_MINUTES = 1; // 1 minute represents 1 in-game year
+
 /***
  * Bit Buddy!
  */
 class BitBuddy : public QObject {
  Q_OBJECT
-
 
  public:
   /***
@@ -41,7 +42,6 @@ class BitBuddy : public QObject {
   /**
    * Destructor for the BitBuddy
    */
-
   ~BitBuddy() override;
 
   BitBuddy(const BitBuddy &) = delete;
@@ -53,14 +53,29 @@ class BitBuddy : public QObject {
   BitBuddy &operator=(BitBuddy &&) = delete;
 
   /***
+   * Gets the attribute value for the given attribute name
+   *
+   * @param attributeName The name of the attribute to get the value for
+   * @return The value of the attribute
+   */
+  [[nodiscard]] int getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const;
+
+  /***
    * Increments the value of the attribute with the given value
    *
    * @param attribute
    * @param value
    */
-  std::string currentSprite;
-  int getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const;
   void incrementAttribute(BitBuddyAttributeName::UniqueName attribute, int value);
+
+  /***
+   * Gets the age of the BitBuddy represented in 'in-game-years'
+   *
+   * @return The age of the BitBuddy in 'in-game-years'
+   */
+  [[nodiscard]] long getAgeInGameYears() const;
+
+  std::string currentSprite;
 
  signals:
   /***
@@ -83,9 +98,7 @@ class BitBuddy : public QObject {
   std::chrono::system_clock::time_point creationTime;
   std::string name;
 
-
   void connectSignals() const;
-
 };
 
 #endif //BITBUDDY_SRC_COMPONENT_BITBUDDY_H_

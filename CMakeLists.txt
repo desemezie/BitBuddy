@@ -62,6 +62,8 @@ add_executable(bitbuddy src/main.cpp
         include/service/MusicService.h
         src/model/audio.cpp
         include/model/audio.h
+        src/service/FileStorageService.cpp
+        include/service/FileStorageService.h
 
 )
 
