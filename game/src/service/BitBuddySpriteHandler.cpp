@@ -3,6 +3,7 @@
 //
 #include "service/BitBuddySpriteHandler.h"
 #include "model/SingleAttributeEvent.h"
+#include "LauncherWindow.h"
 #include <QDebug>
 #include <QPixmap>
 #include <QTimer>
@@ -84,12 +85,8 @@ void BitBuddySpriteHandler::displayPills(const QString &imagePath) {
     temporaryLabel->setPixmap(pixmap.scaled(newSize, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     temporaryLabel->resize(newSize);
 
-    // Dynamic positioning based on the parent widget's size
-    int xPosition = displayLabel->parentWidget()->width() - newSize.width() - 700; // 20 pixels from the right edge
-    int yPosition = displayLabel->parentWidget()->height() - newSize.height() - 335; // 20 pixels from the bottom edge
+    updatePillsPosition();
 
-    // Move the temporary label to the calculated position
-    temporaryLabel->move(xPosition, yPosition);
 
     temporaryLabel->show();
     // Use QTimer to wait 5 seconds before removing the image
@@ -223,5 +220,17 @@ void BitBuddySpriteHandler::changeSpriteSmoothly(const QString &imagePath) {
 
 }
 
+void BitBuddySpriteHandler::updatePillsPosition() {
+  //if (temporaryLabel->pixmap() != nullptr && !temporaryLabel->pixmap()->isNull()) {
+    QSize newSize = temporaryLabel->pixmap().size(); // Get the size of the image
+    int parentWidth = temporaryLabel->parentWidget()->width();
+    int parentHeight = temporaryLabel->parentWidget()->height();
+
+    int xPosition = (parentWidth - newSize.width()) / 2 + ((parentWidth - newSize.width()) / 45)/3 - ((parentWidth - newSize.width()) / 65);
+    int yPosition = (parentHeight - newSize.height()) / 2 + (parentHeight - newSize.height()) / 15;
+
+    temporaryLabel->move(xPosition, yPosition);
+
+}
 
 

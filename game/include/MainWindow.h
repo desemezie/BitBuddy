@@ -36,6 +36,9 @@ class MainWindow : public QMainWindow {
 
   MainWindow &operator=(MainWindow &&) = delete;
 
+ protected:
+  void resizeEvent(QResizeEvent *event) override;
+
  private slots:
   void openSettings();
 

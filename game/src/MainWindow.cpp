@@ -116,3 +116,10 @@ void MainWindow::openSettings() {
   settingsDialog.exec();
 
 }
+void MainWindow::resizeEvent(QResizeEvent *event) {
+  QWidget::resizeEvent(event);
+  if (spriteHandler){
+    spriteHandler->updatePillsPosition();
+
+  }
+}
