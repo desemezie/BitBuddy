@@ -94,7 +94,8 @@ void BitBuddySpriteHandler::changeSprite(const std::string &state) {
 
   } else if (state.find("Event for: Hygiene") != std::string::npos) {
     QString imagePath = ":/assets/tamagochi_bubble.png";
-    displayBubbles(imagePath);
+
+
 
   } else if (state.find("Event for: Tiredness") != std::string::npos) {
     QString imagePath = ":/assets/sleeping_bitbuddy.png";

@@ -6,6 +6,8 @@
 #include "service/EventDispatcherService.h"
 #include "model/SingleAttributeEvent.h"
 #include "model/BitBuddy.h"
+#include "model/audio.h"
+
 
 #include <QVBoxLayout>
 #include <iostream>
