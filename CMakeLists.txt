@@ -58,8 +58,9 @@ add_executable(bitbuddy src/main.cpp
         include/LauncherWindow.h
         include/SettingsWindow.h
         src/SettingsWindow.cpp
-        include/model/audio.h
-        src/model/audio.cpp
+        src/service/MusicService.cpp
+        include/service/MusicService.h
+
 
 )
 
