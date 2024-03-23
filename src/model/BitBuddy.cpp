@@ -51,7 +51,6 @@ void BitBuddy::incrementAttribute(BitBuddyAttributeName::UniqueName attribute, i
 
 void BitBuddy::onEvent(const Event &event) {
   const auto *specificEvent = dynamic_cast<const SingleAttributeEvent *>(&event);
-  std::cout << "BitBuddy received an event: " << specificEvent->getDescription() << std::endl;
   BitBuddyAttributeName::UniqueName attributeKey = specificEvent->getAttribute();
   int increment = specificEvent->getIncrement();
   incrementAttribute(attributeKey, increment);
@@ -65,10 +64,12 @@ void BitBuddy::connectSignals() const {
 int BitBuddy::getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const {
 
   auto it = attributes.find(attributeName);
-  if (it != attributes.end()) {
-    auto value = it->second.getValue();
-    std::cout << "Found value: " << value << " for attribute " << BitBuddyAttributeName::toString(attributeName) << "\n";
-    return value;
+  if (it == attributes.end()) {
+    std::cerr << "BitBuddy does not contain the attribute: " << BitBuddyAttributeName::toString(attributeName)
+              << std::endl;
+    return -1;
   }
-  return -1; // Or some error value
+
+  auto value = it->second.getValue();
+  return value;
 }

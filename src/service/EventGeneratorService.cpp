@@ -8,6 +8,7 @@
 
 #include <random>
 #include <chrono>
+#include <iostream>
 
 // Constants for event generation timing
 constexpr int TARGET_MEAN_SECONDS = 10; // Target mean time for event generation
@@ -70,9 +71,9 @@ void EventGeneratorService::generateEvent() {
 
   // Select a random event based on the distribution
   const auto &selectedEvent = PREDEFINED_EVENTS[eventDistribution(generator)];
-//  QMetaObject::invokeMethod(&EventDispatcherService::getInstance(),
-//                            "dispatchEvent",
-//                            Qt::QueuedConnection,
-//                            Q_ARG(const Event*, &selectedEvent));
+  QMetaObject::invokeMethod(&EventDispatcherService::getInstance(),
+                            "dispatchEvent",
+                            Qt::QueuedConnection,
+                            Q_ARG(const Event*, &selectedEvent));
 }
 
