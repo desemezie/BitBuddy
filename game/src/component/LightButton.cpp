@@ -35,5 +35,3 @@ void LightButton::update() {
     emit textChange(true);
   }
 }
-
-

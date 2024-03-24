@@ -10,7 +10,8 @@ StatsWindow::StatsWindow(const QString &thename, QWidget *parent) : QDialog(pare
   setupUi();
 }
 
-StatsWindow::~StatsWindow() {}
+StatsWindow::~StatsWindow() {
+}
 
 void StatsWindow::setupUi() {
   setWindowTitle(tr("BitBuddy Info"));
@@ -27,5 +28,3 @@ void StatsWindow::setupUi() {
 
   setLayout(layout);
 }
-
-

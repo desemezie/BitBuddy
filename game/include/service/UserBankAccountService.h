@@ -16,23 +16,23 @@
  * Exposes only a reference to the UserBankAccount object.
  */
 class UserBankAccountService {
- public:
-  static UserBankAccountService &getInstance();
+  public:
+    static UserBankAccountService &getInstance();
 
-  UserBankAccountService(const UserBankAccountService &) = delete;
-  UserBankAccountService &operator=(const UserBankAccountService &) = delete;
-  UserBankAccountService(UserBankAccountService &&) = delete;
-  UserBankAccountService &operator=(UserBankAccountService &&) = delete;
+    UserBankAccountService(const UserBankAccountService &) = delete;
+    UserBankAccountService &operator=(const UserBankAccountService &) = delete;
+    UserBankAccountService(UserBankAccountService &&) = delete;
+    UserBankAccountService &operator=(UserBankAccountService &&) = delete;
 
-  static void registerUserBankAccount(UserBankAccount *userBankAccount);
+    static void registerUserBankAccount(UserBankAccount *userBankAccount);
 
-  [[nodiscard]] static UserBankAccount &getUserBankAccount();
+    [[nodiscard]] static UserBankAccount &getUserBankAccount();
 
- private:
-  UserBankAccountService() = default;
-  ~UserBankAccountService();
+  private:
+    UserBankAccountService() = default;
+    ~UserBankAccountService();
 
-  static UserBankAccount *userBankAccount;
+    static UserBankAccount *userBankAccount;
 };
 
 #endif //BITBUDDY_GAME_SRC_SERVICE_USERBANKACCOUNTSERVICE_H_

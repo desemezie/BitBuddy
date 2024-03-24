@@ -38,19 +38,19 @@ class BitBuddy : public QObject {
      * @param id The unique identifier of the BitBuddy
      * @param bitBuckGenerator The BitBuckGenerator that generates BitBucks for the BitBuddy
      */
-    BitBuddy(std::string name, const std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute>& attributes,
+    BitBuddy(std::string name, const std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> &attributes,
              std::chrono::system_clock::time_point creationTime, bool dead, QUuid id,
-             BitBuckGenerator* bitBuckGenerator);
+             BitBuckGenerator *bitBuckGenerator);
 
     /**
      * Destructor for the BitBuddy
      */
     ~BitBuddy() override;
 
-    BitBuddy(const BitBuddy&) = delete;
-    BitBuddy& operator=(const BitBuddy&) = delete;
-    BitBuddy(BitBuddy&&) = delete;
-    BitBuddy& operator=(BitBuddy&&) = delete;
+    BitBuddy(const BitBuddy &) = delete;
+    BitBuddy &operator=(const BitBuddy &) = delete;
+    BitBuddy(BitBuddy &&) = delete;
+    BitBuddy &operator=(BitBuddy &&) = delete;
 
     /**
      * Converts the BitBuddy to a JSON object
@@ -65,7 +65,7 @@ class BitBuddy : public QObject {
      * @param json The JSON object to convert
      * @return The BitBuddy
      */
-    static BitBuddy* fromJson(const QJsonObject& json);
+    static BitBuddy *fromJson(const QJsonObject &json);
 
     /**
      * Gets the attribute value for the given attribute name
@@ -97,6 +97,11 @@ class BitBuddy : public QObject {
      */
     [[nodiscard]] std::string getName() const;
 
+    /**
+     * @brief Sets the name of the BitBuddy
+     */
+    void setName(std::string name);
+
     std::string currentSprite;
 
   signals:
@@ -105,14 +110,14 @@ class BitBuddy : public QObject {
      *
      * @param attribute The attribute that was updated
      */
-    void attributeUpdated(const BitBuddyAttribute& attribute);
+    void attributeUpdated(const BitBuddyAttribute &attribute);
 
     /**
      * Signal emitted when the BitBuddy dies
      *
      * @paragraph attribute The attribute that caused the BitBuddy to die
      */
-    void died(const BitBuddyAttribute& attribute);
+    void died(const BitBuddyAttribute &attribute);
 
   public slots:
     /**
@@ -120,7 +125,7 @@ class BitBuddy : public QObject {
      *
      * @param event The event to process
      */
-    void onEvent(const Event& event);
+    void onEvent(const Event &event);
 
   private:
     QUuid id;
@@ -128,7 +133,7 @@ class BitBuddy : public QObject {
     std::chrono::system_clock::time_point creationTime;
     std::string name;
     bool dead;
-    BitBuckGenerator* bitBuckGenerator;
+    BitBuckGenerator *bitBuckGenerator;
 
     /**
      * Connects the signals to the slots
@@ -140,7 +145,7 @@ class BitBuddy : public QObject {
      *
      * @param attribute The attribute that caused the BitBuddy to die
      */
-    void die(const BitBuddyAttribute& attribute);
+    void die(const BitBuddyAttribute &attribute);
 };
 
 #endif //BITBUDDY_SRC_COMPONENT_BITBUDDY_H_
