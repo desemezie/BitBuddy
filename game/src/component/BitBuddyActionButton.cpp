@@ -30,15 +30,66 @@ void BitBuddyActionButton::handleButtonClicked() {
   //play sound
   Audio::playSound(Sound);
 
-
-
-
-
-
-
   EventDispatcherService::getInstance().dispatchEvent(&event);
 }
 
+
+void  BitBuddyActionButton::setButtonStyle(){
+    QString imageName = QString::fromStdString(BitBuddyAttributeName::toString(attribute));
+    setStyleSheet(
+            "QPushButton {\n"
+            "    color: #000000;\n"
+            "    border: 2px solid #000000;\n"
+            "    border-radius: 15px; /* Increase for chubbier corners */\n"
+            "    background-color: white;\n"
+            "    padding: 10px 20px; /* Increase padding for a chubbier look */\n"
+            "    font-size: 25px;\n"
+            "    text-align: center;\n"
+            "    icon-size: 60px; /* Size for the icons */\n"
+            "    min-width: 100px; /* Minimum width to accommodate text and icon */\n"
+            "    min-height: 40px; /* Minimum height for a chubbier look */\n"
+
+            "}\n"
+            "\n"
+            "QPushButton:hover {\n"
+            "    background-color: #000000;\n"
+            "    color: white;\n"
+            "}"
+
+    );
+
+    if (imageName == "Hunger") {
+        setIcon(QIcon(":/assets/tamagochi_feed.png"));
+        setIconSize(QSize(50, 50));
+    }
+    else if (imageName == "Happiness"){
+        setIcon(QIcon(":/assets/happy_bitbuddy.png"));
+        setIconSize(QSize(50, 50));
+    }
+    else if (imageName == "Thirst"){
+        setIcon(QIcon(":/assets/tamagochi_drink_2.png"));
+        setIconSize(QSize(50, 50));
+    }
+    else if (imageName == "Health"){
+        setIcon(QIcon(":/assets/tamagochi_health.png"));
+        setIconSize(QSize(50, 50));
+    }
+    else if (imageName == "Tiredness"){
+        setIcon(QIcon(":/assets/sleeping_bitbuddy.png"));
+        setIconSize(QSize(50, 50));
+    }
+    else if (imageName == "Boredom"){
+        setIcon(QIcon(":/assets/tamagochi_dead.png"));
+        setIconSize(QSize(50, 50));
+    }
+    else {//Hygiene
+        //Q_ASSERT(type == "snore.mp3");
+        setIcon(QIcon(":/assets/tamagochi_soap_final.png"));
+        setIconSize(QSize(50, 50));
+    }
+
+
+}
 
 
 

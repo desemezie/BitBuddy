@@ -27,6 +27,7 @@ BitBuddyStatusWidget::BitBuddyStatusWidget(BitBuddy *bitBuddy, QWidget *parent) 
     auto *hLayout = new QHBoxLayout();
     auto *label = new QLabel(QString::fromStdString(BitBuddyAttributeName::toString(attribute)), this);
     label->setFixedWidth(LABEL_WIDTH);
+    label->setStyleSheet("QLabel { color : black; }");//sets progress bar's color to black
     hLayout->addWidget(label);
 
     // Create and configure the progress bar

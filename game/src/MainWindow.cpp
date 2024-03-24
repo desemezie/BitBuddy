@@ -21,10 +21,19 @@ constexpr int SCREEN_HEIGHT = 1080;
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   auto *centralWidget = new QWidget(this);
   setCentralWidget(centralWidget);
-  resize(SCREEN_WIDTH, SCREEN_HEIGHT);
+  centralWidget->setObjectName("centralWidget");
+
+  // Set the stylesheet for the central widget
+
+  QString imagePath = ":/assets/background.png";  // Make sure to provide the correct path to your image
+  centralWidget->setStyleSheet("QWidget#centralWidget { background-image: url(:/assets/background.png); }");
+
+    resize(SCREEN_WIDTH, SCREEN_HEIGHT);
 
   // Grid layout for the central widget
   auto *layout = new QGridLayout(centralWidget);
+
+
 
   centralWidget->setLayout(layout);
 
@@ -64,6 +73,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
                                          QString::fromStdString(BitBuddyAttributeName::toString(attribute)),
                                          attribute,
                                          centralWidget);
+    but->setButtonStyle();
+
     if (i < 4) {
       rowLayout1->addWidget(but);
     } else {
@@ -71,8 +82,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     }
   }
 
-  rowLayout1->setSpacing(0);
-  rowLayout2->setSpacing(0);
+
+  rowLayout1->setSpacing(1);
+  rowLayout2->setSpacing(1);
   layout->addWidget(spriteLabel, 0, 0, 2, 2, Qt::AlignCenter);
   layout->addLayout(rowLayout1, 2, 0, 2, 2);
   layout->addLayout(rowLayout2, 4, 0, 2, 2);
