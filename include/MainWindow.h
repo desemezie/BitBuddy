@@ -50,6 +50,7 @@ class MainWindow : public QMainWindow {
   lightButton *lightSwitch;
   QPushButton *stats;
   QString bitBuddyName;
+  BitBuddy *bitBuddy;
 
 
   void loadDefaultSprite();

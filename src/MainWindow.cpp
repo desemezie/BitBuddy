@@ -21,6 +21,11 @@ constexpr int SCREEN_HEIGHT = 1080;
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
+  //start the music
+  MusicService& musicService = MusicService::getInstance();
+  musicService.setVolume(0.5f); // Set volume to 50%
+  musicService.startMusic();
+
   auto *centralWidget = new QWidget(this);
   setCentralWidget(centralWidget);
   resize(SCREEN_WIDTH, SCREEN_HEIGHT);
