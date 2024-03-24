@@ -6,6 +6,8 @@
 
 #include <QApplication>
 #include <QGridLayout>
+#include <QGuiApplication>
+#include <QScreen>
 #include <iostream>
 
 #include "../include/window/SettingsWindow.h"
@@ -22,34 +24,55 @@
 #include "service/GameService.h"
 #include "service/UserBankAccountService.h"
 
-constexpr int SCREEN_WIDTH = 1920;
-constexpr int SCREEN_HEIGHT = 1080;
+constexpr double DEFAULT_SCREEN_PERCENTAGE = 0.7;
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   BitBuddyService::registerBitBuddy(FileStorageService::loadBitBuddy("BitBuddy"));
   UserBankAccountService::registerUserBankAccount(&FileStorageService::loadUserBankAccount());
 
+  setupUi();
+
+  connect(settingsButton, &QPushButton::clicked, this, &MainWindow::openSettings);
+  connect(lightSwitch, &LightButton::themeChange, this, &MainWindow::updateTheme);
+  connect(lightSwitch, &LightButton::textChange, bitBuddyStatusWidget, &BitBuddyStatusWidget::updateDarkMode);
+  connect(stats, &QPushButton::clicked, this, [this]() {
+    auto *statsWindow = new StatsWindow(QString::fromStdString(BitBuddyService::getBitBuddy().getName()), this);
+    statsWindow->setAttribute(Qt::WA_DeleteOnClose);
+    statsWindow->show();
+  });
+  connect(&EventDispatcherService::getInstance(), &EventDispatcherService::eventDispatched, spriteHandler,
+          &BitBuddySpriteHandler::handleEvent);
+
+  GameService::startService();
+}
+
+MainWindow::~MainWindow() {
+  FileStorageService::saveBitBuddy(BitBuddyService::getBitBuddy());
+  FileStorageService::saveUserBankAccount(UserBankAccountService::getUserBankAccount());
+
+  setupUi();
+
+  delete spriteHandler;
+  delete spriteLabel;
+  delete settingsButton;
+}
+
+void MainWindow::setupUi() {
   // Set up central widget
   auto *centralWidget = new QWidget(this);
   setCentralWidget(centralWidget);
-
   centralWidget->setObjectName("centralWidget");
-
-  // Set the stylesheet for the central widget
-
-  QString imagePath = ":/assets/background.png";  // Make sure to provide the correct path to your image
-  centralWidget->setStyleSheet("QWidget#centralWidget { background-image: url(:/assets/background.png); }");
-
-  resize(SCREEN_WIDTH, SCREEN_HEIGHT);
-
-  // Grid layout for the central widget
   auto *layout = new QGridLayout(centralWidget);
-
   centralWidget->setLayout(layout);
+  centralWidget->setStyleSheet("QWidget#centralWidget { background-image: url(:/assets/background.png); }");
+  const QRect screenSize = QGuiApplication::primaryScreen()->availableGeometry();
+  const int width = screenSize.width() * DEFAULT_SCREEN_PERCENTAGE;
+  const int height = screenSize.height() * DEFAULT_SCREEN_PERCENTAGE;
+  resize(width, height);
 
   // Add bit buddy status widget
-  auto *statusWidget = new BitBuddyStatusWidget(&BitBuddyService::getBitBuddy(), this);
-  layout->addWidget(statusWidget, 0, 0, Qt::AlignTop | Qt::AlignLeft);
+  bitBuddyStatusWidget = new BitBuddyStatusWidget(&BitBuddyService::getBitBuddy(), this);
+  layout->addWidget(bitBuddyStatusWidget, 0, 0, Qt::AlignTop | Qt::AlignLeft);
 
   // Add user bank account balance widget
   auto *userBankAccountBalanceWidget = new UserBankAccountBalanceWidget(this);
@@ -72,24 +95,16 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   settingsButton->setIcon(settingsIcon);
   settingsButton->setIconSize(QSize(40, 40));
   layout->addWidget(settingsButton, 0, 1, Qt::AlignTop | Qt::AlignRight);
-  connect(settingsButton, &QPushButton::clicked, this, &MainWindow::openSettings);
 
   // Add the light switch button
-  LightButton *lightSwitch = new LightButton();
+  lightSwitch = new LightButton();
   layout->addWidget(lightSwitch, 1, 1, Qt::AlignTop | Qt::AlignCenter);
-  connect(lightSwitch, &LightButton::themeChange, this, &MainWindow::updateTheme);
-  connect(lightSwitch, &LightButton::textChange, statusWidget, &BitBuddyStatusWidget::updateDarkMode);
 
   // Add the stats button
   QIcon statsIcon(":/assets/info.png");
-  QPushButton *stats = new QPushButton();
+  stats = new QPushButton();
   stats->setIcon(statsIcon);
   stats->setIconSize(QSize(40, 40));
-  connect(stats, &QPushButton::clicked, this, [this]() {
-    auto *statsWindow = new StatsWindow(QString::fromStdString(BitBuddyService::getBitBuddy().getName()), this);
-    statsWindow->setAttribute(Qt::WA_DeleteOnClose);
-    statsWindow->show();
-  });
   layout->addWidget(stats, 0, 1, Qt::AlignCenter | Qt::AlignRight);
 
   auto *rowLayout1 = new QHBoxLayout;
@@ -115,24 +130,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   layout->addLayout(rowLayout1, 2, 0, 2, 2);
   layout->addLayout(rowLayout2, 4, 0, 2, 2);
   layout->setAlignment(Qt::AlignBottom);
-
-  connect(&EventDispatcherService::getInstance(), &EventDispatcherService::eventDispatched, spriteHandler,
-          &BitBuddySpriteHandler::handleEvent);
-
-  GameService::startService();
-}
-
-MainWindow::~MainWindow() {
-  FileStorageService::saveBitBuddy(BitBuddyService::getBitBuddy());
-  FileStorageService::saveUserBankAccount(UserBankAccountService::getUserBankAccount());
-
-  delete spriteHandler;
-  delete spriteLabel;
-  delete settingsButton;
-}
-
-void MainWindow::updateTheme(const QString &newStyle) {
-  this->setStyleSheet(newStyle);  // NOTE, THIS CAUSES THE BLUE STATUS BARS TO BECOME GREY
 }
 
 void MainWindow::loadDefaultSprite() const {
@@ -152,10 +149,6 @@ void MainWindow::loadDefaultSprite() const {
   }
 }
 
-void MainWindow::openSettings() {
-  SettingsWindow settingsDialog(this);
-  settingsDialog.exec();
-}
 void MainWindow::resizeEvent(QResizeEvent *event) {
   QWidget::resizeEvent(event);
   if (spriteHandler) {
@@ -165,4 +158,13 @@ void MainWindow::resizeEvent(QResizeEvent *event) {
     spriteHandler->updateBubblePosition();
     spriteHandler->updateZZZPosition();
   }
+}
+
+void MainWindow::openSettings() {
+  SettingsWindow settingsDialog(this);
+  settingsDialog.exec();
+}
+
+void MainWindow::updateTheme(const QString &newStyle) {
+  this->setStyleSheet(newStyle);  // NOTE, THIS CAUSES THE BLUE STATUS BARS TO BECOME GREY
 }
