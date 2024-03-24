@@ -5,17 +5,17 @@
 #ifndef BITBUDDY_INCLUDE_SETTINGSWINDOW_H_
 #define BITBUDDY_INCLUDE_SETTINGSWINDOW_H_
 
-#include <QWidget>
-#include <QPushButton>
-#include <QDialog>
-#include <QVBoxLayout>
 #include <QCheckBox>
-#include <QSlider>
+#include <QDialog>
 #include <QLabel>
 #include <QLineEdit>
-#include <QLabel>
+#include <QPushButton>
 #include <QSettings>
-#include "service/MusicService.h"
+#include <QSlider>
+#include <QVBoxLayout>
+#include <QWidget>
+
+#include "../service/MusicService.h"
 
 class SettingsWindow : public QDialog {
  Q_OBJECT

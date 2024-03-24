@@ -3,7 +3,7 @@
 //
 
 #include <QVBoxLayout>
-#include "LauncherWindow.h"
+#include "window/LauncherWindow.h"
 #include "MainWindow.h"
 #include <QApplication>
 #include <QGraphicsDropShadowEffect>
@@ -13,15 +13,15 @@
 constexpr int SCREEN_WIDTH = 1920;
 constexpr int SCREEN_HEIGHT = 1080;
 
-LauncherWindow::LauncherWindow(QWidget* parent) : QWidget(parent) {
+LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
   // adding background of layout
   this->setStyleSheet("background-color: white;");
-  auto* layout = new QVBoxLayout(this);
+  auto *layout = new QVBoxLayout(this);
 
   // adding background images
   addImages();
   layout->addStretch(1);
-  auto* welcomeLabel = new QLabel(this);
+  auto *welcomeLabel = new QLabel(this);
 
   // set design for welcome label
   welcomeLabel->setStyleSheet(R"(
@@ -49,28 +49,27 @@ LauncherWindow::LauncherWindow(QWidget* parent) : QWidget(parent) {
   welcomeLabel->setWordWrap(true);
 
   layout->addWidget(welcomeLabel, 0, Qt::AlignCenter);
-  layout->addSpacerItem(
-      new QSpacerItem(20, 250, QSizePolicy::Minimum, QSizePolicy::Expanding));
+  layout->addSpacerItem(new QSpacerItem(20, 250, QSizePolicy::Minimum, QSizePolicy::Expanding));
 
   this->resize(SCREEN_WIDTH, SCREEN_HEIGHT);
 
-  auto* playButton = new QPushButton("PLAY", this);
+  auto *playButton = new QPushButton("PLAY", this);
 
   // playbutton design
   playButton->setStyleSheet(
-      "QPushButton { " "color: #000000; " "border: 2px solid #000000; "
-      "border-radius: 10px; " "background-color: white; " "padding: 5px; " "}"
-      "QPushButton:hover { " "background-color: #000000;" "color: white;" "}");
+      "QPushButton { " "color: #000000; " "border: 2px solid #000000; " "border-radius: 10px; "
+      "background-color: white; " "padding: 5px; " "}" "QPushButton:hover { " "background-color: #000000;"
+      "color: white;" "}");
 
   // add the place to insert a name for your bitbuddy
-  auto* nameLineEdit = new QLineEdit(this);
+  auto *nameLineEdit = new QLineEdit(this);
   nameLineEdit->setPlaceholderText("Enter your name");
   nameLineEdit->setFixedSize(200, 30);
   // Set the width and height according to your preference
   nameLineEdit->setStyleSheet("border: 1px solid black;");
   nameLineEdit->setStyleSheet("QLineEdit { color: black !important; }");
 
-  auto* hLayoutForLineEdit = new QHBoxLayout();
+  auto *hLayoutForLineEdit = new QHBoxLayout();
   hLayoutForLineEdit->addStretch(1);
   // Add a stretchable space on the left side to push everything else to the right
   hLayoutForLineEdit->addWidget(nameLineEdit);
@@ -83,7 +82,7 @@ LauncherWindow::LauncherWindow(QWidget* parent) : QWidget(parent) {
   layout->addStretch();
 
   // add shadow effect for the box
-  auto* shadowEffect = new QGraphicsDropShadowEffect(welcomeLabel);
+  auto *shadowEffect = new QGraphicsDropShadowEffect(welcomeLabel);
   shadowEffect->setBlurRadius(5);
   shadowEffect->setXOffset(5);
   shadowEffect->setYOffset(5);
@@ -105,7 +104,7 @@ LauncherWindow::LauncherWindow(QWidget* parent) : QWidget(parent) {
   // connect the playButton to an action
   connect(playButton, &QPushButton::clicked, this, [this]() {
     this->hide();
-    auto* mainWindow = new MainWindow();
+    auto *mainWindow = new MainWindow();
     mainWindow->setAttribute(Qt::WA_DeleteOnClose);
     mainWindow->show();
   });
@@ -115,13 +114,11 @@ LauncherWindow::LauncherWindow(QWidget* parent) : QWidget(parent) {
  * addImages() - helper method to add the bitbuddies
  */
 void LauncherWindow::addImages() {
-  QWidget* imageContainer = new QWidget(this);
-  QTimer* timer = new QTimer(this);
+  QWidget *imageContainer = new QWidget(this);
+  QTimer *timer = new QTimer(this);
   connect(timer, &QTimer::timeout, [imageContainer]() {
     static int colorIndex = 0;
-    QStringList backgroundColors = {"background-color:#eaaee3",
-                                    "background-color:#c79dfb",
-                                    "background-color:#fbfb9d",
+    QStringList backgroundColors = {"background-color:#eaaee3", "background-color:#c79dfb", "background-color:#fbfb9d",
                                     "background-color:#bbdddd"};
     imageContainer->setStyleSheet(backgroundColors[colorIndex]);
 
@@ -149,28 +146,22 @@ void LauncherWindow::addImages() {
   int count = 0;
 
   // vector of images
-  std::vector<std::string> images = {":assets/happy_bitbuddy.png",
-                                     ":assets/angry_bitbuddy.png",
-                                     ":assets/mad_bitbuddy.png",
-                                     ":assets/sad_bitbuddy.png",
-                                     ":assets/sick_bitbuddy.png",
-                                     ":assets/sick_bitbuddy.png"};
+  std::vector<std::string> images = {":assets/happy_bitbuddy.png", ":assets/angry_bitbuddy.png",
+                                     ":assets/mad_bitbuddy.png", ":assets/sad_bitbuddy.png",
+                                     ":assets/sick_bitbuddy.png", ":assets/sick_bitbuddy.png"};
 
-  std::vector<std::string> backgroundColours = {"background-color:#eaaee3",
-                                                "background-color:#c79dfb",
-                                                "background-color:#fbfb9d",
-                                                "background-color:#bbdddd"};
+  std::vector<std::string> backgroundColours = {"background-color:#eaaee3", "background-color:#c79dfb",
+                                                "background-color:#fbfb9d", "background-color:#bbdddd"};
 
   // for loop for image placement
   for (int i = 0; i < numRows; ++i) {
     x = 0;
     for (int j = 0; j < 20; j++) {
       int pos = count % 6;
-      QLabel* imageLabel = new QLabel(imageContainer);
+      QLabel *imageLabel = new QLabel(imageContainer);
 
       QPixmap pixmap(images[pos].c_str()); // Adjust path accordingly
-      imageLabel->setPixmap(pixmap.scaled(QSize(80, 80), Qt::KeepAspectRatio,
-                                          Qt::SmoothTransformation));
+      imageLabel->setPixmap(pixmap.scaled(QSize(80, 80), Qt::KeepAspectRatio, Qt::SmoothTransformation));
       // Adjust size as needed
       imageLabel->adjustSize();
       imageLabel->move(x, y);

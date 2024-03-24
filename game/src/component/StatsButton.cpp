@@ -3,10 +3,11 @@
 //
 
 #include "component/StatsButton.h"
-#include "StatsWindow.h"
 
-#include <QIcon>
 #include <QApplication>
+#include <QIcon>
+
+#include "../../include/window/StatsWindow.h"
 
 StatsButton::StatsButton(QWidget *parent) : QPushButton(parent) {
   connect(this, &QPushButton::clicked, this, &StatsButton::statsClicked);
