@@ -87,12 +87,11 @@ void BitBuddySpriteHandler::displayPills(const QString &imagePath) {
 
     updatePillsPosition();
 
-
     temporaryLabel->show();
     // Use QTimer to wait 5 seconds before removing the image
     QTimer::singleShot(3000, this, [this]() {
       temporaryLabel->clear(); // Removes the pixmap from the label
-      // Optionally reset to a default sprite or state here
+
     });
   } else {
     qDebug() << "Failed to load image";
@@ -108,12 +107,12 @@ void BitBuddySpriteHandler::displayTacoAndRemove(const QString &imagePath) {
 
     temporaryLabel->setPixmap(pixmap.scaled(newSize, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     temporaryLabel->resize(newSize);
-    temporaryLabel->move(400, 270);
+    updateTacoPosition();
     temporaryLabel->show();
     // Use QTimer to wait 5 seconds before removing the image
     QTimer::singleShot(3000, this, [this]() {
       temporaryLabel->clear(); // Removes the pixmap from the label
-      // Optionally reset to a default sprite or state here
+
     });
   } else {
     qDebug() << "Failed to load image for taco event.";
@@ -127,7 +126,7 @@ void BitBuddySpriteHandler::displayDrink(const QString &imagePath) {
     //temporaryLabel->setStyleSheet("background-color: red;");
     temporaryLabel->setPixmap(pixmap.scaled(newSize, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     temporaryLabel->resize(newSize);
-    temporaryLabel->move(535, 395);
+    updateDrinkPosition();
     temporaryLabel->show();
     // Use QTimer to wait 5 seconds before removing the image
     QTimer::singleShot(5000, this, [this]() {
@@ -146,7 +145,7 @@ void BitBuddySpriteHandler::displayZZZ(const QString &imagePath) {
 
     temporaryLabel->setPixmap(pixmap.scaled(newSize, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     temporaryLabel->resize(newSize);
-    temporaryLabel->move(400, 125);
+    updateZZZPosition();
     temporaryLabel->show();
     // Use QTimer to wait 5 seconds before removing the image
     QTimer::singleShot(5000, this, [this]() {
@@ -170,15 +169,19 @@ void BitBuddySpriteHandler::displayBubbles(const QString &imagePath) {
     bubbleLabel->setPixmap(pixmap.scaled(bubbleSize, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     bubbleLabel->resize(bubbleSize);
     // Random position for each bubble
+
     int x = rand() % (displayLabel->width() - bubbleSize.width()) + 470;
     int y = rand() % (displayLabel->height() - bubbleSize.height()) + 150;
+    bubbleLabels.append(bubbleLabel);
     bubbleLabel->move(x, y);
     bubbleLabel->setAttribute(Qt::WA_TranslucentBackground);
+
     bubbleLabel->show();
 
     // Set each bubble to clear after 3 seconds
-    QTimer::singleShot(3000, bubbleLabel, [bubbleLabel]() {
+    QTimer::singleShot(3000, bubbleLabel, [bubbleLabel, this]() {
       bubbleLabel->deleteLater(); // Ensure the label is properly deleted
+      bubbleLabels.removeAll(bubbleLabel);
     });
   }
 }
@@ -221,15 +224,70 @@ void BitBuddySpriteHandler::changeSpriteSmoothly(const QString &imagePath) {
 }
 
 void BitBuddySpriteHandler::updatePillsPosition() {
-  //if (temporaryLabel->pixmap() != nullptr && !temporaryLabel->pixmap()->isNull()) {
-    QSize newSize = temporaryLabel->pixmap().size(); // Get the size of the image
-    int parentWidth = temporaryLabel->parentWidget()->width();
-    int parentHeight = temporaryLabel->parentWidget()->height();
 
-    int xPosition = (parentWidth - newSize.width()) / 2 + ((parentWidth - newSize.width()) / 45)/3 - ((parentWidth - newSize.width()) / 65);
-    int yPosition = (parentHeight - newSize.height()) / 2 + (parentHeight - newSize.height()) / 15;
+  QSize newSize = temporaryLabel->pixmap().size(); // Get the size of the image
+  int parentWidth = temporaryLabel->parentWidget()->width();
+  int parentHeight = temporaryLabel->parentWidget()->height();
 
-    temporaryLabel->move(xPosition, yPosition);
+  int xPosition = (parentWidth - newSize.width()) / 2 + ((parentWidth - newSize.width()) / 45)/3 - ((parentWidth - newSize.width()) / 65);
+  int yPosition = (parentHeight - newSize.height()) / 2 + (parentHeight - newSize.height()) / 15;
+
+  temporaryLabel->move(xPosition, yPosition);
+
+}
+
+void BitBuddySpriteHandler::updateDrinkPosition() {
+  QSize newSize = temporaryLabel->pixmap().size(); // Get the size of the image
+  int parentWidth = temporaryLabel->parentWidget()->width();
+  int parentHeight = temporaryLabel->parentWidget()->height();
+
+  int xPosition = (parentWidth - newSize.width()) / 2 + ((parentWidth - newSize.width()) / 45)/3 - ((parentWidth - newSize.width()) / 65) - 35;
+  int yPosition = (parentHeight - newSize.height()) / 2 + 150;
+
+  temporaryLabel->move(xPosition, yPosition);
+
+}
+
+void BitBuddySpriteHandler::updateTacoPosition() {
+  QSize newSize = temporaryLabel->pixmap().size(); // Get the size of the image
+  int parentWidth = temporaryLabel->parentWidget()->width();
+  int parentHeight = temporaryLabel->parentWidget()->height();
+
+  int xPosition = ((parentWidth - newSize.width()) / 2) - 100;
+  int yPosition = (parentHeight - newSize.height()) / 2 + 75;
+
+  temporaryLabel->move(xPosition, yPosition);
+
+}
+
+void BitBuddySpriteHandler::updateBubblePosition() {
+  // Dimensions of the central box
+  const int boxWidth = 300;
+  const int boxHeight = 300;
+
+  // Calculate the top-left corner of the central box
+  int boxStartX = ((displayLabel->width() - boxWidth) / 2 ) + 500;
+  int boxStartY = ((displayLabel->height() - boxHeight) / 2 ) + 150 ;
+
+  // Ensure bubbles are positioned within the 300x300 central box
+  for (QLabel* bubble : bubbleLabels) {
+    if (bubble) {
+      int x = boxStartX + (rand() % boxWidth) ; // Ensuring x is within the box
+      int y = boxStartY + (rand() % boxHeight); // Ensuring y is within the box
+      bubble->move(x, y);
+    }
+  }
+}
+
+void BitBuddySpriteHandler::updateZZZPosition() {
+  QSize newSize = temporaryLabel->pixmap().size(); // Get the size of the image
+  int parentWidth = temporaryLabel->parentWidget()->width();
+  int parentHeight = temporaryLabel->parentWidget()->height();
+
+  int xPosition = ((parentWidth - newSize.width()) / 2) -135;
+  int yPosition = ((parentHeight - newSize.height()) / 2) - 185;
+
+  temporaryLabel->move(xPosition, yPosition);
 
 }
 

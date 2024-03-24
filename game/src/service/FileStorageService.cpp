@@ -50,6 +50,38 @@ BitBuddy *FileStorageService::loadBitBuddy(std::string fallBackName) {
   return BitBuddy::fromJson(loadDoc.object());
 }
 
+void FileStorageService::saveUserBankAccount(const UserBankAccount &userBankAccount) {
+  QDir saveDir(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));
+  QString filePath = QDir(saveDir.absoluteFilePath(SAVE_DIRECTORY_NAME)).absoluteFilePath(USER_BANK_ACCOUNT_FILE_NAME);
+  QFile file(filePath);
+
+  if (!file.open(QIODevice::WriteOnly)) {
+    qWarning() << "Could not save the user bank account to" << filePath;
+    return;
+  }
+
+  QJsonObject userBankAccountObject = userBankAccount.toJson();
+  QJsonDocument saveDoc(userBankAccountObject);
+  file.write(saveDoc.toJson());
+  file.close();
+  std::cout << "Saved user bank account to " << filePath.toStdString() << std::endl;
+}
+
+UserBankAccount &FileStorageService::loadUserBankAccount() {
+  QDir saveDir(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));
+  QString filePath = QDir(saveDir.absoluteFilePath(SAVE_DIRECTORY_NAME)).absoluteFilePath(USER_BANK_ACCOUNT_FILE_NAME);
+  QFile file(filePath);
+
+  if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    qWarning() << "Could not load the user bank account from" << filePath;
+    return *new UserBankAccount();
+  }
+
+  QByteArray saveData = file.readAll();
+  QJsonDocument loadDoc(QJsonDocument::fromJson(saveData));
+  return *UserBankAccount::fromJson(loadDoc.object());
+}
+
 FileStorageService::FileStorageService() {
   QDir saveDir(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));
   saveDir.mkpath(SAVE_DIRECTORY_NAME);

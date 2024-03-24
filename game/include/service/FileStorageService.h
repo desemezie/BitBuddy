@@ -7,9 +7,11 @@
 
 #include <QString>
 #include "model/BitBuddy.h"
+#include "model/UserBankAccount.h"
 
 const QString SAVE_DIRECTORY_NAME = "bitbuddySaveFiles";
 const QString BITBUDDY_FILE_NAME = "bitBuddy.json";
+const QString USER_BANK_ACCOUNT_FILE_NAME = "userBankAccount.json";
 
 /**
  * @class FileStorageService
@@ -49,6 +51,10 @@ class FileStorageService {
    * @return A pointer to the loaded or newly created BitBuddy instance.
    */
   static BitBuddy *loadBitBuddy(std::string fallBackName);
+
+  static void saveUserBankAccount(const UserBankAccount &userBankAccount);
+
+  static UserBankAccount &loadUserBankAccount();
 
  private:
   FileStorageService();

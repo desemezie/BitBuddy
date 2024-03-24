@@ -31,5 +31,7 @@
         <file>assets/music/bye_bye_brain.mp3</file>
         <file>assets/tamagochi_soap_final.png</file>
         <file>assets/background.png</file>
+        <file>assets/fonts/ARCADECLASSIC.TTF</file>
+
     </qresource>
 </RCC>

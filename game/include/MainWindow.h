@@ -41,12 +41,12 @@ class MainWindow : public QMainWindow {
 
  private slots:
   void openSettings();
+  void updateTheme(const QString& newStyle);
 
  private:
   QLabel *spriteLabel;
   BitBuddySpriteHandler *spriteHandler;
   QPushButton *settingsButton;
-  BitBuddy *bitBuddy;
 
   void loadDefaultSprite();
 };

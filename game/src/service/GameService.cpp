@@ -5,9 +5,7 @@
 #include "service/GameService.h"
 #include "service/EventGeneratorService.h"
 #include "service/MusicService.h"
-#include "service/FileStorageService.h"
-
-EventGeneratorService &GameService::eventGeneratorService = EventGeneratorService::getInstance();
+#include "service/UserBankAccountService.h"
 
 GameService &GameService::getInstance() {
   static GameService instance;
@@ -15,13 +13,13 @@ GameService &GameService::getInstance() {
 }
 
 void GameService::startService() {
-  eventGeneratorService.startService();
+  EventGeneratorService::getInstance().startService();
   MusicService::getInstance().startMusic();
 }
 
 void GameService::stopService() {
   MusicService::getInstance().stopMusic();
-  eventGeneratorService.stopService();
+  EventGeneratorService::getInstance().stopService();
 }
 
 GameService::~GameService() {
