@@ -65,6 +65,16 @@ add_executable(bitbuddy game/src/main.cpp
         game/include/service/FileStorageService.h
         game/src/service/BitBuddyService.cpp
         game/include/service/BitBuddyService.h
+        game/src/service/UserBankAccountService.cpp
+        game/include/service/UserBankAccountService.h
+        game/src/model/UserBankAccount.cpp
+        game/include/model/UserBankAccount.h
+        game/src/model/BitBuckGenerator.cpp
+        game/include/model/BitBuckGenerator.h
+        game/src/service/TransactionService.cpp
+        game/include/service/TransactionService.h
+        game/src/component/UserBankAccountBalanceWidget.cpp
+        game/include/component/UserBankAccountBalanceWidget.h
 
 )
 

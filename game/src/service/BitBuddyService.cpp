@@ -17,12 +17,12 @@ void BitBuddyService::registerBitBuddy(BitBuddy *bitBuddy) {
 
 BitBuddy &BitBuddyService::getBitBuddy() {
   if (bitBuddy == nullptr) {
-    throw std::runtime_error("There is not BitBuddy registered with the BitBuddyService.");
+    throw std::runtime_error("There is no BitBuddy registered with the BitBuddyService.");
   }
 
   return *bitBuddy;
 }
 
 BitBuddyService::~BitBuddyService() {
-  bitBuddy = nullptr;
+  BitBuddyService::bitBuddy = nullptr;
 }

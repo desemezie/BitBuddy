@@ -22,11 +22,8 @@ class EventGeneratorService {
   static EventGeneratorService &getInstance();
 
   EventGeneratorService(const EventGeneratorService &) = delete;
-
   EventGeneratorService &operator=(const EventGeneratorService &) = delete;
-
   EventGeneratorService(EventGeneratorService &&) = delete;
-
   EventGeneratorService &operator=(EventGeneratorService &&) = delete;
 
   /**

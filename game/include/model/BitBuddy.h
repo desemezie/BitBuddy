@@ -9,6 +9,7 @@
 #include <map>
 #include "model/BitBuddyAttribute.h"
 #include "model/Event.h"
+#include "BitBuckGenerator.h"
 #include <QUuid>
 
 constexpr int IN_GAME_YEAR_LENGTH_IN_MINUTES = 1; // 1 minute represents 1 in-game year
@@ -35,10 +36,13 @@ class BitBuddy : public QObject {
    * @param parent The parent widget of the BitBuddy, typically the MainWindow.
    * @param attributes A map of the BitBuddy's attributes where the key is the attribute's unique name and the value is the attribute
    * @param creationTime The time the BitBuddy was created
+   * @param dead Whether the BitBuddy is dead
+   * @param id The unique identifier of the BitBuddy
+   * @param bitBuckGenerator The BitBuckGenerator that generates BitBucks for the BitBuddy
    */
   BitBuddy(std::string name,
            const std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> &attributes,
-           std::chrono::system_clock::time_point creationTime, bool dead, QUuid id);
+           std::chrono::system_clock::time_point creationTime, bool dead, QUuid id, BitBuckGenerator *bitBuckGenerator);
 
   /**
    * Destructor for the BitBuddy
@@ -50,8 +54,19 @@ class BitBuddy : public QObject {
   BitBuddy(BitBuddy &&) = delete;
   BitBuddy &operator=(BitBuddy &&) = delete;
 
+  /**
+   * Converts the BitBuddy to a JSON object
+   *
+   * @return The BitBuddy as a JSON object
+   */
   [[nodiscard]] QJsonObject toJson() const;
 
+  /**
+   * Converts a JSON object to a BitBuddy
+   *
+   * @param json The JSON object to convert
+   * @return The BitBuddy
+   */
   static BitBuddy *fromJson(const QJsonObject &json);
 
   /**
@@ -108,6 +123,7 @@ class BitBuddy : public QObject {
   std::chrono::system_clock::time_point creationTime;
   std::string name;
   bool dead;
+  BitBuckGenerator *bitBuckGenerator;
 
   /**
    * Connects the signals to the slots

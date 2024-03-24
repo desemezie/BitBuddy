@@ -7,7 +7,6 @@
 #include "MainWindow.h"
 #include "model/BitBuddyAttributeName.h"
 #include "component/BitBuddyStatusWidget.h"
-#include "model/BitBuddy.h"
 #include "component/BitBuddyActionButton.h"
 #include "service/EventDispatcherService.h"
 #include "SettingsWindow.h"
@@ -15,42 +14,39 @@
 #include "service/FileStorageService.h"
 #include <iostream>
 #include "service/BitBuddyService.h"
+#include "service/UserBankAccountService.h"
+#include "component/UserBankAccountBalanceWidget.h"
 
 constexpr int SCREEN_WIDTH = 1920;
 constexpr int SCREEN_HEIGHT = 1080;
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
+  BitBuddyService::registerBitBuddy(FileStorageService::loadBitBuddy("BitBuddy"));
+  UserBankAccountService::registerUserBankAccount(&FileStorageService::loadUserBankAccount());
+
   auto *centralWidget = new QWidget(this);
   setCentralWidget(centralWidget);
   resize(SCREEN_WIDTH, SCREEN_HEIGHT);
-
-  // Grid layout for the central widget
   auto *layout = new QGridLayout(centralWidget);
-
   centralWidget->setLayout(layout);
 
-  bitBuddy = FileStorageService::loadBitBuddy("BitBuddy");
+  auto *statusWidget = new BitBuddyStatusWidget(&BitBuddyService::getBitBuddy(), this);
+  layout->addWidget(statusWidget, 0, 0, Qt::AlignTop | Qt::AlignLeft);
 
-  BitBuddyService::registerBitBuddy(bitBuddy);
-
-  auto *statusWidget = new BitBuddyStatusWidget(bitBuddy, this);
+  auto *userBankAccountBalanceWidget = new UserBankAccountBalanceWidget(this);
+  layout->addWidget(userBankAccountBalanceWidget, 0, 1, Qt::AlignTop | Qt::AlignLeft); // To the right of statusWidget
 
   // Create spacers to push the status widget to the top-left corner
   auto *verticalSpacer = new QSpacerItem(1, 1, QSizePolicy::Minimum, QSizePolicy::Expanding);
+  layout->addItem(verticalSpacer, 1, 0, 1, 2);
 
   // connect spriteHandler to bitbuddy
   spriteLabel = new QLabel(centralWidget);
-  spriteHandler = new BitBuddySpriteHandler(spriteLabel, this, bitBuddy);
-
+  spriteHandler = new BitBuddySpriteHandler(spriteLabel, this, &BitBuddyService::getBitBuddy());
   loadDefaultSprite();
 
-  layout->addWidget(statusWidget, 0, 0, Qt::AlignTop | Qt::AlignLeft);
-  layout->addItem(verticalSpacer, 1, 0, 1, 2);
-
-  // Setting button icon
-  QIcon buttonIcon("");
-
   // Add the settings button
+  QIcon buttonIcon("");
   QIcon settingsIcon(":/assets/settings.png");
   settingsButton = new QPushButton();
   settingsButton->setIcon(settingsIcon);
@@ -81,17 +77,18 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   layout->addLayout(rowLayout2, 4, 0, 2, 2);
   layout->setAlignment(Qt::AlignBottom);
 
-  connect(&EventDispatcherService::getInstance(), &EventDispatcherService::eventDispatched,
-          spriteHandler, &BitBuddySpriteHandler::handleEvent);
+  connect(&EventDispatcherService::getInstance(),
+          &EventDispatcherService::eventDispatched,
+          spriteHandler,
+          &BitBuddySpriteHandler::handleEvent);
 
   GameService::startService();
 }
 
 MainWindow::~MainWindow() {
-  FileStorageService::saveBitBuddy(*bitBuddy);
-  GameService::stopService();
+  FileStorageService::saveBitBuddy(BitBuddyService::getBitBuddy());
+  FileStorageService::saveUserBankAccount(UserBankAccountService::getUserBankAccount());
 
-  bitBuddy = nullptr;
   delete spriteHandler;
   delete spriteLabel;
   delete settingsButton;
