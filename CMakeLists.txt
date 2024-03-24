@@ -53,10 +53,10 @@ add_executable(bitbuddy game/src/main.cpp
         game/include/component/BitBuddyActionButton.h
         game/src/service/BitBuddySpriteHandler.cpp
         game/include/service/BitBuddySpriteHandler.h
-        game/src/LauncherWindow.cpp
-        game/include/LauncherWindow.h
-        game/include/SettingsWindow.h
-        game/src/SettingsWindow.cpp
+        game/src/window/LauncherWindow.cpp
+        game/include/window/LauncherWindow.h
+        game/include/window/SettingsWindow.h
+        game/src/window/SettingsWindow.cpp
         game/src/service/MusicService.cpp
         game/include/service/MusicService.h
         game/src/model/audio.cpp
@@ -75,8 +75,8 @@ add_executable(bitbuddy game/src/main.cpp
         game/include/service/TransactionService.h
         game/src/component/UserBankAccountBalanceWidget.cpp
         game/include/component/UserBankAccountBalanceWidget.h
-        game/src/StatsWindow.cpp
-        game/include/StatsWindow.h
+        game/src/window/StatsWindow.cpp
+        game/include/window/StatsWindow.h
         game/src/component/LightButton.cpp
         game/include/component/LightButton.h
         game/src/component/StatsButton.cpp

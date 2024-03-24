@@ -2,23 +2,25 @@
 // Created by Ryan Hecht  on 2024-02-25.
 //
 
+#include "MainWindow.h"
+
 #include <QApplication>
 #include <QGridLayout>
-#include "MainWindow.h"
-#include "model/BitBuddyAttributeName.h"
-#include "component/BitBuddyStatusWidget.h"
-#include "component/BitBuddyActionButton.h"
-#include "service/EventDispatcherService.h"
-#include "SettingsWindow.h"
-#include "service/GameService.h"
-#include "service/FileStorageService.h"
 #include <iostream>
-#include "service/BitBuddyService.h"
-#include "service/UserBankAccountService.h"
-#include "component/UserBankAccountBalanceWidget.h"
+
+#include "../include/window/SettingsWindow.h"
+#include "../include/window/StatsWindow.h"
+#include "component/BitBuddyActionButton.h"
+#include "component/BitBuddyStatusWidget.h"
 #include "component/LightButton.h"
 #include "component/StatsButton.h"
-#include "StatsWindow.h"
+#include "component/UserBankAccountBalanceWidget.h"
+#include "model/BitBuddyAttributeName.h"
+#include "service/BitBuddyService.h"
+#include "service/EventDispatcherService.h"
+#include "service/FileStorageService.h"
+#include "service/GameService.h"
+#include "service/UserBankAccountService.h"
 
 constexpr int SCREEN_WIDTH = 1920;
 constexpr int SCREEN_HEIGHT = 1080;
@@ -107,7 +109,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     }
   }
 
-
   rowLayout1->setSpacing(1);
   rowLayout2->setSpacing(1);
   layout->addWidget(spriteLabel, 0, 0, 2, 2, Qt::AlignCenter);
@@ -131,10 +132,10 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::updateTheme(const QString &newStyle) {
-  this->setStyleSheet(newStyle); // NOTE, THIS CAUSES THE BLUE STATUS BARS TO BECOME GREY
+  this->setStyleSheet(newStyle);  // NOTE, THIS CAUSES THE BLUE STATUS BARS TO BECOME GREY
 }
 
-void MainWindow::loadDefaultSprite() {
+void MainWindow::loadDefaultSprite() const {
   QImage image(":/assets/happy_bitbuddy.png");
 
   if (image.isNull()) {

@@ -2,8 +2,9 @@
 // Created by Shaylan Pratt on 2024-03-19.
 //
 
-#include "SettingsWindow.h"
-#include "service/MusicService.h"
+#include "../../include/window/SettingsWindow.h"
+
+#include "../../include/service/MusicService.h"
 
 SettingsWindow::SettingsWindow(QWidget *parent) : QDialog(parent) {
   setup();

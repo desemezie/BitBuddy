@@ -15,40 +15,37 @@
  * The main window of the application
  */
 class MainWindow : public QMainWindow {
- Q_OBJECT
+    Q_OBJECT public:
+    /**
+     * @brief Constructor of the MainWindow.
+     *
+     * @param parent The parent widget of the MainWindow, typically the desktop.
+     */
+    explicit MainWindow(QWidget *parent = nullptr);
 
- public:
+    ~MainWindow() override;
 
-  /**
-   * @brief Constructor of the MainWindow.
-   *
-   * @param parent The parent widget of the MainWindow, typically the desktop.
-   */
-  explicit MainWindow(QWidget *parent = nullptr);
+    MainWindow(const MainWindow &) = delete;
 
-  ~MainWindow() override;
+    MainWindow &operator=(const MainWindow &) = delete;
 
-  MainWindow(const MainWindow &) = delete;
+    MainWindow(MainWindow &&) = delete;
 
-  MainWindow &operator=(const MainWindow &) = delete;
+    MainWindow &operator=(MainWindow &&) = delete;
 
-  MainWindow(MainWindow &&) = delete;
+  protected:
+    void resizeEvent(QResizeEvent *event) override;
 
-  MainWindow &operator=(MainWindow &&) = delete;
+  private slots:
+    void openSettings();
+    void updateTheme(const QString &newStyle);
 
- protected:
-  void resizeEvent(QResizeEvent *event) override;
+  private:
+    QLabel *spriteLabel;
+    BitBuddySpriteHandler *spriteHandler;
+    QPushButton *settingsButton;
 
- private slots:
-  void openSettings();
-  void updateTheme(const QString& newStyle);
-
- private:
-  QLabel *spriteLabel;
-  BitBuddySpriteHandler *spriteHandler;
-  QPushButton *settingsButton;
-
-  void loadDefaultSprite();
+    void loadDefaultSprite() const;
 };
 
 #endif //BITBUDDY_MAINWINDOW_H

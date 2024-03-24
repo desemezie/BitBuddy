@@ -5,7 +5,7 @@
 #include <QApplication>
 #include "MainWindow.h"
 #include "service/GameService.h"
-#include "LauncherWindow.h"
+#include "window/LauncherWindow.h"
 #include "model/audio.h"
 #include "QtMultimedia"
 #include <QMediaPlayer>

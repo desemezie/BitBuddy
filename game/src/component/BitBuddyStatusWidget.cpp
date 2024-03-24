@@ -11,10 +11,10 @@
 #include <QVBoxLayout>
 #include <iostream>
 
-const int LABEL_WIDTH = 80;
-const int PROGRESS_BAR_WIDTH = 120;
+constexpr int LABEL_WIDTH = 80;
+constexpr int PROGRESS_BAR_WIDTH = 120;
 
-BitBuddyStatusWidget::BitBuddyStatusWidget(BitBuddy *bitBuddy, QWidget *parent) : QWidget(parent) {
+BitBuddyStatusWidget::BitBuddyStatusWidget(const BitBuddy *bitBuddy, QWidget *parent) : QWidget(parent) {
   auto *layout = new QVBoxLayout(this);
   layout->setAlignment(Qt::AlignTop);
 
@@ -26,7 +26,7 @@ BitBuddyStatusWidget::BitBuddyStatusWidget(BitBuddy *bitBuddy, QWidget *parent) 
     auto *hLayout = new QHBoxLayout();
     auto *label = new QLabel(QString::fromStdString(BitBuddyAttributeName::toString(attribute)), this);
     label->setFixedWidth(LABEL_WIDTH);
-    label->setStyleSheet("QLabel { color : black; }");//sets progress bar's color to black
+    label->setStyleSheet("QLabel { color : black; }"); //sets progress bar's color to black
     hLayout->addWidget(label);
 
     // Create and configure the progress bar
@@ -44,7 +44,7 @@ BitBuddyStatusWidget::BitBuddyStatusWidget(BitBuddy *bitBuddy, QWidget *parent) 
   connect(bitBuddy, &BitBuddy::attributeUpdated, this, &BitBuddyStatusWidget::onAttributeUpdated);
 }
 
-void BitBuddyStatusWidget::setAttributeLevel(BitBuddyAttributeName::UniqueName attributeName, int level) {
+void BitBuddyStatusWidget::setAttributeLevel(const BitBuddyAttributeName::UniqueName attributeName, const int level) {
   if (attributeBars.contains(attributeName)) {
     attributeBars[attributeName]->setValue(level);
   }

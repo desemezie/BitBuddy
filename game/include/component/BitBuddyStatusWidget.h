@@ -24,7 +24,7 @@ class BitBuddyStatusWidget final : public QWidget {
      * @param BitBuddyInstance The BitBuddy instance to display the status of
      * @param parent The parent widget of the BitBuddyStatusWidget, typically the MainWindow.
      */
-    explicit BitBuddyStatusWidget(BitBuddy *BitBuddyInstance, QWidget *parent = nullptr);
+    explicit BitBuddyStatusWidget(const BitBuddy *BitBuddyInstance, QWidget *parent = nullptr);
 
   public slots:
     /**

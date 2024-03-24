@@ -3,7 +3,7 @@
 //
 #include "service/BitBuddySpriteHandler.h"
 #include "model/SingleAttributeEvent.h"
-#include "LauncherWindow.h"
+#include "window/LauncherWindow.h"
 #include <QDebug>
 #include <QPixmap>
 #include <QTimer>

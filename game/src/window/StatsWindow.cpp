@@ -2,7 +2,8 @@
 // Created by Shaylan Pratt on 2024-03-22.
 //
 
-#include "StatsWindow.h"
+#include "../../include/window/StatsWindow.h"
+
 #include <QVBoxLayout>
 
 StatsWindow::StatsWindow(const QString &thename, QWidget *parent) : QDialog(parent) {
