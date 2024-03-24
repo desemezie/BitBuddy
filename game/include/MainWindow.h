@@ -13,6 +13,7 @@
 #include "component/LightButton.h"
 #include "model/BitBuddyAttributeName.h"
 #include "service/BitBuddySpriteHandler.h"
+#include "window/ShopWindow.h"
 
 /**
  * The main window of the application
@@ -45,6 +46,8 @@ class MainWindow final : public QMainWindow {
   BitBuddyStatusWidget *bitBuddyStatusWidget{};
   LightButton *lightSwitch{};
   QPushButton *stats{};
+  ShopWindow *shopWindow{};
+  QPushButton *shopButton{};
 
   void setupUi();
   void loadDefaultSprite() const;
@@ -52,6 +55,7 @@ class MainWindow final : public QMainWindow {
 
  private slots:
   void openSettings();
+  void openShop();
   void updateTheme(const QString &newStyle);
 };
 
