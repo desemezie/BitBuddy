@@ -8,7 +8,7 @@
 
 LightButton::LightButton(QWidget *parent) : QPushButton(parent), isLightOn(true) {
   connect(this, &QPushButton::clicked, this, &LightButton::lightClicked);
-  setImage(":/assets/light.png");
+  setImage(":/assets/switch.png");
   update();
 }
 
@@ -31,7 +31,7 @@ void LightButton::update() {
   } else {
     //qApp->setStyleSheet("QWidget { background-color: black; color: white; }");
     emit themeChange(
-        "MainWindow { background-image: url(:/assets/black.jpeg); background-repeat: no-repeat; background-position: center; background-size: cover; }");
+        "MainWindow { background-image: url(:/assets/blackbackground.jpeg); background-repeat: no-repeat; background-position: center; background-size: cover; }");
     emit textChange(true);
   }
 }
