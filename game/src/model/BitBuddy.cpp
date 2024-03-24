@@ -13,11 +13,8 @@
 #include <QJsonObject>
 
 BitBuddy::BitBuddy(std::string name)
-    : name(std::move(name)),
-      creationTime(std::chrono::system_clock::now()),
-      dead(false),
-      id(QUuid::createUuid()),
-      bitBuckGenerator(new BitBuckGenerator()) {
+  : name(std::move(name)), creationTime(std::chrono::system_clock::now()), dead(false), id(QUuid::createUuid()),
+    bitBuckGenerator(new BitBuckGenerator()) {
   for (int i = 0; i < NUMBER_OF_ATTRIBUTES; i++) {
     // Constructs a map of the form {HUNGER -> <BitBuddyAttribute> with name HUNGER and value 10}
     attributes.emplace(std::piecewise_construct,
@@ -28,18 +25,11 @@ BitBuddy::BitBuddy(std::string name)
   BitBuddy::connectSignals();
 }
 
-BitBuddy::BitBuddy(std::string name,
-                   const std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> &attributes,
-                   std::chrono::system_clock::time_point creationTime,
-                   bool dead,
-                   QUuid id,
+BitBuddy::BitBuddy(std::string name, const std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> &attributes,
+                   std::chrono::system_clock::time_point creationTime, bool dead, QUuid id,
                    BitBuckGenerator *bitBuckGenerator)
-    : name(std::move(name)),
-      attributes(attributes),
-      creationTime(creationTime),
-      dead(dead),
-      id(id),
-      bitBuckGenerator(bitBuckGenerator) {
+  : name(std::move(name)), attributes(attributes), creationTime(creationTime), dead(dead), id(id),
+    bitBuckGenerator(bitBuckGenerator) {
   connectSignals();
 }
 
@@ -68,9 +58,8 @@ QJsonObject BitBuddy::toJson() const {
 
 BitBuddy *BitBuddy::fromJson(const QJsonObject &obj) {
   std::string name = obj["name"].toString().toStdString();
-  auto creationTime =
-      std::chrono::system_clock::time_point(std::chrono::system_clock::duration(obj["creationTime"].toString()
-                                                                                    .toLongLong()));
+  auto creationTime = std::chrono::system_clock::time_point(
+      std::chrono::system_clock::duration(obj["creationTime"].toString().toLongLong()));
   bool dead = obj["dead"].toBool();
   QUuid id = obj["id"].toString().isEmpty() ? QUuid::createUuid() : QUuid(obj["id"].toString());
 
@@ -88,11 +77,10 @@ BitBuddy *BitBuddy::fromJson(const QJsonObject &obj) {
 }
 
 int BitBuddy::getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const {
-
   auto it = attributes.find(attributeName);
   if (it == attributes.end()) {
-    std::cerr << "BitBuddy does not contain the attribute: " << BitBuddyAttributeName::toString(attributeName)
-              << std::endl;
+    std::cerr << "BitBuddy does not contain the attribute: " << BitBuddyAttributeName::toString(attributeName) <<
+        std::endl;
     return -1;
   }
 
@@ -117,11 +105,15 @@ void BitBuddy::incrementAttribute(BitBuddyAttributeName::UniqueName attribute, i
 }
 
 long BitBuddy::getAgeInGameYears() const {
-  auto currentTime = std::chrono::system_clock::now();
-  long ageInGameYearUnits = std::chrono::duration_cast<std::chrono::minutes>(currentTime - creationTime).count();
-  long ageInGameYears = ageInGameYearUnits / IN_GAME_YEAR_LENGTH_IN_MINUTES;
+  const auto currentTime = std::chrono::system_clock::now();
+  const long ageInGameYearUnits = std::chrono::duration_cast<std::chrono::minutes>(currentTime - creationTime).count();
+  const long ageInGameYears = ageInGameYearUnits / IN_GAME_YEAR_LENGTH_IN_MINUTES;
 
   return ageInGameYears;
+}
+
+std::string BitBuddy::getName() const {
+  return name;
 }
 
 void BitBuddy::onEvent(const Event &event) {
@@ -141,8 +133,8 @@ void BitBuddy::connectSignals() const {
 
 void BitBuddy::die(const BitBuddyAttribute &attribute) {
   dead = true;
-  std::cerr << "BitBuddy has died due to: " << BitBuddyAttributeName::toString(attribute.getAttributeName())
-            << std::endl;
+  std::cerr << "BitBuddy has died due to: " << BitBuddyAttributeName::toString(attribute.getAttributeName()) <<
+      std::endl;
 
   emit died(attribute);
 }

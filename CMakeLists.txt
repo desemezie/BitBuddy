@@ -75,7 +75,12 @@ add_executable(bitbuddy game/src/main.cpp
         game/include/service/TransactionService.h
         game/src/component/UserBankAccountBalanceWidget.cpp
         game/include/component/UserBankAccountBalanceWidget.h
-
+        game/src/StatsWindow.cpp
+        game/include/StatsWindow.h
+        game/src/component/LightButton.cpp
+        game/include/component/LightButton.h
+        game/src/component/StatsButton.cpp
+        game/include/component/StatsButton.h
 )
 
 

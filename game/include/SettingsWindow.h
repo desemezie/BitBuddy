@@ -14,17 +14,18 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QLabel>
+#include <QSettings>
+#include "service/MusicService.h"
 
-class SettingsWindow : public QDialog{
+class SettingsWindow : public QDialog {
  Q_OBJECT
 
  public:
   explicit SettingsWindow(QWidget *parent = nullptr);
- ~SettingsWindow();
+  ~SettingsWindow();
 
  private slots:
   void saveSettings();
-  void cancelSettings();
   void soundEffectsVolume(int);
   void musicVolume(int);
   void disableSoundEffects(bool);
@@ -32,17 +33,12 @@ class SettingsWindow : public QDialog{
 
  private:
   QPushButton *save;
-  QPushButton *cancel;
-  QVBoxLayout *layout;
   QSlider *soundEffectsSlider;
   QSlider *musicSlider;
   QCheckBox *disableSoundEffectsCheckBox;
   QCheckBox *disableMusicCheckBox;
 
   void setup();
-
-
-
 
 };
 

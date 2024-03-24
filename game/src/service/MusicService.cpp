@@ -9,6 +9,7 @@
 const QString MUSIC_SOURCE = "qrc:/assets/music/bye_bye_brain.mp3";
 const float MINIMUM_VOLUME = 0.0f;
 const float MAXIMUM_VOLUME = 1.0f;
+const float DEFAULT_VOLUME = 0.5f;
 
 MusicService &MusicService::getInstance() {
   static MusicService instance;
@@ -45,7 +46,7 @@ float MusicService::getVolume() const {
   return currentVolume;
 }
 
-MusicService::MusicService() : currentVolume(MAXIMUM_VOLUME) {
+MusicService::MusicService() : currentVolume(DEFAULT_VOLUME) {
   musicPlayer = new QMediaPlayer;
   audioOutput = new QAudioOutput;
   musicPlayer->setAudioOutput(audioOutput);
