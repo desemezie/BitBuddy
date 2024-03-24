@@ -24,6 +24,10 @@ public:
 
     void changeSprite(const std::string& state);
     void updatePillsPosition();
+    void updateDrinkPosition();
+    void updateTacoPosition();
+    void updateBubblePosition();
+  void updateZZZPosition();
 
 public slots:
     void handleEvent(const Event& event);
@@ -31,6 +35,8 @@ private:
     QLabel* displayLabel;
     QLabel* temporaryLabel;
     BitBuddy * bitBuddy;
+    QList<QLabel*> bubbleLabels;
+    QRect bubbleSquare;
 
     void displayTacoAndRemove(const QString &imagePath);
 
@@ -54,6 +60,7 @@ private:
 
   void spriteOrganizer();
   void spriteOrganizer(const Event &event);
+
 
 };
 
