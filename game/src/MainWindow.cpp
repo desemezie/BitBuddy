@@ -35,7 +35,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
   // Set the stylesheet for the central widget
 
-  QString imagePath = ":/assets/background.png";  // Make sure to provide the correct path to your image
+  QString imagePath = ":/assets/background.png"; // Make sure to provide the correct path to your image
   centralWidget->setStyleSheet("QWidget#centralWidget { background-image: url(:/assets/background.png); }");
 
   resize(SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -107,7 +107,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     }
   }
 
-
   rowLayout1->setSpacing(1);
   rowLayout2->setSpacing(1);
   layout->addWidget(spriteLabel, 0, 0, 2, 2, Qt::AlignCenter);
@@ -134,7 +133,7 @@ void MainWindow::updateTheme(const QString &newStyle) {
   this->setStyleSheet(newStyle); // NOTE, THIS CAUSES THE BLUE STATUS BARS TO BECOME GREY
 }
 
-void MainWindow::loadDefaultSprite() {
+void MainWindow::loadDefaultSprite() const {
   QImage image(":/assets/happy_bitbuddy.png");
 
   if (image.isNull()) {
