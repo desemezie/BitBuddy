@@ -18,124 +18,129 @@ constexpr int IN_GAME_YEAR_LENGTH_IN_MINUTES = 1; // 1 minute represents 1 in-ga
  * Bit Buddy!
  */
 class BitBuddy : public QObject {
- Q_OBJECT
+    Q_OBJECT public:
+    /**
+     * Constructor for the BitBuddy. Initializes the attribute maps.
+     *
+     * @param name The name of the BitBuddy
+     * @param parent The parent widget of the BitBuddy, typically the MainWindow.
+     */
+    explicit BitBuddy(std::string name);
 
- public:
-  /**
-   * Constructor for the BitBuddy. Initializes the attribute maps.
-   *
-   * @param name The name of the BitBuddy
-   * @param parent The parent widget of the BitBuddy, typically the MainWindow.
-   */
-  explicit BitBuddy(std::string name);
+    /**
+     * Constructor for the BitBuddy that takes all of BitBuddy's attributes as parameters.
+     *
+     * @param name The name of the BitBuddy
+     * @param parent The parent widget of the BitBuddy, typically the MainWindow.
+     * @param attributes A map of the BitBuddy's attributes where the key is the attribute's unique name and the value is the attribute
+     * @param creationTime The time the BitBuddy was created
+     * @param dead Whether the BitBuddy is dead
+     * @param id The unique identifier of the BitBuddy
+     * @param bitBuckGenerator The BitBuckGenerator that generates BitBucks for the BitBuddy
+     */
+    BitBuddy(std::string name, const std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute>& attributes,
+             std::chrono::system_clock::time_point creationTime, bool dead, QUuid id,
+             BitBuckGenerator* bitBuckGenerator);
 
-  /**
-   * Constructor for the BitBuddy that takes all of BitBuddy's attributes as parameters.
-   *
-   * @param name The name of the BitBuddy
-   * @param parent The parent widget of the BitBuddy, typically the MainWindow.
-   * @param attributes A map of the BitBuddy's attributes where the key is the attribute's unique name and the value is the attribute
-   * @param creationTime The time the BitBuddy was created
-   * @param dead Whether the BitBuddy is dead
-   * @param id The unique identifier of the BitBuddy
-   * @param bitBuckGenerator The BitBuckGenerator that generates BitBucks for the BitBuddy
-   */
-  BitBuddy(std::string name,
-           const std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> &attributes,
-           std::chrono::system_clock::time_point creationTime, bool dead, QUuid id, BitBuckGenerator *bitBuckGenerator);
+    /**
+     * Destructor for the BitBuddy
+     */
+    ~BitBuddy() override;
 
-  /**
-   * Destructor for the BitBuddy
-   */
-  ~BitBuddy() override;
+    BitBuddy(const BitBuddy&) = delete;
+    BitBuddy& operator=(const BitBuddy&) = delete;
+    BitBuddy(BitBuddy&&) = delete;
+    BitBuddy& operator=(BitBuddy&&) = delete;
 
-  BitBuddy(const BitBuddy &) = delete;
-  BitBuddy &operator=(const BitBuddy &) = delete;
-  BitBuddy(BitBuddy &&) = delete;
-  BitBuddy &operator=(BitBuddy &&) = delete;
+    /**
+     * Converts the BitBuddy to a JSON object
+     *
+     * @return The BitBuddy as a JSON object
+     */
+    [[nodiscard]] QJsonObject toJson() const;
 
-  /**
-   * Converts the BitBuddy to a JSON object
-   *
-   * @return The BitBuddy as a JSON object
-   */
-  [[nodiscard]] QJsonObject toJson() const;
+    /**
+     * Converts a JSON object to a BitBuddy
+     *
+     * @param json The JSON object to convert
+     * @return The BitBuddy
+     */
+    static BitBuddy* fromJson(const QJsonObject& json);
 
-  /**
-   * Converts a JSON object to a BitBuddy
-   *
-   * @param json The JSON object to convert
-   * @return The BitBuddy
-   */
-  static BitBuddy *fromJson(const QJsonObject &json);
+    /**
+     * Gets the attribute value for the given attribute name
+     *
+     * @param attributeName The name of the attribute to get the value for
+     * @return The value of the attribute
+     */
+    [[nodiscard]] int getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const;
 
-  /**
-   * Gets the attribute value for the given attribute name
-   *
-   * @param attributeName The name of the attribute to get the value for
-   * @return The value of the attribute
-   */
-  [[nodiscard]] int getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const;
+    /**
+     * Increments the value of the attribute with the given value
+     *
+     * @param attribute
+     * @param value
+     */
+    void incrementAttribute(BitBuddyAttributeName::UniqueName attribute, int value);
 
-  /**
-   * Increments the value of the attribute with the given value
-   *
-   * @param attribute
-   * @param value
-   */
-  void incrementAttribute(BitBuddyAttributeName::UniqueName attribute, int value);
+    /**
+     * Gets the age of the BitBuddy represented in 'in-game-years'
+     *
+     * @return The age of the BitBuddy in 'in-game-years'
+     */
+    [[nodiscard]] long getAgeInGameYears() const;
 
-  /**
-   * Gets the age of the BitBuddy represented in 'in-game-years'
-   *
-   * @return The age of the BitBuddy in 'in-game-years'
-   */
-  [[nodiscard]] long getAgeInGameYears() const;
+    /**
+     * @brief Gets the name of the BitBuddy
+     *
+     * @return The name of the BitBuddy
+     */
+    [[nodiscard]] std::string getName() const;
 
-  std::string currentSprite;
+    std::string currentSprite;
 
- signals:
-  /**
-   * Signal emitted when an attribute is updated
-   *
-   * @param attribute The attribute that was updated
-   */
-  void attributeUpdated(const BitBuddyAttribute &attribute);
+  signals:
+    /**
+     * Signal emitted when an attribute is updated
+     *
+     * @param attribute The attribute that was updated
+     */
+    void attributeUpdated(const BitBuddyAttribute& attribute);
 
-  /**
-   * Signal emitted when the BitBuddy dies
-   *
-   * @paragraph attribute The attribute that caused the BitBuddy to die
-   */
-  void died(const BitBuddyAttribute &attribute);
+    /**
+     * Signal emitted when the BitBuddy dies
+     *
+     * @paragraph attribute The attribute that caused the BitBuddy to die
+     */
+    void died(const BitBuddyAttribute& attribute);
 
- public slots:
-  /**
-   * Slot that listens for Events from the event dispatch service and updates the BitBuddy's attributes.
-   *
-   * @param event The event to process
-   */
-  void onEvent(const Event &event);
+  public slots:
+    /**
+     * Slot that listens for Events from the event dispatch service and updates the BitBuddy's attributes.
+     *
+     * @param event The event to process
+     */
+    void onEvent(const Event& event);
 
- private:
-  QUuid id;
-  std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> attributes;
-  std::chrono::system_clock::time_point creationTime;
-  std::string name;
-  bool dead;
-  BitBuckGenerator *bitBuckGenerator;
+  private:
+    QUuid id;
+    std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> attributes;
+    std::chrono::system_clock::time_point creationTime;
+    std::string name;
+    bool dead;
+    BitBuckGenerator* bitBuckGenerator;
 
-  /**
-   * Connects the signals to the slots
-   */
-  void connectSignals() const;
+    /**
+     * Connects the signals to the slots
+     */
+    void connectSignals() const;
 
-  /**
-   * Kills the BitBuddy
-   *
-   * @param attribute The attribute that caused the BitBuddy to die
-   */
-  void die(const BitBuddyAttribute &attribute);
+    /**
+     * Kills the BitBuddy
+     *
+     * @param attribute The attribute that caused the BitBuddy to die
+     */
+    void die(const BitBuddyAttribute& attribute);
 };
 
 #endif //BITBUDDY_SRC_COMPONENT_BITBUDDY_H_

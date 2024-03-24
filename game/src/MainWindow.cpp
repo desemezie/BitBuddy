@@ -16,33 +16,35 @@
 #include "service/BitBuddyService.h"
 #include "service/UserBankAccountService.h"
 #include "component/UserBankAccountBalanceWidget.h"
-#include "component/lightButton.h"
+#include "component/LightButton.h"
 #include "component/StatsButton.h"
+#include "StatsWindow.h"
 
 constexpr int SCREEN_WIDTH = 1920;
 constexpr int SCREEN_HEIGHT = 1080;
 
-MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
+MainWindow::MainWindow(QWidget* parent) : QMainWindow(parent) {
   BitBuddyService::registerBitBuddy(FileStorageService::loadBitBuddy("BitBuddy"));
   UserBankAccountService::registerUserBankAccount(&FileStorageService::loadUserBankAccount());
 
   // Set up central widget
-  auto *centralWidget = new QWidget(this);
+  auto* centralWidget = new QWidget(this);
   setCentralWidget(centralWidget);
   resize(SCREEN_WIDTH, SCREEN_HEIGHT);
-  auto *layout = new QGridLayout(centralWidget);
+  auto* layout = new QGridLayout(centralWidget);
   centralWidget->setLayout(layout);
 
   // Add bit buddy status widget
-  auto *statusWidget = new BitBuddyStatusWidget(&BitBuddyService::getBitBuddy(), this);
+  auto* statusWidget = new BitBuddyStatusWidget(&BitBuddyService::getBitBuddy(), this);
   layout->addWidget(statusWidget, 0, 0, Qt::AlignTop | Qt::AlignLeft);
 
   // Add user bank account balance widget
-  auto *userBankAccountBalanceWidget = new UserBankAccountBalanceWidget(this);
-  layout->addWidget(userBankAccountBalanceWidget, 0, 1, Qt::AlignTop | Qt::AlignLeft); // To the right of statusWidget
+  auto* userBankAccountBalanceWidget = new UserBankAccountBalanceWidget(this);
+  layout->addWidget(userBankAccountBalanceWidget, 0, 1, Qt::AlignTop | Qt::AlignLeft);
+  // To the right of statusWidget
 
   // Create spacers to push the status widget to the top-left corner
-  auto *verticalSpacer = new QSpacerItem(1, 1, QSizePolicy::Minimum, QSizePolicy::Expanding);
+  auto* verticalSpacer = new QSpacerItem(1, 1, QSizePolicy::Minimum, QSizePolicy::Expanding);
   layout->addItem(verticalSpacer, 1, 0, 1, 2);
 
   // connect spriteHandler to bitbuddy
@@ -60,32 +62,30 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   connect(settingsButton, &QPushButton::clicked, this, &MainWindow::openSettings);
 
   // Add the light switch button
-  LightButton lightSwitch = new lightButton();
+  LightButton* lightSwitch = new LightButton();
   layout->addWidget(lightSwitch, 1, 1, Qt::AlignTop | Qt::AlignCenter);
-  connect(lightSwitch, &lightButton::themeChange, this, &MainWindow::updateTheme);
-  connect(lightSwitch, &lightButton::textChange, statusWidget, &BitBuddyStatusWidget::updateDarkMode);
+  connect(lightSwitch, &LightButton::themeChange, this, &MainWindow::updateTheme);
+  connect(lightSwitch, &LightButton::textChange, statusWidget, &BitBuddyStatusWidget::updateDarkMode);
 
   // Add the stats button
   QIcon statsIcon(":/assets/info.png");
-  stats = new QPushButton();
+  QPushButton* stats = new QPushButton();
   stats->setIcon(statsIcon);
   stats->setIconSize(QSize(40, 40));
   connect(stats, &QPushButton::clicked, this, [this]() {
-    auto *statsWindow = new StatsWindow(bitBuddyName, this);
+    auto* statsWindow = new StatsWindow(QString::fromStdString(BitBuddyService::getBitBuddy().getName()), this);
     statsWindow->setAttribute(Qt::WA_DeleteOnClose);
     statsWindow->show();
   });
   layout->addWidget(stats, 0, 1, Qt::AlignCenter | Qt::AlignRight);
 
-  auto *rowLayout1 = new QHBoxLayout;
-  auto *rowLayout2 = new QHBoxLayout;
+  auto* rowLayout1 = new QHBoxLayout;
+  auto* rowLayout2 = new QHBoxLayout;
 
   for (int i = 0; i < NUMBER_OF_ATTRIBUTES; i++) {
     auto attribute = static_cast<BitBuddyAttributeName::UniqueName>(i);
-    auto *but = new BitBuddyActionButton(buttonIcon,
-                                         QString::fromStdString(BitBuddyAttributeName::toString(attribute)),
-                                         attribute,
-                                         centralWidget);
+    auto* but = new BitBuddyActionButton(buttonIcon, QString::fromStdString(BitBuddyAttributeName::toString(attribute)),
+                                         attribute, centralWidget);
     if (i < 4) {
       rowLayout1->addWidget(but);
     } else {
@@ -100,9 +100,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   layout->addLayout(rowLayout2, 4, 0, 2, 2);
   layout->setAlignment(Qt::AlignBottom);
 
-  connect(&EventDispatcherService::getInstance(),
-          &EventDispatcherService::eventDispatched,
-          spriteHandler,
+  connect(&EventDispatcherService::getInstance(), &EventDispatcherService::eventDispatched, spriteHandler,
           &BitBuddySpriteHandler::handleEvent);
 
   GameService::startService();
@@ -115,6 +113,10 @@ MainWindow::~MainWindow() {
   delete spriteHandler;
   delete spriteLabel;
   delete settingsButton;
+}
+
+void MainWindow::updateTheme(const QString& newStyle) {
+  this->setStyleSheet(newStyle);
 }
 
 void MainWindow::loadDefaultSprite() {
@@ -137,9 +139,8 @@ void MainWindow::loadDefaultSprite() {
 void MainWindow::openSettings() {
   SettingsWindow settingsDialog(this);
   settingsDialog.exec();
-
 }
-void MainWindow::resizeEvent(QResizeEvent *event) {
+void MainWindow::resizeEvent(QResizeEvent* event) {
   QWidget::resizeEvent(event);
   if (spriteHandler) {
     spriteHandler->updatePillsPosition();

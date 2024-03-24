@@ -6,13 +6,12 @@
 #define BITBUDDY_INCLUDE_COMPONENT_LIGHTBUTTON_H_
 
 #include <QPushButton>
-#include <QIcon>
 
-class lightButton : public QPushButton {
+class LightButton : public QPushButton {
  Q_OBJECT
 
  public:
-  explicit lightButton(QWidget *parent = nullptr);
+  explicit LightButton(QWidget *parent = nullptr);
 
  private slots:
   void lightClicked();

@@ -2,28 +2,28 @@
 // Created by Shaylan Pratt on 2024-03-21.
 //
 
-#include "component/lightButton.h"
+#include "component/LightButton.h"
 #include <QIcon>
 #include <QApplication>
 
-lightButton::lightButton(QWidget *parent) : QPushButton(parent), isLightOn(true) {
-  connect(this, &QPushButton::clicked, this, &lightButton::lightClicked);
+LightButton::LightButton(QWidget *parent) : QPushButton(parent), isLightOn(true) {
+  connect(this, &QPushButton::clicked, this, &LightButton::lightClicked);
   setImage(":/assets/light.png");
   update();
 }
 
-void lightButton::lightClicked() {
+void LightButton::lightClicked() {
   isLightOn = !isLightOn;
   update();
 }
 
-void lightButton::setImage(QString imagePath) {
+void LightButton::setImage(QString imagePath) {
   QIcon buttonIcon(imagePath);
   this->setIcon(buttonIcon);
   this->setIconSize(buttonIcon.actualSize(QSize(64, 64)));
 }
 
-void lightButton::update() {
+void LightButton::update() {
   if (isLightOn) {
     //qApp->setStyleSheet("");
     emit themeChange("");

@@ -20,7 +20,6 @@ BitBuddyStatusWidget::BitBuddyStatusWidget(BitBuddy *bitBuddy, QWidget *parent) 
 
   for (int attr = static_cast<int>(BitBuddyAttributeName::UniqueName::HUNGER);
        attr <= static_cast<int>(BitBuddyAttributeName::UniqueName::HYGIENE); ++attr) {
-
     auto attribute = static_cast<BitBuddyAttributeName::UniqueName>(attr);
 
     // Create a horizontal layout for the label and the progress bar
@@ -51,8 +50,16 @@ void BitBuddyStatusWidget::setAttributeLevel(BitBuddyAttributeName::UniqueName a
 }
 
 void BitBuddyStatusWidget::onAttributeUpdated(const BitBuddyAttribute &attribute) {
-  std::cout << "BitBuddyWidget received an updated attribute: "
-            << BitBuddyAttributeName::toString(attribute.getAttributeName())
-            << " with value: " << attribute.getValue() << std::endl;
+  std::cout << "BitBuddyWidget received an updated attribute: " <<
+      BitBuddyAttributeName::toString(attribute.getAttributeName()) << " with value: " << attribute.getValue() <<
+      std::endl;
   setAttributeLevel(attribute.getAttributeName(), attribute.getValue());
+}
+
+void BitBuddyStatusWidget::updateDarkMode(bool isDarkMode) {
+  if (isDarkMode) {
+    this->setStyleSheet("QLabel { color: white; }");
+  } else {
+    this->setStyleSheet("QLabel { color: black; }");
+  }
 }
