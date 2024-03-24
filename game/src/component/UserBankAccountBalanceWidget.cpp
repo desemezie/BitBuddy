@@ -42,5 +42,5 @@ UserBankAccountBalanceWidget::UserBankAccountBalanceWidget(QWidget *parent)
 }
 
 void UserBankAccountBalanceWidget::updateBalanceDisplay(int newBalance) {
-  balanceLabel->setText(QString("Balance: %1").arg(newBalance));
+  balanceLabel->setText(QString("BitBucks: %1").arg(newBalance));
 }
