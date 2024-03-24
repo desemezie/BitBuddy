@@ -5,47 +5,54 @@
 #ifndef BITBUDDY_MAINWINDOW_H
 #define BITBUDDY_MAINWINDOW_H
 
-#include <QMainWindow>
 #include <QLabel>
-#include "model/BitBuddyAttributeName.h"
+#include <QMainWindow>
+
 #include "component/BitBuddyActionButton.h"
+#include "component/BitBuddyStatusWidget.h"
+#include "component/LightButton.h"
+#include "model/BitBuddyAttributeName.h"
 #include "service/BitBuddySpriteHandler.h"
 
 /**
  * The main window of the application
  */
-class MainWindow : public QMainWindow {
-    Q_OBJECT public:
-    /**
-     * @brief Constructor of the MainWindow.
-     *
-     * @param parent The parent widget of the MainWindow, typically the desktop.
-     */
-    explicit MainWindow(QWidget *parent = nullptr);
+class MainWindow final : public QMainWindow {
+  Q_OBJECT
 
-    ~MainWindow() override;
+ public:
+  /**
+   * @brief Constructor of the MainWindow.
+   *
+   * @param parent The parent widget of the MainWindow, typically the desktop.
+   */
+  explicit MainWindow(QWidget *parent = nullptr);
 
-    MainWindow(const MainWindow &) = delete;
+  ~MainWindow() override;
 
-    MainWindow &operator=(const MainWindow &) = delete;
+  MainWindow(const MainWindow &) = delete;
 
-    MainWindow(MainWindow &&) = delete;
+  MainWindow &operator=(const MainWindow &) = delete;
 
-    MainWindow &operator=(MainWindow &&) = delete;
+  MainWindow(MainWindow &&) = delete;
 
-  protected:
-    void resizeEvent(QResizeEvent *event) override;
+  MainWindow &operator=(MainWindow &&) = delete;
 
-  private slots:
-    void openSettings();
-    void updateTheme(const QString &newStyle);
+ private:
+  QLabel *spriteLabel{};
+  BitBuddySpriteHandler *spriteHandler{};
+  QPushButton *settingsButton{};
+  BitBuddyStatusWidget *bitBuddyStatusWidget{};
+  LightButton *lightSwitch{};
+  QPushButton *stats{};
 
-  private:
-    QLabel *spriteLabel;
-    BitBuddySpriteHandler *spriteHandler;
-    QPushButton *settingsButton;
+  void setupUi();
+  void loadDefaultSprite() const;
+  void resizeEvent(QResizeEvent *event) override;
 
-    void loadDefaultSprite() const;
+ private slots:
+  void openSettings();
+  void updateTheme(const QString &newStyle);
 };
 
-#endif //BITBUDDY_MAINWINDOW_H
+#endif  // BITBUDDY_MAINWINDOW_H
