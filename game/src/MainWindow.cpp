@@ -30,8 +30,19 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   // Set up central widget
   auto *centralWidget = new QWidget(this);
   setCentralWidget(centralWidget);
+
+  centralWidget->setObjectName("centralWidget");
+
+  // Set the stylesheet for the central widget
+
+  QString imagePath = ":/assets/background.png";  // Make sure to provide the correct path to your image
+  centralWidget->setStyleSheet("QWidget#centralWidget { background-image: url(:/assets/background.png); }");
+
   resize(SCREEN_WIDTH, SCREEN_HEIGHT);
+
+  // Grid layout for the central widget
   auto *layout = new QGridLayout(centralWidget);
+
   centralWidget->setLayout(layout);
 
   // Add bit buddy status widget
@@ -84,8 +95,11 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
   for (int i = 0; i < NUMBER_OF_ATTRIBUTES; i++) {
     auto attribute = static_cast<BitBuddyAttributeName::UniqueName>(i);
+
     auto *but = new BitBuddyActionButton(buttonIcon, QString::fromStdString(BitBuddyAttributeName::toString(attribute)),
                                          attribute, centralWidget);
+    but->setButtonStyle();
+
     if (i < 4) {
       rowLayout1->addWidget(but);
     } else {
@@ -93,8 +107,9 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     }
   }
 
-  rowLayout1->setSpacing(0);
-  rowLayout2->setSpacing(0);
+
+  rowLayout1->setSpacing(1);
+  rowLayout2->setSpacing(1);
   layout->addWidget(spriteLabel, 0, 0, 2, 2, Qt::AlignCenter);
   layout->addLayout(rowLayout1, 2, 0, 2, 2);
   layout->addLayout(rowLayout2, 4, 0, 2, 2);
