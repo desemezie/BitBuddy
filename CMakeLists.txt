@@ -38,7 +38,6 @@ add_executable(bitbuddy game/src/main.cpp
         game/include/service/EventGeneratorService.h
         game/src/service/EventDispatcherService.cpp
         game/include/service/EventDispatcherService.h
-        game/include/model/DeprecatedEventListener.h
         game/src/service/GameService.cpp
         game/include/service/GameService.h
         game/include/model/BitBuddyEvents.h
@@ -64,6 +63,8 @@ add_executable(bitbuddy game/src/main.cpp
         game/include/model/audio.h
         game/src/service/FileStorageService.cpp
         game/include/service/FileStorageService.h
+        game/src/service/BitBuddyService.cpp
+        game/include/service/BitBuddyService.h
 
 )
 

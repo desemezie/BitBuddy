@@ -6,7 +6,6 @@
 #define BITBUDDY_SRC_BITBUDDYSTATUSWIDGET_H_
 
 #include "model/BitBuddyAttributeName.h"
-#include "model/DeprecatedEventListener.h"
 #include "model/BitBuddyAttribute.h"
 #include "model/BitBuddy.h"
 

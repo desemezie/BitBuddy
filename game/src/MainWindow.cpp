@@ -14,7 +14,8 @@
 #include "service/GameService.h"
 #include "service/FileStorageService.h"
 #include <iostream>
-//1920
+#include "service/BitBuddyService.h"
+
 constexpr int SCREEN_WIDTH = 1920;
 constexpr int SCREEN_HEIGHT = 1080;
 
@@ -29,6 +30,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   centralWidget->setLayout(layout);
 
   bitBuddy = FileStorageService::loadBitBuddy("BitBuddy");
+
+  BitBuddyService::registerBitBuddy(bitBuddy);
 
   auto *statusWidget = new BitBuddyStatusWidget(bitBuddy, this);
 
@@ -88,7 +91,7 @@ MainWindow::~MainWindow() {
   FileStorageService::saveBitBuddy(*bitBuddy);
   GameService::stopService();
 
-  delete bitBuddy;
+  bitBuddy = nullptr;
   delete spriteHandler;
   delete spriteLabel;
   delete settingsButton;
@@ -118,7 +121,7 @@ void MainWindow::openSettings() {
 }
 void MainWindow::resizeEvent(QResizeEvent *event) {
   QWidget::resizeEvent(event);
-  if (spriteHandler){
+  if (spriteHandler) {
     spriteHandler->updatePillsPosition();
 
   }
