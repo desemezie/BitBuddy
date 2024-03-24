@@ -116,6 +116,10 @@ std::string BitBuddy::getName() const {
   return name;
 }
 
+void BitBuddy::setName(std::string name) {
+  this->name = std::move(name);
+}
+
 void BitBuddy::onEvent(const Event &event) {
   if (dead) {
     return;
