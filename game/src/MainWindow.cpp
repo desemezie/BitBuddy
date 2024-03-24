@@ -16,6 +16,8 @@
 #include "service/BitBuddyService.h"
 #include "service/UserBankAccountService.h"
 #include "component/UserBankAccountBalanceWidget.h"
+#include "component/lightButton.h"
+#include "component/StatsButton.h"
 
 constexpr int SCREEN_WIDTH = 1920;
 constexpr int SCREEN_HEIGHT = 1080;
@@ -24,15 +26,18 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   BitBuddyService::registerBitBuddy(FileStorageService::loadBitBuddy("BitBuddy"));
   UserBankAccountService::registerUserBankAccount(&FileStorageService::loadUserBankAccount());
 
+  // Set up central widget
   auto *centralWidget = new QWidget(this);
   setCentralWidget(centralWidget);
   resize(SCREEN_WIDTH, SCREEN_HEIGHT);
   auto *layout = new QGridLayout(centralWidget);
   centralWidget->setLayout(layout);
 
+  // Add bit buddy status widget
   auto *statusWidget = new BitBuddyStatusWidget(&BitBuddyService::getBitBuddy(), this);
   layout->addWidget(statusWidget, 0, 0, Qt::AlignTop | Qt::AlignLeft);
 
+  // Add user bank account balance widget
   auto *userBankAccountBalanceWidget = new UserBankAccountBalanceWidget(this);
   layout->addWidget(userBankAccountBalanceWidget, 0, 1, Qt::AlignTop | Qt::AlignLeft); // To the right of statusWidget
 
@@ -53,6 +58,24 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   settingsButton->setIconSize(QSize(40, 40));
   layout->addWidget(settingsButton, 0, 1, Qt::AlignTop | Qt::AlignRight);
   connect(settingsButton, &QPushButton::clicked, this, &MainWindow::openSettings);
+
+  // Add the light switch button
+  LightButton lightSwitch = new lightButton();
+  layout->addWidget(lightSwitch, 1, 1, Qt::AlignTop | Qt::AlignCenter);
+  connect(lightSwitch, &lightButton::themeChange, this, &MainWindow::updateTheme);
+  connect(lightSwitch, &lightButton::textChange, statusWidget, &BitBuddyStatusWidget::updateDarkMode);
+
+  // Add the stats button
+  QIcon statsIcon(":/assets/info.png");
+  stats = new QPushButton();
+  stats->setIcon(statsIcon);
+  stats->setIconSize(QSize(40, 40));
+  connect(stats, &QPushButton::clicked, this, [this]() {
+    auto *statsWindow = new StatsWindow(bitBuddyName, this);
+    statsWindow->setAttribute(Qt::WA_DeleteOnClose);
+    statsWindow->show();
+  });
+  layout->addWidget(stats, 0, 1, Qt::AlignCenter | Qt::AlignRight);
 
   auto *rowLayout1 = new QHBoxLayout;
   auto *rowLayout2 = new QHBoxLayout;
