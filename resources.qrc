@@ -29,5 +29,6 @@
         <file>assets/yay.mp3</file>
         <file>assets/settings.png</file>
         <file>assets/music/bye_bye_brain.mp3</file>
+        <file>assets/fonts/ARCADECLASSIC.TTF</file>
     </qresource>
 </RCC>

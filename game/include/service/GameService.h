@@ -39,10 +39,7 @@ class GameService {
 
  private:
   GameService() = default;
-
   ~GameService();
-
-  static EventGeneratorService &eventGeneratorService;
 };
 
 #endif //BITBUDDY_GAMESERVICE_H
