@@ -28,6 +28,9 @@
         <file>assets/snore.mp3</file>
         <file>assets/yay.mp3</file>
         <file>assets/settings.png</file>
+        <file>assets/info.png</file>
+        <file>assets/switch.png</file>
+        <file>assets/blackbackground.jpeg</file>
         <file>assets/music/bye_bye_brain.mp3</file>
         <file>assets/fonts/ARCADECLASSIC.TTF</file>
     </qresource>
