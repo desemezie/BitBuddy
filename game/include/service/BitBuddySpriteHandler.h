@@ -61,7 +61,7 @@ private:
   void spriteOrganizer();
   void spriteOrganizer(const Event &event);
 
-
+  BitBuddyAttributeName checkLevels();
 };
 
 

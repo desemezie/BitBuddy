@@ -15,13 +15,15 @@ inline constexpr int NUMBER_OF_ATTRIBUTES = 7;
 class BitBuddyAttributeName {
  public:
   enum UniqueName {
-    HUNGER,
+    FIRST = 0,
+    HUNGER = FIRST,
     HAPPINESS,
     THIRST,
     HEALTH,
     TIREDNESS,
     BOREDOM,
-    HYGIENE
+    HYGIENE,
+    LAST = HYGIENE
   };
 
   /**

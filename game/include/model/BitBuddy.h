@@ -104,6 +104,13 @@ class BitBuddy : public QObject {
 
     std::string currentSprite;
 
+    /**
+    * @brief Gets the bitbuddys current sprite
+    * @return The bitbuddy sprite
+    */
+    [[nodiscard]] std::string getSprite() const;
+
+    void setCurrentSprite(std::string name);
   signals:
     /**
      * Signal emitted when an attribute is updated
