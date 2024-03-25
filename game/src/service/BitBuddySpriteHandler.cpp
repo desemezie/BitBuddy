@@ -28,7 +28,7 @@ void BitBuddySpriteHandler::handleEvent(const Event &event) {
   // Checks if it is a bitbuddy feeling or user action
   if (specificEvent->getIncrement() < 0) {
     BitBuddyAttributeName::UniqueName attributeName = specificEvent->getAttribute();
-    // Gets the value of the current attiribute
+    // Gets the value of the current attribute
     int value = bitBuddy->getAttributeValue(attributeName);
     qDebug() << "Attribute: " << QString::fromStdString(BitBuddyAttributeName::toString(attributeName)) << " With Value: " << value;
     qDebug() << "URL: " << QString::fromStdString(BitBuddyAttributeName::imageURL(attributeName));
