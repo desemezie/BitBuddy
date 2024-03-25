@@ -45,6 +45,7 @@ class MainWindow final : public QMainWindow {
   BitBuddyStatusWidget *bitBuddyStatusWidget{};
   LightButton *lightSwitch{};
   QPushButton *stats{};
+  QWidget *centralWidget;
 
   void setupUi();
   void loadDefaultSprite() const;
@@ -52,7 +53,7 @@ class MainWindow final : public QMainWindow {
 
  private slots:
   void openSettings();
-  void updateTheme(const QString &newStyle);
+  void updateCentralWidgetStyle(const QString &newStyle);
 };
 
 #endif  // BITBUDDY_MAINWINDOW_H

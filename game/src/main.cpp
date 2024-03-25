@@ -7,7 +7,9 @@
 #include "service/GameService.h"
 #include "window/LauncherWindow.h"
 #include "model/audio.h"
+#include "service/BitBuddyService.h"
 #include "QtMultimedia"
+#include "service/FileStorageService.h"
 #include <QMediaPlayer>
 #include "model/audio.h"
 #include <QMediaPlayer>
@@ -33,6 +35,7 @@ int main(int argc, char *argv[]) {
   QApplication application(argc, argv);
   QCoreApplication::setApplicationName("BitBuddy");
   QCoreApplication::setApplicationVersion("1.0.0");
+  BitBuddyService::registerBitBuddy(FileStorageService::loadBitBuddy("BitBuddy"));
 
   LauncherWindow start;
   start.show();

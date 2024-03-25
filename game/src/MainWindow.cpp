@@ -27,13 +27,13 @@
 constexpr double DEFAULT_SCREEN_PERCENTAGE = 0.7;
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
-  BitBuddyService::registerBitBuddy(FileStorageService::loadBitBuddy("BitBuddy"));
+
   UserBankAccountService::registerUserBankAccount(&FileStorageService::loadUserBankAccount());
 
   setupUi();
 
   connect(settingsButton, &QPushButton::clicked, this, &MainWindow::openSettings);
-  connect(lightSwitch, &LightButton::themeChange, this, &MainWindow::updateTheme);
+  connect(lightSwitch, &LightButton::themeChange, this, &MainWindow::updateCentralWidgetStyle);
   connect(lightSwitch, &LightButton::textChange, bitBuddyStatusWidget, &BitBuddyStatusWidget::updateDarkMode);
   connect(stats, &QPushButton::clicked, this, [this]() {
     auto *statsWindow = new StatsWindow(QString::fromStdString(BitBuddyService::getBitBuddy().getName()), this);
@@ -57,7 +57,7 @@ MainWindow::~MainWindow() {
 
 void MainWindow::setupUi() {
   // Set up central widget
-  auto *centralWidget = new QWidget(this);
+  centralWidget = new QWidget(this);
   setCentralWidget(centralWidget);
   centralWidget->setObjectName("centralWidget");
   auto *layout = new QGridLayout(centralWidget);
@@ -163,6 +163,6 @@ void MainWindow::openSettings() {
   settingsDialog.exec();
 }
 
-void MainWindow::updateTheme(const QString &newStyle) {
-  this->setStyleSheet(newStyle);  // NOTE, THIS CAUSES THE BLUE STATUS BARS TO BECOME GREY
+void MainWindow::updateCentralWidgetStyle(const QString &newStyle) {
+  centralWidget->setStyleSheet(newStyle);
 }

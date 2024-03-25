@@ -26,12 +26,12 @@ void LightButton::setImage(QString imagePath) {
 void LightButton::update() {
   if (isLightOn) {
     //qApp->setStyleSheet("");
-    emit themeChange("");
+    emit themeChange("QWidget#centralWidget { background-image: url(:/assets/background.png); }");
     emit textChange(false);
   } else {
     //qApp->setStyleSheet("QWidget { background-color: black; color: white; }");
     emit themeChange(
-        "MainWindow { background-image: url(:/assets/blackbackground.jpeg); background-repeat: no-repeat; background-position: center; background-size: cover; }");
+        "QWidget#centralWidget { background-image: url(:/assets/nightbackground.tiff); }");
     emit textChange(true);
   }
 }
