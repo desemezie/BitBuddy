@@ -107,6 +107,15 @@ void MainWindow::setupUi() {
   stats->setIconSize(QSize(40, 40));
   layout->addWidget(stats, 0, 1, Qt::AlignCenter | Qt::AlignRight);
 
+  // Add the shop button
+  QIcon shopIcon(":/assets/shop.png");
+  shop = new QPushButton();
+  shop->setIcon(shopIcon);
+  shop->setIconSize(QSize(40, 40));
+  layout->addWidget(shop, 0, 1, Qt::AlignBottom | Qt::AlignRight);
+
+
+  // Add action buttons on the botton
   auto *rowLayout1 = new QHBoxLayout;
   auto *rowLayout2 = new QHBoxLayout;
 
