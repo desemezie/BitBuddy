@@ -23,6 +23,7 @@
 #include "service/FileStorageService.h"
 #include "service/GameService.h"
 #include "service/UserBankAccountService.h"
+#include "window/ShopWindow.h"
 
 constexpr double DEFAULT_SCREEN_PERCENTAGE = 0.7;
 
@@ -108,11 +109,13 @@ void MainWindow::setupUi() {
   layout->addWidget(stats, 0, 1, Qt::AlignCenter | Qt::AlignRight);
 
   // Add the shop button
-  QIcon shopIcon(":/assets/shop.png");
+  QIcon shopIcon(":/assets/shopicon.png");
   shop = new QPushButton();
   shop->setIcon(shopIcon);
   shop->setIconSize(QSize(40, 40));
   layout->addWidget(shop, 0, 1, Qt::AlignBottom | Qt::AlignRight);
+  connect(shop, &QPushButton::clicked, this, &MainWindow::openShopWindow);
+
 
 
   // Add action buttons on the botton
@@ -174,6 +177,15 @@ void MainWindow::openSettings() {
   settingsDialog.exec();
 }
 
+void MainWindow::openShopWindow() {
+  auto *shopWindow = new ShopWindow(this); // Pass 'this' to set MainWindow as the parent
+  shopWindow->setAttribute(Qt::WA_DeleteOnClose); // Ensure the window is deleted automatically when closed
+  shopWindow->show();
+}
+
+
 void MainWindow::updateTheme(const QString &newStyle) {
   this->setStyleSheet(newStyle);  // NOTE, THIS CAUSES THE BLUE STATUS BARS TO BECOME GREY
 }
+
+

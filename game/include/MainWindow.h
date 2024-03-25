@@ -53,6 +53,7 @@ class MainWindow final : public QMainWindow {
 
  private slots:
   void openSettings();
+  void openShopWindow();
   void updateTheme(const QString &newStyle);
 };
 

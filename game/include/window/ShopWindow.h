@@ -23,6 +23,8 @@ class ShopWindow final : public QWidget {
   QListWidget *gameListWidget;
   QPushButton *buyButton;
   QLabel *titleLabel;
+  void addListItem(QString *name, QListWidget *parentWidget, QString &icon);
+  void addItem(const QString &name, const QString &iconPath);
 };
 
 #endif  // SHOPWINDOW_H
