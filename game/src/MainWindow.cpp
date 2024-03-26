@@ -51,6 +51,8 @@ MainWindow::~MainWindow() {
   FileStorageService::saveBitBuddy(BitBuddyService::getBitBuddy());
   FileStorageService::saveUserBankAccount(UserBankAccountService::getUserBankAccount());
 
+  setupUi();
+
   delete spriteHandler;
   delete spriteLabel;
   delete settingsButton;
@@ -179,11 +181,10 @@ void MainWindow::openShopWindow() {
   auto *shopWindow = new ShopWindow(this); // Pass 'this' to set MainWindow as the parent
   shopWindow->setAttribute(Qt::WA_DeleteOnClose); // Ensure the window is deleted automatically when closed
   shopWindow->show();
+
 }
 
 
 void MainWindow::updateTheme(const QString &newStyle) {
   this->setStyleSheet(newStyle);  // NOTE, THIS CAUSES THE BLUE STATUS BARS TO BECOME GREY
 }
-
-

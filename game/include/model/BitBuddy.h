@@ -18,7 +18,9 @@ constexpr int IN_GAME_YEAR_LENGTH_IN_MINUTES = 1; // 1 minute represents 1 in-ga
  * Bit Buddy!
  */
 class BitBuddy : public QObject {
-    Q_OBJECT public:
+    Q_OBJECT
+
+ public:
     /**
      * Constructor for the BitBuddy. Initializes the attribute maps.
      *
@@ -51,6 +53,10 @@ class BitBuddy : public QObject {
     BitBuddy &operator=(const BitBuddy &) = delete;
     BitBuddy(BitBuddy &&) = delete;
     BitBuddy &operator=(BitBuddy &&) = delete;
+    void addItemPurchased(const std::string &itemName);
+
+    std::vector<std::string> thingsPurchased;
+    [[nodiscard]] const std::vector<std::string>& getPurchasedItems() const;
 
     /**
      * Converts the BitBuddy to a JSON object
@@ -142,6 +148,7 @@ class BitBuddy : public QObject {
     bool dead;
     BitBuckGenerator *bitBuckGenerator;
 
+
     /**
      * Connects the signals to the slots
      */
@@ -153,6 +160,8 @@ class BitBuddy : public QObject {
      * @param attribute The attribute that caused the BitBuddy to die
      */
     void die(const BitBuddyAttribute &attribute);
+
+  const std::vector<std::string> &getItemsPurchased() const;
 };
 
 #endif //BITBUDDY_SRC_COMPONENT_BITBUDDY_H_

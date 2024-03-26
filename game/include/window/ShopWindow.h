@@ -9,9 +9,13 @@
 #include <QListWidget>
 #include <QPushButton>
 #include <QWidget>
+#include "model/BitBuddy.h"
 
 class ShopWindow final : public QWidget {
   Q_OBJECT
+  void setBitBuddy(BitBuddy *bitBuddy);
+
+  BitBuddy *bitBuddy;
 
  public:
   explicit ShopWindow(QWidget *parent = nullptr);
@@ -23,8 +27,10 @@ class ShopWindow final : public QWidget {
   QListWidget *gameListWidget;
   QPushButton *buyButton;
   QLabel *titleLabel;
+
   void addListItem(QString *name, QListWidget *parentWidget, QString &icon);
   void addItem(const QString &name, const QString &iconPath);
+  void showItemsPurchased();
 };
 
 #endif  // SHOPWINDOW_H

@@ -55,6 +55,7 @@ class MainWindow final : public QMainWindow {
   void openSettings();
   void openShopWindow();
   void updateTheme(const QString &newStyle);
+
 };
 
 #endif  // BITBUDDY_MAINWINDOW_H

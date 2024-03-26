@@ -3,16 +3,19 @@
 //
 
 #include "../../include/window/ShopWindow.h"
-
+#include "model/BitBuddy.h"
+#include "service/BitBuddyService.h"
 #include <QGuiApplication>
 #include <QScreen>
 #include <QVBoxLayout>
+#include <iostream>
 
 ShopWindow::ShopWindow(QWidget *parent) : QWidget(parent, Qt::Window) {
   const QScreen *screen = QGuiApplication::primaryScreen();
   const QRect screenSize = screen->availableGeometry();
   const int width = screenSize.width() * 0.375;    // 50% of the screen width
   const int height = screenSize.height() * 0.5;  // 50% of the screen height
+
 
   // Set window title and size based on screen size
   setWindowTitle("Game Store");
@@ -64,10 +67,6 @@ ShopWindow::ShopWindow(QWidget *parent) : QWidget(parent, Qt::Window) {
   layout->addWidget(buyButton);
 }
 
-// Function to buy the items chosen
-void ShopWindow::onBuyButtonClicked() {
-  qDebug() << "Buy button clicked";
-}
 
 // Function to add items to the shop
 void ShopWindow::addItem(const QString &name, const QString &iconPath) {
@@ -79,3 +78,30 @@ void ShopWindow::addItem(const QString &name, const QString &iconPath) {
   gameListWidget->addItem(item);
 
 }
+
+
+
+void ShopWindow::onBuyButtonClicked() {
+  qDebug() << "Buy Button Clicked";
+  qDebug() << gameListWidget->currentItem()->text();
+  setBitBuddy(&BitBuddyService::getBitBuddy());
+  if (gameListWidget->currentItem() != nullptr && bitBuddy != nullptr) {
+    QString itemName = gameListWidget->currentItem()->text();
+    qDebug() << itemName << "purchased";
+
+    // Call BitBuddy's method to add the item to thingsPurchased
+    bitBuddy->addItemPurchased(itemName.toStdString());
+  }
+  qDebug() << bitBuddy->thingsPurchased.size();
+  this->showItemsPurchased();
+}
+void ShopWindow::setBitBuddy(BitBuddy *BitBuddy) {
+  this->bitBuddy = BitBuddy;
+}
+
+void ShopWindow::showItemsPurchased(){
+  for(const auto &item: bitBuddy->thingsPurchased) {
+    std::cout << item << std::endl;
+  }
+}
+
