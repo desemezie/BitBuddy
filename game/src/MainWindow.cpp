@@ -51,8 +51,6 @@ MainWindow::~MainWindow() {
   FileStorageService::saveBitBuddy(BitBuddyService::getBitBuddy());
   FileStorageService::saveUserBankAccount(UserBankAccountService::getUserBankAccount());
 
-  setupUi();
-
   delete spriteHandler;
   delete spriteLabel;
   delete settingsButton;
