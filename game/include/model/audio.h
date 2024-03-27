@@ -8,10 +8,20 @@
 
 #include <QApplication>
 #include <QMediaPlayer>
+#include <QString>
 
 
 namespace Audio {
-    void playSound(QString type);
+    void playSound(const QString &type);
+    void initializeAudioSystem();
+    void muteSound(bool mute);
+    void setVolume(int volume);
+
+
+
+
+
+
 }
 
 

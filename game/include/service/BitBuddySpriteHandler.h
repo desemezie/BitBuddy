@@ -31,6 +31,8 @@ public:
 
 public slots:
     void handleEvent(const Event& event);
+
+
 private:
     QLabel* displayLabel;
     QLabel* temporaryLabel;

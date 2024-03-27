@@ -3,6 +3,10 @@
 //
 
 #include "component/LightButton.h"
+#include "model/SingleAttributeEvent.h"
+#include "model/audio.h"
+#include "service/EventDispatcherService.h"
+#include "model/BitBuddyAttributeName.h"
 #include <QIcon>
 #include <QApplication>
 
@@ -15,6 +19,20 @@ LightButton::LightButton(QWidget *parent) : QPushButton(parent), isLightOn(true)
 void LightButton::lightClicked() {
   isLightOn = !isLightOn;
   update();
+  if(isLightOn == false){
+    SingleAttributeEvent event(1,
+                               BitBuddyAttributeName::TIREDNESS,
+                               1.0,
+                               "Event for: " + BitBuddyAttributeName::toString(BitBuddyAttributeName::TIREDNESS));
+    QString Sound = QString::fromStdString(BitBuddyAttributeName::toString(BitBuddyAttributeName::TIREDNESS));
+    //std::string myString =  BitBuddyAttributeName::toString(attribute);
+
+    //play sound
+    Audio::playSound(Sound);
+
+    EventDispatcherService::getInstance().dispatchEvent(&event);
+
+  }
 }
 
 void LightButton::setImage(QString imagePath) {

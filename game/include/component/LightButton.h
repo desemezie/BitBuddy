@@ -24,6 +24,7 @@ class LightButton : public QPushButton {
  signals:
   void themeChange(const QString &newStyle);
   void textChange(bool isDarkMode);
+  void goSleep();
 
 };
 
