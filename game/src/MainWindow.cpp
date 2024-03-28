@@ -25,7 +25,7 @@
 #include "service/UserBankAccountService.h"
 #include "window/ShopWindow.h"
 
-constexpr double DEFAULT_SCREEN_PERCENTAGE = 0.7;
+constexpr double DEFAULT_SCREEN_PERCENTAGE = 0.9;
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
   BitBuddyService::registerBitBuddy(FileStorageService::loadBitBuddy("BitBuddy"));

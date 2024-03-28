@@ -42,10 +42,12 @@ ShopWindow::ShopWindow(QWidget *parent) : QWidget(parent, Qt::Window) {
     QListWidget {
         border: 2px solid gray; /* Adjust the border color/width as needed */
         border-radius: 10px; /* Adjust the radius as needed */
-        background-color: rgba(20, 25, 155, 2); /* Adjust background color and opacity */
+        background-color: pink; /* Adjust background color and opacity */
     }
     QListWidget::item {
         background-color: transparent; /* Make item background transparent */
+        font-size: 20pt; /* Set font size */
+        font-weight: bold; /* Make text bold */
     }
 )");
 
@@ -58,7 +60,31 @@ ShopWindow::ShopWindow(QWidget *parent) : QWidget(parent, Qt::Window) {
   gameListWidget->setIconSize(*new QSize(100,100));
 
 
+
   buyButton = new QPushButton("Buy", this);
+
+  buyButton->setStyleSheet(
+      "QPushButton {\n"
+      "    color: #000000;\n"
+      "    border: 2px solid #000000;\n"
+      "    border-radius: 15px; /* Increase for chubbier corners */\n"
+      "    background-color: white;\n"
+      "    padding: 10px 20px; /* Increase padding for a chubbier look */\n"
+      "    font-size: 25px;\n"
+      "    text-align: center;\n"
+      "    icon-size: 60px; /* Size for the icons */\n"
+      "    min-width: 100px; /* Minimum width to accommodate text and icon */\n"
+      "    min-height: 40px; /* Minimum height for a chubbier look */\n"
+
+      "}\n"
+      "\n"
+      "QPushButton:hover {\n"
+      "    background-color: #000000;\n"
+      "    color: white;\n"
+      "}"
+
+  );
+
   connect(buyButton, &QPushButton::clicked, this, &ShopWindow::onBuyButtonClicked);
 
   auto *layout = new QVBoxLayout(this);
@@ -72,6 +98,7 @@ ShopWindow::ShopWindow(QWidget *parent) : QWidget(parent, Qt::Window) {
 void ShopWindow::addItem(const QString &name, const QString &iconPath) {
   // Creates new item
   auto *item = new QListWidgetItem(name, gameListWidget);
+
   // Sets the icon for it
   item->setIcon(QIcon(iconPath));
   // Adds it to the gameListWidget

@@ -47,13 +47,32 @@ class MainWindow final : public QMainWindow {
   QPushButton *stats{};
   QPushButton *shop{};
 
+  /**
+   * @brief Will set up the homepage of the bitbuddy game
+   *
+   */
   void setupUi();
+  /**
+   * @brief Sets the default sprite to the happy bitbuddy
+   */
   void loadDefaultSprite() const;
+  /**
+   * @brief resizeEvent will be called when the window is resized
+   * @brief Will ensure the position of the bitbuddy and its items are in the correct places
+   * @param event resize event is sent in
+   */
   void resizeEvent(QResizeEvent *event) override;
 
  private slots:
+  /**
+   * @brief Opens the additional windows that are accessible through the mainWindow
+   */
   void openSettings();
   void openShopWindow();
+  /**
+   * @brief Changes the style of the game
+   * @param newStyle light or dark
+   */
   void updateTheme(const QString &newStyle);
 
 };

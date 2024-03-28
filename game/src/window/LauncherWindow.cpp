@@ -9,11 +9,30 @@
 #include <QGraphicsDropShadowEffect>
 #include <QLineEdit>
 #include <QTimer>
+#include <QFontDatabase>
+#include <QGraphicsOpacityEffect>
+#include <QPropertyAnimation>
 
+
+const QString LABEL_FONT = ":/assets/fonts/ARCADECLASSIC.TTF";
+const QString GAMES_FONT = ":/assets/fonts/GAMES.TTF";
 constexpr int SCREEN_WIDTH = 1920;
 constexpr int SCREEN_HEIGHT = 1080;
 
+/**
+ * @brief Launcher window Constructor
+ * @brief Will initialize the launcher window and call the addImages function to add the background
+ * @param parent
+ */
 LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
+  // font
+  int id = QFontDatabase::addApplicationFont(LABEL_FONT);
+  QStringList fontFamilies = QFontDatabase::applicationFontFamilies(id);
+  const QString fontFamily = fontFamilies.at(0);
+
+  int gameFontID = QFontDatabase::addApplicationFont(GAMES_FONT);
+  QStringList fontFamilies2 = QFontDatabase::applicationFontFamilies(gameFontID);
+  const QString fontFamily2 = fontFamilies2.at(0);
   // adding background of layout
   this->setStyleSheet("background-color: white;");
   auto *layout = new QVBoxLayout(this);
@@ -21,6 +40,8 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
   // adding background images
   addImages();
   layout->addStretch(1);
+
+
   auto *welcomeLabel = new QLabel(this);
 
   // set design for welcome label
@@ -35,18 +56,32 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
     )");
   welcomeLabel->setAlignment(Qt::AlignCenter);
 
-  // Using HTML to format the text content, allowing for different sizes/styles
-  QString labelText = R"(
-    <h1 style="font-size: 24px;" >Welcome to Bit Buddy!</h1>
-    <p style="font-size: 16px;" >Here are some instructions for the game:<br>
-    - Do this<br>
-    - Do that<br>
-    - Have fun!</p>
-  )";
 
-  welcomeLabel->setFixedSize(300, 200);
+  // Using HTML to format the text content, allowing for different sizes/styles
+  QString labelText = QString(R"(
+    <h1 style="font-size: 42px; font-family: '%1';" >Welcome to Bit Buddy!</h1>
+    <p style="font-size: 16px; font-family: '%1' " >BitBuddy is your newest digital interactive friend<br>
+    Like a pet, a BitBuddy is a lot of responsibility<br>
+    Make sure you keep an eye on it and take care of it accordingly<br>
+    And dont forget to have fun!</p>
+  )").arg(fontFamily2);
+
+  welcomeLabel->setFixedSize(350, 250);
   welcomeLabel->setText(labelText);
   welcomeLabel->setWordWrap(true);
+
+  // adding fade in widget
+  QGraphicsOpacityEffect *fadeinEffect = new QGraphicsOpacityEffect(welcomeLabel);
+  welcomeLabel->setGraphicsEffect(fadeinEffect);
+  QPropertyAnimation *fadeInAnimation = new QPropertyAnimation(fadeinEffect, "opacity");
+  fadeInAnimation->setDuration(1500);
+  fadeInAnimation->setStartValue(0.0);
+  fadeInAnimation->setEndValue(1.0);
+  fadeInAnimation->setEasingCurve(QEasingCurve::InOutQuad);
+
+  // Start the animation
+  fadeInAnimation->start(QPropertyAnimation::DeleteWhenStopped);
+
 
   layout->addWidget(welcomeLabel, 0, Qt::AlignCenter);
   layout->addSpacerItem(new QSpacerItem(20, 250, QSizePolicy::Minimum, QSizePolicy::Expanding));
@@ -57,27 +92,45 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
 
   // playbutton design
   playButton->setStyleSheet(
-      "QPushButton { " "color: #000000; " "border: 2px solid #000000; " "border-radius: 10px; "
-      "background-color: white; " "padding: 5px; " "}" "QPushButton:hover { " "background-color: #000000;"
-      "color: white;" "}");
+      "QPushButton { " "color: #000000; "
+                        "border: 2px solid #000000; "
+                        "border-radius: 10px; "
+                        "background-color: white;"
+                        "padding: 5px; " "}"
+
+      "QPushButton:hover { " "background-color: #000000;"
+                             "color: white;"
+                             "}");
+
 
   // add the place to insert a name for your bitbuddy
-  auto *nameLineEdit = new QLineEdit(this);
-  nameLineEdit->setPlaceholderText("Enter your name");
-  nameLineEdit->setFixedSize(200, 30);
+  auto *nameLine = new QLineEdit(this);
+  nameLine->setPlaceholderText("Enter your BitBuddy's name");
+  nameLine->setFixedSize(350, 50);
+
+  if (fontFamilies.isEmpty()) {
+    qWarning() << "Failed to load font from" << LABEL_FONT;
+  } else {
+    const QString &family = fontFamilies.at(0);
+    QFont retroFont(family, 24, QFont::Bold);
+    nameLine->setFont(retroFont);
+  }
   // Set the width and height according to your preference
-  nameLineEdit->setStyleSheet("border: 1px solid black;");
-  nameLineEdit->setStyleSheet("QLineEdit { color: black !important; }");
+
+  nameLine->setStyleSheet("border: 1px solid black;");
+  nameLine->setStyleSheet("QLineEdit { color: black !important; "
+                                           "border: 3px solid black; "
+                              "}");
 
   auto *hLayoutForLineEdit = new QHBoxLayout();
   hLayoutForLineEdit->addStretch(1);
   // Add a stretchable space on the left side to push everything else to the right
-  hLayoutForLineEdit->addWidget(nameLineEdit);
-  // Add the nameLineEdit to the QHBoxLayout
+  hLayoutForLineEdit->addWidget(nameLine);
+  // Add the nameLine to the QHBoxLayout
   hLayoutForLineEdit->addStretch(1);
   // Add a stretchable space on the right side to push everything else to the left
   layout->addLayout(hLayoutForLineEdit);
-  // This adds the QHBoxLayout (which contains your centered nameLineEdit) to the main QVBoxLayout
+  // This adds the QHBoxLayout (which contains your centered nameLine) to the main QVBoxLayout
 
   layout->addStretch();
 
