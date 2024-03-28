@@ -11,7 +11,7 @@ list(APPEND CMAKE_PREFIX_PATH "/Users/ryanhecht/Qt/6.6.1/macos")
 list(APPEND CMAKE_PREFIX_PATH "/Users/danielesemezie/Qt/6.6.2/macos")
 list(APPEND CMAKE_PREFIX_PATH "/shaylan/path")
 list(APPEND CMAKE_PREFIX_PATH "/annabel/path")
-list(APPEND CMAKE_PREFIX_PATH "/razvan/path")
+list(APPEND CMAKE_PREFIX_PATH "/home/razvan/Qt/6.6.3/gcc_64")
 
 find_package(Qt6 COMPONENTS
         Core
