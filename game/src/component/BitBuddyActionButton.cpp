@@ -9,7 +9,17 @@
 #include "component/BitBuddyActionButton.h"
 #include "QtMultimedia"
 #include "model/audio.h"
+
 const QString ATTRIBUTE_FONT = ":/assets/fonts/GAMES.TTF";
+
+/**
+ * @class BitBuddyActionButton
+ * @brief Will initialize the button by connecting the button click to the handleButtonClicked method
+ * @param icon Icon for the button
+ * @param attribute Attribute that the button belongs to
+ * @param text The string for the button
+ * @param parent The parent widget of the button
+ */
 BitBuddyActionButton::BitBuddyActionButton(const QIcon &icon,
                                            const QString &text,
                                            BitBuddyAttributeName::UniqueName attribute,
@@ -19,21 +29,31 @@ BitBuddyActionButton::BitBuddyActionButton(const QIcon &icon,
 
 }
 
+/**
+ * @class BitBuddyActionButton
+ * @brief Will handle the button click depending on which button it is and its Attribute
+ *
+ */
 void BitBuddyActionButton::handleButtonClicked() {
+  // Creates a single attribute event for each of the buttons
   SingleAttributeEvent event(1,
                              attribute,
                              1.0,
                              "Event for: " + BitBuddyAttributeName::toString(attribute));
+  // Adds the sound for each button
   QString Sound = QString::fromStdString(BitBuddyAttributeName::toString(attribute));
-  //std::string myString =  BitBuddyAttributeName::toString(attribute);
 
-  //play sound
+
+  // Play sound
   Audio::playSound(Sound);
 
+  // Dispatches event
   EventDispatcherService::getInstance().dispatchEvent(&event);
 }
 
-
+/**
+ * @brief setButtonStyle is supposed to set the design of the button.
+ */
 void  BitBuddyActionButton::setButtonStyle(){
 
     // set font style
@@ -43,7 +63,7 @@ void  BitBuddyActionButton::setButtonStyle(){
 
     QString imageName = QString::fromStdString(BitBuddyAttributeName::toString(attribute));
 
-  // Assuming fontFamily holds the font family name you want to use
+    // String used in the format of the design expectations to send into stylesheet
     QString buttonStyleSheet = QString(
         "QPushButton {\n"
         "    color: #000000;\n"
@@ -65,7 +85,7 @@ void  BitBuddyActionButton::setButtonStyle(){
         "}"
     ).arg(fontFamily); // Replace %1 with the fontFamily variable
 
-  // Apply the constructed style sheet to the widget
+    // Apply the constructed style sheet to the widget
     setStyleSheet(buttonStyleSheet);
 
 

@@ -59,31 +59,36 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
 
   // Using HTML to format the text content, allowing for different sizes/styles
   QString labelText = QString(R"(
-    <h1 style="font-size: 42px; font-family: '%1';" >Welcome to Bit Buddy!</h1>
-    <p style="font-size: 16px; font-family: '%1' " >BitBuddy is your newest digital interactive friend<br>
+    <p style="font-size: 46px; font-family: '%1';" >Welcome to Bit Buddy!</p>
+    <p style="font-size: 18px; font-family: '%1' " >BitBuddy is your newest digital interactive friend<br>
     Like a pet, a BitBuddy is a lot of responsibility<br>
     Make sure you keep an eye on it and take care of it accordingly<br>
     And dont forget to have fun!</p>
   )").arg(fontFamily2);
 
-  welcomeLabel->setFixedSize(350, 250);
+  // Sets size and text
+  welcomeLabel->setFixedSize(400, 300);
   welcomeLabel->setText(labelText);
   welcomeLabel->setWordWrap(true);
 
-  // adding fade in widget
+  // Adding fade in widget
   QGraphicsOpacityEffect *fadeinEffect = new QGraphicsOpacityEffect(welcomeLabel);
   welcomeLabel->setGraphicsEffect(fadeinEffect);
   QPropertyAnimation *fadeInAnimation = new QPropertyAnimation(fadeinEffect, "opacity");
+  // Fade in lasts for 1.5 seconds
   fadeInAnimation->setDuration(1500);
+  // Original opacity
   fadeInAnimation->setStartValue(0.0);
+  // End opacity
   fadeInAnimation->setEndValue(1.0);
   fadeInAnimation->setEasingCurve(QEasingCurve::InOutQuad);
 
   // Start the animation
   fadeInAnimation->start(QPropertyAnimation::DeleteWhenStopped);
 
-
   layout->addWidget(welcomeLabel, 0, Qt::AlignCenter);
+
+  // Adds spacer
   layout->addSpacerItem(new QSpacerItem(20, 250, QSizePolicy::Minimum, QSizePolicy::Expanding));
 
   this->resize(SCREEN_WIDTH, SCREEN_HEIGHT);
@@ -137,22 +142,14 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
 
   layout->addStretch();
 
-
-  // add shadow effect for the box
-  //auto *shadowEffect = new QGraphicsDropShadowEffect(welcomeLabel);
-  //shadowEffect->setBlurRadius(5);
-  //shadowEffect->setXOffset(5);
-  //shadowEffect->setYOffset(5);
-  //shadowEffect->setColor(Qt::black);
-  //playButton->setGraphicsEffect(shadowEffect);
-  //welcomeLabel->setGraphicsEffect(shadowEffect);
+  // Sets size of playButton
   playButton->setFixedSize(100, 60);
 
-  // align the box
-  // add playButton
+  // Align the box
+  // Add playButton
   layout->addWidget(playButton);
 
-  // align playbutton
+  // Align playButton
   layout->addStretch();
   layout->setAlignment(playButton, Qt::AlignHCenter);
   layout->setContentsMargins(0, 0, 0, 100); // Adjust top margin
@@ -167,31 +164,29 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
   });
 }
 
-/*
- * addImages() - helper method to add the bitbuddies
- */
+/**
+  * @brief addImages() - helper method to add the bitbuddies
+  */
 void LauncherWindow::addImages() {
+  // Initializes container
   QWidget *imageContainer = new QWidget(this);
   QTimer *timer = new QTimer(this);
   connect(timer, &QTimer::timeout, [imageContainer]() {
     static int colorIndex = 0;
+    // Array of background colours to transition throughout
     QStringList backgroundColors = {"background-color:#eaaee3", "background-color:#c79dfb", "background-color:#fbfb9d",
-                                    "background-color:#bbdddd"};
+                                    "background-color:#bbdddd", "background-color:#ffae42",  "background-color:#77dd77"};
+    // Sets the stylesheet as the backgroundColors
     imageContainer->setStyleSheet(backgroundColors[colorIndex]);
-
+    // Will have a changing index
     colorIndex = (colorIndex + 1) % backgroundColors.size();
   });
+  // Will change the colors every .25 of a second
   timer->start(250);
 
   imageContainer->setStyleSheet("background-color:#eaaee3");
 
-  /*
-   * beige - #d8a38d
-   * purple - #c79dfb
-   * yellow - #fbfb9d
-   * blue - #bbdddd
-   * pink - #eaaee3
-   */
+
   imageContainer->setFixedSize(SCREEN_WIDTH, SCREEN_HEIGHT); // Adjust as needed
 
   // Logic for bitbuddies
@@ -206,9 +201,6 @@ void LauncherWindow::addImages() {
   std::vector<std::string> images = {":assets/happy_bitbuddy.png", ":assets/angry_bitbuddy.png",
                                      ":assets/mad_bitbuddy.png", ":assets/sad_bitbuddy.png",
                                      ":assets/sick_bitbuddy.png", ":assets/sick_bitbuddy.png"};
-
-  std::vector<std::string> backgroundColours = {"background-color:#eaaee3", "background-color:#c79dfb",
-                                                "background-color:#fbfb9d", "background-color:#bbdddd"};
 
   // for loop for image placement
   for (int i = 0; i < numRows; ++i) {
