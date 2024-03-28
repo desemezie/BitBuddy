@@ -9,7 +9,7 @@
 #include "component/BitBuddyActionButton.h"
 #include "QtMultimedia"
 #include "model/audio.h"
-
+const QString ATTRIBUTE_FONT = ":/assets/fonts/GAMES.TTF";
 BitBuddyActionButton::BitBuddyActionButton(const QIcon &icon,
                                            const QString &text,
                                            BitBuddyAttributeName::UniqueName attribute,
@@ -35,28 +35,40 @@ void BitBuddyActionButton::handleButtonClicked() {
 
 
 void  BitBuddyActionButton::setButtonStyle(){
+
+    // set font style
+    int id = QFontDatabase::addApplicationFont(ATTRIBUTE_FONT);
+    QStringList fontFamilies = QFontDatabase::applicationFontFamilies(id);
+    const QString fontFamily = fontFamilies.at(0);
+
     QString imageName = QString::fromStdString(BitBuddyAttributeName::toString(attribute));
-    setStyleSheet(
-            "QPushButton {\n"
-            "    color: #000000;\n"
-            "    border: 2px solid #000000;\n"
-            "    border-radius: 15px; /* Increase for chubbier corners */\n"
-            "    background-color: white;\n"
-            "    padding: 10px 20px; /* Increase padding for a chubbier look */\n"
-            "    font-size: 25px;\n"
-            "    text-align: center;\n"
-            "    icon-size: 60px; /* Size for the icons */\n"
-            "    min-width: 100px; /* Minimum width to accommodate text and icon */\n"
-            "    min-height: 40px; /* Minimum height for a chubbier look */\n"
 
-            "}\n"
-            "\n"
-            "QPushButton:hover {\n"
-            "    background-color: #000000;\n"
-            "    color: white;\n"
-            "}"
+  // Assuming fontFamily holds the font family name you want to use
+    QString buttonStyleSheet = QString(
+        "QPushButton {\n"
+        "    color: #000000;\n"
+        "    border: 2px solid #000000;\n"
+        "    border-radius: 15px; /* Increase for chubbier corners */\n"
+        "    background-color: white;\n"
+        "    padding: 10px 20px; /* Increase padding for a chubbier look */\n"
+        "    font-size: 25px;\n"
+        "    font-family: '%1';\n" // Add the font family here
+        "    text-align: center;\n"
+        "    icon-size: 60px; /* Size for the icons */\n"
+        "    min-width: 100px; /* Minimum width to accommodate text and icon */\n"
+        "    min-height: 40px; /* Minimum height for a chubbier look */\n"
+        "}\n"
+        "\n"
+        "QPushButton:hover {\n"
+        "    background-color: #000000;\n"
+        "    color: white;\n"
+        "}"
+    ).arg(fontFamily); // Replace %1 with the fontFamily variable
 
-    );
+  // Apply the constructed style sheet to the widget
+    setStyleSheet(buttonStyleSheet);
+
+
 
     if (imageName == "Hunger") {
         setIcon(QIcon(":/assets/tamagochi_feed.png"));

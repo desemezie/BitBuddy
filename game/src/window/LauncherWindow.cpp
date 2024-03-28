@@ -89,8 +89,11 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
   this->resize(SCREEN_WIDTH, SCREEN_HEIGHT);
 
   auto *playButton = new QPushButton("PLAY", this);
+  // supposed to make the button press when enter is clicked
+  playButton->setAutoDefault(true);
+  playButton->setDefault(true);
 
-  // playbutton design
+  // playButton design
   playButton->setStyleSheet(
       "QPushButton { " "color: #000000; "
                         "border: 2px solid #000000; "
@@ -134,14 +137,15 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
 
   layout->addStretch();
 
+
   // add shadow effect for the box
-  auto *shadowEffect = new QGraphicsDropShadowEffect(welcomeLabel);
-  shadowEffect->setBlurRadius(5);
-  shadowEffect->setXOffset(5);
-  shadowEffect->setYOffset(5);
-  shadowEffect->setColor(Qt::black);
-  playButton->setGraphicsEffect(shadowEffect);
-  welcomeLabel->setGraphicsEffect(shadowEffect);
+  //auto *shadowEffect = new QGraphicsDropShadowEffect(welcomeLabel);
+  //shadowEffect->setBlurRadius(5);
+  //shadowEffect->setXOffset(5);
+  //shadowEffect->setYOffset(5);
+  //shadowEffect->setColor(Qt::black);
+  //playButton->setGraphicsEffect(shadowEffect);
+  //welcomeLabel->setGraphicsEffect(shadowEffect);
   playButton->setFixedSize(100, 60);
 
   // align the box

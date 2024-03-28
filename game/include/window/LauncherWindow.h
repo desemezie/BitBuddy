@@ -28,6 +28,7 @@ class LauncherWindow : public QWidget{
    * @brief function to insert the image pattern
    */
   void addImages();
+
 };
 
 #endif //BITBUDDY_GROUP17_SRC_LAUNCHERWINDOW_H_
