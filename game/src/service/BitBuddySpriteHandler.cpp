@@ -18,6 +18,7 @@ BitBuddySpriteHandler::BitBuddySpriteHandler(QLabel *displayLabel, QObject *pare
   temporaryLabel = new QLabel(displayLabel->parentWidget());
   temporaryLabel->setAttribute(Qt::WA_TransparentForMouseEvents);
   temporaryLabel->hide();
+
 }
 
 
@@ -273,7 +274,7 @@ void BitBuddySpriteHandler::updatePillsPosition() {
   int parentHeight = temporaryLabel->parentWidget()->height();
 
   int xPosition = (parentWidth - newSize.width()) / 2 + ((parentWidth - newSize.width()) / 45)/3 - ((parentWidth - newSize.width()) / 65);
-  int yPosition = (parentHeight - newSize.height()) / 2 + (parentHeight - newSize.height()) / 15;
+  int yPosition = (parentHeight - newSize.height()) / 2 + (parentHeight - newSize.height()) / 45;
 
   temporaryLabel->move(xPosition, yPosition);
 
@@ -284,8 +285,8 @@ void BitBuddySpriteHandler::updateDrinkPosition() {
   int parentWidth = temporaryLabel->parentWidget()->width();
   int parentHeight = temporaryLabel->parentWidget()->height();
 
-  int xPosition = (parentWidth - newSize.width()) / 2 + ((parentWidth - newSize.width()) / 45)/3 - ((parentWidth - newSize.width()) / 65) - 35;
-  int yPosition = (parentHeight - newSize.height()) / 2 + 150;
+  int xPosition = (parentWidth - newSize.width()) / 2 + ((parentWidth - newSize.width()) / 45)/3 - ((parentWidth - newSize.width()) / 65) - 20;
+  int yPosition = (parentHeight - newSize.height()) / 2 + 125;
 
   temporaryLabel->move(xPosition, yPosition);
 
