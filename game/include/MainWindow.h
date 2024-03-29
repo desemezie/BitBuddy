@@ -45,7 +45,11 @@ class MainWindow final : public QMainWindow {
   BitBuddyStatusWidget *bitBuddyStatusWidget{};
   LightButton *lightSwitch{};
   QPushButton *stats{};
+
   QPushButton *shop{};
+
+  QPushButton *shopButton{};
+
 
   /**
    * @brief Will set up the homepage of the bitbuddy game
