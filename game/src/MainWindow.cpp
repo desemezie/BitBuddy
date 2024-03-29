@@ -40,7 +40,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
     statsWindow->setAttribute(Qt::WA_DeleteOnClose);
     statsWindow->show();
   });
-  connect(shopButton, &QPushButton::clicked, this, &MainWindow::openShop);
   connect(&EventDispatcherService::getInstance(), &EventDispatcherService::eventDispatched, spriteHandler,
           &BitBuddySpriteHandler::handleEvent);
 
@@ -106,11 +105,6 @@ void MainWindow::setupUi() {
   stats->setIconSize(QSize(40, 40));
   layout->addWidget(stats, 0, 1, Qt::AlignCenter | Qt::AlignRight);
 
-  // Add the store button
-  shopButton = new QPushButton("Open Game Store", this);
-  shopButton->setIconSize(QSize(40, 40));
-  layout->addWidget(shopButton, 0, 1, Qt::AlignTop | Qt::AlignRight);
-
   auto *rowLayout1 = new QHBoxLayout;
   auto *rowLayout2 = new QHBoxLayout;
 
@@ -167,14 +161,6 @@ void MainWindow::resizeEvent(QResizeEvent *event) {
 void MainWindow::openSettings() {
   SettingsWindow settingsDialog(this);
   settingsDialog.exec();
-}
-
-void MainWindow::openShop() {
-  if (!shopWindow) {
-    shopWindow = new ShopWindow(this);
-  }
-
-  shopWindow->show();
 }
 
 void MainWindow::updateTheme(const QString &newStyle) {
