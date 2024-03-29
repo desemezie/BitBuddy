@@ -45,6 +45,7 @@ class MainWindow final : public QMainWindow {
   BitBuddyStatusWidget *bitBuddyStatusWidget{};
   LightButton *lightSwitch{};
   QPushButton *stats{};
+  QPushButton *shopButton{};
 
   void setupUi();
   void loadDefaultSprite() const;
