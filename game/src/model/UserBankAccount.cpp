@@ -6,7 +6,7 @@
 
 #include <stdexcept>
 
-UserBankAccount::UserBankAccount(int balance) {
+UserBankAccount::UserBankAccount(const int balance) {
   if (balance < MIN_USER_ACCOUNT_BALANCE || balance > MAX_USER_ACCOUNT_BALANCE) {
     throw std::invalid_argument("Balance is outside of the minimum and maximum range.");
   }
@@ -14,7 +14,7 @@ UserBankAccount::UserBankAccount(int balance) {
   this->balance = balance;
 }
 
-void UserBankAccount::deposit(int amount) {
+void UserBankAccount::deposit(const int amount) {
   if (amount < 0) {
     throw std::invalid_argument("Amount must be positive.");
   }
@@ -27,7 +27,7 @@ void UserBankAccount::deposit(int amount) {
   emit bankAccountUpdated(balance);
 }
 
-void UserBankAccount::withdraw(int amount) {
+void UserBankAccount::withdraw(const int amount) {
   if (amount < 0) {
     throw std::invalid_argument("Amount must be positive.");
   }
