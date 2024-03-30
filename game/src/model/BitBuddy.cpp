@@ -15,6 +15,8 @@
 BitBuddy::BitBuddy(std::string name)
   : name(std::move(name)), creationTime(std::chrono::system_clock::now()), dead(false), id(QUuid::createUuid()),
     bitBuckGenerator(new BitBuckGenerator()) {
+
+  currentSprite = ":/assets/happy_bitbuddy.png";
   for (int i = 0; i < NUMBER_OF_ATTRIBUTES; i++) {
     // Constructs a map of the form {HUNGER -> <BitBuddyAttribute> with name HUNGER and value 10}
     attributes.emplace(std::piecewise_construct,
@@ -141,4 +143,20 @@ void BitBuddy::die(const BitBuddyAttribute &attribute) {
       std::endl;
 
   emit died(attribute);
+}
+
+std::string BitBuddy::getSprite() const{
+  return this->currentSprite;
+}
+
+void BitBuddy::setCurrentSprite(std::string name) {
+  this->currentSprite = name;
+}
+
+void BitBuddy::addItemPurchased(const std::string& itemName) {
+  thingsPurchased.push_back(itemName);
+}
+
+const std::vector<std::string>& BitBuddy::getItemsPurchased() const {
+  return thingsPurchased;
 }
