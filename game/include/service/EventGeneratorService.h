@@ -9,6 +9,8 @@
 
 #include <thread>
 #include <atomic>
+//razvan added this
+#include <condition_variable>
 
 /**
  * Service that generates events on its own thread
