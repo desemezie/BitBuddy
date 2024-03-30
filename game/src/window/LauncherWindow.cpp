@@ -10,11 +10,30 @@
 #include <QGraphicsDropShadowEffect>
 #include <QLineEdit>
 #include <QTimer>
+#include <QFontDatabase>
+#include <QGraphicsOpacityEffect>
+#include <QPropertyAnimation>
 
+
+const QString LABEL_FONT = ":/assets/fonts/ARCADECLASSIC.TTF";
+const QString GAMES_FONT = ":/assets/fonts/GAMES.TTF";
 constexpr int SCREEN_WIDTH = 1920;
 constexpr int SCREEN_HEIGHT = 1080;
 
+/**
+ * @brief Launcher window Constructor
+ * @brief Will initialize the launcher window and call the addImages function to add the background
+ * @param parent
+ */
 LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
+  // font
+  int id = QFontDatabase::addApplicationFont(LABEL_FONT);
+  QStringList fontFamilies = QFontDatabase::applicationFontFamilies(id);
+  const QString fontFamily = fontFamilies.at(0);
+
+  int gameFontID = QFontDatabase::addApplicationFont(GAMES_FONT);
+  QStringList fontFamilies2 = QFontDatabase::applicationFontFamilies(gameFontID);
+  const QString fontFamily2 = fontFamilies2.at(0);
   // adding background of layout
   this->setStyleSheet("background-color: white;");
   auto *layout = new QVBoxLayout(this);
@@ -22,6 +41,8 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
   // adding background images
   addImages();
   layout->addStretch(1);
+
+
   auto *welcomeLabel = new QLabel(this);
 
   // set design for welcome label
@@ -36,67 +57,110 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
     )");
   welcomeLabel->setAlignment(Qt::AlignCenter);
 
-  // Using HTML to format the text content, allowing for different sizes/styles
-  QString labelText = R"(
-    <h1 style="font-size: 24px;" >Welcome to Bit Buddy!</h1>
-    <p style="font-size: 16px;" >Here are some instructions for the game:<br>
-    - Do this<br>
-    - Do that<br>
-    - Have fun!</p>
-  )";
 
-  welcomeLabel->setFixedSize(300, 200);
+  // Using HTML to format the text content, allowing for different sizes/styles
+  QString labelText = QString(R"(
+    <p style="font-size: 46px; font-family: '%1';" >Welcome to Bit Buddy!</p>
+    <p style="font-size: 18px; font-family: '%1' " >BitBuddy is your newest digital interactive friend<br>
+    Like a pet, a BitBuddy is a lot of responsibility<br>
+    Make sure you keep an eye on it and take care of it accordingly<br>
+    And dont forget to have fun!</p>
+  )").arg(fontFamily2);
+
+  // Sets size and text
+  welcomeLabel->setFixedSize(400, 300);
   welcomeLabel->setText(labelText);
   welcomeLabel->setWordWrap(true);
 
+  // Adding fade in widget
+  QGraphicsOpacityEffect *fadeinEffect = new QGraphicsOpacityEffect(welcomeLabel);
+  welcomeLabel->setGraphicsEffect(fadeinEffect);
+  QPropertyAnimation *fadeInAnimation = new QPropertyAnimation(fadeinEffect, "opacity");
+  // Fade in lasts for 1.5 seconds
+  fadeInAnimation->setDuration(1500);
+  // Original opacity
+  fadeInAnimation->setStartValue(0.0);
+  // End opacity
+  fadeInAnimation->setEndValue(1.0);
+  fadeInAnimation->setEasingCurve(QEasingCurve::InOutQuad);
+
+  // Start the animation
+  fadeInAnimation->start(QPropertyAnimation::DeleteWhenStopped);
+
   layout->addWidget(welcomeLabel, 0, Qt::AlignCenter);
+
+  // Adds spacer
   layout->addSpacerItem(new QSpacerItem(20, 250, QSizePolicy::Minimum, QSizePolicy::Expanding));
 
   this->resize(SCREEN_WIDTH, SCREEN_HEIGHT);
 
   auto *playButton = new QPushButton("PLAY", this);
+  // supposed to make the button press when enter is clicked
+  playButton->setAutoDefault(true);
+  playButton->setDefault(true);
 
-  // playbutton design
+  // playButton design
   playButton->setStyleSheet(
-      "QPushButton { " "color: #000000; " "border: 2px solid #000000; " "border-radius: 10px; "
-      "background-color: white; " "padding: 5px; " "}" "QPushButton:hover { " "background-color: #000000;"
-      "color: white;" "}");
+      "QPushButton { " "color: #000000; "
+                        "border: 2px solid #000000; "
+                        "border-radius: 10px; "
+                        "background-color: white;"
+                        "padding: 5px; " "}"
+
+      "QPushButton:hover { " "background-color: #000000;"
+                             "color: white;"
+                             "}");
+
 
   // add the place to insert a name for your bitbuddy
+
   nameLineEdit = new QLineEdit(this);
   nameLineEdit->setPlaceholderText("Enter your name");
   nameLineEdit->setFixedSize(200, 30);
   // Set the width and height according to your preference
   nameLineEdit->setStyleSheet("border: 1px solid black;");
   nameLineEdit->setStyleSheet("QLineEdit { color: black !important; }");
+
+  auto *nameLine = new QLineEdit(this);
+  nameLine->setPlaceholderText("Enter your BitBuddy's name");
+  nameLine->setFixedSize(350, 50);
+
+  if (fontFamilies.isEmpty()) {
+    qWarning() << "Failed to load font from" << LABEL_FONT;
+  } else {
+    const QString &family = fontFamilies.at(0);
+    QFont retroFont(family, 24, QFont::Bold);
+    nameLine->setFont(retroFont);
+  }
+  // Set the width and height according to your preference
+
+  nameLine->setStyleSheet("border: 1px solid black;");
+  nameLine->setStyleSheet("QLineEdit { color: black !important; "
+                                           "border: 3px solid black; "
+                              "}");
+
+
   auto *hLayoutForLineEdit = new QHBoxLayout();
   hLayoutForLineEdit->addStretch(1);
   // Add a stretchable space on the left side to push everything else to the right
-  hLayoutForLineEdit->addWidget(nameLineEdit);
-  // Add the nameLineEdit to the QHBoxLayout
+  hLayoutForLineEdit->addWidget(nameLine);
+  // Add the nameLine to the QHBoxLayout
   hLayoutForLineEdit->addStretch(1);
   // Add a stretchable space on the right side to push everything else to the left
   layout->addLayout(hLayoutForLineEdit);
-  // This adds the QHBoxLayout (which contains your centered nameLineEdit) to the main QVBoxLayout
+  // This adds the QHBoxLayout (which contains your centered nameLine) to the main QVBoxLayout
 
 
   layout->addStretch();
 
-  // add shadow effect for the box
-  auto *shadowEffect = new QGraphicsDropShadowEffect(welcomeLabel);
-  shadowEffect->setBlurRadius(5);
-  shadowEffect->setXOffset(5);
-  shadowEffect->setYOffset(5);
-  shadowEffect->setColor(Qt::black);
-  playButton->setGraphicsEffect(shadowEffect);
-  welcomeLabel->setGraphicsEffect(shadowEffect);
+  // Sets size of playButton
   playButton->setFixedSize(100, 60);
 
-  // align the box
-  // add playButton
+  // Align the box
+  // Add playButton
   layout->addWidget(playButton);
 
-  // align playbutton
+  // Align playButton
   layout->addStretch();
   layout->setAlignment(playButton, Qt::AlignHCenter);
   layout->setContentsMargins(0, 0, 0, 100); // Adjust top margin
@@ -112,31 +176,29 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
   });
 }
 
-/*
- * addImages() - helper method to add the bitbuddies
- */
+/**
+  * @brief addImages() - helper method to add the bitbuddies
+  */
 void LauncherWindow::addImages() {
+  // Initializes container
   QWidget *imageContainer = new QWidget(this);
   QTimer *timer = new QTimer(this);
   connect(timer, &QTimer::timeout, [imageContainer]() {
     static int colorIndex = 0;
+    // Array of background colours to transition throughout
     QStringList backgroundColors = {"background-color:#eaaee3", "background-color:#c79dfb", "background-color:#fbfb9d",
-                                    "background-color:#bbdddd"};
+                                    "background-color:#bbdddd", "background-color:#ffae42",  "background-color:#77dd77"};
+    // Sets the stylesheet as the backgroundColors
     imageContainer->setStyleSheet(backgroundColors[colorIndex]);
-
+    // Will have a changing index
     colorIndex = (colorIndex + 1) % backgroundColors.size();
   });
+  // Will change the colors every .25 of a second
   timer->start(250);
 
   imageContainer->setStyleSheet("background-color:#eaaee3");
 
-  /*
-   * beige - #d8a38d
-   * purple - #c79dfb
-   * yellow - #fbfb9d
-   * blue - #bbdddd
-   * pink - #eaaee3
-   */
+
   imageContainer->setFixedSize(SCREEN_WIDTH, SCREEN_HEIGHT); // Adjust as needed
 
   // Logic for bitbuddies
@@ -151,9 +213,6 @@ void LauncherWindow::addImages() {
   std::vector<std::string> images = {":assets/happy_bitbuddy.png", ":assets/angry_bitbuddy.png",
                                      ":assets/mad_bitbuddy.png", ":assets/sad_bitbuddy.png",
                                      ":assets/sick_bitbuddy.png", ":assets/sick_bitbuddy.png"};
-
-  std::vector<std::string> backgroundColours = {"background-color:#eaaee3", "background-color:#c79dfb",
-                                                "background-color:#fbfb9d", "background-color:#bbdddd"};
 
   // for loop for image placement
   for (int i = 0; i < numRows; ++i) {
