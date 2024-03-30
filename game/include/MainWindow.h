@@ -18,7 +18,7 @@
  * The main window of the application
  */
 class MainWindow final : public QMainWindow {
-  Q_OBJECT
+ Q_OBJECT
 
  public:
   /**
@@ -51,7 +51,6 @@ class MainWindow final : public QMainWindow {
 
   QPushButton *shopButton{};
 
-
   /**
    * @brief Will set up the homepage of the bitbuddy game
    *
@@ -83,6 +82,6 @@ class MainWindow final : public QMainWindow {
    */
   void updateTheme(const QString &newStyle);
 
-
+};
 
 #endif  // BITBUDDY_MAINWINDOW_H

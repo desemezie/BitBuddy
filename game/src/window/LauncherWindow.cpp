@@ -6,6 +6,7 @@
 #include "window/LauncherWindow.h"
 #include "MainWindow.h"
 #include "service/BitBuddyService.h"
+#include "model/BitBuddy.h"
 #include <QApplication>
 #include <QGraphicsDropShadowEffect>
 #include <QLineEdit>
