@@ -5,6 +5,8 @@
 #include <QVBoxLayout>
 #include "window/LauncherWindow.h"
 #include "MainWindow.h"
+#include "service/BitBuddyService.h"
+#include "model/BitBuddy.h"
 #include <QApplication>
 #include <QGraphicsDropShadowEffect>
 #include <QLineEdit>
@@ -112,7 +114,15 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
 
 
   // add the place to insert a name for your bitbuddy
-  auto *nameLine = new QLineEdit(this);
+
+  //nameLineEdit = new QLineEdit(this);
+  //nameLineEdit->setPlaceholderText("Enter your name");
+  //nameLineEdit->setFixedSize(200, 30);
+  // Set the width and height according to your preference
+  //nameLineEdit->setStyleSheet("border: 1px solid black;");
+  //nameLineEdit->setStyleSheet("QLineEdit { color: black !important; }");
+
+  nameLine = new QLineEdit(this);
   nameLine->setPlaceholderText("Enter your BitBuddy's name");
   nameLine->setFixedSize(350, 50);
 
@@ -130,6 +140,7 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
                                            "border: 3px solid black; "
                               "}");
 
+
   auto *hLayoutForLineEdit = new QHBoxLayout();
   hLayoutForLineEdit->addStretch(1);
   // Add a stretchable space on the left side to push everything else to the right
@@ -139,6 +150,7 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
   // Add a stretchable space on the right side to push everything else to the left
   layout->addLayout(hLayoutForLineEdit);
   // This adds the QHBoxLayout (which contains your centered nameLine) to the main QVBoxLayout
+
 
   layout->addStretch();
 
@@ -157,6 +169,7 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
 
   // connect the playButton to an action
   connect(playButton, &QPushButton::clicked, this, [this]() {
+    BitBuddyService::getBitBuddy().setName(nameLine->text().toStdString());
     this->hide();
     auto *mainWindow = new MainWindow();
     mainWindow->setAttribute(Qt::WA_DeleteOnClose);

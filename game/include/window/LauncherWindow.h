@@ -12,6 +12,7 @@
 
 #include <QWidget>
 #include <QPushButton>
+#include <QLineEdit>
 
 class LauncherWindow : public QWidget{
   Q_OBJECT
@@ -28,6 +29,10 @@ class LauncherWindow : public QWidget{
    * @brief function to insert the image pattern
    */
   void addImages();
+
+
+ private:
+  QLineEdit *nameLine; ///< line edit to get the BitBuddy name entered by the user
 
 };
 

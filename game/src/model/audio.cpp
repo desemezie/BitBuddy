@@ -9,11 +9,21 @@
 
 namespace Audio {
 
-    void playSound(QString type) {
+    QMediaPlayer* media = nullptr;
+    QAudioOutput* audioOutput = nullptr;
 
-        QMediaPlayer* media = new QMediaPlayer;
-        QAudioOutput* audioOutput = new QAudioOutput;
+    void initializeAudioSystem() {
+      if (!media) {
+        media = new QMediaPlayer;
+      }
+      if (!audioOutput) {
+        audioOutput = new QAudioOutput;
         media->setAudioOutput(audioOutput); // Connect player to audio output
+      }
+    }
+
+    void playSound(const QString &type) {
+      initializeAudioSystem();
 
         if (type == "Hunger") {
             media->setSource(QUrl("qrc:assets/munchin.mp3"));
@@ -40,4 +50,17 @@ namespace Audio {
 
         media->play();
     }
+
+    void muteSound(bool mute) {
+      if (audioOutput) {
+        audioOutput->setMuted(mute);
+      }
+    }
+
+    void setVolume(int volume) {
+      if (audioOutput) {
+        audioOutput->setVolume(volume / 100.0); // Assuming volume is from 0 to 100
+      }
+    }
+
 }

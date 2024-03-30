@@ -340,6 +340,7 @@ BitBuddyAttributeName BitBuddySpriteHandler::checkLevels(){
       BitBuddyAttributeName::HUNGER, BitBuddyAttributeName::HAPPINESS, BitBuddyAttributeName::THIRST, BitBuddyAttributeName::HEALTH, BitBuddyAttributeName::TIREDNESS, BitBuddyAttributeName::BOREDOM, BitBuddyAttributeName::HYGIENE
   };
 
+
   for (const auto& attr : attributes) {
     int value = 0;
     switch (attr) {
@@ -392,3 +393,4 @@ BitBuddyAttributeName BitBuddySpriteHandler::checkLevels(){
 
 
 }
+

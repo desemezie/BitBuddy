@@ -32,9 +32,10 @@ constexpr double DEFAULT_SCREEN_PERCENTAGE = 0.9;
  * @param parent
  */
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
-  // Loads bitbuddy from the saved instance
-  BitBuddyService::registerBitBuddy(FileStorageService::loadBitBuddy("BitBuddy"));
+
+
   // Loads bitbuddy's bank account
+
   UserBankAccountService::registerUserBankAccount(&FileStorageService::loadUserBankAccount());
 
   // sets up the UI
@@ -42,7 +43,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
   // connects buttons to the functions they should work on when signaled
   connect(settingsButton, &QPushButton::clicked, this, &MainWindow::openSettings);
-  connect(lightSwitch, &LightButton::themeChange, this, &MainWindow::updateTheme);
+  connect(lightSwitch, &LightButton::themeChange, this, &MainWindow::updateCentralWidgetStyle);
   connect(lightSwitch, &LightButton::textChange, bitBuddyStatusWidget, &BitBuddyStatusWidget::updateDarkMode);
   connect(stats, &QPushButton::clicked, this, [this]() {
     auto *statsWindow = new StatsWindow(QString::fromStdString(BitBuddyService::getBitBuddy().getName()), this);
@@ -72,7 +73,7 @@ MainWindow::~MainWindow() {
 void MainWindow::setupUi() {
 
   // Set up central widget
-  auto *centralWidget = new QWidget(this);
+  centralWidget = new QWidget(this);
   setCentralWidget(centralWidget);
   centralWidget->setObjectName("centralWidget");
   // Set up a layout
@@ -207,6 +208,11 @@ void MainWindow::openSettings() {
   settingsDialog.exec();
 }
 
+
+void MainWindow::updateCentralWidgetStyle(const QString &newStyle) {
+  centralWidget->setStyleSheet(newStyle);
+}
+
 /**
  * @brief Responsible for opening the shop window when the shop button is pressed
  */
@@ -224,3 +230,4 @@ void MainWindow::openShopWindow() {
 void MainWindow::updateTheme(const QString &newStyle) {
   this->setStyleSheet(newStyle);  // NOTE, THIS CAUSES THE BLUE STATUS BARS TO BECOME GREY
 }
+
