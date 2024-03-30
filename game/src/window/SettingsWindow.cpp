@@ -89,6 +89,11 @@ void SettingsWindow::saveSettings() {
   // Save whether music is disabled
   settings.setValue("disableMusic", disableMusicCheckBox->isChecked());
 
+  soundEffectsVolume(soundEffectsSlider->value());
+  musicVolume(musicSlider->value());
+  disableSoundEffects(disableSoundEffectsCheckBox->isChecked());
+  disableMusic(disableMusicCheckBox->isChecked());
+
   accept(); // Close dialog
 }
 
