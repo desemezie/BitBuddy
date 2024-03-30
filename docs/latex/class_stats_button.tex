@@ -1,0 +1,123 @@
+\doxysection{Stats\+Button Class Reference}
+\hypertarget{class_stats_button}{}\label{class_stats_button}\index{StatsButton@{StatsButton}}
+
+
+The \doxylink{class_stats_button}{Stats\+Button} class extends QPush\+Button to provide a button specifically for showing statistics.  
+
+
+
+
+{\ttfamily \#include $<$Stats\+Button.\+h$>$}
+
+Inheritance diagram for Stats\+Button\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_stats_button}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_stats_button_add5c7acb585c70acf78fd767d10500bd}{show\+Stats}} ()
+\begin{DoxyCompactList}\small\item\em Signal emitted to indicate that statistics should be displayed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_stats_button_a2a82a8d41f10ef8705f59cbf71e1ada4}{Stats\+Button}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Construct a new Stats Button object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_stats_button_a42ef92c0ab9ca350c1837c4fb278c783}{stats\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em Slot that handles the button\textquotesingle{}s click event for showing statistics. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_stats_button_ab5f86d08d875aa5defbae0b4e7e33854}{set\+Image}} (QString)
+\begin{DoxyCompactList}\small\item\em Sets the button\textquotesingle{}s image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_stats_button_a78906c4f82d20c2d62a9390352a3c451}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the button\textquotesingle{}s appearance or state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_stats_button}{Stats\+Button} class extends QPush\+Button to provide a button specifically for showing statistics. 
+
+\begin{DoxyAuthor}{Author}
+Shaylan Pratt
+\end{DoxyAuthor}
+This button is designed to trigger the display of statistics or information relevant to the application\textquotesingle{}s context. It can be customized with an image representing its function and is intended to interact with other parts of the application to display statistical data when clicked. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_stats_button_a2a82a8d41f10ef8705f59cbf71e1ada4}\label{class_stats_button_a2a82a8d41f10ef8705f59cbf71e1ada4} 
+\index{StatsButton@{StatsButton}!StatsButton@{StatsButton}}
+\index{StatsButton@{StatsButton}!StatsButton@{StatsButton}}
+\doxysubsubsection{\texorpdfstring{StatsButton()}{StatsButton()}}
+{\footnotesize\ttfamily Stats\+Button\+::\+Stats\+Button (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new Stats Button object. 
+
+Initializes the button with default styling and connects the click event to the slot handling the statistics display.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent widget of this button. Default is nullptr. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_stats_button_ab5f86d08d875aa5defbae0b4e7e33854}\label{class_stats_button_ab5f86d08d875aa5defbae0b4e7e33854} 
+\index{StatsButton@{StatsButton}!setImage@{setImage}}
+\index{setImage@{setImage}!StatsButton@{StatsButton}}
+\doxysubsubsection{\texorpdfstring{setImage()}{setImage()}}
+{\footnotesize\ttfamily void Stats\+Button\+::set\+Image (\begin{DoxyParamCaption}\item[{QString}]{image\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets the button\textquotesingle{}s image. 
+
+This method allows for the customization of the button\textquotesingle{}s appearance by setting an image indicative of its purpose.
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+Path} & The path to the image file to be displayed on the button. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_stats_button_add5c7acb585c70acf78fd767d10500bd}\label{class_stats_button_add5c7acb585c70acf78fd767d10500bd} 
+\index{StatsButton@{StatsButton}!showStats@{showStats}}
+\index{showStats@{showStats}!StatsButton@{StatsButton}}
+\doxysubsubsection{\texorpdfstring{showStats}{showStats}}
+{\footnotesize\ttfamily void Stats\+Button\+::show\+Stats (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted to indicate that statistics should be displayed. 
+
+This signal should be connected to the appropriate slot in the application that handles the display of statistical data. \Hypertarget{class_stats_button_a42ef92c0ab9ca350c1837c4fb278c783}\label{class_stats_button_a42ef92c0ab9ca350c1837c4fb278c783} 
+\index{StatsButton@{StatsButton}!statsClicked@{statsClicked}}
+\index{statsClicked@{statsClicked}!StatsButton@{StatsButton}}
+\doxysubsubsection{\texorpdfstring{statsClicked}{statsClicked}}
+{\footnotesize\ttfamily void Stats\+Button\+::stats\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Slot that handles the button\textquotesingle{}s click event for showing statistics. 
+
+When clicked, this slot triggers the necessary actions to display the relevant statistical data. \Hypertarget{class_stats_button_a78906c4f82d20c2d62a9390352a3c451}\label{class_stats_button_a78906c4f82d20c2d62a9390352a3c451} 
+\index{StatsButton@{StatsButton}!update@{update}}
+\index{update@{update}!StatsButton@{StatsButton}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Stats\+Button\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates the button\textquotesingle{}s appearance or state. 
+
+This method can be used to refresh the button\textquotesingle{}s visual appearance or to perform any necessary updates to its state. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game/include/component/Stats\+Button.\+h\item 
+game/src/component/Stats\+Button.\+cpp\end{DoxyCompactItemize}

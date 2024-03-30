@@ -1,4 +1,31 @@
 var searchData=
 [
-  ['_7ebitbuddy_0',['~BitBuddy',['../class_bit_buddy.html#a757cab92ab30d3818680e2a008bf13d9',1,'BitBuddy']]]
+  ['savebitbuddy_0',['saveBitBuddy',['../class_file_storage_service.html#abdff94a19a4d40ea730b167c806348e0',1,'FileStorageService']]],
+  ['savesettings_1',['saveSettings',['../class_settings_window.html#abe260886a3013b47e1570b4d30362b69',1,'SettingsWindow']]],
+  ['saveuserbankaccount_2',['saveUserBankAccount',['../class_file_storage_service.html#af5636cf597a089f5393a96087c47b044',1,'FileStorageService']]],
+  ['setattributelevel_3',['setAttributeLevel',['../class_bit_buddy_status_widget.html#a1cdf1d3e44af56c91c4ba7ee21523a51',1,'BitBuddyStatusWidget']]],
+  ['setattributename_4',['setAttributeName',['../class_bit_buddy_attribute.html#a86177bb6dde636fc1aace354927b70a2',1,'BitBuddyAttribute']]],
+  ['setbitbucksgeneratedpertimeinterval_5',['setBitBucksGeneratedPerTimeInterval',['../class_bit_buck_generator.html#a499a7623cd2ec22919566b4323a09aae',1,'BitBuckGenerator']]],
+  ['setbitbuddy_6',['setBitBuddy',['../class_shop_window.html#a6b38ce0c9ae02cb0d388187d97c096ba',1,'ShopWindow']]],
+  ['setbuttonstyle_7',['setButtonStyle',['../class_bit_buddy_action_button.html#abb996f973ce5d23013cfc7e2bdb34926',1,'BitBuddyActionButton']]],
+  ['setimage_8',['setImage',['../class_light_button.html#a5bc5a213ae69e1be1ab89af8206374c7',1,'LightButton::setImage()'],['../class_stats_button.html#ab5f86d08d875aa5defbae0b4e7e33854',1,'StatsButton::setImage()']]],
+  ['setname_9',['setName',['../class_bit_buddy.html#ae738cb50caafc184d75ffe5353d5c93f',1,'BitBuddy']]],
+  ['settingswindow_10',['SettingsWindow',['../class_settings_window.html#ad1e0f4254dc44e9efadee40b8602fe5a',1,'SettingsWindow']]],
+  ['setup_11',['setup',['../class_settings_window.html#a797e5c493b426ca151fc4f0553fbe9a1',1,'SettingsWindow']]],
+  ['setupui_12',['setupUi',['../class_main_window.html#aa353e8faed952a95e2fc62d7a5018a89',1,'MainWindow::setupUi()'],['../class_stats_window.html#a56dbacad4471ccde1edac88d107cc709',1,'StatsWindow::setupUi()']]],
+  ['setvolume_13',['setVolume',['../class_music_service.html#aec89cfd60a991c17dcbb75cae28b3d14',1,'MusicService::setVolume()'],['../namespace_audio.html#adcb24fdc9dd051786fcdc96531d82a4c',1,'Audio::setVolume()']]],
+  ['showitemspurchased_14',['showItemsPurchased',['../class_shop_window.html#a75dbe7bde60bf0e66f7582b0d9115879',1,'ShopWindow']]],
+  ['showstats_15',['showStats',['../class_stats_button.html#add5c7acb585c70acf78fd767d10500bd',1,'StatsButton']]],
+  ['singleattributeevent_16',['SingleAttributeEvent',['../class_single_attribute_event.html#ace88280966dd81f1648c26f4f4ce9773',1,'SingleAttributeEvent::SingleAttributeEvent(int increment, BitBuddyAttributeName::UniqueName attribute, double probability=1.0, std::string description=&quot;Single attribute event.&quot;)'],['../class_single_attribute_event.html#a1d3e684cd7ae6a05a3f6bc4e40596981',1,'SingleAttributeEvent::SingleAttributeEvent(const SingleAttributeEvent &amp;)=default']]],
+  ['soundeffectsvolume_17',['soundEffectsVolume',['../class_settings_window.html#ac8aaf08b611ae3088eeb8751784f5616',1,'SettingsWindow']]],
+  ['spriteorganizer_18',['spriteOrganizer',['../class_bit_buddy_sprite_handler.html#a0c787e1e6c343823473b1bb2e94fbc4a',1,'BitBuddySpriteHandler']]],
+  ['startbitbuckgenerator_19',['startBitBuckGenerator',['../class_bit_buddy.html#a5d67a9405d47a1929e1fdd292abc4856',1,'BitBuddy']]],
+  ['startgeneration_20',['startGeneration',['../class_bit_buck_generator.html#ab5c6b4825523ee8aaceaeca20ef880c1',1,'BitBuckGenerator']]],
+  ['startmusic_21',['startMusic',['../class_music_service.html#a33291a64c5d69606289fe56ef30f15ba',1,'MusicService']]],
+  ['startservice_22',['startService',['../class_event_generator_service.html#adec5843f9f5d10afd7bc4d898a9e3290',1,'EventGeneratorService::startService()'],['../class_game_service.html#a4afbcd87e86a07c78d0895b78ed09992',1,'GameService::startService()']]],
+  ['statsbutton_23',['StatsButton',['../class_stats_button.html#a2a82a8d41f10ef8705f59cbf71e1ada4',1,'StatsButton']]],
+  ['statsclicked_24',['statsClicked',['../class_stats_button.html#a42ef92c0ab9ca350c1837c4fb278c783',1,'StatsButton']]],
+  ['statswindow_25',['StatsWindow',['../class_stats_window.html#a7b6fb09bda2a49a32b2e8f636aef7365',1,'StatsWindow']]],
+  ['stopmusic_26',['stopMusic',['../class_music_service.html#a23470ace0df023a96289b2cd03184138',1,'MusicService']]],
+  ['stopservice_27',['stopService',['../class_event_generator_service.html#a262888acaa4fab3525f294309b30d04b',1,'EventGeneratorService::stopService()'],['../class_game_service.html#a9ca946e04f80a3f96a90fb0a61789ac3',1,'GameService::stopService()']]]
 ];

@@ -76,43 +76,53 @@ $(function() {
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_bit_buddy_attribute_name-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">BitBuddyAttributeName Class Reference</div></div>
+  <div class="headertitle"><div class="title">BitBuddyAttributeName Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Container class that holds data surrounding the name of a <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> attribute.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_bit_buddy_attribute_name_8h_source.html">BitBuddyAttributeName.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a31753c61224d615434b2b76c0fa584aa" id="r_a31753c61224d615434b2b76c0fa584aa"><td class="memItemLeft" align="right" valign="top"><a id="a31753c61224d615434b2b76c0fa584aa" name="a31753c61224d615434b2b76c0fa584aa"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>UniqueName</b> { <br />
-&#160;&#160;<b>HUNGER</b>
+<tr class="memitem:a31753c61224d615434b2b76c0fa584aa" id="r_a31753c61224d615434b2b76c0fa584aa"><td class="memItemLeft" align="right" valign="top"><a id="a31753c61224d615434b2b76c0fa584aa" name="a31753c61224d615434b2b76c0fa584aa"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a31753c61224d615434b2b76c0fa584aa">UniqueName</a> { <br />
+&#160;&#160;<b>FIRST</b> = 0
+, <b>HUNGER</b> = FIRST
 , <b>HAPPINESS</b>
 , <b>THIRST</b>
-, <b>HEALTH</b>
 , <br />
-&#160;&#160;<b>TIREDNESS</b>
+&#160;&#160;<b>HEALTH</b>
+, <b>TIREDNESS</b>
 , <b>BOREDOM</b>
 , <b>HYGIENE</b>
+, <br />
+&#160;&#160;<b>LAST</b> = HYGIENE
 <br />
  }</td></tr>
+<tr class="memdesc:a31753c61224d615434b2b76c0fa584aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum that represents the unique names of the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> attributes. <br /></td></tr>
 <tr class="separator:a31753c61224d615434b2b76c0fa584aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:af8805e3a815e4220af3eeb5ecafb0ea5" id="r_af8805e3a815e4220af3eeb5ecafb0ea5"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8805e3a815e4220af3eeb5ecafb0ea5">toString</a> (UniqueName attribute)</td></tr>
-<tr class="separator:af8805e3a815e4220af3eeb5ecafb0ea5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b55da0edee0adf94cbef2f00185016e" id="r_a5b55da0edee0adf94cbef2f00185016e"><td class="memItemLeft" align="right" valign="top"><a id="a5b55da0edee0adf94cbef2f00185016e" name="a5b55da0edee0adf94cbef2f00185016e"></a>
-static std::string&#160;</td><td class="memItemRight" valign="bottom"><b>imageURL</b> (UniqueName attribute)</td></tr>
-<tr class="separator:a5b55da0edee0adf94cbef2f00185016e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a168587fa1257de783a080483e25d3f33" id="r_a168587fa1257de783a080483e25d3f33"><td class="memItemLeft" align="right" valign="top"><a id="a168587fa1257de783a080483e25d3f33" name="a168587fa1257de783a080483e25d3f33"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><b>valueWhereChange</b> (UniqueName attribute)</td></tr>
-<tr class="separator:a168587fa1257de783a080483e25d3f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c42a372b8268df9627af842b5af779" id="r_a45c42a372b8268df9627af842b5af779"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45c42a372b8268df9627af842b5af779">toString</a> (<a class="el" href="#a31753c61224d615434b2b76c0fa584aa">UniqueName</a> attribute)</td></tr>
+<tr class="memdesc:a45c42a372b8268df9627af842b5af779"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an attribute to a string.  <br /></td></tr>
+<tr class="separator:a45c42a372b8268df9627af842b5af779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0296f69a6b18bd8fd029b0fe0fe366b9" id="r_a0296f69a6b18bd8fd029b0fe0fe366b9"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0296f69a6b18bd8fd029b0fe0fe366b9">imageURL</a> (<a class="el" href="#a31753c61224d615434b2b76c0fa584aa">UniqueName</a> attribute)</td></tr>
+<tr class="memdesc:a0296f69a6b18bd8fd029b0fe0fe366b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the image URL for the attribute.  <br /></td></tr>
+<tr class="separator:a0296f69a6b18bd8fd029b0fe0fe366b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfc18230003ef921efcef2526e9b82f8" id="r_abfc18230003ef921efcef2526e9b82f8"><td class="memItemLeft" align="right" valign="top"><a id="abfc18230003ef921efcef2526e9b82f8" name="abfc18230003ef921efcef2526e9b82f8"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><b>valueWhereChange</b> (<a class="el" href="#a31753c61224d615434b2b76c0fa584aa">UniqueName</a> attribute)</td></tr>
+<tr class="separator:abfc18230003ef921efcef2526e9b82f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Class that represents a BitBuddyWidget attribute </p>
+<div class="textblock"><p>Container class that holds data surrounding the name of a <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> attribute. </p>
+<dl class="section author"><dt>Authors</dt><dd>Ryan Hecht, Annabel Irani</dd></dl>
+<p>Contains a UniqueName enum that represents the unique names of the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> attributes. Also features static methods to transform these names into string representations and to retrieve their corresponding images. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="af8805e3a815e4220af3eeb5ecafb0ea5" name="af8805e3a815e4220af3eeb5ecafb0ea5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8805e3a815e4220af3eeb5ecafb0ea5">&#9670;&#160;</a></span>toString()</h2>
+<a id="a0296f69a6b18bd8fd029b0fe0fe366b9" name="a0296f69a6b18bd8fd029b0fe0fe366b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0296f69a6b18bd8fd029b0fe0fe366b9">&#9670;&#160;</a></span>imageURL()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -121,9 +131,9 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>valueWhereChang
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::string BitBuddyAttributeName::toString </td>
+          <td class="memname">std::string BitBuddyAttributeName::imageURL </td>
           <td>(</td>
-          <td class="paramtype">UniqueName</td>          <td class="paramname"><span class="paramname"><em>attribute</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="#a31753c61224d615434b2b76c0fa584aa">UniqueName</a></td>          <td class="paramname"><span class="paramname"><em>attribute</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -133,7 +143,43 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>valueWhereChang
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Converts an attribute to a string </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Gets the image URL for the attribute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">attribute</td><td>the attribute to get the image URL for </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the image URL for the attribute </dd></dl>
+
+</div>
+</div>
+<a id="a45c42a372b8268df9627af842b5af779" name="a45c42a372b8268df9627af842b5af779"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45c42a372b8268df9627af842b5af779">&#9670;&#160;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string BitBuddyAttributeName::toString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="#a31753c61224d615434b2b76c0fa584aa">UniqueName</a></td>          <td class="paramname"><span class="paramname"><em>attribute</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts an attribute to a string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>the attribute to convert </td></tr>
   </table>
@@ -143,8 +189,9 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>valueWhereChang
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>game/include/model/<a class="el" href="_bit_buddy_attribute_name_8h_source.html">BitBuddyAttributeName.h</a></li>
+<li>game/src/model/<b>BitBuddyAttributeName.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -81,9 +81,12 @@ $(function() {
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_bit_buddy-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">BitBuddy Class Reference</div></div>
+  <div class="headertitle"><div class="title">BitBuddy Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> pet in the game.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_bit_buddy_8h_source.html">BitBuddy.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -96,22 +99,29 @@ Inheritance diagram for BitBuddy:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-slots" name="pub-slots"></a>
 Public Slots</h2></td></tr>
 <tr class="memitem:a16d803f967d6313d49177da34a9e9254" id="r_a16d803f967d6313d49177da34a9e9254"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a16d803f967d6313d49177da34a9e9254">onEvent</a> (const <a class="el" href="class_event.html">Event</a> &amp;event)</td></tr>
+<tr class="memdesc:a16d803f967d6313d49177da34a9e9254"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot that listens for Events from the event dispatch service and updates the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>'s attributes.  <br /></td></tr>
 <tr class="separator:a16d803f967d6313d49177da34a9e9254"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
 Signals</h2></td></tr>
 <tr class="memitem:a9314b015b8cb9cc9296144b5c1b93df4" id="r_a9314b015b8cb9cc9296144b5c1b93df4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9314b015b8cb9cc9296144b5c1b93df4">attributeUpdated</a> (const <a class="el" href="class_bit_buddy_attribute.html">BitBuddyAttribute</a> &amp;attribute)</td></tr>
+<tr class="memdesc:a9314b015b8cb9cc9296144b5c1b93df4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal emitted when an attribute is updated.  <br /></td></tr>
 <tr class="separator:a9314b015b8cb9cc9296144b5c1b93df4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2853d9ff7f0f659b79ba99b9837aa226" id="r_a2853d9ff7f0f659b79ba99b9837aa226"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2853d9ff7f0f659b79ba99b9837aa226">died</a> (const <a class="el" href="class_bit_buddy_attribute.html">BitBuddyAttribute</a> &amp;attribute)</td></tr>
+<tr class="memdesc:a2853d9ff7f0f659b79ba99b9837aa226"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal emitted when the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> dies.  <br /></td></tr>
 <tr class="separator:a2853d9ff7f0f659b79ba99b9837aa226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a255ca7c8e2d1851aab1dabdb0e3c7be8" id="r_a255ca7c8e2d1851aab1dabdb0e3c7be8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a255ca7c8e2d1851aab1dabdb0e3c7be8">BitBuddy</a> (std::string name)</td></tr>
+<tr class="memdesc:a255ca7c8e2d1851aab1dabdb0e3c7be8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>. Initializes the attribute maps.  <br /></td></tr>
 <tr class="separator:a255ca7c8e2d1851aab1dabdb0e3c7be8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27ae00c7659a1adbdf1ee09cfcab0fce" id="r_a27ae00c7659a1adbdf1ee09cfcab0fce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a27ae00c7659a1adbdf1ee09cfcab0fce">BitBuddy</a> (std::string name, const std::map&lt; BitBuddyAttributeName::UniqueName, <a class="el" href="class_bit_buddy_attribute.html">BitBuddyAttribute</a> &gt; &amp;attributes, std::chrono::system_clock::time_point creationTime, bool dead, QUuid id)</td></tr>
-<tr class="separator:a27ae00c7659a1adbdf1ee09cfcab0fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a757cab92ab30d3818680e2a008bf13d9" id="r_a757cab92ab30d3818680e2a008bf13d9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a757cab92ab30d3818680e2a008bf13d9">~BitBuddy</a> () override</td></tr>
+<tr class="memitem:a04122422e73eda6c0a8c7ac4d342d608" id="r_a04122422e73eda6c0a8c7ac4d342d608"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04122422e73eda6c0a8c7ac4d342d608">BitBuddy</a> (std::string name, const std::map&lt; <a class="el" href="class_bit_buddy_attribute_name.html#a31753c61224d615434b2b76c0fa584aa">BitBuddyAttributeName::UniqueName</a>, <a class="el" href="class_bit_buddy_attribute.html">BitBuddyAttribute</a> &gt; &amp;attributes, std::chrono::system_clock::time_point creationTime, bool dead, QUuid id, <a class="el" href="class_bit_buck_generator.html">BitBuckGenerator</a> *bitBuckGenerator)</td></tr>
+<tr class="memdesc:a04122422e73eda6c0a8c7ac4d342d608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> that takes all of <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>'s attributes as parameters.  <br /></td></tr>
+<tr class="separator:a04122422e73eda6c0a8c7ac4d342d608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a757cab92ab30d3818680e2a008bf13d9" id="r_a757cab92ab30d3818680e2a008bf13d9"><td class="memItemLeft" align="right" valign="top"><a id="a757cab92ab30d3818680e2a008bf13d9" name="a757cab92ab30d3818680e2a008bf13d9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>~BitBuddy</b> () override</td></tr>
+<tr class="memdesc:a757cab92ab30d3818680e2a008bf13d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>. <br /></td></tr>
 <tr class="separator:a757cab92ab30d3818680e2a008bf13d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8a4bcffa7586bf75216b0175f4bb9e1" id="r_ad8a4bcffa7586bf75216b0175f4bb9e1"><td class="memItemLeft" align="right" valign="top"><a id="ad8a4bcffa7586bf75216b0175f4bb9e1" name="ad8a4bcffa7586bf75216b0175f4bb9e1"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>BitBuddy</b> (const <a class="el" href="class_bit_buddy.html">BitBuddy</a> &amp;)=delete</td></tr>
@@ -125,34 +135,73 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad47079fa99762980874c1f386fe48000" id="r_ad47079fa99762980874c1f386fe48000"><td class="memItemLeft" align="right" valign="top"><a id="ad47079fa99762980874c1f386fe48000" name="ad47079fa99762980874c1f386fe48000"></a>
 <a class="el" href="class_bit_buddy.html">BitBuddy</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="class_bit_buddy.html">BitBuddy</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:ad47079fa99762980874c1f386fe48000"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32eeba045102eb8a821bf7c9d914bc01" id="r_a32eeba045102eb8a821bf7c9d914bc01"><td class="memItemLeft" align="right" valign="top"><a id="a32eeba045102eb8a821bf7c9d914bc01" name="a32eeba045102eb8a821bf7c9d914bc01"></a>
-QJsonObject&#160;</td><td class="memItemRight" valign="bottom"><b>toJson</b> () const</td></tr>
+<tr class="memitem:a6de71e0d716ea2bf849ecfd8bce20666" id="r_a6de71e0d716ea2bf849ecfd8bce20666"><td class="memItemLeft" align="right" valign="top"><a id="a6de71e0d716ea2bf849ecfd8bce20666" name="a6de71e0d716ea2bf849ecfd8bce20666"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addItemPurchased</b> (const std::string &amp;itemName)</td></tr>
+<tr class="separator:a6de71e0d716ea2bf849ecfd8bce20666"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb256212f4e49039381eca5da693bc17" id="r_aeb256212f4e49039381eca5da693bc17"><td class="memItemLeft" align="right" valign="top"><a id="aeb256212f4e49039381eca5da693bc17" name="aeb256212f4e49039381eca5da693bc17"></a>
+const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getPurchasedItems</b> () const</td></tr>
+<tr class="separator:aeb256212f4e49039381eca5da693bc17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32eeba045102eb8a821bf7c9d914bc01" id="r_a32eeba045102eb8a821bf7c9d914bc01"><td class="memItemLeft" align="right" valign="top">QJsonObject&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a32eeba045102eb8a821bf7c9d914bc01">toJson</a> () const</td></tr>
+<tr class="memdesc:a32eeba045102eb8a821bf7c9d914bc01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> to a JSON object.  <br /></td></tr>
 <tr class="separator:a32eeba045102eb8a821bf7c9d914bc01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe04ae96d1ecb59377bda913ac437351" id="r_abe04ae96d1ecb59377bda913ac437351"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe04ae96d1ecb59377bda913ac437351">getAttributeValue</a> (BitBuddyAttributeName::UniqueName attributeName) const</td></tr>
+<tr class="memitem:abe04ae96d1ecb59377bda913ac437351" id="r_abe04ae96d1ecb59377bda913ac437351"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abe04ae96d1ecb59377bda913ac437351">getAttributeValue</a> (<a class="el" href="class_bit_buddy_attribute_name.html#a31753c61224d615434b2b76c0fa584aa">BitBuddyAttributeName::UniqueName</a> attributeName) const</td></tr>
+<tr class="memdesc:abe04ae96d1ecb59377bda913ac437351"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the attribute value for the given attribute name.  <br /></td></tr>
 <tr class="separator:abe04ae96d1ecb59377bda913ac437351"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44f91ebd4db8506aa8294c8517575f95" id="r_a44f91ebd4db8506aa8294c8517575f95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44f91ebd4db8506aa8294c8517575f95">incrementAttribute</a> (BitBuddyAttributeName::UniqueName attribute, int value)</td></tr>
+<tr class="memitem:a44f91ebd4db8506aa8294c8517575f95" id="r_a44f91ebd4db8506aa8294c8517575f95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44f91ebd4db8506aa8294c8517575f95">incrementAttribute</a> (<a class="el" href="class_bit_buddy_attribute_name.html#a31753c61224d615434b2b76c0fa584aa">BitBuddyAttributeName::UniqueName</a> attribute, int value)</td></tr>
+<tr class="memdesc:a44f91ebd4db8506aa8294c8517575f95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Increments the value of the attribute with the given value.  <br /></td></tr>
 <tr class="separator:a44f91ebd4db8506aa8294c8517575f95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a8c3b9668a502627ece3811aa0cddb8" id="r_a3a8c3b9668a502627ece3811aa0cddb8"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a8c3b9668a502627ece3811aa0cddb8">getAgeInGameYears</a> () const</td></tr>
+<tr class="memdesc:a3a8c3b9668a502627ece3811aa0cddb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the age of the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> represented in 'in-game-years'.  <br /></td></tr>
 <tr class="separator:a3a8c3b9668a502627ece3811aa0cddb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afea1f940374283639e8845c70c2b4c5c" id="r_afea1f940374283639e8845c70c2b4c5c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afea1f940374283639e8845c70c2b4c5c">getName</a> () const</td></tr>
+<tr class="memdesc:afea1f940374283639e8845c70c2b4c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the name of the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>.  <br /></td></tr>
+<tr class="separator:afea1f940374283639e8845c70c2b4c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae738cb50caafc184d75ffe5353d5c93f" id="r_ae738cb50caafc184d75ffe5353d5c93f"><td class="memItemLeft" align="right" valign="top"><a id="ae738cb50caafc184d75ffe5353d5c93f" name="ae738cb50caafc184d75ffe5353d5c93f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setName</b> (std::string name)</td></tr>
+<tr class="memdesc:ae738cb50caafc184d75ffe5353d5c93f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the name of the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>. <br /></td></tr>
+<tr class="separator:ae738cb50caafc184d75ffe5353d5c93f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d67a9405d47a1929e1fdd292abc4856" id="r_a5d67a9405d47a1929e1fdd292abc4856"><td class="memItemLeft" align="right" valign="top"><a id="a5d67a9405d47a1929e1fdd292abc4856" name="a5d67a9405d47a1929e1fdd292abc4856"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>startBitBuckGenerator</b> () const</td></tr>
+<tr class="memdesc:a5d67a9405d47a1929e1fdd292abc4856"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the <a class="el" href="class_bit_buck_generator.html" title="Generates BitBucks at a set interval and emits a signal when they are generated.">BitBuckGenerator</a> for the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>. <br /></td></tr>
+<tr class="separator:a5d67a9405d47a1929e1fdd292abc4856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7068ddc5ad1e263199c52b57f5be994c" id="r_a7068ddc5ad1e263199c52b57f5be994c"><td class="memItemLeft" align="right" valign="top"><a id="a7068ddc5ad1e263199c52b57f5be994c" name="a7068ddc5ad1e263199c52b57f5be994c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>pauseBitBuckGenerator</b> () const</td></tr>
+<tr class="memdesc:a7068ddc5ad1e263199c52b57f5be994c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the <a class="el" href="class_bit_buck_generator.html" title="Generates BitBucks at a set interval and emits a signal when they are generated.">BitBuckGenerator</a> for the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>. <br /></td></tr>
+<tr class="separator:a7068ddc5ad1e263199c52b57f5be994c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3932c38915c26a51d974839aba4c01de" id="r_a3932c38915c26a51d974839aba4c01de"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3932c38915c26a51d974839aba4c01de">getSprite</a> () const</td></tr>
+<tr class="memdesc:a3932c38915c26a51d974839aba4c01de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the bitbuddys current sprite.  <br /></td></tr>
+<tr class="separator:a3932c38915c26a51d974839aba4c01de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7000bdfb240a1746a710129d6f9be8be" id="r_a7000bdfb240a1746a710129d6f9be8be"><td class="memItemLeft" align="right" valign="top"><a id="a7000bdfb240a1746a710129d6f9be8be" name="a7000bdfb240a1746a710129d6f9be8be"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setCurrentSprite</b> (std::string name)</td></tr>
+<tr class="separator:a7000bdfb240a1746a710129d6f9be8be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a832af270f42384b449ea3b96e1a969cf" id="r_a832af270f42384b449ea3b96e1a969cf"><td class="memItemLeft" align="right" valign="top"><a id="a832af270f42384b449ea3b96e1a969cf" name="a832af270f42384b449ea3b96e1a969cf"></a>
-static <a class="el" href="class_bit_buddy.html">BitBuddy</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>fromJson</b> (const QJsonObject &amp;json)</td></tr>
-<tr class="separator:a832af270f42384b449ea3b96e1a969cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e3880d260d6a27be774760dc22ecb4a" id="r_a0e3880d260d6a27be774760dc22ecb4a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_bit_buddy.html">BitBuddy</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e3880d260d6a27be774760dc22ecb4a">fromJson</a> (const QJsonObject &amp;json)</td></tr>
+<tr class="memdesc:a0e3880d260d6a27be774760dc22ecb4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a JSON object to a <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>.  <br /></td></tr>
+<tr class="separator:a0e3880d260d6a27be774760dc22ecb4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a21f775595b68d34ca2469481eaaf0a52" id="r_a21f775595b68d34ca2469481eaaf0a52"><td class="memItemLeft" align="right" valign="top"><a id="a21f775595b68d34ca2469481eaaf0a52" name="a21f775595b68d34ca2469481eaaf0a52"></a>
 std::string&#160;</td><td class="memItemRight" valign="bottom"><b>currentSprite</b></td></tr>
 <tr class="separator:a21f775595b68d34ca2469481eaaf0a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c38531fa89ddf1e0568dbd8e1577551" id="r_a5c38531fa89ddf1e0568dbd8e1577551"><td class="memItemLeft" align="right" valign="top"><a id="a5c38531fa89ddf1e0568dbd8e1577551" name="a5c38531fa89ddf1e0568dbd8e1577551"></a>
+std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>thingsPurchased</b></td></tr>
+<tr class="separator:a5c38531fa89ddf1e0568dbd8e1577551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a1a728f0ca9d11146ed4db6be2fe3c04a" id="r_a1a728f0ca9d11146ed4db6be2fe3c04a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a728f0ca9d11146ed4db6be2fe3c04a">connectSignals</a> () const</td></tr>
+<tr class="memitem:a1a728f0ca9d11146ed4db6be2fe3c04a" id="r_a1a728f0ca9d11146ed4db6be2fe3c04a"><td class="memItemLeft" align="right" valign="top"><a id="a1a728f0ca9d11146ed4db6be2fe3c04a" name="a1a728f0ca9d11146ed4db6be2fe3c04a"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>connectSignals</b> () const</td></tr>
+<tr class="memdesc:a1a728f0ca9d11146ed4db6be2fe3c04a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connects the signals to the slots. <br /></td></tr>
 <tr class="separator:a1a728f0ca9d11146ed4db6be2fe3c04a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65dec472b5ed4f6b754644267fc9967f" id="r_a65dec472b5ed4f6b754644267fc9967f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a65dec472b5ed4f6b754644267fc9967f">die</a> (const <a class="el" href="class_bit_buddy_attribute.html">BitBuddyAttribute</a> &amp;attribute)</td></tr>
+<tr class="memdesc:a65dec472b5ed4f6b754644267fc9967f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kills the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>.  <br /></td></tr>
 <tr class="separator:a65dec472b5ed4f6b754644267fc9967f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a506048b54b699262136d9fd1f4d9f90d" id="r_a506048b54b699262136d9fd1f4d9f90d"><td class="memItemLeft" align="right" valign="top"><a id="a506048b54b699262136d9fd1f4d9f90d" name="a506048b54b699262136d9fd1f4d9f90d"></a>
+const std::vector&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>getItemsPurchased</b> () const</td></tr>
+<tr class="separator:a506048b54b699262136d9fd1f4d9f90d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -160,7 +209,7 @@ Private Attributes</h2></td></tr>
 QUuid&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
 <tr class="separator:abd80b3ba21f24c3760ecaf0a62e34869"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a772eaffa55811d274725b5dc9ce1a22e" id="r_a772eaffa55811d274725b5dc9ce1a22e"><td class="memItemLeft" align="right" valign="top"><a id="a772eaffa55811d274725b5dc9ce1a22e" name="a772eaffa55811d274725b5dc9ce1a22e"></a>
-std::map&lt; BitBuddyAttributeName::UniqueName, <a class="el" href="class_bit_buddy_attribute.html">BitBuddyAttribute</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>attributes</b></td></tr>
+std::map&lt; <a class="el" href="class_bit_buddy_attribute_name.html#a31753c61224d615434b2b76c0fa584aa">BitBuddyAttributeName::UniqueName</a>, <a class="el" href="class_bit_buddy_attribute.html">BitBuddyAttribute</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>attributes</b></td></tr>
 <tr class="separator:a772eaffa55811d274725b5dc9ce1a22e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affeb609f4fa9f0057d76fe07409dc337" id="r_affeb609f4fa9f0057d76fe07409dc337"><td class="memItemLeft" align="right" valign="top"><a id="affeb609f4fa9f0057d76fe07409dc337" name="affeb609f4fa9f0057d76fe07409dc337"></a>
 std::chrono::system_clock::time_point&#160;</td><td class="memItemRight" valign="bottom"><b>creationTime</b></td></tr>
@@ -171,9 +220,14 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td><
 <tr class="memitem:a724ed69827e8187965b94e6278d62504" id="r_a724ed69827e8187965b94e6278d62504"><td class="memItemLeft" align="right" valign="top"><a id="a724ed69827e8187965b94e6278d62504" name="a724ed69827e8187965b94e6278d62504"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>dead</b></td></tr>
 <tr class="separator:a724ed69827e8187965b94e6278d62504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbe0fa44159f8b1dd8ed7ac350fd81b8" id="r_abbe0fa44159f8b1dd8ed7ac350fd81b8"><td class="memItemLeft" align="right" valign="top"><a id="abbe0fa44159f8b1dd8ed7ac350fd81b8" name="abbe0fa44159f8b1dd8ed7ac350fd81b8"></a>
+<a class="el" href="class_bit_buck_generator.html">BitBuckGenerator</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>bitBuckGenerator</b></td></tr>
+<tr class="separator:abbe0fa44159f8b1dd8ed7ac350fd81b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Bit Buddy! </p>
+<div class="textblock"><p>Represents the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> pet in the game. </p>
+<dl class="section author"><dt>Authors</dt><dd>Ryan Hecht, Annabel Irani</dd></dl>
+<p>The <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> has a set of attributes that can be updated by events. The <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> can die if one of its attributes goes below zero. The <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> can also purchase items and is born with a <a class="el" href="class_bit_buck_generator.html" title="Generates BitBucks at a set interval and emits a signal when they are generated.">BitBuckGenerator</a> that generates BitBucks that are deposited into the user's bank account. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a255ca7c8e2d1851aab1dabdb0e3c7be8" name="a255ca7c8e2d1851aab1dabdb0e3c7be8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a255ca7c8e2d1851aab1dabdb0e3c7be8">&#9670;&#160;</a></span>BitBuddy() <span class="overload">[1/2]</span></h2>
@@ -197,19 +251,19 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>dead</b></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Constructor for the <a class="el" href="class_bit_buddy.html">BitBuddy</a>. Initializes the attribute maps.</p>
+
+<p>Constructor for the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>. Initializes the attribute maps. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>The name of the <a class="el" href="class_bit_buddy.html">BitBuddy</a> </td></tr>
-    <tr><td class="paramname">parent</td><td>The parent widget of the <a class="el" href="class_bit_buddy.html">BitBuddy</a>, typically the <a class="el" href="class_main_window.html">MainWindow</a>. </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a27ae00c7659a1adbdf1ee09cfcab0fce" name="a27ae00c7659a1adbdf1ee09cfcab0fce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a27ae00c7659a1adbdf1ee09cfcab0fce">&#9670;&#160;</a></span>BitBuddy() <span class="overload">[2/2]</span></h2>
+<a id="a04122422e73eda6c0a8c7ac4d342d608" name="a04122422e73eda6c0a8c7ac4d342d608"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04122422e73eda6c0a8c7ac4d342d608">&#9670;&#160;</a></span>BitBuddy() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -222,7 +276,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>dead</b></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const std::map&lt; BitBuddyAttributeName::UniqueName, <a class="el" href="class_bit_buddy_attribute.html">BitBuddyAttribute</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>attributes</em>, </span></td>
+          <td class="paramtype">const std::map&lt; <a class="el" href="class_bit_buddy_attribute_name.html#a31753c61224d615434b2b76c0fa584aa">BitBuddyAttributeName::UniqueName</a>, <a class="el" href="class_bit_buddy_attribute.html">BitBuddyAttribute</a> &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>attributes</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -237,46 +291,28 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>dead</b></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">QUuid</td>          <td class="paramname"><span class="paramname"><em>id</em></span>&#160;)</td>
+          <td class="paramtype">QUuid</td>          <td class="paramname"><span class="paramname"><em>id</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_bit_buck_generator.html">BitBuckGenerator</a> *</td>          <td class="paramname"><span class="paramname"><em>bitBuckGenerator</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Constructor for the <a class="el" href="class_bit_buddy.html">BitBuddy</a> that takes all of <a class="el" href="class_bit_buddy.html">BitBuddy</a>'s attributes as parameters.</p>
+
+<p>Constructor for the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> that takes all of <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>'s attributes as parameters. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>The name of the <a class="el" href="class_bit_buddy.html">BitBuddy</a> </td></tr>
-    <tr><td class="paramname">parent</td><td>The parent widget of the <a class="el" href="class_bit_buddy.html">BitBuddy</a>, typically the <a class="el" href="class_main_window.html">MainWindow</a>. </td></tr>
-    <tr><td class="paramname">attributes</td><td>A map of the <a class="el" href="class_bit_buddy.html">BitBuddy</a>'s attributes where the key is the attribute's unique name and the value is the attribute </td></tr>
-    <tr><td class="paramname">creationTime</td><td>The time the <a class="el" href="class_bit_buddy.html">BitBuddy</a> was created </td></tr>
+    <tr><td class="paramname">name</td><td>The name of the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> </td></tr>
+    <tr><td class="paramname">attributes</td><td>A map of the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>'s attributes where the key is the attribute's unique name and the value is the attribute </td></tr>
+    <tr><td class="paramname">creationTime</td><td>The time the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> was created </td></tr>
+    <tr><td class="paramname">dead</td><td>Whether the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> is dead </td></tr>
+    <tr><td class="paramname">id</td><td>The unique identifier of the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> </td></tr>
+    <tr><td class="paramname">bitBuckGenerator</td><td>The <a class="el" href="class_bit_buck_generator.html" title="Generates BitBucks at a set interval and emits a signal when they are generated.">BitBuckGenerator</a> that generates BitBucks for the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a757cab92ab30d3818680e2a008bf13d9" name="a757cab92ab30d3818680e2a008bf13d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a757cab92ab30d3818680e2a008bf13d9">&#9670;&#160;</a></span>~BitBuddy()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">BitBuddy::~BitBuddy </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Destructor for the <a class="el" href="class_bit_buddy.html">BitBuddy</a> </p>
 
 </div>
 </div>
@@ -303,39 +339,14 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>dead</b></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Signal emitted when an attribute is updated</p>
+
+<p>Signal emitted when an attribute is updated. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>The attribute that was updated </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a1a728f0ca9d11146ed4db6be2fe3c04a" name="a1a728f0ca9d11146ed4db6be2fe3c04a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1a728f0ca9d11146ed4db6be2fe3c04a">&#9670;&#160;</a></span>connectSignals()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void BitBuddy::connectSignals </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Connects the signals to the slots </p>
 
 </div>
 </div>
@@ -361,10 +372,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>dead</b></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Kills the <a class="el" href="class_bit_buddy.html">BitBuddy</a></p>
+
+<p>Kills the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">attribute</td><td>The attribute that caused the <a class="el" href="class_bit_buddy.html">BitBuddy</a> to die </td></tr>
+    <tr><td class="paramname">attribute</td><td>The attribute that caused the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> to die </td></tr>
   </table>
   </dd>
 </dl>
@@ -393,9 +405,44 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>dead</b></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Signal emitted when the <a class="el" href="class_bit_buddy.html">BitBuddy</a> dies</p>
+
+<p>Signal emitted when the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> dies. </p>
 <h4><a class="anchor" id="attribute"></a>
 The attribute that caused the BitBuddy to die</h4>
+
+</div>
+</div>
+<a id="a0e3880d260d6a27be774760dc22ecb4a" name="a0e3880d260d6a27be774760dc22ecb4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e3880d260d6a27be774760dc22ecb4a">&#9670;&#160;</a></span>fromJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bit_buddy.html">BitBuddy</a> * BitBuddy::fromJson </td>
+          <td>(</td>
+          <td class="paramtype">const QJsonObject &amp;</td>          <td class="paramname"><span class="paramname"><em>json</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts a JSON object to a <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">json</td><td>The JSON object to convert </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> </dd></dl>
 
 </div>
 </div>
@@ -413,8 +460,9 @@ The attribute that caused the BitBuddy to die</h4>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Gets the age of the <a class="el" href="class_bit_buddy.html">BitBuddy</a> represented in 'in-game-years'</p>
-<dl class="section return"><dt>Returns</dt><dd>The age of the <a class="el" href="class_bit_buddy.html">BitBuddy</a> in 'in-game-years' </dd></dl>
+
+<p>Gets the age of the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> represented in 'in-game-years'. </p>
+<dl class="section return"><dt>Returns</dt><dd>The age of the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> in 'in-game-years' </dd></dl>
 
 </div>
 </div>
@@ -427,12 +475,13 @@ The attribute that caused the BitBuddy to die</h4>
         <tr>
           <td class="memname">int BitBuddy::getAttributeValue </td>
           <td>(</td>
-          <td class="paramtype">BitBuddyAttributeName::UniqueName</td>          <td class="paramname"><span class="paramname"><em>attributeName</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="class_bit_buddy_attribute_name.html#a31753c61224d615434b2b76c0fa584aa">BitBuddyAttributeName::UniqueName</a></td>          <td class="paramname"><span class="paramname"><em>attributeName</em></span></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Gets the attribute value for the given attribute name</p>
+
+<p>Gets the attribute value for the given attribute name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">attributeName</td><td>The name of the attribute to get the value for </td></tr>
@@ -440,6 +489,46 @@ The attribute that caused the BitBuddy to die</h4>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The value of the attribute </dd></dl>
+
+</div>
+</div>
+<a id="afea1f940374283639e8845c70c2b4c5c" name="afea1f940374283639e8845c70c2b4c5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afea1f940374283639e8845c70c2b4c5c">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string BitBuddy::getName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the name of the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>The name of the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> </dd></dl>
+
+</div>
+</div>
+<a id="a3932c38915c26a51d974839aba4c01de" name="a3932c38915c26a51d974839aba4c01de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3932c38915c26a51d974839aba4c01de">&#9670;&#160;</a></span>getSprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string BitBuddy::getSprite </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets the bitbuddys current sprite. </p>
+<dl class="section return"><dt>Returns</dt><dd>The bitbuddy sprite </dd></dl>
 
 </div>
 </div>
@@ -452,7 +541,7 @@ The attribute that caused the BitBuddy to die</h4>
         <tr>
           <td class="memname">void BitBuddy::incrementAttribute </td>
           <td>(</td>
-          <td class="paramtype">BitBuddyAttributeName::UniqueName</td>          <td class="paramname"><span class="paramname"><em>attribute</em>, </span></td>
+          <td class="paramtype"><a class="el" href="class_bit_buddy_attribute_name.html#a31753c61224d615434b2b76c0fa584aa">BitBuddyAttributeName::UniqueName</a></td>          <td class="paramname"><span class="paramname"><em>attribute</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -461,7 +550,8 @@ The attribute that caused the BitBuddy to die</h4>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Increments the value of the attribute with the given value</p>
+
+<p>Increments the value of the attribute with the given value. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td></td></tr>
@@ -494,7 +584,8 @@ The attribute that caused the BitBuddy to die</h4>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Slot that listens for Events from the event dispatch service and updates the <a class="el" href="class_bit_buddy.html">BitBuddy</a>'s attributes.</p>
+
+<p>Slot that listens for Events from the event dispatch service and updates the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>'s attributes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>The event to process </td></tr>
@@ -504,8 +595,29 @@ The attribute that caused the BitBuddy to die</h4>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a id="a32eeba045102eb8a821bf7c9d914bc01" name="a32eeba045102eb8a821bf7c9d914bc01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32eeba045102eb8a821bf7c9d914bc01">&#9670;&#160;</a></span>toJson()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QJsonObject BitBuddy::toJson </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Converts the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> to a JSON object. </p>
+<dl class="section return"><dt>Returns</dt><dd>The <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> as a JSON object </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>game/include/model/<a class="el" href="_bit_buddy_8h_source.html">BitBuddy.h</a></li>
+<li>game/src/model/<b>BitBuddy.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

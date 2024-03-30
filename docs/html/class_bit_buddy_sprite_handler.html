@@ -81,6 +81,11 @@ $(function() {
   <div class="headertitle"><div class="title">BitBuddySpriteHandler Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="class_bit_buddy_sprite_handler.html" title="The BitBuddySpriteHandler is responsible for the changing sprites of the bitbuddy based on his emotio...">BitBuddySpriteHandler</a> is responsible for the changing sprites of the bitbuddy based on his emotional levels.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_bit_buddy_sprite_handler_8h_source.html">BitBuddySpriteHandler.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for BitBuddySpriteHandler:</div>
 <div class="dyncontent">
@@ -90,8 +95,7 @@ Inheritance diagram for BitBuddySpriteHandler:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-slots" name="pub-slots"></a>
 Public Slots</h2></td></tr>
-<tr class="memitem:aa4bd0d9809755830f0b83f52e76bd390" id="r_aa4bd0d9809755830f0b83f52e76bd390"><td class="memItemLeft" align="right" valign="top"><a id="aa4bd0d9809755830f0b83f52e76bd390" name="aa4bd0d9809755830f0b83f52e76bd390"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>handleEvent</b> (const <a class="el" href="class_event.html">Event</a> &amp;event)</td></tr>
+<tr class="memitem:aa4bd0d9809755830f0b83f52e76bd390" id="r_aa4bd0d9809755830f0b83f52e76bd390"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4bd0d9809755830f0b83f52e76bd390">handleEvent</a> (const <a class="el" href="class_event.html">Event</a> &amp;event)</td></tr>
 <tr class="separator:aa4bd0d9809755830f0b83f52e76bd390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -99,17 +103,33 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7afb9fde0bb606f3eb9bd828d2fb503f" id="r_a7afb9fde0bb606f3eb9bd828d2fb503f"><td class="memItemLeft" align="right" valign="top"><a id="a7afb9fde0bb606f3eb9bd828d2fb503f" name="a7afb9fde0bb606f3eb9bd828d2fb503f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>BitBuddySpriteHandler</b> (QLabel *displayLabel, QObject *parent=nullptr, <a class="el" href="class_bit_buddy.html">BitBuddy</a> *bitBuddy=nullptr)</td></tr>
 <tr class="separator:a7afb9fde0bb606f3eb9bd828d2fb503f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9cab98961755b44554ce410ad6faf872" id="r_a9cab98961755b44554ce410ad6faf872"><td class="memItemLeft" align="right" valign="top"><a id="a9cab98961755b44554ce410ad6faf872" name="a9cab98961755b44554ce410ad6faf872"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>changeSprite</b> (const std::string &amp;state)</td></tr>
+<tr class="memitem:a9cab98961755b44554ce410ad6faf872" id="r_a9cab98961755b44554ce410ad6faf872"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cab98961755b44554ce410ad6faf872">changeSprite</a> (const std::string &amp;state)</td></tr>
+<tr class="memdesc:a9cab98961755b44554ce410ad6faf872"><td class="mdescLeft">&#160;</td><td class="mdescRight">will change the sprite of the bitbuddy  <br /></td></tr>
 <tr class="separator:a9cab98961755b44554ce410ad6faf872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58a63a8dec0be695e6313d4ff2f749bc" id="r_a58a63a8dec0be695e6313d4ff2f749bc"><td class="memItemLeft" align="right" valign="top"><a id="a58a63a8dec0be695e6313d4ff2f749bc" name="a58a63a8dec0be695e6313d4ff2f749bc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updatePillsPosition</b> ()</td></tr>
+<tr class="memdesc:a58a63a8dec0be695e6313d4ff2f749bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to update the position of the pills once the window is resized <br /></td></tr>
 <tr class="separator:a58a63a8dec0be695e6313d4ff2f749bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a511e7f3886ee2aa41561c47a18b7505b" id="r_a511e7f3886ee2aa41561c47a18b7505b"><td class="memItemLeft" align="right" valign="top"><a id="a511e7f3886ee2aa41561c47a18b7505b" name="a511e7f3886ee2aa41561c47a18b7505b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateDrinkPosition</b> ()</td></tr>
+<tr class="memdesc:a511e7f3886ee2aa41561c47a18b7505b"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to update the position of the drink once the window is resized <br /></td></tr>
+<tr class="separator:a511e7f3886ee2aa41561c47a18b7505b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5394668f391b0e7f54d207c22ea5916" id="r_ad5394668f391b0e7f54d207c22ea5916"><td class="memItemLeft" align="right" valign="top"><a id="ad5394668f391b0e7f54d207c22ea5916" name="ad5394668f391b0e7f54d207c22ea5916"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateTacoPosition</b> ()</td></tr>
+<tr class="memdesc:ad5394668f391b0e7f54d207c22ea5916"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to update the position of the taco once the window is resized <br /></td></tr>
+<tr class="separator:ad5394668f391b0e7f54d207c22ea5916"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59ada245b22381ec6d1bdbb15981d4ad" id="r_a59ada245b22381ec6d1bdbb15981d4ad"><td class="memItemLeft" align="right" valign="top"><a id="a59ada245b22381ec6d1bdbb15981d4ad" name="a59ada245b22381ec6d1bdbb15981d4ad"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateBubblePosition</b> ()</td></tr>
+<tr class="memdesc:a59ada245b22381ec6d1bdbb15981d4ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to update the position of the bubbles once the window is resized <br /></td></tr>
+<tr class="separator:a59ada245b22381ec6d1bdbb15981d4ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff251b52fde240c58beca56c789719be" id="r_aff251b52fde240c58beca56c789719be"><td class="memItemLeft" align="right" valign="top"><a id="aff251b52fde240c58beca56c789719be" name="aff251b52fde240c58beca56c789719be"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateZZZPosition</b> ()</td></tr>
+<tr class="memdesc:aff251b52fde240c58beca56c789719be"><td class="mdescLeft">&#160;</td><td class="mdescRight">function to update the position of the zzz's once the window is resized <br /></td></tr>
+<tr class="separator:aff251b52fde240c58beca56c789719be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:aecf54351f1f3bedc51d8d9fadf9fb49d" id="r_aecf54351f1f3bedc51d8d9fadf9fb49d"><td class="memItemLeft" align="right" valign="top"><a id="aecf54351f1f3bedc51d8d9fadf9fb49d" name="aecf54351f1f3bedc51d8d9fadf9fb49d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>displayTacoAndRemove</b> (const QString &amp;imagePath)</td></tr>
+<tr class="memitem:aecf54351f1f3bedc51d8d9fadf9fb49d" id="r_aecf54351f1f3bedc51d8d9fadf9fb49d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aecf54351f1f3bedc51d8d9fadf9fb49d">displayTacoAndRemove</a> (const QString &amp;imagePath)</td></tr>
 <tr class="separator:aecf54351f1f3bedc51d8d9fadf9fb49d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8c40b4fd14c00e01532df29ef2a70d4" id="r_aa8c40b4fd14c00e01532df29ef2a70d4"><td class="memItemLeft" align="right" valign="top"><a id="aa8c40b4fd14c00e01532df29ef2a70d4" name="aa8c40b4fd14c00e01532df29ef2a70d4"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>changeSpriteSmoothly</b> (const QString &amp;imagePath)</td></tr>
@@ -123,11 +143,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>displayZZZ</b> (const
 <tr class="memitem:a497d3e442c36bf83339b56d39a11b284" id="r_a497d3e442c36bf83339b56d39a11b284"><td class="memItemLeft" align="right" valign="top"><a id="a497d3e442c36bf83339b56d39a11b284" name="a497d3e442c36bf83339b56d39a11b284"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setDefaultSprite</b> ()</td></tr>
 <tr class="separator:a497d3e442c36bf83339b56d39a11b284"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e036711ba8e8bbe8b025adc064c092b" id="r_a6e036711ba8e8bbe8b025adc064c092b"><td class="memItemLeft" align="right" valign="top"><a id="a6e036711ba8e8bbe8b025adc064c092b" name="a6e036711ba8e8bbe8b025adc064c092b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>changeSpriteSmoothly</b> (const QString &amp;imagePath, std::function&lt; void()&gt; callback)</td></tr>
+<tr class="memitem:a6e036711ba8e8bbe8b025adc064c092b" id="r_a6e036711ba8e8bbe8b025adc064c092b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e036711ba8e8bbe8b025adc064c092b">changeSpriteSmoothly</a> (const QString &amp;imagePath, std::function&lt; void()&gt; callback)</td></tr>
 <tr class="separator:a6e036711ba8e8bbe8b025adc064c092b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af033601c0c0f62a29dd12455dc2e307b" id="r_af033601c0c0f62a29dd12455dc2e307b"><td class="memItemLeft" align="right" valign="top"><a id="af033601c0c0f62a29dd12455dc2e307b" name="af033601c0c0f62a29dd12455dc2e307b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>displayDrink</b> (const QString &amp;imagePath)</td></tr>
+<tr class="memitem:af033601c0c0f62a29dd12455dc2e307b" id="r_af033601c0c0f62a29dd12455dc2e307b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af033601c0c0f62a29dd12455dc2e307b">displayDrink</a> (const QString &amp;imagePath)</td></tr>
 <tr class="separator:af033601c0c0f62a29dd12455dc2e307b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a837dcbb605ac4ae26227c74996200816" id="r_a837dcbb605ac4ae26227c74996200816"><td class="memItemLeft" align="right" valign="top"><a id="a837dcbb605ac4ae26227c74996200816" name="a837dcbb605ac4ae26227c74996200816"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>displayPills</b> (const QString &amp;imagePath)</td></tr>
@@ -141,9 +159,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>postUpdateCheck</b> (
 <tr class="memitem:adce6208b1d3543c3a1fd9df83b03b473" id="r_adce6208b1d3543c3a1fd9df83b03b473"><td class="memItemLeft" align="right" valign="top"><a id="adce6208b1d3543c3a1fd9df83b03b473" name="adce6208b1d3543c3a1fd9df83b03b473"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>spriteOrganizer</b> ()</td></tr>
 <tr class="separator:adce6208b1d3543c3a1fd9df83b03b473"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0c787e1e6c343823473b1bb2e94fbc4a" id="r_a0c787e1e6c343823473b1bb2e94fbc4a"><td class="memItemLeft" align="right" valign="top"><a id="a0c787e1e6c343823473b1bb2e94fbc4a" name="a0c787e1e6c343823473b1bb2e94fbc4a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>spriteOrganizer</b> (const <a class="el" href="class_event.html">Event</a> &amp;event)</td></tr>
+<tr class="memitem:a0c787e1e6c343823473b1bb2e94fbc4a" id="r_a0c787e1e6c343823473b1bb2e94fbc4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c787e1e6c343823473b1bb2e94fbc4a">spriteOrganizer</a> (const <a class="el" href="class_event.html">Event</a> &amp;event)</td></tr>
 <tr class="separator:a0c787e1e6c343823473b1bb2e94fbc4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0feba00601266f337c77d3acf324b73f" id="r_a0feba00601266f337c77d3acf324b73f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bit_buddy_attribute_name.html">BitBuddyAttributeName</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0feba00601266f337c77d3acf324b73f">checkLevels</a> ()</td></tr>
+<tr class="separator:a0feba00601266f337c77d3acf324b73f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -156,9 +175,226 @@ QLabel *&#160;</td><td class="memItemRight" valign="bottom"><b>temporaryLabel</b
 <tr class="memitem:a2ce53533c6b9ecab0e12abc01f921c01" id="r_a2ce53533c6b9ecab0e12abc01f921c01"><td class="memItemLeft" align="right" valign="top"><a id="a2ce53533c6b9ecab0e12abc01f921c01" name="a2ce53533c6b9ecab0e12abc01f921c01"></a>
 <a class="el" href="class_bit_buddy.html">BitBuddy</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>bitBuddy</b></td></tr>
 <tr class="separator:a2ce53533c6b9ecab0e12abc01f921c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f0ce28d9fb2edc942a3859d8c8b3d5a" id="r_a8f0ce28d9fb2edc942a3859d8c8b3d5a"><td class="memItemLeft" align="right" valign="top"><a id="a8f0ce28d9fb2edc942a3859d8c8b3d5a" name="a8f0ce28d9fb2edc942a3859d8c8b3d5a"></a>
+QList&lt; QLabel * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>bubbleLabels</b></td></tr>
+<tr class="separator:a8f0ce28d9fb2edc942a3859d8c8b3d5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_bit_buddy_sprite_handler.html" title="The BitBuddySpriteHandler is responsible for the changing sprites of the bitbuddy based on his emotio...">BitBuddySpriteHandler</a> is responsible for the changing sprites of the bitbuddy based on his emotional levels. </p>
+<p>constructor for Sprite Handler</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">displayLabel</td><td>- takes the base label </td></tr>
+    <tr><td class="paramname">parent</td><td>- the parent object </td></tr>
+    <tr><td class="paramname">bitBuddy</td><td>- and the bitbuddy instance </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9cab98961755b44554ce410ad6faf872" name="a9cab98961755b44554ce410ad6faf872"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cab98961755b44554ce410ad6faf872">&#9670;&#160;</a></span>changeSprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitBuddySpriteHandler::changeSprite </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>state</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>will change the sprite of the bitbuddy </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>- given the state in string form </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6e036711ba8e8bbe8b025adc064c092b" name="a6e036711ba8e8bbe8b025adc064c092b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e036711ba8e8bbe8b025adc064c092b">&#9670;&#160;</a></span>changeSpriteSmoothly()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitBuddySpriteHandler::changeSpriteSmoothly </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>imagePath</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void()&gt;</td>          <td class="paramname"><span class="paramname"><em>callback</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>changeSpriteSmoothly will take the given imagePath and change the sprite </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">imagePath</td><td>- url path to image </td></tr>
+    <tr><td class="paramname">callback</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0feba00601266f337c77d3acf324b73f" name="a0feba00601266f337c77d3acf324b73f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0feba00601266f337c77d3acf324b73f">&#9670;&#160;</a></span>checkLevels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bit_buddy_attribute_name.html">BitBuddyAttributeName</a> BitBuddySpriteHandler::checkLevels </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Function responsible for maintaining the correct sprites after event occurs </p><dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_bit_buddy_attribute_name.html" title="Container class that holds data surrounding the name of a BitBuddy attribute.">BitBuddyAttributeName</a> for the current attribute set off </dd></dl>
+
+</div>
+</div>
+<a id="af033601c0c0f62a29dd12455dc2e307b" name="af033601c0c0f62a29dd12455dc2e307b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af033601c0c0f62a29dd12455dc2e307b">&#9670;&#160;</a></span>displayDrink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitBuddySpriteHandler::displayDrink </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>imagePath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Methods to display temporary objects. Each method will display the item in a position dynamically according to screen size. </p>
+
+</div>
+</div>
+<a id="aecf54351f1f3bedc51d8d9fadf9fb49d" name="aecf54351f1f3bedc51d8d9fadf9fb49d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecf54351f1f3bedc51d8d9fadf9fb49d">&#9670;&#160;</a></span>displayTacoAndRemove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitBuddySpriteHandler::displayTacoAndRemove </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>imagePath</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Methods to display temporary objects. Each method will display the item in a position dynamically according to screen size. </p>
+
+</div>
+</div>
+<a id="aa4bd0d9809755830f0b83f52e76bd390" name="aa4bd0d9809755830f0b83f52e76bd390"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4bd0d9809755830f0b83f52e76bd390">&#9670;&#160;</a></span>handleEvent</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitBuddySpriteHandler::handleEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_event.html">Event</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>handleEvent will take the events that are sent out by the <a class="el" href="class_event.html" title="The Event class represents an event that can be dispatched to listeners.">Event</a> dispatcher and in return change the sprite accordingly </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0c787e1e6c343823473b1bb2e94fbc4a" name="a0c787e1e6c343823473b1bb2e94fbc4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c787e1e6c343823473b1bb2e94fbc4a">&#9670;&#160;</a></span>spriteOrganizer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitBuddySpriteHandler::spriteOrganizer </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_event.html">Event</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>game/include/service/<a class="el" href="_bit_buddy_sprite_handler_8h_source.html">BitBuddySpriteHandler.h</a></li>
+<li>game/src/service/<b>BitBuddySpriteHandler.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

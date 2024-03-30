@@ -1,0 +1,186 @@
+\doxysection{Bit\+Buck\+Generator Class Reference}
+\hypertarget{class_bit_buck_generator}{}\label{class_bit_buck_generator}\index{BitBuckGenerator@{BitBuckGenerator}}
+
+
+Generates Bit\+Bucks at a set interval and emits a signal when they are generated.  
+
+
+
+
+{\ttfamily \#include $<$Bit\+Buck\+Generator.\+h$>$}
+
+Inheritance diagram for Bit\+Buck\+Generator\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bit_buck_generator}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_bit_buck_generator_a07dfc228b67b8323c7ac011773c4b109}{bit\+Bucks\+Generated}} (int bit\+Bucks)
+\begin{DoxyCompactList}\small\item\em Signal emitted when Bit\+Bucks are generated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bit_buck_generator_a8deef83555ba38daf5a340e132172f9a}{Bit\+Buck\+Generator}} (int bit\+Buckets\+Generated\+Per\+Time\+Interval=MIN\+\_\+\+BIT\+\_\+\+BUCKS\+\_\+\+GENERATED\+\_\+\+PER\+\_\+\+TIME\+\_\+\+INTERVAL, QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_bit_buck_generator}{Bit\+Buck\+Generator}. \end{DoxyCompactList}\item 
+\Hypertarget{class_bit_buck_generator_a233c61e335d12c4e78d6f5f489fc006b}\label{class_bit_buck_generator_a233c61e335d12c4e78d6f5f489fc006b} 
+{\bfseries Bit\+Buck\+Generator} (const \mbox{\hyperlink{class_bit_buck_generator}{Bit\+Buck\+Generator}} \&)=delete
+\item 
+\Hypertarget{class_bit_buck_generator_ac1e6e57e4d6d8bbc2b6209b6386698c8}\label{class_bit_buck_generator_ac1e6e57e4d6d8bbc2b6209b6386698c8} 
+\mbox{\hyperlink{class_bit_buck_generator}{Bit\+Buck\+Generator}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_bit_buck_generator}{Bit\+Buck\+Generator}} \&)=delete
+\item 
+\Hypertarget{class_bit_buck_generator_a4b710de8da5815f1bea1b7ab26a9983c}\label{class_bit_buck_generator_a4b710de8da5815f1bea1b7ab26a9983c} 
+{\bfseries Bit\+Buck\+Generator} (\mbox{\hyperlink{class_bit_buck_generator}{Bit\+Buck\+Generator}} \&\&)=delete
+\item 
+\Hypertarget{class_bit_buck_generator_a94e66f7614f205a6aed855e06c976930}\label{class_bit_buck_generator_a94e66f7614f205a6aed855e06c976930} 
+\mbox{\hyperlink{class_bit_buck_generator}{Bit\+Buck\+Generator}} \& {\bfseries operator=} (\mbox{\hyperlink{class_bit_buck_generator}{Bit\+Buck\+Generator}} \&\&)=delete
+\item 
+int \mbox{\hyperlink{class_bit_buck_generator_a4381bffbba66d3a3edb1aea49e828235}{get\+Bit\+Bucks\+Generated\+Per\+Time\+Interval}} () const
+\begin{DoxyCompactList}\small\item\em Gets the number of Bit\+Bucks generated per time interval. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bit_buck_generator_a499a7623cd2ec22919566b4323a09aae}{set\+Bit\+Bucks\+Generated\+Per\+Time\+Interval}} (int bit\+Bucks\+Generated\+Per\+Time\+Interval)
+\begin{DoxyCompactList}\small\item\em Sets the number of Bit\+Bucks generated per time interval. \end{DoxyCompactList}\item 
+\Hypertarget{class_bit_buck_generator_a5e9d506b12f003fb7f677fa04c126691}\label{class_bit_buck_generator_a5e9d506b12f003fb7f677fa04c126691} 
+void {\bfseries pause\+Generation} ()
+\begin{DoxyCompactList}\small\item\em Pauses the generation of Bit\+Bucks. \end{DoxyCompactList}\item 
+\Hypertarget{class_bit_buck_generator_ab5c6b4825523ee8aaceaeca20ef880c1}\label{class_bit_buck_generator_ab5c6b4825523ee8aaceaeca20ef880c1} 
+void {\bfseries start\+Generation} ()
+\begin{DoxyCompactList}\small\item\em Starts the generation of Bit\+Bucks. \end{DoxyCompactList}\item 
+QJson\+Object \mbox{\hyperlink{class_bit_buck_generator_aab4a2cbb19cf29718ef77b0bb0aebdb5}{to\+Json}} () const
+\begin{DoxyCompactList}\small\item\em Converts the \doxylink{class_bit_buck_generator}{Bit\+Buck\+Generator} to a JSON object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_bit_buck_generator}{Bit\+Buck\+Generator}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_bit_buck_generator_a93a4bf718f45661516f2c784201a7412}{from\+Json}} (const QJson\+Object \&bit\+Buck\+Generator\+Json)
+\begin{DoxyCompactList}\small\item\em Converts a JSON object to a \doxylink{class_bit_buck_generator}{Bit\+Buck\+Generator}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bit_buck_generator_a53c56300d781343739dbf29b9510aee6}\label{class_bit_buck_generator_a53c56300d781343739dbf29b9510aee6} 
+void {\bfseries generate\+Bit\+Bucks} ()
+\begin{DoxyCompactList}\small\item\em Generates the Bit\+Bucks and emits the bit\+Bucks\+Generated signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bit_buck_generator_a19299b6224a5a7fe947db24423ead5fc}\label{class_bit_buck_generator_a19299b6224a5a7fe947db24423ead5fc} 
+int {\bfseries bit\+Bucks\+Generated\+Per\+Time\+Interval}
+\item 
+\Hypertarget{class_bit_buck_generator_a33d8e78b194087b3c0afdbc3d878950e}\label{class_bit_buck_generator_a33d8e78b194087b3c0afdbc3d878950e} 
+QTimer {\bfseries generation\+Timer}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generates Bit\+Bucks at a set interval and emits a signal when they are generated. 
+
+\begin{DoxyAuthor}{Author}
+Ryan Hecht
+\end{DoxyAuthor}
+A \doxylink{class_bit_buck_generator}{Bit\+Buck\+Generator} generates Bit\+Bucks at a set interval and emits a signal when they are generated. The number of Bit\+Bucks generated and the interval at which they are generated can be set (\textquotesingle{}upgrade\textquotesingle{}), but have default constants that they start at. The \doxylink{class_bit_buck_generator}{Bit\+Buck\+Generator} can be paused and started and is paused by default. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_bit_buck_generator_a8deef83555ba38daf5a340e132172f9a}\label{class_bit_buck_generator_a8deef83555ba38daf5a340e132172f9a} 
+\index{BitBuckGenerator@{BitBuckGenerator}!BitBuckGenerator@{BitBuckGenerator}}
+\index{BitBuckGenerator@{BitBuckGenerator}!BitBuckGenerator@{BitBuckGenerator}}
+\doxysubsubsection{\texorpdfstring{BitBuckGenerator()}{BitBuckGenerator()}}
+{\footnotesize\ttfamily Bit\+Buck\+Generator\+::\+Bit\+Buck\+Generator (\begin{DoxyParamCaption}\item[{int}]{bit\+Buckets\+Generated\+Per\+Time\+Interval = {\ttfamily MIN\+\_\+BIT\+\_\+BUCKS\+\_\+GENERATED\+\_\+PER\+\_\+TIME\+\_\+INTERVAL},  }\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor for the \doxylink{class_bit_buck_generator}{Bit\+Buck\+Generator}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Buckets\+Generated\+Per\+Time\+Interval} & The number of Bit\+Bucks generated per time interval \\
+\hline
+{\em parent} & The parent object of the \doxylink{class_bit_buck_generator}{Bit\+Buck\+Generator} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_bit_buck_generator_a07dfc228b67b8323c7ac011773c4b109}\label{class_bit_buck_generator_a07dfc228b67b8323c7ac011773c4b109} 
+\index{BitBuckGenerator@{BitBuckGenerator}!bitBucksGenerated@{bitBucksGenerated}}
+\index{bitBucksGenerated@{bitBucksGenerated}!BitBuckGenerator@{BitBuckGenerator}}
+\doxysubsubsection{\texorpdfstring{bitBucksGenerated}{bitBucksGenerated}}
+{\footnotesize\ttfamily void Bit\+Buck\+Generator\+::bit\+Bucks\+Generated (\begin{DoxyParamCaption}\item[{int}]{bit\+Bucks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when Bit\+Bucks are generated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Bucks} & The number of Bit\+Bucks generated \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bit_buck_generator_a93a4bf718f45661516f2c784201a7412}\label{class_bit_buck_generator_a93a4bf718f45661516f2c784201a7412} 
+\index{BitBuckGenerator@{BitBuckGenerator}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!BitBuckGenerator@{BitBuckGenerator}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bit_buck_generator}{Bit\+Buck\+Generator}} \texorpdfstring{$\ast$}{*} Bit\+Buck\+Generator\+::from\+Json (\begin{DoxyParamCaption}\item[{const QJson\+Object \&}]{bit\+Buck\+Generator\+Json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts a JSON object to a \doxylink{class_bit_buck_generator}{Bit\+Buck\+Generator}. 
+
+Converts a JSON object to a \doxylink{class_bit_buck_generator}{Bit\+Buck\+Generator}. The JSON object should contain the number of Bit\+Bucks generated per time interval.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Buck\+Generator\+Json} & The JSON object to convert to a \doxylink{class_bit_buck_generator}{Bit\+Buck\+Generator} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{class_bit_buck_generator}{Bit\+Buck\+Generator} created from the JSON object 
+\end{DoxyReturn}
+\Hypertarget{class_bit_buck_generator_a4381bffbba66d3a3edb1aea49e828235}\label{class_bit_buck_generator_a4381bffbba66d3a3edb1aea49e828235} 
+\index{BitBuckGenerator@{BitBuckGenerator}!getBitBucksGeneratedPerTimeInterval@{getBitBucksGeneratedPerTimeInterval}}
+\index{getBitBucksGeneratedPerTimeInterval@{getBitBucksGeneratedPerTimeInterval}!BitBuckGenerator@{BitBuckGenerator}}
+\doxysubsubsection{\texorpdfstring{getBitBucksGeneratedPerTimeInterval()}{getBitBucksGeneratedPerTimeInterval()}}
+{\footnotesize\ttfamily int Bit\+Buck\+Generator\+::get\+Bit\+Bucks\+Generated\+Per\+Time\+Interval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the number of Bit\+Bucks generated per time interval. 
+
+\begin{DoxyReturn}{Returns}
+The number of Bit\+Bucks generated per time interval 
+\end{DoxyReturn}
+\Hypertarget{class_bit_buck_generator_a499a7623cd2ec22919566b4323a09aae}\label{class_bit_buck_generator_a499a7623cd2ec22919566b4323a09aae} 
+\index{BitBuckGenerator@{BitBuckGenerator}!setBitBucksGeneratedPerTimeInterval@{setBitBucksGeneratedPerTimeInterval}}
+\index{setBitBucksGeneratedPerTimeInterval@{setBitBucksGeneratedPerTimeInterval}!BitBuckGenerator@{BitBuckGenerator}}
+\doxysubsubsection{\texorpdfstring{setBitBucksGeneratedPerTimeInterval()}{setBitBucksGeneratedPerTimeInterval()}}
+{\footnotesize\ttfamily void Bit\+Buck\+Generator\+::set\+Bit\+Bucks\+Generated\+Per\+Time\+Interval (\begin{DoxyParamCaption}\item[{int}]{bit\+Bucks\+Generated\+Per\+Time\+Interval }\end{DoxyParamCaption})}
+
+
+
+Sets the number of Bit\+Bucks generated per time interval. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Bucks\+Generated\+Per\+Time\+Interval} & The number of Bit\+Bucks generated per time interval \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bit_buck_generator_aab4a2cbb19cf29718ef77b0bb0aebdb5}\label{class_bit_buck_generator_aab4a2cbb19cf29718ef77b0bb0aebdb5} 
+\index{BitBuckGenerator@{BitBuckGenerator}!toJson@{toJson}}
+\index{toJson@{toJson}!BitBuckGenerator@{BitBuckGenerator}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily QJson\+Object Bit\+Buck\+Generator\+::to\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Converts the \doxylink{class_bit_buck_generator}{Bit\+Buck\+Generator} to a JSON object. 
+
+Converts the \doxylink{class_bit_buck_generator}{Bit\+Buck\+Generator} to a JSON object that can be saved to a file. The JSON object contains the number of Bit\+Bucks generated per time interval.
+
+\begin{DoxyReturn}{Returns}
+The \doxylink{class_bit_buck_generator}{Bit\+Buck\+Generator} as a JSON object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game/include/model/Bit\+Buck\+Generator.\+h\item 
+game/src/model/Bit\+Buck\+Generator.\+cpp\end{DoxyCompactItemize}

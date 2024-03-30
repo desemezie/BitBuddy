@@ -1,0 +1,100 @@
+\doxysection{Stats\+Window Class Reference}
+\hypertarget{class_stats_window}{}\label{class_stats_window}\index{StatsWindow@{StatsWindow}}
+
+
+The \doxylink{class_stats_window}{Stats\+Window} class provides a dialog to display statistics or information.  
+
+
+
+
+{\ttfamily \#include $<$Stats\+Window.\+h$>$}
+
+Inheritance diagram for Stats\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_stats_window}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_stats_window_a7b6fb09bda2a49a32b2e8f636aef7365}{Stats\+Window}} (const QString \&thename, QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Construct a new Stats Window object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_stats_window_ad26fd12aef7d7baace41c4f07fb18b07}{\texorpdfstring{$\sim$}{\string~}\+Stats\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Stats Window object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_stats_window_a56dbacad4471ccde1edac88d107cc709}{setup\+Ui}} ()
+\begin{DoxyCompactList}\small\item\em Sets up the user interface of the stats window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_stats_window_aa30f3b0e2ed5f81c9eb4e9fdbbe7fb69}\label{class_stats_window_aa30f3b0e2ed5f81c9eb4e9fdbbe7fb69} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries name\+Label}
+\begin{DoxyCompactList}\small\item\em Label for displaying the name. \end{DoxyCompactList}\item 
+\Hypertarget{class_stats_window_ab21bbaf99f7d05f6d2b3223036004e01}\label{class_stats_window_ab21bbaf99f7d05f6d2b3223036004e01} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries age\+Label}
+\begin{DoxyCompactList}\small\item\em Label for displaying the age. \end{DoxyCompactList}\item 
+\Hypertarget{class_stats_window_a3440451404a062f4b19a08bcca09a2db}\label{class_stats_window_a3440451404a062f4b19a08bcca09a2db} 
+QString {\bfseries name}
+\begin{DoxyCompactList}\small\item\em Stores the name to be displayed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_stats_window}{Stats\+Window} class provides a dialog to display statistics or information. 
+
+\begin{DoxyAuthor}{Author}
+Shaylan Pratt
+\end{DoxyAuthor}
+This dialog is designed to show specific details, such as name and age, which can be expanded to include more statistics as required. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_stats_window_a7b6fb09bda2a49a32b2e8f636aef7365}\label{class_stats_window_a7b6fb09bda2a49a32b2e8f636aef7365} 
+\index{StatsWindow@{StatsWindow}!StatsWindow@{StatsWindow}}
+\index{StatsWindow@{StatsWindow}!StatsWindow@{StatsWindow}}
+\doxysubsubsection{\texorpdfstring{StatsWindow()}{StatsWindow()}}
+{\footnotesize\ttfamily Stats\+Window\+::\+Stats\+Window (\begin{DoxyParamCaption}\item[{const QString \&}]{thename,  }\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new Stats Window object. 
+
+Initializes the dialog with the given name and sets up the UI elements.
+
+
+\begin{DoxyParams}{Parameters}
+{\em thename} & The name to be displayed in this stats window. \\
+\hline
+{\em parent} & The parent widget of this dialog. Default is nullptr. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_stats_window_ad26fd12aef7d7baace41c4f07fb18b07}\label{class_stats_window_ad26fd12aef7d7baace41c4f07fb18b07} 
+\index{StatsWindow@{StatsWindow}!````~StatsWindow@{\texorpdfstring{$\sim$}{\string~}StatsWindow}}
+\index{````~StatsWindow@{\texorpdfstring{$\sim$}{\string~}StatsWindow}!StatsWindow@{StatsWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}StatsWindow()}{\string~StatsWindow()}}
+{\footnotesize\ttfamily Stats\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Stats\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the Stats Window object. 
+
+Ensures that resources are cleaned up properly. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_stats_window_a56dbacad4471ccde1edac88d107cc709}\label{class_stats_window_a56dbacad4471ccde1edac88d107cc709} 
+\index{StatsWindow@{StatsWindow}!setupUi@{setupUi}}
+\index{setupUi@{setupUi}!StatsWindow@{StatsWindow}}
+\doxysubsubsection{\texorpdfstring{setupUi()}{setupUi()}}
+{\footnotesize\ttfamily void Stats\+Window\+::setup\+Ui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets up the user interface of the stats window. 
+
+This method initializes all UI components, including labels for name and age, and positions them within the window. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game/include/window/Stats\+Window.\+h\item 
+game/src/window/Stats\+Window.\+cpp\end{DoxyCompactItemize}

@@ -17,8 +17,7 @@ constexpr int IN_GAME_YEAR_LENGTH_IN_MINUTES = 1;  // 1 minute represents 1 in-g
 /**
  * @class BitBuddy
  * @brief Represents the BitBuddy pet in the game
- * @author Ryan Hecht
- * @author Annabel Irani
+ * @authors Ryan Hecht, Annabel Irani
  *
  * The BitBuddy has a set of attributes that can be updated by events. The BitBuddy can die if one of its attributes
  * goes below zero. The BitBuddy can also purchase items and is born with a BitBuckGenerator that generates BitBucks
@@ -36,7 +35,7 @@ class BitBuddy final : public QObject {
   explicit BitBuddy(std::string name);
 
   /**
-   * Constructor for the BitBuddy that takes all of BitBuddy's attributes as parameters.
+   * @brief Constructor for the BitBuddy that takes all of BitBuddy's attributes as parameters.
    *
    * @param name The name of the BitBuddy
    * @param attributes A map of the BitBuddy's attributes where the key is the attribute's unique name and the value is
@@ -50,7 +49,7 @@ class BitBuddy final : public QObject {
            std::chrono::system_clock::time_point creationTime, bool dead, QUuid id, BitBuckGenerator *bitBuckGenerator);
 
   /**
-   * Destructor for the BitBuddy
+   * @brief Destructor for the BitBuddy
    */
   ~BitBuddy() override;
 
@@ -64,14 +63,14 @@ class BitBuddy final : public QObject {
   [[nodiscard]] const std::vector<std::string> &getPurchasedItems() const;
 
   /**
-   * Converts the BitBuddy to a JSON object
+   * @brief Converts the BitBuddy to a JSON object
    *
    * @return The BitBuddy as a JSON object
    */
   [[nodiscard]] QJsonObject toJson() const;
 
   /**
-   * Converts a JSON object to a BitBuddy
+   * @brief Converts a JSON object to a BitBuddy
    *
    * @param json The JSON object to convert
    * @return The BitBuddy
@@ -79,7 +78,7 @@ class BitBuddy final : public QObject {
   static BitBuddy *fromJson(const QJsonObject &json);
 
   /**
-   * Gets the attribute value for the given attribute name
+   * @brief Gets the attribute value for the given attribute name
    *
    * @param attributeName The name of the attribute to get the value for
    * @return The value of the attribute
@@ -87,7 +86,7 @@ class BitBuddy final : public QObject {
   [[nodiscard]] int getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const;
 
   /**
-   * Increments the value of the attribute with the given value
+   * @brief Increments the value of the attribute with the given value
    *
    * @param attribute
    * @param value
@@ -95,7 +94,7 @@ class BitBuddy final : public QObject {
   void incrementAttribute(BitBuddyAttributeName::UniqueName attribute, int value);
 
   /**
-   * Gets the age of the BitBuddy represented in 'in-game-years'
+   * @brief Gets the age of the BitBuddy represented in 'in-game-years'
    *
    * @return The age of the BitBuddy in 'in-game-years'
    */
@@ -135,14 +134,14 @@ class BitBuddy final : public QObject {
   std::vector<std::string> thingsPurchased;
  signals:
   /**
-   * Signal emitted when an attribute is updated
+   * @brief Signal emitted when an attribute is updated
    *
    * @param attribute The attribute that was updated
    */
   void attributeUpdated(const BitBuddyAttribute &attribute);
 
   /**
-   * Signal emitted when the BitBuddy dies
+   * @brief Signal emitted when the BitBuddy dies
    *
    * @paragraph attribute The attribute that caused the BitBuddy to die
    */
@@ -150,7 +149,7 @@ class BitBuddy final : public QObject {
 
  public slots:
   /**
-   * Slot that listens for Events from the event dispatch service and updates the BitBuddy's attributes.
+   * @brief Slot that listens for Events from the event dispatch service and updates the BitBuddy's attributes.
    *
    * @param event The event to process
    */
@@ -165,12 +164,12 @@ class BitBuddy final : public QObject {
   BitBuckGenerator *bitBuckGenerator;
 
   /**
-   * Connects the signals to the slots
+   * @brief Connects the signals to the slots
    */
   void connectSignals() const;
 
   /**
-   * Kills the BitBuddy
+   * @brief Kills the BitBuddy
    *
    * @param attribute The attribute that caused the BitBuddy to die
    */

@@ -91,50 +91,46 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef BITBUDDY_SRC_SERVICE_MUSICSERVICE_H_</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define BITBUDDY_SRC_SERVICE_MUSICSERVICE_H_</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;QObject&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;QMediaPlayer&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;QMediaPlayer&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;QObject&gt;</span></div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_music_service.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="class_music_service.html">MusicService</a> : <span class="keyword">public</span> QObject {</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> Q_OBJECT</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_music_service.html#aa1d70ce5ede888826c6e00c8f1111633">   23</a></span>  <span class="keyword">static</span> <a class="code hl_class" href="class_music_service.html">MusicService</a> &amp;<a class="code hl_function" href="class_music_service.html#aa1d70ce5ede888826c6e00c8f1111633">getInstance</a>();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <a class="code hl_class" href="class_music_service.html">MusicService</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_music_service.html">MusicService</a> &amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <a class="code hl_class" href="class_music_service.html">MusicService</a> &amp;operator=(<span class="keyword">const</span> <a class="code hl_class" href="class_music_service.html">MusicService</a> &amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <a class="code hl_class" href="class_music_service.html">MusicService</a>(<a class="code hl_class" href="class_music_service.html">MusicService</a> &amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <a class="code hl_class" href="class_music_service.html">MusicService</a> &amp;operator=(<a class="code hl_class" href="class_music_service.html">MusicService</a> &amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_music_service.html#a33291a64c5d69606289fe56ef30f15ba">   36</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_music_service.html#a33291a64c5d69606289fe56ef30f15ba">startMusic</a>();</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_music_service.html#a23470ace0df023a96289b2cd03184138">   41</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_music_service.html#a23470ace0df023a96289b2cd03184138">stopMusic</a>();</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="class_music_service.html#aec89cfd60a991c17dcbb75cae28b3d14">   48</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_music_service.html#aec89cfd60a991c17dcbb75cae28b3d14">setVolume</a>(<span class="keywordtype">float</span> volume);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_music_service.html#aeba8009cfaa095334edabf9e9c21b130">   55</a></span>  <span class="keywordtype">float</span> <a class="code hl_function" href="class_music_service.html#aeba8009cfaa095334edabf9e9c21b130">getVolume</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>  <a class="code hl_class" href="class_music_service.html">MusicService</a>();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_class" href="class_music_service.html">~MusicService</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  QMediaPlayer *musicPlayer;</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  QAudioOutput *audioOutput;</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  <span class="keywordtype">float</span> currentVolume;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>};</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_music_service.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="class_music_service.html">MusicService</a> final : <span class="keyword">public</span> QObject {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  Q_OBJECT</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>  <span class="keyword">static</span> <a class="code hl_class" href="class_music_service.html">MusicService</a> &amp;<a class="code hl_function" href="class_music_service.html#a24f49eb5dd4ba830fb8ab80a10197a67">getInstance</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <a class="code hl_class" href="class_music_service.html">MusicService</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_music_service.html">MusicService</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <a class="code hl_class" href="class_music_service.html">MusicService</a> &amp;operator=(<span class="keyword">const</span> <a class="code hl_class" href="class_music_service.html">MusicService</a> &amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>  <a class="code hl_class" href="class_music_service.html">MusicService</a>(<a class="code hl_class" href="class_music_service.html">MusicService</a> &amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>  <a class="code hl_class" href="class_music_service.html">MusicService</a> &amp;operator=(<a class="code hl_class" href="class_music_service.html">MusicService</a> &amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_music_service.html#a33291a64c5d69606289fe56ef30f15ba">startMusic</a>();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_music_service.html#a23470ace0df023a96289b2cd03184138">stopMusic</a>();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_music_service.html#aec89cfd60a991c17dcbb75cae28b3d14">setVolume</a>(<span class="keywordtype">float</span> volume);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>  [[nodiscard]] <span class="keywordtype">float</span> <a class="code hl_function" href="class_music_service.html#aeba8009cfaa095334edabf9e9c21b130">getVolume</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <a class="code hl_class" href="class_music_service.html">MusicService</a>();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  <a class="code hl_class" href="class_music_service.html">~MusicService</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>  QMediaPlayer *musicPlayer;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>  QAudioOutput *audioOutput;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>  <span class="keywordtype">float</span> currentVolume;</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
 </div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#endif </span><span class="comment">//BITBUDDY_SRC_SERVICE_MUSICSERVICE_H_</span></div>
-<div class="ttc" id="aclass_music_service_html"><div class="ttname"><a href="class_music_service.html">MusicService</a></div><div class="ttdef"><b>Definition</b> MusicService.h:14</div></div>
-<div class="ttc" id="aclass_music_service_html_a23470ace0df023a96289b2cd03184138"><div class="ttname"><a href="class_music_service.html#a23470ace0df023a96289b2cd03184138">MusicService::stopMusic</a></div><div class="ttdeci">void stopMusic()</div></div>
-<div class="ttc" id="aclass_music_service_html_a33291a64c5d69606289fe56ef30f15ba"><div class="ttname"><a href="class_music_service.html#a33291a64c5d69606289fe56ef30f15ba">MusicService::startMusic</a></div><div class="ttdeci">void startMusic()</div></div>
-<div class="ttc" id="aclass_music_service_html_aa1d70ce5ede888826c6e00c8f1111633"><div class="ttname"><a href="class_music_service.html#aa1d70ce5ede888826c6e00c8f1111633">MusicService::getInstance</a></div><div class="ttdeci">static MusicService &amp; getInstance()</div></div>
-<div class="ttc" id="aclass_music_service_html_aeba8009cfaa095334edabf9e9c21b130"><div class="ttname"><a href="class_music_service.html#aeba8009cfaa095334edabf9e9c21b130">MusicService::getVolume</a></div><div class="ttdeci">float getVolume() const</div></div>
-<div class="ttc" id="aclass_music_service_html_aec89cfd60a991c17dcbb75cae28b3d14"><div class="ttname"><a href="class_music_service.html#aec89cfd60a991c17dcbb75cae28b3d14">MusicService::setVolume</a></div><div class="ttdeci">void setVolume(float volume)</div></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#endif  </span><span class="comment">// BITBUDDY_SRC_SERVICE_MUSICSERVICE_H_</span></div>
+<div class="ttc" id="aclass_music_service_html"><div class="ttname"><a href="class_music_service.html">MusicService</a></div><div class="ttdoc">The MusicService is responsible for playing and stopping the music in the game.</div><div class="ttdef"><b>Definition</b> MusicService.h:19</div></div>
+<div class="ttc" id="aclass_music_service_html_a23470ace0df023a96289b2cd03184138"><div class="ttname"><a href="class_music_service.html#a23470ace0df023a96289b2cd03184138">MusicService::stopMusic</a></div><div class="ttdeci">void stopMusic()</div><div class="ttdoc">Stops the music.</div><div class="ttdef"><b>Definition</b> MusicService.cpp:28</div></div>
+<div class="ttc" id="aclass_music_service_html_a24f49eb5dd4ba830fb8ab80a10197a67"><div class="ttname"><a href="class_music_service.html#a24f49eb5dd4ba830fb8ab80a10197a67">MusicService::getInstance</a></div><div class="ttdeci">static MusicService &amp; getInstance()</div><div class="ttdef"><b>Definition</b> MusicService.cpp:14</div></div>
+<div class="ttc" id="aclass_music_service_html_a33291a64c5d69606289fe56ef30f15ba"><div class="ttname"><a href="class_music_service.html#a33291a64c5d69606289fe56ef30f15ba">MusicService::startMusic</a></div><div class="ttdeci">void startMusic()</div><div class="ttdoc">Starts the music.</div><div class="ttdef"><b>Definition</b> MusicService.cpp:19</div></div>
+<div class="ttc" id="aclass_music_service_html_aeba8009cfaa095334edabf9e9c21b130"><div class="ttname"><a href="class_music_service.html#aeba8009cfaa095334edabf9e9c21b130">MusicService::getVolume</a></div><div class="ttdeci">float getVolume() const</div><div class="ttdoc">Gets the volume of the music.</div><div class="ttdef"><b>Definition</b> MusicService.cpp:45</div></div>
+<div class="ttc" id="aclass_music_service_html_aec89cfd60a991c17dcbb75cae28b3d14"><div class="ttname"><a href="class_music_service.html#aec89cfd60a991c17dcbb75cae28b3d14">MusicService::setVolume</a></div><div class="ttdeci">void setVolume(float volume)</div><div class="ttdoc">Sets the volume of the music.</div><div class="ttdef"><b>Definition</b> MusicService.cpp:36</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

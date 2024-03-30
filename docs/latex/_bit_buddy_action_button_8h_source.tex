@@ -9,27 +9,28 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ BITBUDDY\_BITBUDDYACTIONBUTTON\_H}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ BITBUDDY\_BITBUDDYACTIONBUTTON\_H}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QIcon>}}
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QIcon>}}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bit_buddy_action_button}{BitBuddyActionButton}}:\ \textcolor{keyword}{public}\ QPushButton\{}
-\DoxyCodeLine{00013\ \ \ \ \ Q\_OBJECT}
-\DoxyCodeLine{00014\ }
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{comment}{//BitBuddyActionButton(QIcon\ icon,\ const\ QString\ \&text,\ BitBuddyAttributeName::UniqueName\ name,\ QWidget\ *pWidget);}}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_bit_buddy_action_button}{BitBuddyActionButton}}(\textcolor{keyword}{const}\ QIcon\ \&icon,\ \textcolor{keyword}{const}\ QString\ \&text,BitBuddyAttributeName::UniqueName\ attribute,\ QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \textcolor{keyword}{private}\ slots:}
-\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ handleButtonClicked();}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00024\ \ \ \ \ BitBuddyAttributeName::UniqueName\ attribute;}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \};}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BITBUDDY\_BITBUDDYACTIONBUTTON\_H}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}model/BitBuddyAttributeName.h"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bit_buddy_action_button}{BitBuddyActionButton}}\ :\ \textcolor{keyword}{public}\ QPushButton\ \{}
+\DoxyCodeLine{00019\ \ \ Q\_OBJECT}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_bit_buddy_action_button_a139242f29b1cc452f6384e3f6971c21b}{BitBuddyActionButton}}(\textcolor{keyword}{const}\ QIcon\ \&icon,\ \textcolor{keyword}{const}\ QString\ \&text,\ \mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{BitBuddyAttributeName::UniqueName}}\ \mbox{\hyperlink{class_bit_buddy_action_button_aae11c8f2419e4f0defb1accc892fe3d3}{attribute}},}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buddy_action_button_abb996f973ce5d23013cfc7e2bdb34926}{setButtonStyle}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00043\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buddy_action_button_a9edbdf28aa5f7e45660c6530c31a6b94}{handleButtonClicked}}();}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ \ \ \mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{BitBuddyAttributeName::UniqueName}}\ \mbox{\hyperlink{class_bit_buddy_action_button_aae11c8f2419e4f0defb1accc892fe3d3}{attribute}};}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ BITBUDDY\_BITBUDDYACTIONBUTTON\_H}}
 
 \end{DoxyCode}

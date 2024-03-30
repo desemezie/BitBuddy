@@ -12,13 +12,22 @@
 \DoxyCodeLine{00008\ }
 \DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QApplication>}}
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QMediaPlayer>}}
-\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QString>}}
 \DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }Audio\ \{}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{void}\ playSound(QString\ type);}
-\DoxyCodeLine{00015\ \}}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BITBUDDY\_AUDIO\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_audio}{Audio}}\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_audio_a48e4af4d1c0b79dc0f228fec2f458ffd}{playSound}}(\textcolor{keyword}{const}\ QString\ \&type);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_audio_a8c64b91c174c5fff4b1e4e06d53d3dde}{initializeAudioSystem}}();}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_audio_a9dd8a1b27ea3753e527bcade6168f63a}{muteSound}}(\textcolor{keywordtype}{bool}\ mute);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespace_audio_adcb24fdc9dd051786fcdc96531d82a4c}{setVolume}}(\textcolor{keywordtype}{int}\ volume);}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BITBUDDY\_AUDIO\_H}}
 
 \end{DoxyCode}
