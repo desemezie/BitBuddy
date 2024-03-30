@@ -115,14 +115,14 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
 
   // add the place to insert a name for your bitbuddy
 
-  nameLineEdit = new QLineEdit(this);
-  nameLineEdit->setPlaceholderText("Enter your name");
-  nameLineEdit->setFixedSize(200, 30);
+  //nameLineEdit = new QLineEdit(this);
+  //nameLineEdit->setPlaceholderText("Enter your name");
+  //nameLineEdit->setFixedSize(200, 30);
   // Set the width and height according to your preference
-  nameLineEdit->setStyleSheet("border: 1px solid black;");
-  nameLineEdit->setStyleSheet("QLineEdit { color: black !important; }");
+  //nameLineEdit->setStyleSheet("border: 1px solid black;");
+  //nameLineEdit->setStyleSheet("QLineEdit { color: black !important; }");
 
-  auto *nameLine = new QLineEdit(this);
+  nameLine = new QLineEdit(this);
   nameLine->setPlaceholderText("Enter your BitBuddy's name");
   nameLine->setFixedSize(350, 50);
 
@@ -169,7 +169,7 @@ LauncherWindow::LauncherWindow(QWidget *parent) : QWidget(parent) {
 
   // connect the playButton to an action
   connect(playButton, &QPushButton::clicked, this, [this]() {
-    BitBuddyService::getBitBuddy().setName(nameLineEdit->text().toStdString());
+    BitBuddyService::getBitBuddy().setName(nameLine->text().toStdString());
     this->hide();
     auto *mainWindow = new MainWindow();
     mainWindow->setAttribute(Qt::WA_DeleteOnClose);

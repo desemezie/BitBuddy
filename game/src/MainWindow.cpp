@@ -33,8 +33,7 @@ constexpr double DEFAULT_SCREEN_PERCENTAGE = 0.9;
  */
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
 
-  // Loads bitbuddy from the saved instance
-  BitBuddyService::registerBitBuddy(FileStorageService::loadBitBuddy("BitBuddy"));
+
   // Loads bitbuddy's bank account
 
   UserBankAccountService::registerUserBankAccount(&FileStorageService::loadUserBankAccount());

@@ -32,7 +32,7 @@ class LauncherWindow : public QWidget{
 
 
  private:
-  QLineEdit *nameLineEdit; ///< line edit to get the BitBuddy name entered by the user
+  QLineEdit *nameLine; ///< line edit to get the BitBuddy name entered by the user
 
 };
 
