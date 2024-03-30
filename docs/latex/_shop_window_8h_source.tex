@@ -1,0 +1,42 @@
+\doxysection{Shop\+Window.\+h}
+\hypertarget{_shop_window_8h_source}{}\label{_shop_window_8h_source}\index{game/include/window/ShopWindow.h@{game/include/window/ShopWindow.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ Ryan\ Hecht\ \ on\ 2024-\/03-\/24.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ SHOPWINDOW\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ SHOPWINDOW\_H}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QListWidget>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}model/BitBuddy.h"{}}}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_shop_window}{ShopWindow}}\ final\ :\ \textcolor{keyword}{public}\ QWidget\ \{}
+\DoxyCodeLine{00020\ \ \ Q\_OBJECT}
+\DoxyCodeLine{00025\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shop_window_a6b38ce0c9ae02cb0d388187d97c096ba}{setBitBuddy}}(\mbox{\hyperlink{class_bit_buddy}{BitBuddy}}\ *bitBuddy);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \mbox{\hyperlink{class_bit_buddy}{BitBuddy}}\ *bitBuddy;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00036\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_shop_window}{ShopWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00042\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shop_window_ab53017358c1eaafc7a321cd2e3e8cdab}{onBuyButtonClicked}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ QListWidget\ *\mbox{\hyperlink{class_shop_window_af96bf82792155c23e3c2cdae9c6f4657}{gameListWidget}};}
+\DoxyCodeLine{00049\ \ \ QPushButton\ *buyButton;}
+\DoxyCodeLine{00050\ \ \ QLabel\ *titleLabel;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shop_window_a0361931bfd51c90c2d768b6063a326b5}{addListItem}}(QString\ *name,\ QListWidget\ *parentWidget,\ QString\ \&icon);}
+\DoxyCodeLine{00064\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shop_window_ae290f88de7562633e902a96005a9dd15}{addItem}}(\textcolor{keyword}{const}\ QString\ \&name,\ \textcolor{keyword}{const}\ QString\ \&iconPath);}
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_shop_window_a75dbe7bde60bf0e66f7582b0d9115879}{showItemsPurchased}}();}
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ SHOPWINDOW\_H}}
+
+\end{DoxyCode}

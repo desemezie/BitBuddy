@@ -75,11 +75,13 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_game_service-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">GameService Class Reference</div></div>
+  <div class="headertitle"><div class="title">GameService Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="class_game_service.html" title="The GameService is responsible for starting and stopping the EventGeneratorService and MusicService.">GameService</a> is responsible for starting and stopping the <a class="el" href="class_event_generator_service.html" title="The EventGeneratorService is responsible for generating events at random time intervals.">EventGeneratorService</a> and <a class="el" href="class_music_service.html" title="The MusicService is responsible for playing and stopping the music in the game.">MusicService</a>.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_game_service_8h_source.html">GameService.h</a>&gt;</code></p>
 <table class="memberdecls">
@@ -100,24 +102,25 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a555b4c4c9ba28b5d4b56187d2edc37a4" id="r_a555b4c4c9ba28b5d4b56187d2edc37a4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_game_service.html">GameService</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a555b4c4c9ba28b5d4b56187d2edc37a4">getInstance</a> ()</td></tr>
-<tr class="separator:a555b4c4c9ba28b5d4b56187d2edc37a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ea35b167de859c294e82b071e5413ae" id="r_a5ea35b167de859c294e82b071e5413ae"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ea35b167de859c294e82b071e5413ae">startService</a> ()</td></tr>
-<tr class="separator:a5ea35b167de859c294e82b071e5413ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a2fc0a0b4f900eee54ad53fa1f2ef0c" id="r_a9a2fc0a0b4f900eee54ad53fa1f2ef0c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a2fc0a0b4f900eee54ad53fa1f2ef0c">stopService</a> ()</td></tr>
-<tr class="separator:a9a2fc0a0b4f900eee54ad53fa1f2ef0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:ac861f6f9c2b84acda0141453748864e4" id="r_ac861f6f9c2b84acda0141453748864e4"><td class="memItemLeft" align="right" valign="top"><a id="ac861f6f9c2b84acda0141453748864e4" name="ac861f6f9c2b84acda0141453748864e4"></a>
-static <a class="el" href="class_event_generator_service.html">EventGeneratorService</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>eventGeneratorService</b></td></tr>
-<tr class="separator:ac861f6f9c2b84acda0141453748864e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10638ab0a2961aad8aa0cacb0e24053e" id="r_a10638ab0a2961aad8aa0cacb0e24053e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_game_service.html">GameService</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10638ab0a2961aad8aa0cacb0e24053e">getInstance</a> ()</td></tr>
+<tr class="memdesc:a10638ab0a2961aad8aa0cacb0e24053e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Singleton instance getter.  <br /></td></tr>
+<tr class="separator:a10638ab0a2961aad8aa0cacb0e24053e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4afbcd87e86a07c78d0895b78ed09992" id="r_a4afbcd87e86a07c78d0895b78ed09992"><td class="memItemLeft" align="right" valign="top"><a id="a4afbcd87e86a07c78d0895b78ed09992" name="a4afbcd87e86a07c78d0895b78ed09992"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>startService</b> ()</td></tr>
+<tr class="memdesc:a4afbcd87e86a07c78d0895b78ed09992"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the game service and all other services. <br /></td></tr>
+<tr class="separator:a4afbcd87e86a07c78d0895b78ed09992"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ca946e04f80a3f96a90fb0a61789ac3" id="r_a9ca946e04f80a3f96a90fb0a61789ac3"><td class="memItemLeft" align="right" valign="top"><a id="a9ca946e04f80a3f96a90fb0a61789ac3" name="a9ca946e04f80a3f96a90fb0a61789ac3"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>stopService</b> ()</td></tr>
+<tr class="memdesc:a9ca946e04f80a3f96a90fb0a61789ac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops the game service and all other services. <br /></td></tr>
+<tr class="separator:a9ca946e04f80a3f96a90fb0a61789ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Service that manages all core game logic and starts and stops other services </p>
+<div class="textblock"><p>The <a class="el" href="class_game_service.html" title="The GameService is responsible for starting and stopping the EventGeneratorService and MusicService.">GameService</a> is responsible for starting and stopping the <a class="el" href="class_event_generator_service.html" title="The EventGeneratorService is responsible for generating events at random time intervals.">EventGeneratorService</a> and <a class="el" href="class_music_service.html" title="The MusicService is responsible for playing and stopping the music in the game.">MusicService</a>. </p>
+<dl class="section author"><dt>Author</dt><dd>Ryan Hecht</dd></dl>
+<p>This service was originally meant to be a control paoint for every single service in the game. However, it now only controls the <a class="el" href="class_event_generator_service.html" title="The EventGeneratorService is responsible for generating events at random time intervals.">EventGeneratorService</a> and <a class="el" href="class_music_service.html" title="The MusicService is responsible for playing and stopping the music in the game.">MusicService</a>. Refactoring is needed to make this class and its usage more sensible. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a555b4c4c9ba28b5d4b56187d2edc37a4" name="a555b4c4c9ba28b5d4b56187d2edc37a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a555b4c4c9ba28b5d4b56187d2edc37a4">&#9670;&#160;</a></span>getInstance()</h2>
+<a id="a10638ab0a2961aad8aa0cacb0e24053e" name="a10638ab0a2961aad8aa0cacb0e24053e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10638ab0a2961aad8aa0cacb0e24053e">&#9670;&#160;</a></span>getInstance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,7 +129,7 @@ static <a class="el" href="class_event_generator_service.html">EventGeneratorSer
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="class_game_service.html">GameService</a> &amp; GameService::getInstance </td>
+          <td class="memname"><a class="el" href="class_game_service.html">GameService</a> &amp; GameService::getInstance </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -138,64 +141,15 @@ static <a class="el" href="class_event_generator_service.html">EventGeneratorSer
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Singleton instance getter </p><dl class="section return"><dt>Returns</dt><dd>the instance </dd></dl>
+
+<p>Singleton instance getter. </p>
+<dl class="section return"><dt>Returns</dt><dd>the instance </dd></dl>
 
 </div>
 </div>
-<a id="a5ea35b167de859c294e82b071e5413ae" name="a5ea35b167de859c294e82b071e5413ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ea35b167de859c294e82b071e5413ae">&#9670;&#160;</a></span>startService()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void GameService::startService </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Starts the game service and all other services </p>
-
-</div>
-</div>
-<a id="a9a2fc0a0b4f900eee54ad53fa1f2ef0c" name="a9a2fc0a0b4f900eee54ad53fa1f2ef0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a2fc0a0b4f900eee54ad53fa1f2ef0c">&#9670;&#160;</a></span>stopService()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void GameService::stopService </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Stops the game service and all other services </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>game/include/service/<a class="el" href="_game_service_8h_source.html">GameService.h</a></li>
+<li>game/src/service/<b>GameService.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

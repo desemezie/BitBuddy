@@ -8,32 +8,35 @@
 #include "service/EventGeneratorService.h"
 
 /**
- * Service that manages all core game logic and starts and stops other services
+ * @class GameService
+ * @brief The GameService is responsible for starting and stopping the EventGeneratorService and MusicService.
+ * @author Ryan Hecht
+ *
+ * This service was originally meant to be a control paoint for every single service in the game. However, it now only
+ * controls the EventGeneratorService and MusicService. Refactoring is needed to make this class and its usage more
+ * sensible.
  */
-class GameService {
-
+class GameService final {
  public:
   /**
-   * Singleton instance getter
+   * @brief Singleton instance getter
+   *
    * @return the instance
    */
   static GameService &getInstance();
 
   GameService(const GameService &) = delete;
-
   GameService &operator=(const GameService &) = delete;
-
   GameService(GameService &&) = delete;
-
   GameService &operator=(GameService &&) = delete;
 
   /**
-   * Starts the game service and all other services
+   * @brief Starts the game service and all other services
    */
   static void startService();
 
   /**
-   * Stops the game service and all other services
+   * @brief Stops the game service and all other services
    */
   static void stopService();
 
@@ -42,4 +45,4 @@ class GameService {
   ~GameService();
 };
 
-#endif //BITBUDDY_GAMESERVICE_H
+#endif  // BITBUDDY_GAMESERVICE_H

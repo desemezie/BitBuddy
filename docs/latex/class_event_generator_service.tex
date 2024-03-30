@@ -2,6 +2,11 @@
 \hypertarget{class_event_generator_service}{}\label{class_event_generator_service}\index{EventGeneratorService@{EventGeneratorService}}
 
 
+The \doxylink{class_event_generator_service}{Event\+Generator\+Service} is responsible for generating events at random time intervals.  
+
+
+
+
 {\ttfamily \#include $<$Event\+Generator\+Service.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
@@ -20,24 +25,32 @@
 \mbox{\hyperlink{class_event_generator_service}{Event\+Generator\+Service}} \& {\bfseries operator=} (\mbox{\hyperlink{class_event_generator_service}{Event\+Generator\+Service}} \&\&)=delete
 \item 
 void \mbox{\hyperlink{class_event_generator_service_adec5843f9f5d10afd7bc4d898a9e3290}{start\+Service}} ()
-\item 
-void \mbox{\hyperlink{class_event_generator_service_a262888acaa4fab3525f294309b30d04b}{stop\+Service}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Starts the event generation service. \end{DoxyCompactList}\item 
+\Hypertarget{class_event_generator_service_a262888acaa4fab3525f294309b30d04b}\label{class_event_generator_service_a262888acaa4fab3525f294309b30d04b} 
+void {\bfseries stop\+Service} ()
+\begin{DoxyCompactList}\small\item\em Stops (pauses) the event generation service. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{class_event_generator_service}{Event\+Generator\+Service}} \& \mbox{\hyperlink{class_event_generator_service_ad94dd25656a05345ccd988a5f5d979af}{get\+Instance}} ()
-\end{DoxyCompactItemize}
+static \mbox{\hyperlink{class_event_generator_service}{Event\+Generator\+Service}} \& \mbox{\hyperlink{class_event_generator_service_aa6ba452ddd49cd1eb6384fe34c6efb2e}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Singleton instance getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_event_generator_service_a6815fef4f2b20772666c206b557420b1}{resume\+Service}} ()
-\end{DoxyCompactItemize}
+\Hypertarget{class_event_generator_service_a766bae241700d4fc0357854cbc2b74ae}\label{class_event_generator_service_a766bae241700d4fc0357854cbc2b74ae} 
+{\bfseries Event\+Generator\+Service} ()=default
+\begin{DoxyCompactList}\small\item\em \doxylink{class_event_generator_service}{Event\+Generator\+Service} constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_event_generator_service_a6c8675c979bd271d382c06bff560f6ec}\label{class_event_generator_service_a6c8675c979bd271d382c06bff560f6ec} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Event\+Generator\+Service} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_event_generator_service}{Event\+Generator\+Service} destructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_event_generator_service_a6815fef4f2b20772666c206b557420b1}\label{class_event_generator_service_a6815fef4f2b20772666c206b557420b1} 
+void {\bfseries resume\+Service} ()
+\begin{DoxyCompactList}\small\item\em Resumes the event generation service if it\textquotesingle{}s already been started and is currently paused. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static void \mbox{\hyperlink{class_event_generator_service_a2e3727078583aec0197aa6308e7e6e8d}{generate\+Event}} ()
-\end{DoxyCompactItemize}
+static void \mbox{\hyperlink{class_event_generator_service_ac1f19a8ee8f0f58df557df99cc8154f2}{generate\+Event}} ()
+\begin{DoxyCompactList}\small\item\em Generates a random event from the PREDEFINED\+\_\+\+EVENTS list and passes it to the \doxylink{class_event_dispatcher_service}{Event\+Dispatcher\+Service} to be dispatched. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -59,44 +72,50 @@ std\+::condition\+\_\+variable {\bfseries pause\+Condition}
 
 
 \doxysubsection{Detailed Description}
-Service that generates events on its own thread 
+The \doxylink{class_event_generator_service}{Event\+Generator\+Service} is responsible for generating events at random time intervals. 
+
+\begin{DoxyAuthor}{Author}
+Ryan Hecht
+\end{DoxyAuthor}
+The \doxylink{class_event_generator_service}{Event\+Generator\+Service} is a singleton service that generates events at random time intervals and sends them to the \doxylink{class_event_dispatcher_service}{Event\+Dispatcher\+Service} to be dispatched to \doxylink{class_bit_buddy}{Bit\+Buddy} and throughout the entire application. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_event_generator_service_a2e3727078583aec0197aa6308e7e6e8d}\label{class_event_generator_service_a2e3727078583aec0197aa6308e7e6e8d} 
+\Hypertarget{class_event_generator_service_ac1f19a8ee8f0f58df557df99cc8154f2}\label{class_event_generator_service_ac1f19a8ee8f0f58df557df99cc8154f2} 
 \index{EventGeneratorService@{EventGeneratorService}!generateEvent@{generateEvent}}
 \index{generateEvent@{generateEvent}!EventGeneratorService@{EventGeneratorService}}
 \doxysubsubsection{\texorpdfstring{generateEvent()}{generateEvent()}}
-{\footnotesize\ttfamily static void Event\+Generator\+Service\+::generate\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+{\footnotesize\ttfamily void Event\+Generator\+Service\+::generate\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
 
-Generates a random event from the PREDEFINED\+\_\+\+EVENTS list and passes it to the \doxylink{class_event_dispatcher_service}{Event\+Dispatcher\+Service} to be dispatched \Hypertarget{class_event_generator_service_ad94dd25656a05345ccd988a5f5d979af}\label{class_event_generator_service_ad94dd25656a05345ccd988a5f5d979af} 
+
+
+Generates a random event from the PREDEFINED\+\_\+\+EVENTS list and passes it to the \doxylink{class_event_dispatcher_service}{Event\+Dispatcher\+Service} to be dispatched. 
+
+Generates random events at normally distributed random time intervals using mt19937 random number generators \Hypertarget{class_event_generator_service_aa6ba452ddd49cd1eb6384fe34c6efb2e}\label{class_event_generator_service_aa6ba452ddd49cd1eb6384fe34c6efb2e} 
 \index{EventGeneratorService@{EventGeneratorService}!getInstance@{getInstance}}
 \index{getInstance@{getInstance}!EventGeneratorService@{EventGeneratorService}}
 \doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{class_event_generator_service}{Event\+Generator\+Service}} \& Event\+Generator\+Service\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_event_generator_service}{Event\+Generator\+Service}} \& Event\+Generator\+Service\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Singleton instance getter \begin{DoxyReturn}{Returns}
+
+
+Singleton instance getter. 
+
+\begin{DoxyReturn}{Returns}
 the instance 
 \end{DoxyReturn}
-\Hypertarget{class_event_generator_service_a6815fef4f2b20772666c206b557420b1}\label{class_event_generator_service_a6815fef4f2b20772666c206b557420b1} 
-\index{EventGeneratorService@{EventGeneratorService}!resumeService@{resumeService}}
-\index{resumeService@{resumeService}!EventGeneratorService@{EventGeneratorService}}
-\doxysubsubsection{\texorpdfstring{resumeService()}{resumeService()}}
-{\footnotesize\ttfamily void Event\+Generator\+Service\+::resume\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
-
-Resumes the event generation service if it\textquotesingle{}s already been started and is currently paused \Hypertarget{class_event_generator_service_adec5843f9f5d10afd7bc4d898a9e3290}\label{class_event_generator_service_adec5843f9f5d10afd7bc4d898a9e3290} 
+\Hypertarget{class_event_generator_service_adec5843f9f5d10afd7bc4d898a9e3290}\label{class_event_generator_service_adec5843f9f5d10afd7bc4d898a9e3290} 
 \index{EventGeneratorService@{EventGeneratorService}!startService@{startService}}
 \index{startService@{startService}!EventGeneratorService@{EventGeneratorService}}
 \doxysubsubsection{\texorpdfstring{startService()}{startService()}}
 {\footnotesize\ttfamily void Event\+Generator\+Service\+::start\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Starts the event generation service which generates events on its own thread at normally distributed random time intervals \Hypertarget{class_event_generator_service_a262888acaa4fab3525f294309b30d04b}\label{class_event_generator_service_a262888acaa4fab3525f294309b30d04b} 
-\index{EventGeneratorService@{EventGeneratorService}!stopService@{stopService}}
-\index{stopService@{stopService}!EventGeneratorService@{EventGeneratorService}}
-\doxysubsubsection{\texorpdfstring{stopService()}{stopService()}}
-{\footnotesize\ttfamily void Event\+Generator\+Service\+::stop\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Stops (pauses) the event generation service 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+Starts the event generation service. 
+
+Starts the event generation service which generates events on its own thread at normally distributed random time intervals 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/include/service/Event\+Generator\+Service.\+h\end{DoxyCompactItemize}
+game/include/service/Event\+Generator\+Service.\+h\item 
+game/src/service/Event\+Generator\+Service.\+cpp\end{DoxyCompactItemize}

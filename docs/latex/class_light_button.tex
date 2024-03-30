@@ -1,0 +1,149 @@
+\doxysection{Light\+Button Class Reference}
+\hypertarget{class_light_button}{}\label{class_light_button}\index{LightButton@{LightButton}}
+
+
+The \doxylink{class_light_button}{Light\+Button} class extends QPush\+Button to provide a light-\/themed toggle button.  
+
+
+
+
+{\ttfamily \#include $<$Light\+Button.\+h$>$}
+
+Inheritance diagram for Light\+Button\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_light_button}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_light_button_ad353b775313bf2cd77f9a00aa73c4c6e}{theme\+Change}} (const QString \&new\+Style)
+\begin{DoxyCompactList}\small\item\em Signal emitted when the theme should be changed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_button_acf53b21a994603525b56ecc88ccefe3f}{text\+Change}} (bool is\+Dark\+Mode)
+\begin{DoxyCompactList}\small\item\em Signal emitted to indicate a change in text mode, useful for adjusting text colors in dark/light modes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_light_button_a4d2eb84c24d3739bef52e991efd96a79}{Light\+Button}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Construct a new Light Button object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_light_button_a98994ebd20a71fadd5932a70b69072cb}{light\+Clicked}} ()
+\begin{DoxyCompactList}\small\item\em Slot that handles the button\textquotesingle{}s click event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_light_button_a5bc5a213ae69e1be1ab89af8206374c7}{set\+Image}} (QString)
+\begin{DoxyCompactList}\small\item\em Sets the button\textquotesingle{}s image based on the current state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_light_button_a44f80a0722b270f2d3cb467e20b72a51}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the button\textquotesingle{}s appearance and state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_light_button_a245c594106323fda958c81716d02ab7e}\label{class_light_button_a245c594106323fda958c81716d02ab7e} 
+bool {\bfseries is\+Light\+On}
+\begin{DoxyCompactList}\small\item\em Indicates whether the light mode is currently enabled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_light_button}{Light\+Button} class extends QPush\+Button to provide a light-\/themed toggle button. 
+
+\begin{DoxyAuthor}{Author}
+Shaylan Pratt
+\end{DoxyAuthor}
+This button is designed to toggle between two states, typically representing light and dark modes or turning a light-\/themed feature on and off. It emits signals upon changing themes or text modes, allowing for broader application-\/level changes in response to its state. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_light_button_a4d2eb84c24d3739bef52e991efd96a79}\label{class_light_button_a4d2eb84c24d3739bef52e991efd96a79} 
+\index{LightButton@{LightButton}!LightButton@{LightButton}}
+\index{LightButton@{LightButton}!LightButton@{LightButton}}
+\doxysubsubsection{\texorpdfstring{LightButton()}{LightButton()}}
+{\footnotesize\ttfamily Light\+Button\+::\+Light\+Button (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new Light Button object. 
+
+Initializes the button with default styling and connects the click signal to the slot handling the toggle logic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent widget of this button. Default is nullptr. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_light_button_a98994ebd20a71fadd5932a70b69072cb}\label{class_light_button_a98994ebd20a71fadd5932a70b69072cb} 
+\index{LightButton@{LightButton}!lightClicked@{lightClicked}}
+\index{lightClicked@{lightClicked}!LightButton@{LightButton}}
+\doxysubsubsection{\texorpdfstring{lightClicked}{lightClicked}}
+{\footnotesize\ttfamily void Light\+Button\+::light\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Slot that handles the button\textquotesingle{}s click event. 
+
+Toggles the light state and updates the button\textquotesingle{}s appearance and emitted signals accordingly. \Hypertarget{class_light_button_a5bc5a213ae69e1be1ab89af8206374c7}\label{class_light_button_a5bc5a213ae69e1be1ab89af8206374c7} 
+\index{LightButton@{LightButton}!setImage@{setImage}}
+\index{setImage@{setImage}!LightButton@{LightButton}}
+\doxysubsubsection{\texorpdfstring{setImage()}{setImage()}}
+{\footnotesize\ttfamily void Light\+Button\+::set\+Image (\begin{DoxyParamCaption}\item[{QString}]{image\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets the button\textquotesingle{}s image based on the current state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image\+Path} & The path to the image file that should be displayed on the button. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_light_button_acf53b21a994603525b56ecc88ccefe3f}\label{class_light_button_acf53b21a994603525b56ecc88ccefe3f} 
+\index{LightButton@{LightButton}!textChange@{textChange}}
+\index{textChange@{textChange}!LightButton@{LightButton}}
+\doxysubsubsection{\texorpdfstring{textChange}{textChange}}
+{\footnotesize\ttfamily void Light\+Button\+::text\+Change (\begin{DoxyParamCaption}\item[{bool}]{is\+Dark\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted to indicate a change in text mode, useful for adjusting text colors in dark/light modes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Dark\+Mode} & Indicates whether the text should be optimized for dark mode (true) or light mode (false). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_light_button_ad353b775313bf2cd77f9a00aa73c4c6e}\label{class_light_button_ad353b775313bf2cd77f9a00aa73c4c6e} 
+\index{LightButton@{LightButton}!themeChange@{themeChange}}
+\index{themeChange@{themeChange}!LightButton@{LightButton}}
+\doxysubsubsection{\texorpdfstring{themeChange}{themeChange}}
+{\footnotesize\ttfamily void Light\+Button\+::theme\+Change (\begin{DoxyParamCaption}\item[{const QString \&}]{new\+Style }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Signal emitted when the theme should be changed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Style} & The new style or theme to be applied, typically "{}light"{} or "{}dark"{}. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_light_button_a44f80a0722b270f2d3cb467e20b72a51}\label{class_light_button_a44f80a0722b270f2d3cb467e20b72a51} 
+\index{LightButton@{LightButton}!update@{update}}
+\index{update@{update}!LightButton@{LightButton}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Light\+Button\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates the button\textquotesingle{}s appearance and state. 
+
+This method is called to refresh the button\textquotesingle{}s visual appearance based on the current state and to emit appropriate signals. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game/include/component/Light\+Button.\+h\item 
+game/src/component/Light\+Button.\+cpp\end{DoxyCompactItemize}

@@ -2,6 +2,11 @@
 \hypertarget{class_main_window}{}\label{class_main_window}\index{MainWindow@{MainWindow}}
 
 
+Responsible for the window of the game.  
+
+
+
+
 {\ttfamily \#include $<$Main\+Window.\+h$>$}
 
 Inheritance diagram for Main\+Window\+:\begin{figure}[H]
@@ -27,43 +32,71 @@ Inheritance diagram for Main\+Window\+:\begin{figure}[H]
 \Hypertarget{class_main_window_a54da5b008666d19dcdfb1a5102057b99}\label{class_main_window_a54da5b008666d19dcdfb1a5102057b99} 
 \mbox{\hyperlink{class_main_window}{Main\+Window}} \& {\bfseries operator=} (\mbox{\hyperlink{class_main_window}{Main\+Window}} \&\&)=delete
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Protected Member Functions}
-\begin{DoxyCompactItemize}
-\item 
-\Hypertarget{class_main_window_aad75236c74a5c340c3e18749a9b5eb4f}\label{class_main_window_aad75236c74a5c340c3e18749a9b5eb4f} 
-void {\bfseries resize\+Event} (QResize\+Event \texorpdfstring{$\ast$}{*}event) override
-\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Slots}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_main_window_a8e1c1ad87a68b27f19492549b9c4e773}\label{class_main_window_a8e1c1ad87a68b27f19492549b9c4e773} 
-void {\bfseries open\+Settings} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_main_window_a8e1c1ad87a68b27f19492549b9c4e773}{open\+Settings}} ()
+\begin{DoxyCompactList}\small\item\em Opens the additional windows that are accessible through the main\+Window. \end{DoxyCompactList}\item 
+\Hypertarget{class_main_window_a4d6030556f6c422800de375e4df9f808}\label{class_main_window_a4d6030556f6c422800de375e4df9f808} 
+void {\bfseries update\+Central\+Widget\+Style} (const QString \&new\+Style)
+\item 
+\Hypertarget{class_main_window_aa23840ba480cc293f6cc3e8501a58a73}\label{class_main_window_aa23840ba480cc293f6cc3e8501a58a73} 
+void {\bfseries open\+Shop\+Window} ()
+\begin{DoxyCompactList}\small\item\em Responsible for opening the shop window when the shop button is pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a35c1d3ce153b7919598b4df63c455cc2}{update\+Theme}} (const QString \&new\+Style)
+\begin{DoxyCompactList}\small\item\em Changes the style of the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_main_window_aabdff4cfb4b3b58909f2febf9023b55d}\label{class_main_window_aabdff4cfb4b3b58909f2febf9023b55d} 
-void {\bfseries load\+Default\+Sprite} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_main_window_aa353e8faed952a95e2fc62d7a5018a89}{setup\+Ui}} ()
+\begin{DoxyCompactList}\small\item\em Will set up the homepage of the bitbuddy game. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aa88ba24b2540a862b065a922ab8dcef6}{load\+Default\+Sprite}} () const
+\begin{DoxyCompactList}\small\item\em Sets the default sprite to the happy bitbuddy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aad75236c74a5c340c3e18749a9b5eb4f}{resize\+Event}} (QResize\+Event \texorpdfstring{$\ast$}{*}event) override
+\begin{DoxyCompactList}\small\item\em resize\+Event will be called when the window is resized \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_main_window_a0466805ebcbb37c6f6585757ae5cdcbc}\label{class_main_window_a0466805ebcbb37c6f6585757ae5cdcbc} 
-QLabel \texorpdfstring{$\ast$}{*} {\bfseries sprite\+Label}
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries sprite\+Label} \{\}
 \item 
 \Hypertarget{class_main_window_afc068ac0d3d1e5ca06bf90dec3de5854}\label{class_main_window_afc068ac0d3d1e5ca06bf90dec3de5854} 
-\mbox{\hyperlink{class_bit_buddy_sprite_handler}{Bit\+Buddy\+Sprite\+Handler}} \texorpdfstring{$\ast$}{*} {\bfseries sprite\+Handler}
+\mbox{\hyperlink{class_bit_buddy_sprite_handler}{Bit\+Buddy\+Sprite\+Handler}} \texorpdfstring{$\ast$}{*} {\bfseries sprite\+Handler} \{\}
 \item 
 \Hypertarget{class_main_window_aec2daff2fee8e4f8f3efd274e08ba41a}\label{class_main_window_aec2daff2fee8e4f8f3efd274e08ba41a} 
-QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries settings\+Button}
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries settings\+Button} \{\}
 \item 
-\Hypertarget{class_main_window_af2e2dc3bb1df56ecce3536b6282019e8}\label{class_main_window_af2e2dc3bb1df56ecce3536b6282019e8} 
-\mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*} {\bfseries bit\+Buddy}
+\Hypertarget{class_main_window_a9f8816ada80f8e9c89318d92de5e6471}\label{class_main_window_a9f8816ada80f8e9c89318d92de5e6471} 
+\mbox{\hyperlink{class_bit_buddy_status_widget}{Bit\+Buddy\+Status\+Widget}} \texorpdfstring{$\ast$}{*} {\bfseries bit\+Buddy\+Status\+Widget} \{\}
+\item 
+\Hypertarget{class_main_window_af5ad86027c7df768b6961432b861230f}\label{class_main_window_af5ad86027c7df768b6961432b861230f} 
+\mbox{\hyperlink{class_light_button}{Light\+Button}} \texorpdfstring{$\ast$}{*} {\bfseries light\+Switch} \{\}
+\item 
+\Hypertarget{class_main_window_ab0876b630a84e44ba0ee3afa0ae26ff0}\label{class_main_window_ab0876b630a84e44ba0ee3afa0ae26ff0} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries stats} \{\}
+\item 
+\Hypertarget{class_main_window_ad3bde47a75b6c59146d6aff1752d077f}\label{class_main_window_ad3bde47a75b6c59146d6aff1752d077f} 
+QWidget \texorpdfstring{$\ast$}{*} {\bfseries central\+Widget}
+\item 
+\Hypertarget{class_main_window_a2cf19667f04ffd79b622b2fe3a136f72}\label{class_main_window_a2cf19667f04ffd79b622b2fe3a136f72} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries shop} \{\}
+\item 
+\Hypertarget{class_main_window_af8ad673d6721a5f96f16da3431bb9424}\label{class_main_window_af8ad673d6721a5f96f16da3431bb9424} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries shop\+Button} \{\}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-The main window of the application 
+Responsible for the window of the game. 
+
+The main window of the application
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\label{class_main_window_a996c5a2b6f77944776856f08ec30858d} 
@@ -83,6 +116,79 @@ Constructor of the \doxylink{class_main_window}{Main\+Window}.
 \end{DoxyParams}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_main_window_aa88ba24b2540a862b065a922ab8dcef6}\label{class_main_window_aa88ba24b2540a862b065a922ab8dcef6} 
+\index{MainWindow@{MainWindow}!loadDefaultSprite@{loadDefaultSprite}}
+\index{loadDefaultSprite@{loadDefaultSprite}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{loadDefaultSprite()}{loadDefaultSprite()}}
+{\footnotesize\ttfamily void Main\+Window\+::load\+Default\+Sprite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets the default sprite to the happy bitbuddy. 
+
+Will load the default sprite used for the \doxylink{class_bit_buddy}{Bit\+Buddy} which is the happy bitbuddy. \Hypertarget{class_main_window_a8e1c1ad87a68b27f19492549b9c4e773}\label{class_main_window_a8e1c1ad87a68b27f19492549b9c4e773} 
+\index{MainWindow@{MainWindow}!openSettings@{openSettings}}
+\index{openSettings@{openSettings}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{openSettings}{openSettings}}
+{\footnotesize\ttfamily void Main\+Window\+::open\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Opens the additional windows that are accessible through the main\+Window. 
+
+Responsible for opening the setting window when the settings button is pressed. \Hypertarget{class_main_window_aad75236c74a5c340c3e18749a9b5eb4f}\label{class_main_window_aad75236c74a5c340c3e18749a9b5eb4f} 
+\index{MainWindow@{MainWindow}!resizeEvent@{resizeEvent}}
+\index{resizeEvent@{resizeEvent}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{resizeEvent()}{resizeEvent()}}
+{\footnotesize\ttfamily void Main\+Window\+::resize\+Event (\begin{DoxyParamCaption}\item[{QResize\+Event \texorpdfstring{$\ast$}{*}}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}}
+
+
+
+resize\+Event will be called when the window is resized 
+
+Will ensure the position of the bitbuddy and its items are in the correct places 
+\begin{DoxyParams}{Parameters}
+{\em event} & resize event is sent in\\
+\hline
+\end{DoxyParams}
+resize \doxylink{class_event}{Event} is responsible for ensuring the objects on the screen remain in their correct position regardless of the window size 
+\begin{DoxyParams}{Parameters}
+{\em event} & takes in the event which is sent when the window is resized \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_main_window_aa353e8faed952a95e2fc62d7a5018a89}\label{class_main_window_aa353e8faed952a95e2fc62d7a5018a89} 
+\index{MainWindow@{MainWindow}!setupUi@{setupUi}}
+\index{setupUi@{setupUi}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{setupUi()}{setupUi()}}
+{\footnotesize\ttfamily void Main\+Window\+::setup\+Ui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Will set up the homepage of the bitbuddy game. 
+
+setup\+UI() is responsible for the design of the mainwindow aswell as the functionality \Hypertarget{class_main_window_a35c1d3ce153b7919598b4df63c455cc2}\label{class_main_window_a35c1d3ce153b7919598b4df63c455cc2} 
+\index{MainWindow@{MainWindow}!updateTheme@{updateTheme}}
+\index{updateTheme@{updateTheme}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{updateTheme}{updateTheme}}
+{\footnotesize\ttfamily void Main\+Window\+::update\+Theme (\begin{DoxyParamCaption}\item[{const QString \&}]{new\+Style }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Changes the style of the game. 
+
+Changes the theme of the \doxylink{class_main_window}{Main\+Window}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Style} & light or dark\\
+\hline
+{\em new\+Style} & causes the blue status bars to become grey \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/include/Main\+Window.\+h\end{DoxyCompactItemize}
+game/include/Main\+Window.\+h\item 
+game/src/Main\+Window.\+cpp\end{DoxyCompactItemize}

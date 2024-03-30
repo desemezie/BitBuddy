@@ -1,5 +1,14 @@
 \doxysection{Bit\+Buddy\+Sprite\+Handler Class Reference}
 \hypertarget{class_bit_buddy_sprite_handler}{}\label{class_bit_buddy_sprite_handler}\index{BitBuddySpriteHandler@{BitBuddySpriteHandler}}
+
+
+The \doxylink{class_bit_buddy_sprite_handler}{Bit\+Buddy\+Sprite\+Handler} is responsible for the changing sprites of the bitbuddy based on his emotional levels.  
+
+
+
+
+{\ttfamily \#include $<$Bit\+Buddy\+Sprite\+Handler.\+h$>$}
+
 Inheritance diagram for Bit\+Buddy\+Sprite\+Handler\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,8 +18,7 @@ Inheritance diagram for Bit\+Buddy\+Sprite\+Handler\+:\begin{figure}[H]
 \doxysubsubsection*{Public Slots}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_bit_buddy_sprite_handler_aa4bd0d9809755830f0b83f52e76bd390}\label{class_bit_buddy_sprite_handler_aa4bd0d9809755830f0b83f52e76bd390} 
-void {\bfseries handle\+Event} (const \mbox{\hyperlink{class_event}{Event}} \&event)
+void \mbox{\hyperlink{class_bit_buddy_sprite_handler_aa4bd0d9809755830f0b83f52e76bd390}{handle\+Event}} (const \mbox{\hyperlink{class_event}{Event}} \&event)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -18,17 +26,27 @@ void {\bfseries handle\+Event} (const \mbox{\hyperlink{class_event}{Event}} \&ev
 \Hypertarget{class_bit_buddy_sprite_handler_a7afb9fde0bb606f3eb9bd828d2fb503f}\label{class_bit_buddy_sprite_handler_a7afb9fde0bb606f3eb9bd828d2fb503f} 
 {\bfseries Bit\+Buddy\+Sprite\+Handler} (QLabel \texorpdfstring{$\ast$}{*}display\+Label, QObject \texorpdfstring{$\ast$}{*}parent=nullptr, \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*}bit\+Buddy=nullptr)
 \item 
-\Hypertarget{class_bit_buddy_sprite_handler_a9cab98961755b44554ce410ad6faf872}\label{class_bit_buddy_sprite_handler_a9cab98961755b44554ce410ad6faf872} 
-void {\bfseries change\+Sprite} (const std\+::string \&state)
-\item 
+void \mbox{\hyperlink{class_bit_buddy_sprite_handler_a9cab98961755b44554ce410ad6faf872}{change\+Sprite}} (const std\+::string \&state)
+\begin{DoxyCompactList}\small\item\em will change the sprite of the bitbuddy \end{DoxyCompactList}\item 
 \Hypertarget{class_bit_buddy_sprite_handler_a58a63a8dec0be695e6313d4ff2f749bc}\label{class_bit_buddy_sprite_handler_a58a63a8dec0be695e6313d4ff2f749bc} 
 void {\bfseries update\+Pills\+Position} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em function to update the position of the pills once the window is resized \end{DoxyCompactList}\item 
+\Hypertarget{class_bit_buddy_sprite_handler_a511e7f3886ee2aa41561c47a18b7505b}\label{class_bit_buddy_sprite_handler_a511e7f3886ee2aa41561c47a18b7505b} 
+void {\bfseries update\+Drink\+Position} ()
+\begin{DoxyCompactList}\small\item\em function to update the position of the drink once the window is resized \end{DoxyCompactList}\item 
+\Hypertarget{class_bit_buddy_sprite_handler_ad5394668f391b0e7f54d207c22ea5916}\label{class_bit_buddy_sprite_handler_ad5394668f391b0e7f54d207c22ea5916} 
+void {\bfseries update\+Taco\+Position} ()
+\begin{DoxyCompactList}\small\item\em function to update the position of the taco once the window is resized \end{DoxyCompactList}\item 
+\Hypertarget{class_bit_buddy_sprite_handler_a59ada245b22381ec6d1bdbb15981d4ad}\label{class_bit_buddy_sprite_handler_a59ada245b22381ec6d1bdbb15981d4ad} 
+void {\bfseries update\+Bubble\+Position} ()
+\begin{DoxyCompactList}\small\item\em function to update the position of the bubbles once the window is resized \end{DoxyCompactList}\item 
+\Hypertarget{class_bit_buddy_sprite_handler_aff251b52fde240c58beca56c789719be}\label{class_bit_buddy_sprite_handler_aff251b52fde240c58beca56c789719be} 
+void {\bfseries update\+ZZZPosition} ()
+\begin{DoxyCompactList}\small\item\em function to update the position of the zzz\textquotesingle{}s once the window is resized \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_bit_buddy_sprite_handler_aecf54351f1f3bedc51d8d9fadf9fb49d}\label{class_bit_buddy_sprite_handler_aecf54351f1f3bedc51d8d9fadf9fb49d} 
-void {\bfseries display\+Taco\+And\+Remove} (const QString \&image\+Path)
+void \mbox{\hyperlink{class_bit_buddy_sprite_handler_aecf54351f1f3bedc51d8d9fadf9fb49d}{display\+Taco\+And\+Remove}} (const QString \&image\+Path)
 \item 
 \Hypertarget{class_bit_buddy_sprite_handler_aa8c40b4fd14c00e01532df29ef2a70d4}\label{class_bit_buddy_sprite_handler_aa8c40b4fd14c00e01532df29ef2a70d4} 
 void {\bfseries change\+Sprite\+Smoothly} (const QString \&image\+Path)
@@ -42,11 +60,9 @@ void {\bfseries display\+ZZZ} (const QString \&image\+Path)
 \Hypertarget{class_bit_buddy_sprite_handler_a497d3e442c36bf83339b56d39a11b284}\label{class_bit_buddy_sprite_handler_a497d3e442c36bf83339b56d39a11b284} 
 void {\bfseries set\+Default\+Sprite} ()
 \item 
-\Hypertarget{class_bit_buddy_sprite_handler_a6e036711ba8e8bbe8b025adc064c092b}\label{class_bit_buddy_sprite_handler_a6e036711ba8e8bbe8b025adc064c092b} 
-void {\bfseries change\+Sprite\+Smoothly} (const QString \&image\+Path, std\+::function$<$ void()$>$ callback)
+void \mbox{\hyperlink{class_bit_buddy_sprite_handler_a6e036711ba8e8bbe8b025adc064c092b}{change\+Sprite\+Smoothly}} (const QString \&image\+Path, std\+::function$<$ void()$>$ callback)
 \item 
-\Hypertarget{class_bit_buddy_sprite_handler_af033601c0c0f62a29dd12455dc2e307b}\label{class_bit_buddy_sprite_handler_af033601c0c0f62a29dd12455dc2e307b} 
-void {\bfseries display\+Drink} (const QString \&image\+Path)
+void \mbox{\hyperlink{class_bit_buddy_sprite_handler_af033601c0c0f62a29dd12455dc2e307b}{display\+Drink}} (const QString \&image\+Path)
 \item 
 \Hypertarget{class_bit_buddy_sprite_handler_a837dcbb605ac4ae26227c74996200816}\label{class_bit_buddy_sprite_handler_a837dcbb605ac4ae26227c74996200816} 
 void {\bfseries display\+Pills} (const QString \&image\+Path)
@@ -60,8 +76,9 @@ void {\bfseries post\+Update\+Check} ()
 \Hypertarget{class_bit_buddy_sprite_handler_adce6208b1d3543c3a1fd9df83b03b473}\label{class_bit_buddy_sprite_handler_adce6208b1d3543c3a1fd9df83b03b473} 
 void {\bfseries sprite\+Organizer} ()
 \item 
-\Hypertarget{class_bit_buddy_sprite_handler_a0c787e1e6c343823473b1bb2e94fbc4a}\label{class_bit_buddy_sprite_handler_a0c787e1e6c343823473b1bb2e94fbc4a} 
-void {\bfseries sprite\+Organizer} (const \mbox{\hyperlink{class_event}{Event}} \&event)
+void \mbox{\hyperlink{class_bit_buddy_sprite_handler_a0c787e1e6c343823473b1bb2e94fbc4a}{sprite\+Organizer}} (const \mbox{\hyperlink{class_event}{Event}} \&event)
+\item 
+\mbox{\hyperlink{class_bit_buddy_attribute_name}{Bit\+Buddy\+Attribute\+Name}} \mbox{\hyperlink{class_bit_buddy_sprite_handler_a0feba00601266f337c77d3acf324b73f}{check\+Levels}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -74,9 +91,103 @@ QLabel \texorpdfstring{$\ast$}{*} {\bfseries temporary\+Label}
 \item 
 \Hypertarget{class_bit_buddy_sprite_handler_a2ce53533c6b9ecab0e12abc01f921c01}\label{class_bit_buddy_sprite_handler_a2ce53533c6b9ecab0e12abc01f921c01} 
 \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*} {\bfseries bit\+Buddy}
+\item 
+\Hypertarget{class_bit_buddy_sprite_handler_a8f0ce28d9fb2edc942a3859d8c8b3d5a}\label{class_bit_buddy_sprite_handler_a8f0ce28d9fb2edc942a3859d8c8b3d5a} 
+QList$<$ QLabel \texorpdfstring{$\ast$}{*} $>$ {\bfseries bubble\+Labels}
 \end{DoxyCompactItemize}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Detailed Description}
+The \doxylink{class_bit_buddy_sprite_handler}{Bit\+Buddy\+Sprite\+Handler} is responsible for the changing sprites of the bitbuddy based on his emotional levels. 
+
+constructor for Sprite Handler
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Label} & -\/ takes the base label \\
+\hline
+{\em parent} & -\/ the parent object \\
+\hline
+{\em bit\+Buddy} & -\/ and the bitbuddy instance \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_bit_buddy_sprite_handler_a9cab98961755b44554ce410ad6faf872}\label{class_bit_buddy_sprite_handler_a9cab98961755b44554ce410ad6faf872} 
+\index{BitBuddySpriteHandler@{BitBuddySpriteHandler}!changeSprite@{changeSprite}}
+\index{changeSprite@{changeSprite}!BitBuddySpriteHandler@{BitBuddySpriteHandler}}
+\doxysubsubsection{\texorpdfstring{changeSprite()}{changeSprite()}}
+{\footnotesize\ttfamily void Bit\+Buddy\+Sprite\+Handler\+::change\+Sprite (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{state }\end{DoxyParamCaption})}
+
+
+
+will change the sprite of the bitbuddy 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state} & -\/ given the state in string form \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bit_buddy_sprite_handler_a6e036711ba8e8bbe8b025adc064c092b}\label{class_bit_buddy_sprite_handler_a6e036711ba8e8bbe8b025adc064c092b} 
+\index{BitBuddySpriteHandler@{BitBuddySpriteHandler}!changeSpriteSmoothly@{changeSpriteSmoothly}}
+\index{changeSpriteSmoothly@{changeSpriteSmoothly}!BitBuddySpriteHandler@{BitBuddySpriteHandler}}
+\doxysubsubsection{\texorpdfstring{changeSpriteSmoothly()}{changeSpriteSmoothly()}}
+{\footnotesize\ttfamily void Bit\+Buddy\+Sprite\+Handler\+::change\+Sprite\+Smoothly (\begin{DoxyParamCaption}\item[{const QString \&}]{image\+Path,  }\item[{std\+::function$<$ void()$>$}]{callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+change\+Sprite\+Smoothly will take the given image\+Path and change the sprite 
+\begin{DoxyParams}{Parameters}
+{\em image\+Path} & -\/ url path to image \\
+\hline
+{\em callback} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bit_buddy_sprite_handler_a0feba00601266f337c77d3acf324b73f}\label{class_bit_buddy_sprite_handler_a0feba00601266f337c77d3acf324b73f} 
+\index{BitBuddySpriteHandler@{BitBuddySpriteHandler}!checkLevels@{checkLevels}}
+\index{checkLevels@{checkLevels}!BitBuddySpriteHandler@{BitBuddySpriteHandler}}
+\doxysubsubsection{\texorpdfstring{checkLevels()}{checkLevels()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bit_buddy_attribute_name}{Bit\+Buddy\+Attribute\+Name}} Bit\+Buddy\+Sprite\+Handler\+::check\+Levels (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Function responsible for maintaining the correct sprites after event occurs \begin{DoxyReturn}{Returns}
+\doxylink{class_bit_buddy_attribute_name}{Bit\+Buddy\+Attribute\+Name} for the current attribute set off 
+\end{DoxyReturn}
+\Hypertarget{class_bit_buddy_sprite_handler_af033601c0c0f62a29dd12455dc2e307b}\label{class_bit_buddy_sprite_handler_af033601c0c0f62a29dd12455dc2e307b} 
+\index{BitBuddySpriteHandler@{BitBuddySpriteHandler}!displayDrink@{displayDrink}}
+\index{displayDrink@{displayDrink}!BitBuddySpriteHandler@{BitBuddySpriteHandler}}
+\doxysubsubsection{\texorpdfstring{displayDrink()}{displayDrink()}}
+{\footnotesize\ttfamily void Bit\+Buddy\+Sprite\+Handler\+::display\+Drink (\begin{DoxyParamCaption}\item[{const QString \&}]{image\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Methods to display temporary objects. Each method will display the item in a position dynamically according to screen size. \Hypertarget{class_bit_buddy_sprite_handler_aecf54351f1f3bedc51d8d9fadf9fb49d}\label{class_bit_buddy_sprite_handler_aecf54351f1f3bedc51d8d9fadf9fb49d} 
+\index{BitBuddySpriteHandler@{BitBuddySpriteHandler}!displayTacoAndRemove@{displayTacoAndRemove}}
+\index{displayTacoAndRemove@{displayTacoAndRemove}!BitBuddySpriteHandler@{BitBuddySpriteHandler}}
+\doxysubsubsection{\texorpdfstring{displayTacoAndRemove()}{displayTacoAndRemove()}}
+{\footnotesize\ttfamily void Bit\+Buddy\+Sprite\+Handler\+::display\+Taco\+And\+Remove (\begin{DoxyParamCaption}\item[{const QString \&}]{image\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Methods to display temporary objects. Each method will display the item in a position dynamically according to screen size. \Hypertarget{class_bit_buddy_sprite_handler_aa4bd0d9809755830f0b83f52e76bd390}\label{class_bit_buddy_sprite_handler_aa4bd0d9809755830f0b83f52e76bd390} 
+\index{BitBuddySpriteHandler@{BitBuddySpriteHandler}!handleEvent@{handleEvent}}
+\index{handleEvent@{handleEvent}!BitBuddySpriteHandler@{BitBuddySpriteHandler}}
+\doxysubsubsection{\texorpdfstring{handleEvent}{handleEvent}}
+{\footnotesize\ttfamily void Bit\+Buddy\+Sprite\+Handler\+::handle\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_event}{Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+handle\+Event will take the events that are sent out by the \doxylink{class_event}{Event} dispatcher and in return change the sprite accordingly 
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_bit_buddy_sprite_handler_a0c787e1e6c343823473b1bb2e94fbc4a}\label{class_bit_buddy_sprite_handler_a0c787e1e6c343823473b1bb2e94fbc4a} 
+\index{BitBuddySpriteHandler@{BitBuddySpriteHandler}!spriteOrganizer@{spriteOrganizer}}
+\index{spriteOrganizer@{spriteOrganizer}!BitBuddySpriteHandler@{BitBuddySpriteHandler}}
+\doxysubsubsection{\texorpdfstring{spriteOrganizer()}{spriteOrganizer()}}
+{\footnotesize\ttfamily void Bit\+Buddy\+Sprite\+Handler\+::sprite\+Organizer (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_event}{Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/include/service/Bit\+Buddy\+Sprite\+Handler.\+h\end{DoxyCompactItemize}
+game/include/service/Bit\+Buddy\+Sprite\+Handler.\+h\item 
+game/src/service/Bit\+Buddy\+Sprite\+Handler.\+cpp\end{DoxyCompactItemize}

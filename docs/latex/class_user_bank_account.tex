@@ -1,0 +1,188 @@
+\doxysection{User\+Bank\+Account Class Reference}
+\hypertarget{class_user_bank_account}{}\label{class_user_bank_account}\index{UserBankAccount@{UserBankAccount}}
+
+
+Represents a user\textquotesingle{}s bank account with a balance that can be deposited to or withdrawn from.  
+
+
+
+
+{\ttfamily \#include $<$User\+Bank\+Account.\+h$>$}
+
+Inheritance diagram for User\+Bank\+Account\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_user_bank_account}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_user_bank_account_abe0bfe8b8f36f2454c79f267e2046099}{bank\+Account\+Updated}} (int balance)
+\begin{DoxyCompactList}\small\item\em Emitted when the \doxylink{class_user_bank_account}{User\+Bank\+Account}\textquotesingle{}s balance is updated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_user_bank_account_a2debf0f08d4bc7b02119ff20c9d01fa1}{User\+Bank\+Account}} (int balance=MIN\+\_\+\+USER\+\_\+\+ACCOUNT\+\_\+\+BALANCE)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_user_bank_account}{User\+Bank\+Account}. \end{DoxyCompactList}\item 
+\Hypertarget{class_user_bank_account_a9e91187878b8939bae426a75a3815a91}\label{class_user_bank_account_a9e91187878b8939bae426a75a3815a91} 
+{\bfseries User\+Bank\+Account} (const \mbox{\hyperlink{class_user_bank_account}{User\+Bank\+Account}} \&)=delete
+\item 
+\Hypertarget{class_user_bank_account_a63bfa48188e8160fa88d148c21997b90}\label{class_user_bank_account_a63bfa48188e8160fa88d148c21997b90} 
+\mbox{\hyperlink{class_user_bank_account}{User\+Bank\+Account}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_user_bank_account}{User\+Bank\+Account}} \&)=delete
+\item 
+\Hypertarget{class_user_bank_account_a42ae6756f7084983b7d9dde6513b9a8d}\label{class_user_bank_account_a42ae6756f7084983b7d9dde6513b9a8d} 
+{\bfseries User\+Bank\+Account} (\mbox{\hyperlink{class_user_bank_account}{User\+Bank\+Account}} \&\&)=delete
+\item 
+\Hypertarget{class_user_bank_account_ab414193d62095714b38ca0eace9469c4}\label{class_user_bank_account_ab414193d62095714b38ca0eace9469c4} 
+\mbox{\hyperlink{class_user_bank_account}{User\+Bank\+Account}} \& {\bfseries operator=} (\mbox{\hyperlink{class_user_bank_account}{User\+Bank\+Account}} \&\&)=delete
+\item 
+void \mbox{\hyperlink{class_user_bank_account_a7e937a859ebb309c4d564b496873ae5b}{deposit}} (int amount)
+\begin{DoxyCompactList}\small\item\em Deposits an amount of Bit\+Bucks into the \doxylink{class_user_bank_account}{User\+Bank\+Account}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_bank_account_aa8aa271779c5d878e378dd6c946178aa}{withdraw}} (int amount)
+\begin{DoxyCompactList}\small\item\em Withdraws an amount of Bit\+Bucks from the \doxylink{class_user_bank_account}{User\+Bank\+Account}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_user_bank_account_a682b11ecc112957bca8ec94dd2b78399}{get\+Balance}} () const
+\begin{DoxyCompactList}\small\item\em Gets the balance of the \doxylink{class_user_bank_account}{User\+Bank\+Account}. \end{DoxyCompactList}\item 
+QJson\+Object \mbox{\hyperlink{class_user_bank_account_a6bce77045c06cc6d407b3d1bf4bc92f3}{to\+Json}} () const
+\begin{DoxyCompactList}\small\item\em Converts the \doxylink{class_user_bank_account}{User\+Bank\+Account} to a JSON object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_user_bank_account}{User\+Bank\+Account}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_user_bank_account_a8f365c8f95648e045bd77b1f8a553b1e}{from\+Json}} (const QJson\+Object \&user\+Bank\+Account\+Json)
+\begin{DoxyCompactList}\small\item\em Converts a JSON object to a \doxylink{class_user_bank_account}{User\+Bank\+Account}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_user_bank_account_a15989f26d37b2b03797a724d234f9c7e}\label{class_user_bank_account_a15989f26d37b2b03797a724d234f9c7e} 
+int {\bfseries balance}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a user\textquotesingle{}s bank account with a balance that can be deposited to or withdrawn from. 
+
+\begin{DoxyAuthor}{Author}
+Ryan Hecht 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_user_bank_account_a2debf0f08d4bc7b02119ff20c9d01fa1}\label{class_user_bank_account_a2debf0f08d4bc7b02119ff20c9d01fa1} 
+\index{UserBankAccount@{UserBankAccount}!UserBankAccount@{UserBankAccount}}
+\index{UserBankAccount@{UserBankAccount}!UserBankAccount@{UserBankAccount}}
+\doxysubsubsection{\texorpdfstring{UserBankAccount()}{UserBankAccount()}}
+{\footnotesize\ttfamily User\+Bank\+Account\+::\+User\+Bank\+Account (\begin{DoxyParamCaption}\item[{int}]{balance = {\ttfamily MIN\+\_\+USER\+\_\+ACCOUNT\+\_\+BALANCE} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Constructor for the \doxylink{class_user_bank_account}{User\+Bank\+Account}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em balance} & The initial balance of the \doxylink{class_user_bank_account}{User\+Bank\+Account} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_user_bank_account_abe0bfe8b8f36f2454c79f267e2046099}\label{class_user_bank_account_abe0bfe8b8f36f2454c79f267e2046099} 
+\index{UserBankAccount@{UserBankAccount}!bankAccountUpdated@{bankAccountUpdated}}
+\index{bankAccountUpdated@{bankAccountUpdated}!UserBankAccount@{UserBankAccount}}
+\doxysubsubsection{\texorpdfstring{bankAccountUpdated}{bankAccountUpdated}}
+{\footnotesize\ttfamily void User\+Bank\+Account\+::bank\+Account\+Updated (\begin{DoxyParamCaption}\item[{int}]{balance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Emitted when the \doxylink{class_user_bank_account}{User\+Bank\+Account}\textquotesingle{}s balance is updated. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em balance} & The new balance of the \doxylink{class_user_bank_account}{User\+Bank\+Account} \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_bank_account_a7e937a859ebb309c4d564b496873ae5b}\label{class_user_bank_account_a7e937a859ebb309c4d564b496873ae5b} 
+\index{UserBankAccount@{UserBankAccount}!deposit@{deposit}}
+\index{deposit@{deposit}!UserBankAccount@{UserBankAccount}}
+\doxysubsubsection{\texorpdfstring{deposit()}{deposit()}}
+{\footnotesize\ttfamily void User\+Bank\+Account\+::deposit (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+
+Deposits an amount of Bit\+Bucks into the \doxylink{class_user_bank_account}{User\+Bank\+Account}. 
+
+The amount must be greater than or equal to 0 and less than or equal to the difference between the user\textquotesingle{}s current balance and the MAX\+\_\+\+USER\+\_\+\+ACCOUNT\+\_\+\+BALANCE such that depositing money would not cause themn to exceed the maximim limit. If the amount does not meet either of these conditions, an invalid\+\_\+argument exception is thrown.
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The amount of Bit\+Bucks to deposit \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_user_bank_account_a8f365c8f95648e045bd77b1f8a553b1e}\label{class_user_bank_account_a8f365c8f95648e045bd77b1f8a553b1e} 
+\index{UserBankAccount@{UserBankAccount}!fromJson@{fromJson}}
+\index{fromJson@{fromJson}!UserBankAccount@{UserBankAccount}}
+\doxysubsubsection{\texorpdfstring{fromJson()}{fromJson()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user_bank_account}{User\+Bank\+Account}} \texorpdfstring{$\ast$}{*} User\+Bank\+Account\+::from\+Json (\begin{DoxyParamCaption}\item[{const QJson\+Object \&}]{user\+Bank\+Account\+Json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts a JSON object to a \doxylink{class_user_bank_account}{User\+Bank\+Account}. 
+
+If the JSON object does not contain a balance key or the balance key is not an integer, a \doxylink{class_user_bank_account}{User\+Bank\+Account} is created with the minimum balance and returned instead.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Bank\+Account\+Json} & The JSON object to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The \doxylink{class_user_bank_account}{User\+Bank\+Account} created from the JSON object 
+\end{DoxyReturn}
+\Hypertarget{class_user_bank_account_a682b11ecc112957bca8ec94dd2b78399}\label{class_user_bank_account_a682b11ecc112957bca8ec94dd2b78399} 
+\index{UserBankAccount@{UserBankAccount}!getBalance@{getBalance}}
+\index{getBalance@{getBalance}!UserBankAccount@{UserBankAccount}}
+\doxysubsubsection{\texorpdfstring{getBalance()}{getBalance()}}
+{\footnotesize\ttfamily int User\+Bank\+Account\+::get\+Balance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the balance of the \doxylink{class_user_bank_account}{User\+Bank\+Account}. 
+
+\begin{DoxyReturn}{Returns}
+The balance of the \doxylink{class_user_bank_account}{User\+Bank\+Account} 
+\end{DoxyReturn}
+\Hypertarget{class_user_bank_account_a6bce77045c06cc6d407b3d1bf4bc92f3}\label{class_user_bank_account_a6bce77045c06cc6d407b3d1bf4bc92f3} 
+\index{UserBankAccount@{UserBankAccount}!toJson@{toJson}}
+\index{toJson@{toJson}!UserBankAccount@{UserBankAccount}}
+\doxysubsubsection{\texorpdfstring{toJson()}{toJson()}}
+{\footnotesize\ttfamily QJson\+Object User\+Bank\+Account\+::to\+Json (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Converts the \doxylink{class_user_bank_account}{User\+Bank\+Account} to a JSON object. 
+
+\begin{DoxyReturn}{Returns}
+The JSON object representation of the \doxylink{class_user_bank_account}{User\+Bank\+Account} 
+\end{DoxyReturn}
+\Hypertarget{class_user_bank_account_aa8aa271779c5d878e378dd6c946178aa}\label{class_user_bank_account_aa8aa271779c5d878e378dd6c946178aa} 
+\index{UserBankAccount@{UserBankAccount}!withdraw@{withdraw}}
+\index{withdraw@{withdraw}!UserBankAccount@{UserBankAccount}}
+\doxysubsubsection{\texorpdfstring{withdraw()}{withdraw()}}
+{\footnotesize\ttfamily void User\+Bank\+Account\+::withdraw (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+
+Withdraws an amount of Bit\+Bucks from the \doxylink{class_user_bank_account}{User\+Bank\+Account}. 
+
+The amount must be greater than or equal to 0 and less than or equal to the user\textquotesingle{}s current balance. If the amount does not meet these conditions, an invalid\+\_\+argument exception is thrown.
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The amount of Bit\+Bucks to withdraw \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game/include/model/User\+Bank\+Account.\+h\item 
+game/src/model/User\+Bank\+Account.\+cpp\end{DoxyCompactItemize}

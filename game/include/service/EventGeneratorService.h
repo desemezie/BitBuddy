@@ -5,18 +5,24 @@
 #ifndef BITBUDDY_EVENTGENERATORSERVICE_H
 #define BITBUDDY_EVENTGENERATORSERVICE_H
 
+#include <atomic>
+#include <thread>
+
 #include "service/EventDispatcherService.h"
 
-#include <thread>
-#include <atomic>
-
 /**
- * Service that generates events on its own thread
+ * @class EventGeneratorService
+ * @brief The EventGeneratorService is responsible for generating events at random time intervals.
+ * @author Ryan Hecht
+ *
+ * The EventGeneratorService is a singleton service that generates events at random time intervals and sends them to the
+ * EventDispatcherService to be dispatched to BitBuddy and throughout the entire application.
  */
-class EventGeneratorService {
+class EventGeneratorService final {
  public:
   /**
-   * Singleton instance getter
+   * @brief Singleton instance getter
+   *
    * @return the instance
    */
   static EventGeneratorService &getInstance();
@@ -27,28 +33,39 @@ class EventGeneratorService {
   EventGeneratorService &operator=(EventGeneratorService &&) = delete;
 
   /**
-   * Starts the event generation service which generates events on its own thread at normally distributed random time
-   * intervals
+   * @brief Starts the event generation service
+   *
+   * @details Starts the event generation service which generates events on its own thread at normally distributed
+   * random time intervals
    */
   void startService();
 
   /**
-   * Stops (pauses) the event generation service
+   * @brief Stops (pauses) the event generation service
    */
   void stopService();
 
  private:
+  /**
+   * @brief EventGeneratorService constructor
+   */
   EventGeneratorService() = default;
 
+  /**
+   * @brief EventGeneratorService destructor
+   */
   ~EventGeneratorService();
 
   /**
-   * Resumes the event generation service if it's already been started and is currently paused
+   * @brief Resumes the event generation service if it's already been started and is currently paused
    */
   void resumeService();
 
   /**
-   * Generates a random event from the PREDEFINED_EVENTS list and passes it to the EventDispatcherService to be dispatched
+   * @brief Generates a random event from the PREDEFINED_EVENTS list and passes it to the EventDispatcherService to be
+   * dispatched
+   * @details Generates random events at normally distributed random time intervals using mt19937 random number
+   * generators
    */
   static void generateEvent();
 
@@ -59,4 +76,4 @@ class EventGeneratorService {
   std::condition_variable pauseCondition;
 };
 
-#endif //BITBUDDY_EVENTGENERATORSERVICE_H
+#endif  // BITBUDDY_EVENTGENERATORSERVICE_H

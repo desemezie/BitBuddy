@@ -1,0 +1,134 @@
+\doxysection{Shop\+Window Class Reference}
+\hypertarget{class_shop_window}{}\label{class_shop_window}\index{ShopWindow@{ShopWindow}}
+
+
+Constructor for the \doxylink{class_show_window}{Show\+Window}.  
+
+
+
+
+{\ttfamily \#include $<$Shop\+Window.\+h$>$}
+
+Inheritance diagram for Shop\+Window\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_shop_window}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_shop_window_ab75c2654bbc7753168f31c21233c3127}\label{class_shop_window_ab75c2654bbc7753168f31c21233c3127} 
+{\bfseries Shop\+Window} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_shop_window_ab53017358c1eaafc7a321cd2e3e8cdab}\label{class_shop_window_ab53017358c1eaafc7a321cd2e3e8cdab} 
+void {\bfseries on\+Buy\+Button\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em Function for functionality of "{}purchacing"{} and item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_shop_window_a6b38ce0c9ae02cb0d388187d97c096ba}{set\+Bit\+Buddy}} (\mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*}bit\+Buddy)
+\begin{DoxyCompactList}\small\item\em Sets the unique bitbuddy for the \doxylink{class_show_window}{Show\+Window}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shop_window_a0361931bfd51c90c2d768b6063a326b5}{add\+List\+Item}} (QString \texorpdfstring{$\ast$}{*}name, QList\+Widget \texorpdfstring{$\ast$}{*}parent\+Widget, QString \&icon)
+\begin{DoxyCompactList}\small\item\em Used to add an item to the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_shop_window_ae290f88de7562633e902a96005a9dd15}{add\+Item}} (const QString \&name, const QString \&icon\+Path)
+\begin{DoxyCompactList}\small\item\em Used to add an item to the list. \end{DoxyCompactList}\item 
+\Hypertarget{class_shop_window_a75dbe7bde60bf0e66f7582b0d9115879}\label{class_shop_window_a75dbe7bde60bf0e66f7582b0d9115879} 
+void {\bfseries show\+Items\+Purchased} ()
+\begin{DoxyCompactList}\small\item\em Function to display the bitbuddy\textquotesingle{}s already purchased items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_shop_window_a39fff125bb4522ba104a1c29de3377d7}\label{class_shop_window_a39fff125bb4522ba104a1c29de3377d7} 
+\mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*} {\bfseries bit\+Buddy}
+\item 
+QList\+Widget \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_shop_window_af96bf82792155c23e3c2cdae9c6f4657}{game\+List\+Widget}}
+\item 
+\Hypertarget{class_shop_window_ac9f73ed8aaafc0c5b813a94fbd53354a}\label{class_shop_window_ac9f73ed8aaafc0c5b813a94fbd53354a} 
+QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries buy\+Button}
+\item 
+\Hypertarget{class_shop_window_aa6d9e21bc549d7c98ac51307eb410901}\label{class_shop_window_aa6d9e21bc549d7c98ac51307eb410901} 
+QLabel \texorpdfstring{$\ast$}{*} {\bfseries title\+Label}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Constructor for the \doxylink{class_show_window}{Show\+Window}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent,sends} & in the parent widget \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_shop_window_ae290f88de7562633e902a96005a9dd15}\label{class_shop_window_ae290f88de7562633e902a96005a9dd15} 
+\index{ShopWindow@{ShopWindow}!addItem@{addItem}}
+\index{addItem@{addItem}!ShopWindow@{ShopWindow}}
+\doxysubsubsection{\texorpdfstring{addItem()}{addItem()}}
+{\footnotesize\ttfamily void Shop\+Window\+::add\+Item (\begin{DoxyParamCaption}\item[{const QString \&}]{name,  }\item[{const QString \&}]{icon\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Used to add an item to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ name of the object \\
+\hline
+{\em icon} & -\/ icon path to set the icon \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_shop_window_a0361931bfd51c90c2d768b6063a326b5}\label{class_shop_window_a0361931bfd51c90c2d768b6063a326b5} 
+\index{ShopWindow@{ShopWindow}!addListItem@{addListItem}}
+\index{addListItem@{addListItem}!ShopWindow@{ShopWindow}}
+\doxysubsubsection{\texorpdfstring{addListItem()}{addListItem()}}
+{\footnotesize\ttfamily void Shop\+Window\+::add\+List\+Item (\begin{DoxyParamCaption}\item[{QString \texorpdfstring{$\ast$}{*}}]{name,  }\item[{QList\+Widget \texorpdfstring{$\ast$}{*}}]{parent\+Widget,  }\item[{QString \&}]{icon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Used to add an item to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ name of the object \\
+\hline
+{\em parent\+Widget} & -\/ parent widget is sent in \\
+\hline
+{\em icon} & -\/ icon path to set the icon \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_shop_window_a6b38ce0c9ae02cb0d388187d97c096ba}\label{class_shop_window_a6b38ce0c9ae02cb0d388187d97c096ba} 
+\index{ShopWindow@{ShopWindow}!setBitBuddy@{setBitBuddy}}
+\index{setBitBuddy@{setBitBuddy}!ShopWindow@{ShopWindow}}
+\doxysubsubsection{\texorpdfstring{setBitBuddy()}{setBitBuddy()}}
+{\footnotesize\ttfamily void Shop\+Window\+::set\+Bit\+Buddy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*}}]{bit\+Buddy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets the unique bitbuddy for the \doxylink{class_show_window}{Show\+Window}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Buddy,sends} & in the \doxylink{class_bit_buddy}{Bit\+Buddy} instance \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_shop_window_af96bf82792155c23e3c2cdae9c6f4657}\label{class_shop_window_af96bf82792155c23e3c2cdae9c6f4657} 
+\index{ShopWindow@{ShopWindow}!gameListWidget@{gameListWidget}}
+\index{gameListWidget@{gameListWidget}!ShopWindow@{ShopWindow}}
+\doxysubsubsection{\texorpdfstring{gameListWidget}{gameListWidget}}
+{\footnotesize\ttfamily QList\+Widget\texorpdfstring{$\ast$}{*} Shop\+Window\+::game\+List\+Widget\hspace{0.3cm}{\ttfamily [private]}}
+
+private variables 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game/include/window/Shop\+Window.\+h\item 
+game/src/window/Shop\+Window.\+cpp\end{DoxyCompactItemize}

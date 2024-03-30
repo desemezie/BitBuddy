@@ -2,6 +2,11 @@
 \hypertarget{class_bit_buddy_status_widget}{}\label{class_bit_buddy_status_widget}\index{BitBuddyStatusWidget@{BitBuddyStatusWidget}}
 
 
+The \doxylink{class_bit_buddy_status_widget}{Bit\+Buddy\+Status\+Widget} class is a widget that displays the status of the \doxylink{class_bit_buddy}{Bit\+Buddy}.  
+
+
+
+
 {\ttfamily \#include $<$Bit\+Buddy\+Status\+Widget.\+h$>$}
 
 Inheritance diagram for Bit\+Buddy\+Status\+Widget\+:\begin{figure}[H]
@@ -14,37 +19,50 @@ Inheritance diagram for Bit\+Buddy\+Status\+Widget\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_bit_buddy_status_widget_a57cf81f1160959a94107ed76f7526094}{on\+Attribute\+Updated}} (const \mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} \&attribute)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Updates the progress bar for the updated attribute. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bit_buddy_status_widget_ab20650bf988bc2212a0026cce5c7be39}{update\+Dark\+Mode}} (bool is\+Dark\+Mode)
+\begin{DoxyCompactList}\small\item\em Updates the dark mode of the widget. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_bit_buddy_status_widget_a4e7e4431b391241bf646118d69a737ee}{Bit\+Buddy\+Status\+Widget}} (\mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*}Bit\+Buddy\+Instance, QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_bit_buddy_status_widget_a4d63483aa7ea49cab3cd67c4a17936fe}{Bit\+Buddy\+Status\+Widget}} (const \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*}Bit\+Buddy\+Instance, QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_bit_buddy_status_widget}{Bit\+Buddy\+Status\+Widget}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_bit_buddy_status_widget_a1cdf1d3e44af56c91c4ba7ee21523a51}{set\+Attribute\+Level}} (Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name attribute\+Name, int level)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_bit_buddy_status_widget_a1cdf1d3e44af56c91c4ba7ee21523a51}{set\+Attribute\+Level}} (\mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}} attribute\+Name, int level)
+\begin{DoxyCompactList}\small\item\em Sets the level of the attribute\textquotesingle{}s progress bar. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_bit_buddy_status_widget_a873e839d738883d99f096a6f2666ab34}\label{class_bit_buddy_status_widget_a873e839d738883d99f096a6f2666ab34} 
-QMap$<$ Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name, QProgress\+Bar \texorpdfstring{$\ast$}{*} $>$ {\bfseries attribute\+Bars}
+QMap$<$ \mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}}, QProgress\+Bar \texorpdfstring{$\ast$}{*} $>$ {\bfseries attribute\+Bars}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Widget that displays the status of the \doxylink{class_bit_buddy}{Bit\+Buddy}\textquotesingle{}s attributes. 
+The \doxylink{class_bit_buddy_status_widget}{Bit\+Buddy\+Status\+Widget} class is a widget that displays the status of the \doxylink{class_bit_buddy}{Bit\+Buddy}. 
+
+\begin{DoxyAuthor}{Author}
+Ryan Hecht
+\end{DoxyAuthor}
+The \doxylink{class_bit_buddy_status_widget}{Bit\+Buddy\+Status\+Widget} class is a widget that displays the status of the \doxylink{class_bit_buddy}{Bit\+Buddy}. Specifically, it displays the attributes of the \doxylink{class_bit_buddy}{Bit\+Buddy} along with their current values represented by how much each progress bar associated with the value is filled. For example, an attribute with a value of 2 out of 10 will have 20\% of the progress bar filled and an attribute that\textquotesingle{}s completely filled will have a comnpletely filled progress bar. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\Hypertarget{class_bit_buddy_status_widget_a4e7e4431b391241bf646118d69a737ee}\label{class_bit_buddy_status_widget_a4e7e4431b391241bf646118d69a737ee} 
+\Hypertarget{class_bit_buddy_status_widget_a4d63483aa7ea49cab3cd67c4a17936fe}\label{class_bit_buddy_status_widget_a4d63483aa7ea49cab3cd67c4a17936fe} 
 \index{BitBuddyStatusWidget@{BitBuddyStatusWidget}!BitBuddyStatusWidget@{BitBuddyStatusWidget}}
 \index{BitBuddyStatusWidget@{BitBuddyStatusWidget}!BitBuddyStatusWidget@{BitBuddyStatusWidget}}
 \doxysubsubsection{\texorpdfstring{BitBuddyStatusWidget()}{BitBuddyStatusWidget()}}
-{\footnotesize\ttfamily Bit\+Buddy\+Status\+Widget\+::\+Bit\+Buddy\+Status\+Widget (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*}}]{Bit\+Buddy\+Instance,  }\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+{\footnotesize\ttfamily Bit\+Buddy\+Status\+Widget\+::\+Bit\+Buddy\+Status\+Widget (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*}}]{Bit\+Buddy\+Instance,  }\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
-Constructor for the \doxylink{class_bit_buddy_status_widget}{Bit\+Buddy\+Status\+Widget} 
+
+
+Constructor for the \doxylink{class_bit_buddy_status_widget}{Bit\+Buddy\+Status\+Widget}. 
+
+
 \begin{DoxyParams}{Parameters}
+{\em Bit\+Buddy\+Instance} & The \doxylink{class_bit_buddy}{Bit\+Buddy} instance to display the status of \\
+\hline
 {\em parent} & The parent widget of the \doxylink{class_bit_buddy_status_widget}{Bit\+Buddy\+Status\+Widget}, typically the \doxylink{class_main_window}{Main\+Window}. \\
 \hline
 \end{DoxyParams}
@@ -57,7 +75,9 @@ Constructor for the \doxylink{class_bit_buddy_status_widget}{Bit\+Buddy\+Status\
 \doxysubsubsection{\texorpdfstring{onAttributeUpdated}{onAttributeUpdated}}
 {\footnotesize\ttfamily void Bit\+Buddy\+Status\+Widget\+::on\+Attribute\+Updated (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_bit_buddy_attribute}{Bit\+Buddy\+Attribute}} \&}]{attribute }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
-Updates the progress bar for the updated attribute
+
+
+Updates the progress bar for the updated attribute. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -68,9 +88,11 @@ Updates the progress bar for the updated attribute
 \index{BitBuddyStatusWidget@{BitBuddyStatusWidget}!setAttributeLevel@{setAttributeLevel}}
 \index{setAttributeLevel@{setAttributeLevel}!BitBuddyStatusWidget@{BitBuddyStatusWidget}}
 \doxysubsubsection{\texorpdfstring{setAttributeLevel()}{setAttributeLevel()}}
-{\footnotesize\ttfamily void Bit\+Buddy\+Status\+Widget\+::set\+Attribute\+Level (\begin{DoxyParamCaption}\item[{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}]{attribute\+Name,  }\item[{int}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void Bit\+Buddy\+Status\+Widget\+::set\+Attribute\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}}}]{attribute\+Name,  }\item[{int}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
-Sets the level of the attribute\textquotesingle{}s progress bar
+
+
+Sets the level of the attribute\textquotesingle{}s progress bar. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -79,8 +101,24 @@ Sets the level of the attribute\textquotesingle{}s progress bar
 {\em level} & The level to set the attribute\+Name to \\
 \hline
 \end{DoxyParams}
+\Hypertarget{class_bit_buddy_status_widget_ab20650bf988bc2212a0026cce5c7be39}\label{class_bit_buddy_status_widget_ab20650bf988bc2212a0026cce5c7be39} 
+\index{BitBuddyStatusWidget@{BitBuddyStatusWidget}!updateDarkMode@{updateDarkMode}}
+\index{updateDarkMode@{updateDarkMode}!BitBuddyStatusWidget@{BitBuddyStatusWidget}}
+\doxysubsubsection{\texorpdfstring{updateDarkMode}{updateDarkMode}}
+{\footnotesize\ttfamily void Bit\+Buddy\+Status\+Widget\+::update\+Dark\+Mode (\begin{DoxyParamCaption}\item[{bool}]{is\+Dark\+Mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+
+Updates the dark mode of the widget. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is\+Dark\+Mode} & The dark mode to set the widget to \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/include/component/Bit\+Buddy\+Status\+Widget.\+h\end{DoxyCompactItemize}
+game/include/component/Bit\+Buddy\+Status\+Widget.\+h\item 
+game/src/component/Bit\+Buddy\+Status\+Widget.\+cpp\end{DoxyCompactItemize}

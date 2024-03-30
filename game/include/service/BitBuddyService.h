@@ -15,8 +15,7 @@
  *
  * Exposes only a reference to the BitBuddy object.
  */
-class BitBuddyService {
-
+class BitBuddyService final {
  public:
   /**
    * Singleton instance getter
@@ -51,4 +50,4 @@ class BitBuddyService {
   static BitBuddy *bitBuddy;
 };
 
-#endif //BITBUDDY_GAME_SRC_SERVICE_BITBUDDYSERVICE_H_
+#endif  // BITBUDDY_GAME_SRC_SERVICE_BITBUDDYSERVICE_H_

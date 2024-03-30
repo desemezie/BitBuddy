@@ -5,36 +5,37 @@
 #ifndef BITBUDDY_EVENTDISPATCHERSERVICE_H
 #define BITBUDDY_EVENTDISPATCHERSERVICE_H
 
-#include "model/Event.h"
 #include <QObject>
 
+#include "model/Event.h"
+
 /**
- * Service that dispatches events to listeners
+ * @class EventDispatcherService
+ * @brief The EventDispatcherService is responsible for dispatching events to all listeners
+ * @author Ryan Hecht
+ *
+ * The EventDispatcherService is a singleton service that dispatches events to all listeners. It is used to send events
+ * to BitBuddy and any other listeners.
  */
-class EventDispatcherService : public QObject {
- Q_OBJECT
+class EventDispatcherService final : public QObject {
+  Q_OBJECT
 
  public:
-/**
- * Singleton instance getter
- *
- * @return the instance
- */
+  /**
+   * @brief Singleton instance getter
+   *
+   * @return the instance
+   */
   static EventDispatcherService &getInstance();
 
   EventDispatcherService(const EventDispatcherService &) = delete;
-
   EventDispatcherService &operator=(const EventDispatcherService &) = delete;
-
-  EventDispatcherService(EventDispatcherService
-                         &&) = delete;
-
-  EventDispatcherService &operator=(EventDispatcherService &&)
-  = delete;
+  EventDispatcherService(EventDispatcherService &&) = delete;
+  EventDispatcherService &operator=(EventDispatcherService &&) = delete;
 
  signals:
   /**
-   * Signal emitted when an event is dispatched
+   * @brief Signal emitted when an event is dispatched
    *
    * @param event The event that was dispatched
    */
@@ -42,10 +43,11 @@ class EventDispatcherService : public QObject {
 
  public slots:
   /**
-   * Slot that dispatches the event passed as an argumetn to all listeners. Use this if you want to send an event to
-   * BitBuddy and any other listeners.
+   * @brief Slot that dispatches the event passed as an argumetn to all listeners.
    *
    * @param event The event to dispatch to all listeners
+   *
+   * @details Use this if you want to send an event to BitBuddy and any other listeners.
    */
   void dispatchEvent(const Event *event);
 
@@ -53,7 +55,6 @@ class EventDispatcherService : public QObject {
   EventDispatcherService() = default;
 
   ~EventDispatcherService() override = default;
-
 };
 
-#endif //BITBUDDY_EVENTDISPATCHERSERVICE_H
+#endif  // BITBUDDY_EVENTDISPATCHERSERVICE_H

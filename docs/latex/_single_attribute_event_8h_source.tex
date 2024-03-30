@@ -9,37 +9,32 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ BITBUDDY\_SINGLEATTRIBUTEEVENT\_H}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ BITBUDDY\_SINGLEATTRIBUTEEVENT\_H}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}model/Event.h"{}}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}BitBuddyAttributeName.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}BitBuddyAttributeName.h"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}model/Event.h"{}}}
 \DoxyCodeLine{00010\ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_single_attribute_event}{SingleAttributeEvent}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_event}{Event}}\ \{}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00025\ \ \ \mbox{\hyperlink{class_single_attribute_event_ace88280966dd81f1648c26f4f4ce9773}{SingleAttributeEvent}}(\textcolor{keywordtype}{int}\ increment,}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BitBuddyAttributeName::UniqueName\ attribute,}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ probability\ =\ 1.0,}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ description\ =\ \textcolor{stringliteral}{"{}Single\ attribute\ event."{}});}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \ \ \mbox{\hyperlink{class_single_attribute_event}{\string~SingleAttributeEvent}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_single_attribute_event}{SingleAttributeEvent}}\ final\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_event}{Event}}\ \{}
+\DoxyCodeLine{00020\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \mbox{\hyperlink{class_single_attribute_event_ace88280966dd81f1648c26f4f4ce9773}{SingleAttributeEvent}}(\textcolor{keywordtype}{int}\ increment,\ \mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{BitBuddyAttributeName::UniqueName}}\ attribute,\ \textcolor{keywordtype}{double}\ probability\ =\ 1.0,}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ description\ =\ \textcolor{stringliteral}{"{}Single\ attribute\ event."{}});}
 \DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \ \mbox{\hyperlink{class_single_attribute_event_ace88280966dd81f1648c26f4f4ce9773}{SingleAttributeEvent}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_single_attribute_event}{SingleAttributeEvent}}\ \&)\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \ \ \mbox{\hyperlink{class_single_attribute_event}{SingleAttributeEvent}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_single_attribute_event}{SingleAttributeEvent}}\ \&)\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{class_single_attribute_event_ace88280966dd81f1648c26f4f4ce9773}{SingleAttributeEvent}}(\mbox{\hyperlink{class_single_attribute_event}{SingleAttributeEvent}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \mbox{\hyperlink{class_single_attribute_event}{SingleAttributeEvent}}\ \&operator=(\mbox{\hyperlink{class_single_attribute_event}{SingleAttributeEvent}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00045\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_single_attribute_event_a986b82ae6dbd929fcc0d7785aa9f4b47}{getIncrement}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00052\ \ \ [[nodiscard]]\ BitBuddyAttributeName::UniqueName\ \mbox{\hyperlink{class_single_attribute_event_ad2f0c73f0900b615cf7bdce85cb5ea93}{getAttribute}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00055\ \ \ \textcolor{keywordtype}{int}\ increment;\ \textcolor{comment}{//\ positive\ or\ negative}}
-\DoxyCodeLine{00056\ \ \ BitBuddyAttributeName::UniqueName\ attribute;}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \};}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BITBUDDY\_SINGLEATTRIBUTEEVENT\_H}}
+\DoxyCodeLine{00035\ \ \ \mbox{\hyperlink{class_single_attribute_event_a3334973d0e610b88f23249a21bd52290}{\string~SingleAttributeEvent}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \mbox{\hyperlink{class_single_attribute_event_a1d3e684cd7ae6a05a3f6bc4e40596981}{SingleAttributeEvent}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_single_attribute_event}{SingleAttributeEvent}}\ \&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \mbox{\hyperlink{class_single_attribute_event}{SingleAttributeEvent}}\ \&\mbox{\hyperlink{class_single_attribute_event_a765ef1d31aee7411f3b60a2e7f5fd275}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_single_attribute_event}{SingleAttributeEvent}}\ \&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \mbox{\hyperlink{class_single_attribute_event_ace88280966dd81f1648c26f4f4ce9773}{SingleAttributeEvent}}(\mbox{\hyperlink{class_single_attribute_event}{SingleAttributeEvent}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00050\ \ \ \mbox{\hyperlink{class_single_attribute_event}{SingleAttributeEvent}}\ \&\mbox{\hyperlink{class_single_attribute_event_a765ef1d31aee7411f3b60a2e7f5fd275}{operator=}}(\mbox{\hyperlink{class_single_attribute_event}{SingleAttributeEvent}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00057\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_single_attribute_event_a986b82ae6dbd929fcc0d7785aa9f4b47}{getIncrement}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00064\ \ \ [[nodiscard]]\ \mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{BitBuddyAttributeName::UniqueName}}\ \mbox{\hyperlink{class_single_attribute_event_ad2f0c73f0900b615cf7bdce85cb5ea93}{getAttribute}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00067\ \ \ \textcolor{keywordtype}{int}\ increment;\ \ \textcolor{comment}{//\ positive\ or\ negative}}
+\DoxyCodeLine{00068\ \ \ \mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{BitBuddyAttributeName::UniqueName}}\ attribute;}
+\DoxyCodeLine{00069\ \};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ BITBUDDY\_SINGLEATTRIBUTEEVENT\_H}}
 
 \end{DoxyCode}

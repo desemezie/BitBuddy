@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['deprecatedeventlistener_0',['DeprecatedEventListener',['../class_deprecated_event_listener.html',1,'']]]
+  ['event_0',['Event',['../class_event.html',1,'']]],
+  ['eventdispatcherservice_1',['EventDispatcherService',['../class_event_dispatcher_service.html',1,'']]],
+  ['eventgeneratorservice_2',['EventGeneratorService',['../class_event_generator_service.html',1,'']]]
 ];

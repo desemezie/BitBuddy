@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['launcherwindow_0',['LauncherWindow',['../class_launcher_window.html',1,'']]]
+  ['mainwindow_0',['MainWindow',['../class_main_window.html',1,'']]],
+  ['musicservice_1',['MusicService',['../class_music_service.html',1,'']]]
 ];

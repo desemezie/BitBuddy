@@ -1,5 +1,14 @@
 \doxysection{Settings\+Window Class Reference}
 \hypertarget{class_settings_window}{}\label{class_settings_window}\index{SettingsWindow@{SettingsWindow}}
+
+
+The \doxylink{class_settings_window}{Settings\+Window} class provides a dialog for users to adjust application settings.  
+
+
+
+
+{\ttfamily \#include $<$Settings\+Window.\+h$>$}
+
 Inheritance diagram for Settings\+Window\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,62 +18,150 @@ Inheritance diagram for Settings\+Window\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_settings_window_ad1e0f4254dc44e9efadee40b8602fe5a}\label{class_settings_window_ad1e0f4254dc44e9efadee40b8602fe5a} 
-{\bfseries Settings\+Window} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_settings_window_ad1e0f4254dc44e9efadee40b8602fe5a}{Settings\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Construct a new Settings Window object. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_settings_window_a380a4a1227c28e0b3499175b10cea230}{\texorpdfstring{$\sim$}{\string~}\+Settings\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Settings Window object. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Slots}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_settings_window_abe260886a3013b47e1570b4d30362b69}\label{class_settings_window_abe260886a3013b47e1570b4d30362b69} 
 void {\bfseries save\+Settings} ()
-\item 
-\Hypertarget{class_settings_window_ac14712587208bfab4dfab1fa675ea478}\label{class_settings_window_ac14712587208bfab4dfab1fa675ea478} 
-void {\bfseries cancel\+Settings} ()
-\item 
-\Hypertarget{class_settings_window_ac8aaf08b611ae3088eeb8751784f5616}\label{class_settings_window_ac8aaf08b611ae3088eeb8751784f5616} 
-void {\bfseries sound\+Effects\+Volume} (int)
-\item 
-\Hypertarget{class_settings_window_a453708c7231115b967366d894cceaf7d}\label{class_settings_window_a453708c7231115b967366d894cceaf7d} 
-void {\bfseries music\+Volume} (int)
-\item 
-\Hypertarget{class_settings_window_ae64cb5b9ba5fb9bde3c83bc69125d905}\label{class_settings_window_ae64cb5b9ba5fb9bde3c83bc69125d905} 
-void {\bfseries disable\+Sound\+Effects} (bool)
-\item 
-\Hypertarget{class_settings_window_a053ac3a65c44c0ee1e42282c875539a9}\label{class_settings_window_a053ac3a65c44c0ee1e42282c875539a9} 
-void {\bfseries disable\+Music} (bool)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Saves the current settings to the application\textquotesingle{}s settings storage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_settings_window_ac8aaf08b611ae3088eeb8751784f5616}{sound\+Effects\+Volume}} (int)
+\begin{DoxyCompactList}\small\item\em Slot to handle changes in sound effects volume. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_settings_window_a453708c7231115b967366d894cceaf7d}{music\+Volume}} (int)
+\begin{DoxyCompactList}\small\item\em Slot to handle changes in music volume. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_settings_window_ae64cb5b9ba5fb9bde3c83bc69125d905}{disable\+Sound\+Effects}} (bool)
+\begin{DoxyCompactList}\small\item\em Slot to handle toggling of sound effects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_settings_window_a053ac3a65c44c0ee1e42282c875539a9}{disable\+Music}} (bool)
+\begin{DoxyCompactList}\small\item\em Slot to handle toggling of music. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_settings_window_a797e5c493b426ca151fc4f0553fbe9a1}\label{class_settings_window_a797e5c493b426ca151fc4f0553fbe9a1} 
 void {\bfseries setup} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sets up the UI components and connects signals and slots. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_settings_window_a1a00b2e0703a4081196447aa72caec9b}\label{class_settings_window_a1a00b2e0703a4081196447aa72caec9b} 
 QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries save}
-\item 
-\Hypertarget{class_settings_window_a7c145ab1838488eb170de22dd88b9ed4}\label{class_settings_window_a7c145ab1838488eb170de22dd88b9ed4} 
-QPush\+Button \texorpdfstring{$\ast$}{*} {\bfseries cancel}
-\item 
-\Hypertarget{class_settings_window_a3c75d964f9d9683c07078f65021ad3f5}\label{class_settings_window_a3c75d964f9d9683c07078f65021ad3f5} 
-QVBox\+Layout \texorpdfstring{$\ast$}{*} {\bfseries layout}
-\item 
+\begin{DoxyCompactList}\small\item\em Button to save the settings. \end{DoxyCompactList}\item 
 \Hypertarget{class_settings_window_ae598830af09a948ac1a16a037e2d4c0c}\label{class_settings_window_ae598830af09a948ac1a16a037e2d4c0c} 
 QSlider \texorpdfstring{$\ast$}{*} {\bfseries sound\+Effects\+Slider}
-\item 
+\begin{DoxyCompactList}\small\item\em Slider to adjust the sound effects volume. \end{DoxyCompactList}\item 
 \Hypertarget{class_settings_window_a91b39db773932adfd018478725609fb3}\label{class_settings_window_a91b39db773932adfd018478725609fb3} 
 QSlider \texorpdfstring{$\ast$}{*} {\bfseries music\+Slider}
-\item 
+\begin{DoxyCompactList}\small\item\em Slider to adjust the music volume. \end{DoxyCompactList}\item 
 \Hypertarget{class_settings_window_aeaf682d60c05aff6a2ccc8bbe5e164b2}\label{class_settings_window_aeaf682d60c05aff6a2ccc8bbe5e164b2} 
 QCheck\+Box \texorpdfstring{$\ast$}{*} {\bfseries disable\+Sound\+Effects\+Check\+Box}
-\item 
+\begin{DoxyCompactList}\small\item\em Checkbox to enable/disable sound effects. \end{DoxyCompactList}\item 
 \Hypertarget{class_settings_window_aaf1c584abaf26318f70c58e184b3f83f}\label{class_settings_window_aaf1c584abaf26318f70c58e184b3f83f} 
 QCheck\+Box \texorpdfstring{$\ast$}{*} {\bfseries disable\+Music\+Check\+Box}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checkbox to enable/disable music. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Detailed Description}
+The \doxylink{class_settings_window}{Settings\+Window} class provides a dialog for users to adjust application settings. 
+
+\begin{DoxyAuthor}{Author}
+Shaylan Pratt
+\end{DoxyAuthor}
+This class offers a GUI for adjusting sound effects volume, music volume, and toggles to enable or disable sound effects and music. It interfaces with the application\textquotesingle{}s settings to persist these preferences. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_settings_window_ad1e0f4254dc44e9efadee40b8602fe5a}\label{class_settings_window_ad1e0f4254dc44e9efadee40b8602fe5a} 
+\index{SettingsWindow@{SettingsWindow}!SettingsWindow@{SettingsWindow}}
+\index{SettingsWindow@{SettingsWindow}!SettingsWindow@{SettingsWindow}}
+\doxysubsubsection{\texorpdfstring{SettingsWindow()}{SettingsWindow()}}
+{\footnotesize\ttfamily Settings\+Window\+::\+Settings\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new Settings Window object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & The parent widget of this dialog. Default is nullptr. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_settings_window_a380a4a1227c28e0b3499175b10cea230}\label{class_settings_window_a380a4a1227c28e0b3499175b10cea230} 
+\index{SettingsWindow@{SettingsWindow}!````~SettingsWindow@{\texorpdfstring{$\sim$}{\string~}SettingsWindow}}
+\index{````~SettingsWindow@{\texorpdfstring{$\sim$}{\string~}SettingsWindow}!SettingsWindow@{SettingsWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SettingsWindow()}{\string~SettingsWindow()}}
+{\footnotesize\ttfamily Settings\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Settings\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the Settings Window object. 
+
+Ensures that resources are cleaned up properly. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_settings_window_a053ac3a65c44c0ee1e42282c875539a9}\label{class_settings_window_a053ac3a65c44c0ee1e42282c875539a9} 
+\index{SettingsWindow@{SettingsWindow}!disableMusic@{disableMusic}}
+\index{disableMusic@{disableMusic}!SettingsWindow@{SettingsWindow}}
+\doxysubsubsection{\texorpdfstring{disableMusic}{disableMusic}}
+{\footnotesize\ttfamily void Settings\+Window\+::disable\+Music (\begin{DoxyParamCaption}\item[{bool}]{checked }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Slot to handle toggling of music. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em disable} & True to disable music, false to enable. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_settings_window_ae64cb5b9ba5fb9bde3c83bc69125d905}\label{class_settings_window_ae64cb5b9ba5fb9bde3c83bc69125d905} 
+\index{SettingsWindow@{SettingsWindow}!disableSoundEffects@{disableSoundEffects}}
+\index{disableSoundEffects@{disableSoundEffects}!SettingsWindow@{SettingsWindow}}
+\doxysubsubsection{\texorpdfstring{disableSoundEffects}{disableSoundEffects}}
+{\footnotesize\ttfamily void Settings\+Window\+::disable\+Sound\+Effects (\begin{DoxyParamCaption}\item[{bool}]{checked }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Slot to handle toggling of sound effects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em disable} & True to disable sound effects, false to enable. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_settings_window_a453708c7231115b967366d894cceaf7d}\label{class_settings_window_a453708c7231115b967366d894cceaf7d} 
+\index{SettingsWindow@{SettingsWindow}!musicVolume@{musicVolume}}
+\index{musicVolume@{musicVolume}!SettingsWindow@{SettingsWindow}}
+\doxysubsubsection{\texorpdfstring{musicVolume}{musicVolume}}
+{\footnotesize\ttfamily void Settings\+Window\+::music\+Volume (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Slot to handle changes in music volume. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & The new volume level for music. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_settings_window_ac8aaf08b611ae3088eeb8751784f5616}\label{class_settings_window_ac8aaf08b611ae3088eeb8751784f5616} 
+\index{SettingsWindow@{SettingsWindow}!soundEffectsVolume@{soundEffectsVolume}}
+\index{soundEffectsVolume@{soundEffectsVolume}!SettingsWindow@{SettingsWindow}}
+\doxysubsubsection{\texorpdfstring{soundEffectsVolume}{soundEffectsVolume}}
+{\footnotesize\ttfamily void Settings\+Window\+::sound\+Effects\+Volume (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Slot to handle changes in sound effects volume. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & The new volume level for sound effects. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/include/Settings\+Window.\+h\end{DoxyCompactItemize}
+game/include/window/Settings\+Window.\+h\item 
+game/src/window/Settings\+Window.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,87 @@
+\doxysection{Transaction\+Service Class Reference}
+\hypertarget{class_transaction_service}{}\label{class_transaction_service}\index{TransactionService@{TransactionService}}
+
+
+Service that handles all transactions in the game.  
+
+
+
+
+{\ttfamily \#include $<$Transaction\+Service.\+h$>$}
+
+Inheritance diagram for Transaction\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_transaction_service}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_transaction_service_a5ffb1da545ff651b1ad4bea68c96dde8}{pay\+User\+Bit\+Bucks}} (int bit\+Bucks)
+\begin{DoxyCompactList}\small\item\em Pays the user the given amount of Bit\+Bucks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_transaction_service_a8e4338173975b7e0ce7a20e16b28baf4}\label{class_transaction_service_a8e4338173975b7e0ce7a20e16b28baf4} 
+{\bfseries Transaction\+Service} (const \mbox{\hyperlink{class_transaction_service}{Transaction\+Service}} \&)=delete
+\item 
+\Hypertarget{class_transaction_service_a6339fd7b31a1d7fee6cef756818af34f}\label{class_transaction_service_a6339fd7b31a1d7fee6cef756818af34f} 
+\mbox{\hyperlink{class_transaction_service}{Transaction\+Service}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_transaction_service}{Transaction\+Service}} \&)=delete
+\item 
+\Hypertarget{class_transaction_service_a80baf186534b9edaee67e8b8a7dab259}\label{class_transaction_service_a80baf186534b9edaee67e8b8a7dab259} 
+{\bfseries Transaction\+Service} (\mbox{\hyperlink{class_transaction_service}{Transaction\+Service}} \&\&)=delete
+\item 
+\Hypertarget{class_transaction_service_a24af79a5eb70937672ee183c27613931}\label{class_transaction_service_a24af79a5eb70937672ee183c27613931} 
+\mbox{\hyperlink{class_transaction_service}{Transaction\+Service}} \& {\bfseries operator=} (\mbox{\hyperlink{class_transaction_service}{Transaction\+Service}} \&\&)=delete
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_transaction_service}{Transaction\+Service}} \& \mbox{\hyperlink{class_transaction_service_af65f03ee3e5f060c0418ebb4c1a40951}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Singleton instance getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service that handles all transactions in the game. 
+
+\begin{DoxyAuthor}{Author}
+Ryan Hecht
+\end{DoxyAuthor}
+This service is a singleton responsible for handling transactions between the user and the game. The approach with this service is questionable\+: events were originally supposed to be dispatched via the \doxylink{class_event_dispatcher_service}{Event\+Dispatcher\+Service} and nothing else, but this service causes some tighter coupling since transactions require confirmation by both parties to occur. If a refactor occurs, this service deserves to be scrutinized. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_transaction_service_af65f03ee3e5f060c0418ebb4c1a40951}\label{class_transaction_service_af65f03ee3e5f060c0418ebb4c1a40951} 
+\index{TransactionService@{TransactionService}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!TransactionService@{TransactionService}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_transaction_service}{Transaction\+Service}} \& Transaction\+Service\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Singleton instance getter. 
+
+\begin{DoxyReturn}{Returns}
+The instance of the \doxylink{class_transaction_service}{Transaction\+Service} 
+\end{DoxyReturn}
+\Hypertarget{class_transaction_service_a5ffb1da545ff651b1ad4bea68c96dde8}\label{class_transaction_service_a5ffb1da545ff651b1ad4bea68c96dde8} 
+\index{TransactionService@{TransactionService}!payUserBitBucks@{payUserBitBucks}}
+\index{payUserBitBucks@{payUserBitBucks}!TransactionService@{TransactionService}}
+\doxysubsubsection{\texorpdfstring{payUserBitBucks}{payUserBitBucks}}
+{\footnotesize\ttfamily void Transaction\+Service\+::pay\+User\+Bit\+Bucks (\begin{DoxyParamCaption}\item[{int}]{bit\+Bucks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Pays the user the given amount of Bit\+Bucks. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Bucks} & The amount of Bit\+Bucks to pay the user \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game/include/service/Transaction\+Service.\+h\item 
+game/src/service/Transaction\+Service.\+cpp\end{DoxyCompactItemize}

@@ -2,6 +2,11 @@
 \hypertarget{class_game_service}{}\label{class_game_service}\index{GameService@{GameService}}
 
 
+The \doxylink{class_game_service}{Game\+Service} is responsible for starting and stopping the \doxylink{class_event_generator_service}{Event\+Generator\+Service} and \doxylink{class_music_service}{Music\+Service}.  
+
+
+
+
 {\ttfamily \#include $<$Game\+Service.\+h$>$}
 
 \doxysubsubsection*{Public Member Functions}
@@ -22,47 +27,41 @@
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{class_game_service}{Game\+Service}} \& \mbox{\hyperlink{class_game_service_a555b4c4c9ba28b5d4b56187d2edc37a4}{get\+Instance}} ()
-\item 
-static void \mbox{\hyperlink{class_game_service_a5ea35b167de859c294e82b071e5413ae}{start\+Service}} ()
-\item 
-static void \mbox{\hyperlink{class_game_service_a9a2fc0a0b4f900eee54ad53fa1f2ef0c}{stop\+Service}} ()
-\end{DoxyCompactItemize}
-\doxysubsubsection*{Static Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-\Hypertarget{class_game_service_ac861f6f9c2b84acda0141453748864e4}\label{class_game_service_ac861f6f9c2b84acda0141453748864e4} 
-static \mbox{\hyperlink{class_event_generator_service}{Event\+Generator\+Service}} \& {\bfseries event\+Generator\+Service}
-\end{DoxyCompactItemize}
+static \mbox{\hyperlink{class_game_service}{Game\+Service}} \& \mbox{\hyperlink{class_game_service_a10638ab0a2961aad8aa0cacb0e24053e}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Singleton instance getter. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_service_a4afbcd87e86a07c78d0895b78ed09992}\label{class_game_service_a4afbcd87e86a07c78d0895b78ed09992} 
+static void {\bfseries start\+Service} ()
+\begin{DoxyCompactList}\small\item\em Starts the game service and all other services. \end{DoxyCompactList}\item 
+\Hypertarget{class_game_service_a9ca946e04f80a3f96a90fb0a61789ac3}\label{class_game_service_a9ca946e04f80a3f96a90fb0a61789ac3} 
+static void {\bfseries stop\+Service} ()
+\begin{DoxyCompactList}\small\item\em Stops the game service and all other services. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Service that manages all core game logic and starts and stops other services 
+The \doxylink{class_game_service}{Game\+Service} is responsible for starting and stopping the \doxylink{class_event_generator_service}{Event\+Generator\+Service} and \doxylink{class_music_service}{Music\+Service}. 
+
+\begin{DoxyAuthor}{Author}
+Ryan Hecht
+\end{DoxyAuthor}
+This service was originally meant to be a control paoint for every single service in the game. However, it now only controls the \doxylink{class_event_generator_service}{Event\+Generator\+Service} and \doxylink{class_music_service}{Music\+Service}. Refactoring is needed to make this class and its usage more sensible. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_game_service_a555b4c4c9ba28b5d4b56187d2edc37a4}\label{class_game_service_a555b4c4c9ba28b5d4b56187d2edc37a4} 
+\Hypertarget{class_game_service_a10638ab0a2961aad8aa0cacb0e24053e}\label{class_game_service_a10638ab0a2961aad8aa0cacb0e24053e} 
 \index{GameService@{GameService}!getInstance@{getInstance}}
 \index{getInstance@{getInstance}!GameService@{GameService}}
 \doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{class_game_service}{Game\+Service}} \& Game\+Service\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_game_service}{Game\+Service}} \& Game\+Service\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Singleton instance getter \begin{DoxyReturn}{Returns}
+
+
+Singleton instance getter. 
+
+\begin{DoxyReturn}{Returns}
 the instance 
 \end{DoxyReturn}
-\Hypertarget{class_game_service_a5ea35b167de859c294e82b071e5413ae}\label{class_game_service_a5ea35b167de859c294e82b071e5413ae} 
-\index{GameService@{GameService}!startService@{startService}}
-\index{startService@{startService}!GameService@{GameService}}
-\doxysubsubsection{\texorpdfstring{startService()}{startService()}}
-{\footnotesize\ttfamily static void Game\+Service\+::start\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Starts the game service and all other services \Hypertarget{class_game_service_a9a2fc0a0b4f900eee54ad53fa1f2ef0c}\label{class_game_service_a9a2fc0a0b4f900eee54ad53fa1f2ef0c} 
-\index{GameService@{GameService}!stopService@{stopService}}
-\index{stopService@{stopService}!GameService@{GameService}}
-\doxysubsubsection{\texorpdfstring{stopService()}{stopService()}}
-{\footnotesize\ttfamily static void Game\+Service\+::stop\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Stops the game service and all other services 
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/include/service/Game\+Service.\+h\end{DoxyCompactItemize}
+game/include/service/Game\+Service.\+h\item 
+game/src/service/Game\+Service.\+cpp\end{DoxyCompactItemize}

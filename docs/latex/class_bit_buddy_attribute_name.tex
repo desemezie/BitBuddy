@@ -2,47 +2,81 @@
 \hypertarget{class_bit_buddy_attribute_name}{}\label{class_bit_buddy_attribute_name}\index{BitBuddyAttributeName@{BitBuddyAttributeName}}
 
 
+Container class that holds data surrounding the name of a \doxylink{class_bit_buddy}{Bit\+Buddy} attribute.  
+
+
+
+
 {\ttfamily \#include $<$Bit\+Buddy\+Attribute\+Name.\+h$>$}
 
 \doxysubsubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}\label{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa} 
-enum {\bfseries Unique\+Name} \{ \newline
-{\bfseries HUNGER}
+enum \mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Unique\+Name}} \{ \newline
+{\bfseries FIRST} = 0
+, {\bfseries HUNGER} = FIRST
 , {\bfseries HAPPINESS}
 , {\bfseries THIRST}
-, {\bfseries HEALTH}
 , \newline
-{\bfseries TIREDNESS}
+{\bfseries HEALTH}
+, {\bfseries TIREDNESS}
 , {\bfseries BOREDOM}
 , {\bfseries HYGIENE}
+, \newline
+{\bfseries LAST} = HYGIENE
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Enum that represents the unique names of the \doxylink{class_bit_buddy}{Bit\+Buddy} attributes. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static std\+::string \mbox{\hyperlink{class_bit_buddy_attribute_name_af8805e3a815e4220af3eeb5ecafb0ea5}{to\+String}} (Unique\+Name attribute)
-\item 
-\Hypertarget{class_bit_buddy_attribute_name_a5b55da0edee0adf94cbef2f00185016e}\label{class_bit_buddy_attribute_name_a5b55da0edee0adf94cbef2f00185016e} 
-static std\+::string {\bfseries image\+URL} (Unique\+Name attribute)
-\item 
-\Hypertarget{class_bit_buddy_attribute_name_a168587fa1257de783a080483e25d3f33}\label{class_bit_buddy_attribute_name_a168587fa1257de783a080483e25d3f33} 
-static int {\bfseries value\+Where\+Change} (Unique\+Name attribute)
+static std\+::string \mbox{\hyperlink{class_bit_buddy_attribute_name_a45c42a372b8268df9627af842b5af779}{to\+String}} (\mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Unique\+Name}} attribute)
+\begin{DoxyCompactList}\small\item\em Converts an attribute to a string. \end{DoxyCompactList}\item 
+static std\+::string \mbox{\hyperlink{class_bit_buddy_attribute_name_a0296f69a6b18bd8fd029b0fe0fe366b9}{image\+URL}} (\mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Unique\+Name}} attribute)
+\begin{DoxyCompactList}\small\item\em Gets the image URL for the attribute. \end{DoxyCompactList}\item 
+\Hypertarget{class_bit_buddy_attribute_name_abfc18230003ef921efcef2526e9b82f8}\label{class_bit_buddy_attribute_name_abfc18230003ef921efcef2526e9b82f8} 
+static int {\bfseries value\+Where\+Change} (\mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Unique\+Name}} attribute)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Class that represents a Bit\+Buddy\+Widget attribute 
+Container class that holds data surrounding the name of a \doxylink{class_bit_buddy}{Bit\+Buddy} attribute. 
+
+\begin{DoxyAuthor}{Authors}
+Ryan Hecht, Annabel Irani
+\end{DoxyAuthor}
+Contains a Unique\+Name enum that represents the unique names of the \doxylink{class_bit_buddy}{Bit\+Buddy} attributes. Also features static methods to transform these names into string representations and to retrieve their corresponding images. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_bit_buddy_attribute_name_af8805e3a815e4220af3eeb5ecafb0ea5}\label{class_bit_buddy_attribute_name_af8805e3a815e4220af3eeb5ecafb0ea5} 
+\Hypertarget{class_bit_buddy_attribute_name_a0296f69a6b18bd8fd029b0fe0fe366b9}\label{class_bit_buddy_attribute_name_a0296f69a6b18bd8fd029b0fe0fe366b9} 
+\index{BitBuddyAttributeName@{BitBuddyAttributeName}!imageURL@{imageURL}}
+\index{imageURL@{imageURL}!BitBuddyAttributeName@{BitBuddyAttributeName}}
+\doxysubsubsection{\texorpdfstring{imageURL()}{imageURL()}}
+{\footnotesize\ttfamily std\+::string Bit\+Buddy\+Attribute\+Name\+::image\+URL (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Unique\+Name}}}]{attribute }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the image URL for the attribute. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em attribute} & the attribute to get the image URL for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the image URL for the attribute 
+\end{DoxyReturn}
+\Hypertarget{class_bit_buddy_attribute_name_a45c42a372b8268df9627af842b5af779}\label{class_bit_buddy_attribute_name_a45c42a372b8268df9627af842b5af779} 
 \index{BitBuddyAttributeName@{BitBuddyAttributeName}!toString@{toString}}
 \index{toString@{toString}!BitBuddyAttributeName@{BitBuddyAttributeName}}
 \doxysubsubsection{\texorpdfstring{toString()}{toString()}}
-{\footnotesize\ttfamily static std\+::string Bit\+Buddy\+Attribute\+Name\+::to\+String (\begin{DoxyParamCaption}\item[{Unique\+Name}]{attribute }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily std\+::string Bit\+Buddy\+Attribute\+Name\+::to\+String (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Unique\+Name}}}]{attribute }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Converts an attribute to a string 
+
+
+Converts an attribute to a string. 
+
+
 \begin{DoxyParams}{Parameters}
 {\em attribute} & the attribute to convert \\
 \hline
@@ -52,6 +86,7 @@ the string representation of the attribute
 \end{DoxyReturn}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/include/model/Bit\+Buddy\+Attribute\+Name.\+h\end{DoxyCompactItemize}
+game/include/model/Bit\+Buddy\+Attribute\+Name.\+h\item 
+game/src/model/Bit\+Buddy\+Attribute\+Name.\+cpp\end{DoxyCompactItemize}
