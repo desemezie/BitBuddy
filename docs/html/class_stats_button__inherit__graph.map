@@ -1,0 +1,5 @@
+<map id="StatsButton" name="StatsButton">
+<area shape="rect" id="Node000001" title="The StatsButton class extends QPushButton to provide a button specifically for showing statistics." alt="" coords="5,119,109,244"/>
+<area shape="rect" id="Node000002" href="$class_q_push_button.html" title=" " alt="" coords="12,5,103,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,86,60,119,55,119,55,86"/>
+</map>

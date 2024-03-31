@@ -1,0 +1,7 @@
+<map id="game/include/model/BitBuckGenerator.h" name="game/include/model/BitBuckGenerator.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="16,5,155,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,75,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,48,57,82,52,79,72,45"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="99,94,163,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="99,45,118,79,114,82,94,48"/>
+</map>

@@ -1,12 +1,24 @@
 \doxysection{game/include/service/\+File\+Storage\+Service.h File Reference}
 \hypertarget{_file_storage_service_8h}{}\label{_file_storage_service_8h}\index{game/include/service/FileStorageService.h@{game/include/service/FileStorageService.h}}
-
-
-Defines the \doxylink{class_file_storage_service}{File\+Storage\+Service} class, responsible for saving and loading \doxylink{class_bit_buddy}{Bit\+Buddy} objects.  
-
-
 {\ttfamily \#include $<$QString$>$}\newline
 {\ttfamily \#include "{}model/\+Bit\+Buddy.\+h"{}}\newline
+{\ttfamily \#include "{}model/\+User\+Bank\+Account.\+h"{}}\newline
+Include dependency graph for File\+Storage\+Service.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_file_storage_service_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_file_storage_service_8h__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -15,19 +27,30 @@ class \mbox{\hyperlink{class_file_storage_service}{File\+Storage\+Service}}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{_file_storage_service_8h_af7e7278755a139b669e36ed5c79539aa}\label{_file_storage_service_8h_af7e7278755a139b669e36ed5c79539aa} 
-const QString {\bfseries SAVE\+\_\+\+DIRECTORY\+\_\+\+NAME} = "{}bitbuddy\+Save\+Files"{}
+const QString \mbox{\hyperlink{_file_storage_service_8h_af7e7278755a139b669e36ed5c79539aa}{SAVE\+\_\+\+DIRECTORY\+\_\+\+NAME}} = "{}bitbuddy\+Save\+Files"{}
 \item 
-\Hypertarget{_file_storage_service_8h_a345849fc3182480a2b52d5a9f9a9e7a1}\label{_file_storage_service_8h_a345849fc3182480a2b52d5a9f9a9e7a1} 
-const QString {\bfseries BITBUDDY\+\_\+\+FILE\+\_\+\+NAME} = "{}bit\+Buddy.\+json"{}
+const QString \mbox{\hyperlink{_file_storage_service_8h_a345849fc3182480a2b52d5a9f9a9e7a1}{BITBUDDY\+\_\+\+FILE\+\_\+\+NAME}} = "{}bit\+Buddy.\+json"{}
+\item 
+const QString \mbox{\hyperlink{_file_storage_service_8h_a4e803028786558d553d74016687ff82e}{USER\+\_\+\+BANK\+\_\+\+ACCOUNT\+\_\+\+FILE\+\_\+\+NAME}} = "{}user\+Bank\+Account.\+json"{}
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Detailed Description}
-Defines the \doxylink{class_file_storage_service}{File\+Storage\+Service} class, responsible for saving and loading \doxylink{class_bit_buddy}{Bit\+Buddy} objects. 
+\doxysubsection{Variable Documentation}
+\Hypertarget{_file_storage_service_8h_a345849fc3182480a2b52d5a9f9a9e7a1}\label{_file_storage_service_8h_a345849fc3182480a2b52d5a9f9a9e7a1} 
+\index{FileStorageService.h@{FileStorageService.h}!BITBUDDY\_FILE\_NAME@{BITBUDDY\_FILE\_NAME}}
+\index{BITBUDDY\_FILE\_NAME@{BITBUDDY\_FILE\_NAME}!FileStorageService.h@{FileStorageService.h}}
+\doxysubsubsection{\texorpdfstring{BITBUDDY\_FILE\_NAME}{BITBUDDY\_FILE\_NAME}}
+{\footnotesize\ttfamily const QString BITBUDDY\+\_\+\+FILE\+\_\+\+NAME = "{}bit\+Buddy.\+json"{}}
 
-Provides functionality to save the current state of a \doxylink{class_bit_buddy}{Bit\+Buddy} object to a JSON file and to load a \doxylink{class_bit_buddy}{Bit\+Buddy} object from a JSON file. It implements the Singleton design pattern to ensure only one instance of the service is created and used throughout the application.
+\Hypertarget{_file_storage_service_8h_af7e7278755a139b669e36ed5c79539aa}\label{_file_storage_service_8h_af7e7278755a139b669e36ed5c79539aa} 
+\index{FileStorageService.h@{FileStorageService.h}!SAVE\_DIRECTORY\_NAME@{SAVE\_DIRECTORY\_NAME}}
+\index{SAVE\_DIRECTORY\_NAME@{SAVE\_DIRECTORY\_NAME}!FileStorageService.h@{FileStorageService.h}}
+\doxysubsubsection{\texorpdfstring{SAVE\_DIRECTORY\_NAME}{SAVE\_DIRECTORY\_NAME}}
+{\footnotesize\ttfamily const QString SAVE\+\_\+\+DIRECTORY\+\_\+\+NAME = "{}bitbuddy\+Save\+Files"{}}
 
-\begin{DoxyAuthor}{Author}
-Ryan Hecht 
-\end{DoxyAuthor}
+\Hypertarget{_file_storage_service_8h_a4e803028786558d553d74016687ff82e}\label{_file_storage_service_8h_a4e803028786558d553d74016687ff82e} 
+\index{FileStorageService.h@{FileStorageService.h}!USER\_BANK\_ACCOUNT\_FILE\_NAME@{USER\_BANK\_ACCOUNT\_FILE\_NAME}}
+\index{USER\_BANK\_ACCOUNT\_FILE\_NAME@{USER\_BANK\_ACCOUNT\_FILE\_NAME}!FileStorageService.h@{FileStorageService.h}}
+\doxysubsubsection{\texorpdfstring{USER\_BANK\_ACCOUNT\_FILE\_NAME}{USER\_BANK\_ACCOUNT\_FILE\_NAME}}
+{\footnotesize\ttfamily const QString USER\+\_\+\+BANK\+\_\+\+ACCOUNT\+\_\+\+FILE\+\_\+\+NAME = "{}user\+Bank\+Account.\+json"{}}
+

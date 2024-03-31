@@ -1,0 +1,19 @@
+<map id="game/include/service/EventGeneratorService.h" name="game/include/service/EventGeneratorService.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="33,5,204,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,66,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,48,61,85,58,81,96,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="90,94,147,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="121,46,121,78,116,78,116,46"/>
+<area shape="rect" id="Node000004" href="$_event_dispatcher_service_8h.html" title=" " alt="" coords="171,94,391,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="160,44,243,84,241,89,158,49"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="190,168,260,193"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="274,122,246,157,242,154,269,118"/>
+<area shape="rect" id="Node000006" href="$_event_8h.html" title=" " alt="" coords="284,168,390,193"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="292,118,320,154,316,157,288,122"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="225,241,286,267"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="325,196,282,233,279,229,321,192"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="310,241,364,267"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="340,194,340,226,334,226,334,194"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="388,241,441,267"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="352,192,392,229,388,233,348,196"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="UserBankAccountService" name="UserBankAccountService">
+<area shape="rect" id="Node000001" title="Singleton service that acts as a global registry for the UserBankAccount object to allow access throu..." alt="" coords="5,442,195,667"/>
+<area shape="rect" id="Node000002" href="$class_user_bank_account.html" title="Represents a user&#39;s bank account with a balance that can be deposited to or withdrawn from." alt="" coords="31,134,169,379"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,379,103,425,97,425,97,379"/>
+<area shape="rect" id="Node000003" href="$class_q_object.html" title=" " alt="" coords="36,5,97,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="76,85,84,133,79,134,71,85"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="121,5,148,71"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="132,71,125,117,120,116,127,70"/>
+</map>
