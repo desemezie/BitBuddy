@@ -115,6 +115,11 @@ void BitBuddySpriteHandler::spriteOrganizer(const Event &event){
     }
   }
 
+  //Gametime
+  if(specificEvent->getAttribute() == BitBuddyAttributeName::BOREDOM){
+    displayPills(":/assets/tamagochi_pills.png");
+  }
+
 }
 
 void BitBuddySpriteHandler::displayPills(const QString &imagePath) {

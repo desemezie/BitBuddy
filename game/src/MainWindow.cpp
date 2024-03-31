@@ -144,6 +144,9 @@ void MainWindow::setupUi() {
     } else {
       rowLayout2->addWidget(but);
     }
+    if(attribute == BitBuddyAttributeName::BOREDOM){
+      std::cout << "BOREDOM CREATED" << std::endl;
+    }
   }
 
   rowLayout1->setSpacing(1);

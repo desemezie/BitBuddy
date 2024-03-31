@@ -88,6 +88,8 @@ add_executable(bitbuddy game/src/main.cpp
         game/src/window/BuddyWindow.cpp
         game/include/window/BuddyWindow.h
         game/include/window/TieWindow.h
+        game/src/service/XOController.cpp
+        game/include/service/XOController.h
 )
 
 

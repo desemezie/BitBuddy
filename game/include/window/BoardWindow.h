@@ -20,6 +20,12 @@ class BoardWindow : public QWidget{
  public:
   BoardWindow(QWidget *parent = nullptr);
 
+  //container for the buttons
+  QVector<QPushButton *> buttons;
+
+  //method to set a button's text
+  void setButtonText(int index, const QString &text);
+
   //private layout thing
  private:
   QGridLayout *gridLayout;
@@ -27,6 +33,9 @@ class BoardWindow : public QWidget{
   //Private slots
  private slots:
   void changeButtonText();
+
+ signals:
+  void buttonClicked(int index);
 };
 
 #endif  // BITBUDDY_BOARDWINDOW_H

@@ -6,7 +6,8 @@
 #define BITBUDDY_EVENTDISPATCHERSERVICE_H
 
 #include <QObject>
-
+//raz added
+#include <condition_variable>
 #include "model/Event.h"
 
 /**

@@ -24,21 +24,42 @@ BoardWindow::BoardWindow(QWidget *parent) : QWidget(parent) {
 
       // Connect the button signal to the changeletter method
       connect(button, &QPushButton::clicked, this, &BoardWindow::changeButtonText);
+
+      // Add the Button to the array
+      buttons.push_back(button);
+
     }
   }
 
   // Set the Window layout
   setLayout(gridLayout);
-
 }
-
-//function to change button text
+// function to change button text ON CALL
+void BoardWindow::setButtonText(int index, const QString &text){
+  if(index >= 0 && index <= buttons.size()){
+    buttons[index]->setText(text);
+    buttons[index]->setFont(QFont("Arial", 24, QFont::Bold));
+  }
+}
+//function to change button text ON CLICK
 void BoardWindow::changeButtonText() {
   QPushButton *button = qobject_cast<QPushButton*>(sender());
-  if(button){
-    button ->setText("X");
-    button->setFont(QFont("Arial", 24, QFont::Bold));
+  int index = -1;
+
+  // Find the index of the button which was clicked
+  for(int i = 0; i < 9; i++){
+    if(button == buttons[i]){
+      index = i;
+      break;
+    }
   }
+  //if(button){
+  // button ->setText("X");
+  //button->setFont(QFont("Arial", 24, QFont::Bold));
+  //}
+
+  //Signal + the button that sent it
+  emit buttonClicked(index);
 }
 
 
