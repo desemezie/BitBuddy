@@ -1,0 +1,21 @@
+<map id="game/src/model/BitBuddyEvents.cpp" name="game/src/model/BitBuddyEvents.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="29,5,267,31"/>
+<area shape="rect" id="Node000002" href="$_bit_buddy_events_8h.html" title=" " alt="" coords="5,79,171,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,33,110,69,106,65,136,30"/>
+<area shape="rect" id="Node000004" href="$_single_attribute_event_8h.html" title=" " alt="" coords="113,153,303,178"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="158,30,185,78,204,137,199,139,180,80,154,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="31,153,89,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="86,106,73,139,68,137,81,104"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="110,103,176,142,173,147,107,108"/>
+<area shape="rect" id="Node000005" href="$_bit_buddy_attribute_name_8h.html" title=" " alt="" coords="43,226,213,252"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="196,181,154,218,151,214,193,177"/>
+<area shape="rect" id="Node000007" href="$_event_8h.html" title=" " alt="" coords="237,226,342,252"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="224,177,266,214,263,218,220,181"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="141,300,195,326"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="137,251,156,285,152,288,132,254"/>
+<area shape="poly" id="edge9_Node000007_Node000006" title=" " alt="" coords="270,255,203,294,200,289,267,250"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="239,300,300,326"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="289,253,279,286,274,284,283,252"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="324,300,377,326"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="301,250,332,286,328,290,297,254"/>
+</map>

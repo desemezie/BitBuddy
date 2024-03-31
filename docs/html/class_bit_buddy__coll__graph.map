@@ -1,0 +1,24 @@
+<map id="BitBuddy" name="BitBuddy">
+<area shape="rect" id="Node000001" title="Represents the BitBuddy pet in the game." alt="" coords="401,541,570,1067"/>
+<area shape="rect" id="Node000002" href="$class_q_object.html" title=" " alt="" coords="31,5,92,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="47,85,26,161,10,258,8,310,11,362,21,414,40,462,73,517,113,566,159,612,209,652,260,688,311,718,402,765,400,770,308,723,257,692,206,656,156,616,109,570,68,520,35,465,16,415,6,363,3,310,5,257,21,160,42,84"/>
+<area shape="rect" id="Node000009" href="$class_bit_buck_generator.html" title="Generates BitBucks at a set interval and emits a signal when they are generated." alt="" coords="50,149,254,463"/>
+<area shape="poly" id="edge9_Node000009_Node000002" title=" " alt="" coords="79,84,101,148,96,150,74,86"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="279,273,324,339"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="303,338,305,420,311,469,322,517,354,595,394,669,389,671,349,597,317,518,305,470,299,421,297,338"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="351,273,481,339"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="418,339,415,487,415,517,416,524,411,525,410,518,410,487,413,338"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="506,273,555,339"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="534,338,534,420,529,518,529,525,523,524,524,517,528,419,529,338"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="580,266,799,346"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="676,347,579,583,574,581,671,345"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="823,273,897,339"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="857,339,842,399,829,433,813,465,762,539,703,609,642,672,584,725,581,721,638,668,699,606,758,536,808,462,824,431,836,397,852,338"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="937,273,975,339"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="954,339,946,379,932,426,910,475,879,519,809,588,732,650,656,704,586,748,583,744,653,700,729,646,806,584,875,516,905,473,927,424,941,377,949,338"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="177,462,199,516,239,578,287,635,339,686,389,729,386,733,335,690,283,638,235,581,194,519,172,464"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="120,5,147,71"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="136,70,137,125,138,132,132,132,132,125,131,71"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="304,5,360,71"/>
+<area shape="poly" id="edge11_Node000009_Node000011" title=" " alt="" coords="329,71,320,99,305,126,287,140,268,151,268,151,264,148,265,147,284,135,301,123,315,97,324,70"/>
+</map>

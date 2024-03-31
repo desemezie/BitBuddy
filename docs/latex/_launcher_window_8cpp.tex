@@ -1,0 +1,60 @@
+\doxysection{game/src/window/\+Launcher\+Window.cpp File Reference}
+\hypertarget{_launcher_window_8cpp}{}\label{_launcher_window_8cpp}\index{game/src/window/LauncherWindow.cpp@{game/src/window/LauncherWindow.cpp}}
+{\ttfamily \#include $<$QVBox\+Layout$>$}\newline
+{\ttfamily \#include "{}window/\+Launcher\+Window.\+h"{}}\newline
+{\ttfamily \#include "{}Main\+Window.\+h"{}}\newline
+{\ttfamily \#include "{}service/\+Bit\+Buddy\+Service.\+h"{}}\newline
+{\ttfamily \#include "{}model/\+Bit\+Buddy.\+h"{}}\newline
+{\ttfamily \#include $<$QApplication$>$}\newline
+{\ttfamily \#include $<$QGraphics\+Drop\+Shadow\+Effect$>$}\newline
+{\ttfamily \#include $<$QLine\+Edit$>$}\newline
+{\ttfamily \#include $<$QTimer$>$}\newline
+{\ttfamily \#include $<$QFont\+Database$>$}\newline
+{\ttfamily \#include $<$QGraphics\+Opacity\+Effect$>$}\newline
+{\ttfamily \#include $<$QProperty\+Animation$>$}\newline
+Include dependency graph for Launcher\+Window.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_launcher_window_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const QString \mbox{\hyperlink{_launcher_window_8cpp_abf3d494f996b6dbd109b97f7e72b6146}{LABEL\+\_\+\+FONT}} = "{}\+:/assets/fonts/ARCADECLASSIC.\+TTF"{}
+\item 
+const QString \mbox{\hyperlink{_launcher_window_8cpp_a1eb50965a9c4b5b99e4a6fb005602a81}{GAMES\+\_\+\+FONT}} = "{}\+:/assets/fonts/GAMES.\+TTF"{}
+\item 
+constexpr int \mbox{\hyperlink{_launcher_window_8cpp_a99b684b1821066f3a8b1e5477cc5eb34}{SCREEN\+\_\+\+WIDTH}} = 1920
+\item 
+constexpr int \mbox{\hyperlink{_launcher_window_8cpp_a4ae60e21767f04fbdb318afcdfae058d}{SCREEN\+\_\+\+HEIGHT}} = 1080
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_launcher_window_8cpp_a1eb50965a9c4b5b99e4a6fb005602a81}\label{_launcher_window_8cpp_a1eb50965a9c4b5b99e4a6fb005602a81} 
+\index{LauncherWindow.cpp@{LauncherWindow.cpp}!GAMES\_FONT@{GAMES\_FONT}}
+\index{GAMES\_FONT@{GAMES\_FONT}!LauncherWindow.cpp@{LauncherWindow.cpp}}
+\doxysubsubsection{\texorpdfstring{GAMES\_FONT}{GAMES\_FONT}}
+{\footnotesize\ttfamily const QString GAMES\+\_\+\+FONT = "{}\+:/assets/fonts/GAMES.\+TTF"{}}
+
+\Hypertarget{_launcher_window_8cpp_abf3d494f996b6dbd109b97f7e72b6146}\label{_launcher_window_8cpp_abf3d494f996b6dbd109b97f7e72b6146} 
+\index{LauncherWindow.cpp@{LauncherWindow.cpp}!LABEL\_FONT@{LABEL\_FONT}}
+\index{LABEL\_FONT@{LABEL\_FONT}!LauncherWindow.cpp@{LauncherWindow.cpp}}
+\doxysubsubsection{\texorpdfstring{LABEL\_FONT}{LABEL\_FONT}}
+{\footnotesize\ttfamily const QString LABEL\+\_\+\+FONT = "{}\+:/assets/fonts/ARCADECLASSIC.\+TTF"{}}
+
+\Hypertarget{_launcher_window_8cpp_a4ae60e21767f04fbdb318afcdfae058d}\label{_launcher_window_8cpp_a4ae60e21767f04fbdb318afcdfae058d} 
+\index{LauncherWindow.cpp@{LauncherWindow.cpp}!SCREEN\_HEIGHT@{SCREEN\_HEIGHT}}
+\index{SCREEN\_HEIGHT@{SCREEN\_HEIGHT}!LauncherWindow.cpp@{LauncherWindow.cpp}}
+\doxysubsubsection{\texorpdfstring{SCREEN\_HEIGHT}{SCREEN\_HEIGHT}}
+{\footnotesize\ttfamily constexpr int SCREEN\+\_\+\+HEIGHT = 1080\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\Hypertarget{_launcher_window_8cpp_a99b684b1821066f3a8b1e5477cc5eb34}\label{_launcher_window_8cpp_a99b684b1821066f3a8b1e5477cc5eb34} 
+\index{LauncherWindow.cpp@{LauncherWindow.cpp}!SCREEN\_WIDTH@{SCREEN\_WIDTH}}
+\index{SCREEN\_WIDTH@{SCREEN\_WIDTH}!LauncherWindow.cpp@{LauncherWindow.cpp}}
+\doxysubsubsection{\texorpdfstring{SCREEN\_WIDTH}{SCREEN\_WIDTH}}
+{\footnotesize\ttfamily constexpr int SCREEN\+\_\+\+WIDTH = 1920\hspace{0.3cm}{\ttfamily [constexpr]}}
+

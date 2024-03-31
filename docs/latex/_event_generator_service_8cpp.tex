@@ -1,0 +1,53 @@
+\doxysection{game/src/service/\+Event\+Generator\+Service.cpp File Reference}
+\hypertarget{_event_generator_service_8cpp}{}\label{_event_generator_service_8cpp}\index{game/src/service/EventGeneratorService.cpp@{game/src/service/EventGeneratorService.cpp}}
+{\ttfamily \#include "{}service/\+Event\+Generator\+Service.\+h"{}}\newline
+{\ttfamily \#include "{}model/\+Bit\+Buddy\+Events.\+h"{}}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for Event\+Generator\+Service.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_event_generator_service_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr int \mbox{\hyperlink{_event_generator_service_8cpp_a3f960abb12cc3cffe30566f5b902a663}{TARGET\+\_\+\+MEAN\+\_\+\+SECONDS}} = 10
+\item 
+constexpr int \mbox{\hyperlink{_event_generator_service_8cpp_aee4e4a403b493181b46cac22838099b9}{TIME\+\_\+\+SPREAD\+\_\+\+SECONDS}} = 5
+\item 
+constexpr int \mbox{\hyperlink{_event_generator_service_8cpp_a1b499cecd6c2f4d0f0ede4eaf115748a}{MIN\+\_\+\+DELAY\+\_\+\+SECONDS}} = 2
+\item 
+constexpr int \mbox{\hyperlink{_event_generator_service_8cpp_a1ee8f933dc2a2a45c8f50cbbfc710eed}{MAX\+\_\+\+DELAY\+\_\+\+SECONDS}} = 20
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_event_generator_service_8cpp_a1ee8f933dc2a2a45c8f50cbbfc710eed}\label{_event_generator_service_8cpp_a1ee8f933dc2a2a45c8f50cbbfc710eed} 
+\index{EventGeneratorService.cpp@{EventGeneratorService.cpp}!MAX\_DELAY\_SECONDS@{MAX\_DELAY\_SECONDS}}
+\index{MAX\_DELAY\_SECONDS@{MAX\_DELAY\_SECONDS}!EventGeneratorService.cpp@{EventGeneratorService.cpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_DELAY\_SECONDS}{MAX\_DELAY\_SECONDS}}
+{\footnotesize\ttfamily constexpr int MAX\+\_\+\+DELAY\+\_\+\+SECONDS = 20\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\Hypertarget{_event_generator_service_8cpp_a1b499cecd6c2f4d0f0ede4eaf115748a}\label{_event_generator_service_8cpp_a1b499cecd6c2f4d0f0ede4eaf115748a} 
+\index{EventGeneratorService.cpp@{EventGeneratorService.cpp}!MIN\_DELAY\_SECONDS@{MIN\_DELAY\_SECONDS}}
+\index{MIN\_DELAY\_SECONDS@{MIN\_DELAY\_SECONDS}!EventGeneratorService.cpp@{EventGeneratorService.cpp}}
+\doxysubsubsection{\texorpdfstring{MIN\_DELAY\_SECONDS}{MIN\_DELAY\_SECONDS}}
+{\footnotesize\ttfamily constexpr int MIN\+\_\+\+DELAY\+\_\+\+SECONDS = 2\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\Hypertarget{_event_generator_service_8cpp_a3f960abb12cc3cffe30566f5b902a663}\label{_event_generator_service_8cpp_a3f960abb12cc3cffe30566f5b902a663} 
+\index{EventGeneratorService.cpp@{EventGeneratorService.cpp}!TARGET\_MEAN\_SECONDS@{TARGET\_MEAN\_SECONDS}}
+\index{TARGET\_MEAN\_SECONDS@{TARGET\_MEAN\_SECONDS}!EventGeneratorService.cpp@{EventGeneratorService.cpp}}
+\doxysubsubsection{\texorpdfstring{TARGET\_MEAN\_SECONDS}{TARGET\_MEAN\_SECONDS}}
+{\footnotesize\ttfamily constexpr int TARGET\+\_\+\+MEAN\+\_\+\+SECONDS = 10\hspace{0.3cm}{\ttfamily [constexpr]}}
+
+\Hypertarget{_event_generator_service_8cpp_aee4e4a403b493181b46cac22838099b9}\label{_event_generator_service_8cpp_aee4e4a403b493181b46cac22838099b9} 
+\index{EventGeneratorService.cpp@{EventGeneratorService.cpp}!TIME\_SPREAD\_SECONDS@{TIME\_SPREAD\_SECONDS}}
+\index{TIME\_SPREAD\_SECONDS@{TIME\_SPREAD\_SECONDS}!EventGeneratorService.cpp@{EventGeneratorService.cpp}}
+\doxysubsubsection{\texorpdfstring{TIME\_SPREAD\_SECONDS}{TIME\_SPREAD\_SECONDS}}
+{\footnotesize\ttfamily constexpr int TIME\+\_\+\+SPREAD\+\_\+\+SECONDS = 5\hspace{0.3cm}{\ttfamily [constexpr]}}
+

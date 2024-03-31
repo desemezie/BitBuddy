@@ -1,0 +1,11 @@
+<map id="game/include/component/BitBuddyActionButton.h" name="game/include/component/BitBuddyActionButton.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="52,5,218,46"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,94,62,120"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,49,63,86,59,82,108,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="85,94,185,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="138,46,138,78,132,78,132,46"/>
+<area shape="rect" id="Node000004" href="$_bit_buddy_attribute_name_8h.html" title=" " alt="" coords="208,94,416,120"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="180,44,272,85,270,90,178,49"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="286,168,339,193"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="315,120,315,152,310,152,310,120"/>
+</map>

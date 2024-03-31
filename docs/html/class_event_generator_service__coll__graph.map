@@ -1,0 +1,11 @@
+<map id="EventGeneratorService" name="EventGeneratorService">
+<area shape="rect" id="Node000001" title="The EventGeneratorService is responsible for generating events at random time intervals." alt="" coords="199,149,373,414"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,55,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="38,70,46,97,61,123,88,154,119,182,186,228,182,232,115,186,84,158,56,126,41,99,33,71"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="183,5,283,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="242,70,256,132,251,133,237,71"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="307,5,356,71"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="328,71,317,132,311,131,323,70"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="382,5,499,71"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="431,72,406,126,385,158,381,156,401,123,427,69"/>
+</map>

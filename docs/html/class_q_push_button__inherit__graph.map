@@ -1,0 +1,9 @@
+<map id="QPushButton" name="QPushButton">
+<area shape="rect" id="Node000001" title=" " alt="" coords="195,5,285,71"/>
+<area shape="rect" id="Node000002" href="$class_bit_buddy_action_button.html" title="Will initialize the button by connecting the button click to the handleButtonClicked method." alt="" coords="5,129,165,234"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,83,143,131,140,127,193,79"/>
+<area shape="rect" id="Node000003" href="$class_light_button.html" title="The LightButton class extends QPushButton to provide a light&#45;themed toggle button." alt="" coords="190,119,290,244"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="243,86,243,119,237,119,237,86"/>
+<area shape="rect" id="Node000004" href="$class_stats_button.html" title="The StatsButton class extends QPushButton to provide a button specifically for showing statistics." alt="" coords="315,119,419,244"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="280,80,317,120,313,124,276,84"/>
+</map>

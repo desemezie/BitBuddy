@@ -1,0 +1,17 @@
+<map id="QObject" name="QObject">
+<area shape="rect" id="Node000001" title=" " alt="" coords="682,5,743,71"/>
+<area shape="rect" id="Node000002" href="$class_bit_buck_generator.html" title="Generates BitBucks at a set interval and emits a signal when they are generated." alt="" coords="5,277,209,626"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="667,43,561,50,429,63,363,73,304,86,256,102,222,121,191,154,166,192,147,234,132,278,127,276,142,232,161,190,187,150,219,117,254,97,303,81,362,68,428,58,561,44,667,38"/>
+<area shape="rect" id="Node000003" href="$class_bit_buddy.html" title="Represents the BitBuddy pet in the game." alt="" coords="233,119,403,784"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="667,41,610,45,542,56,508,67,475,80,443,98,416,121,405,133,401,129,412,117,440,94,472,76,506,61,541,51,609,39,667,36"/>
+<area shape="rect" id="Node000004" href="$class_bit_buddy_sprite_handler.html" title="The BitBuddySpriteHandler is responsible for the changing sprites of the bitbuddy based on his emotio..." alt="" coords="427,189,599,714"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="672,66,640,90,612,120,592,154,574,190,570,188,587,151,608,117,636,86,668,61"/>
+<area shape="rect" id="Node000005" href="$class_event_dispatcher_service.html" title="The EventDispatcherService is responsible for dispatching events to all listeners." alt="" coords="623,349,803,554"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="715,86,715,349,710,349,710,86"/>
+<area shape="rect" id="Node000006" href="$class_music_service.html" title="The MusicService is responsible for playing and stopping the music in the game." alt="" coords="827,299,945,604"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="757,61,790,85,818,117,840,160,857,206,879,298,874,300,852,207,835,162,813,120,786,89,754,65"/>
+<area shape="rect" id="Node000007" href="$class_transaction_service.html" title="Service that handles all transactions in the game." alt="" coords="970,349,1122,554"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="759,39,806,45,860,59,914,81,938,97,960,117,980,142,997,169,1023,229,1038,290,1047,349,1041,349,1033,292,1018,231,993,172,976,145,956,121,935,102,911,86,858,64,805,50,758,44"/>
+<area shape="rect" id="Node000008" href="$class_user_bank_account.html" title="Represents a user&#39;s bank account with a balance that can be deposited to or withdrawn from." alt="" coords="1147,329,1284,574"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="758,39,851,47,963,61,1067,84,1108,99,1136,117,1156,138,1172,163,1197,216,1212,273,1219,328,1214,329,1206,274,1192,218,1168,165,1151,142,1132,121,1105,103,1066,89,962,66,850,52,758,44"/>
+</map>

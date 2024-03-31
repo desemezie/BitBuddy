@@ -1,0 +1,5 @@
+<map id="SingleAttributeEvent" name="SingleAttributeEvent">
+<area shape="rect" id="Node000001" title="The SingleAttributeEvent class represents an event that modifies a single attribute of the BitBuddy." alt="" coords="5,319,164,544"/>
+<area shape="rect" id="Node000002" href="$class_event.html" title="The Event class represents an event that can be dispatched to listeners." alt="" coords="21,5,149,271"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,286,87,319,82,319,82,286"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$class_event.html" title="The Event class represents an event that can be dispatched to listeners." alt="" coords="5,5,61,31"/>
+<area shape="rect" id="Node000001" href="$class_single_attribute_event.html" title="The SingleAttributeEvent class represents an event that modifies a single attribute of the BitBuddy." alt="" coords="109,5,249,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="77,16,108,16,108,21,77,21"/>
+</map>
