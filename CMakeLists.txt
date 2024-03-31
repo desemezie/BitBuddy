@@ -85,6 +85,10 @@ add_executable(bitbuddy game/src/main.cpp
         game/include/window/ShopWindow.h
         game/src/window/BoardWindow.cpp
         game/include/window/BoardWindow.h
+        game/src/window/TieWindow.cpp
+        game/src/window/BuddyWindow.cpp
+        game/include/window/BuddyWindow.h
+        game/include/window/TieWindow.h
 )
 
 
