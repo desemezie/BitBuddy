@@ -114,6 +114,13 @@ void BitBuddySpriteHandler::spriteOrganizer(const Event &event){
       changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(attributeName)));
     }
   }
+  if (specificEvent->getAttribute() == BitBuddyAttributeName::HAPPINESS) {
+    displayDessert(":/assets/lollipop.png");
+    int value = bitBuddy->getAttributeValue(BitBuddyAttributeName::HAPPINESS);
+    if (value < BitBuddyAttributeName::valueWhereChange(BitBuddyAttributeName::HAPPINESS)) {
+      changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(attributeName)));
+    }
+  }
 
 }
 
@@ -229,6 +236,27 @@ void BitBuddySpriteHandler::displayBubbles(const QString &imagePath) {
     });
   }
 }
+
+void BitBuddySpriteHandler::displayDessert(const QString &imagePath) {
+  QPixmap pixmap(imagePath);
+  if (!pixmap.isNull()) {
+    QSize newSize(200, 200);
+
+    temporaryLabel->setPixmap(pixmap.scaled(newSize, Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    temporaryLabel->resize(newSize);
+    updateDessertPosition();
+    temporaryLabel->show();
+    // Use QTimer to wait 5 seconds before removing the image
+    QTimer::singleShot(3000, this, [this]() {
+      temporaryLabel->clear(); // Removes the pixmap from the label
+      checkLevels();
+    });
+
+  } else {
+    qDebug() << "Failed to load image for taco event.";
+  }
+}
+
 void BitBuddySpriteHandler::changeSpriteSmoothly(const QString &imagePath) {
   auto *effect = new QGraphicsOpacityEffect(this);
   displayLabel->setGraphicsEffect(effect);
@@ -335,6 +363,17 @@ void BitBuddySpriteHandler::updateZZZPosition() {
 
 }
 
+void BitBuddySpriteHandler::updateDessertPosition() {
+  QSize newSize = temporaryLabel->pixmap().size(); // Get the size of the image
+  int parentWidth = temporaryLabel->parentWidget()->width();
+  int parentHeight = temporaryLabel->parentWidget()->height();
+
+  int xPosition = (parentWidth - newSize.width()) / 2 + ((parentWidth - newSize.width()) / 45)/3 - ((parentWidth - newSize.width()) / 65) - 10;
+  int yPosition = (parentHeight - newSize.height()) / 2 + 90;
+
+  temporaryLabel->move(xPosition, yPosition);
+}
+
 BitBuddyAttributeName BitBuddySpriteHandler::checkLevels(){
   std::vector<BitBuddyAttributeName::UniqueName> attributes = {
       BitBuddyAttributeName::HUNGER, BitBuddyAttributeName::HAPPINESS, BitBuddyAttributeName::THIRST, BitBuddyAttributeName::HEALTH, BitBuddyAttributeName::TIREDNESS, BitBuddyAttributeName::BOREDOM, BitBuddyAttributeName::HYGIENE
@@ -392,3 +431,4 @@ BitBuddyAttributeName BitBuddySpriteHandler::checkLevels(){
 
 
 }
+

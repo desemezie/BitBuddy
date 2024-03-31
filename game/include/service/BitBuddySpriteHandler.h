@@ -121,6 +121,8 @@ class BitBuddySpriteHandler :public QObject{
    * @return BitBuddyAttributeName for the current attribute set off
    */
   BitBuddyAttributeName checkLevels();
+  void displayDessert(const QString &imagePath);
+  void updateDessertPosition();
 };
 
 
