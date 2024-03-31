@@ -83,10 +83,6 @@ add_executable(bitbuddy game/src/main.cpp
         game/include/component/StatsButton.h
         game/src/window/ShopWindow.cpp
         game/include/window/ShopWindow.h
-        game/src/window/xoPlayerWindow.cpp
-        game/include/window/xoPlayerWindow.h
-        game/src/window/xoGameBoard.cpp
-        game/include/window/xoGameBoard.h
 )
 
 
