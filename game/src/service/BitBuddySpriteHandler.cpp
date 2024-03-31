@@ -11,6 +11,8 @@
 #include <QPropertyAnimation>
 #include <QGraphicsOpacityEffect>
 #include <iostream>
+// Raz
+#include <service/XOController.h>
 
 // Constructor
 BitBuddySpriteHandler::BitBuddySpriteHandler(QLabel *displayLabel, QObject *parent, BitBuddy *bitBuddy)
@@ -113,6 +115,12 @@ void BitBuddySpriteHandler::spriteOrganizer(const Event &event){
     if (value < BitBuddyAttributeName::valueWhereChange(BitBuddyAttributeName::HEALTH)) {
       changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(attributeName)));
     }
+  }
+
+  //Gametime
+  if(specificEvent->getAttribute() == BitBuddyAttributeName::BOREDOM){
+    XOController game;
+    int winner = game.run();
   }
 
 }

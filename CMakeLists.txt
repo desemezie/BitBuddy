@@ -11,7 +11,7 @@ list(APPEND CMAKE_PREFIX_PATH "/Users/ryanhecht/Qt/6.6.1/macos")
 list(APPEND CMAKE_PREFIX_PATH "/Users/danielesemezie/Qt/6.6.2/macos")
 list(APPEND CMAKE_PREFIX_PATH "/shaylan/path")
 list(APPEND CMAKE_PREFIX_PATH "/annabel/path")
-list(APPEND CMAKE_PREFIX_PATH "/razvan/path")
+list(APPEND CMAKE_PREFIX_PATH "/home/razvan/Qt/6.6.3/gcc_64")
 
 find_package(Qt6 COMPONENTS
         Core
@@ -82,6 +82,15 @@ add_executable(bitbuddy game/src/main.cpp
         game/include/component/StatsButton.h
         game/src/window/ShopWindow.cpp
         game/include/window/ShopWindow.h
+        game/src/window/BoardWindow.cpp
+        game/include/window/BoardWindow.h
+        game/src/window/TieWindow.cpp
+        game/src/window/BuddyWindow.cpp
+        game/include/window/BuddyWindow.h
+        game/include/window/TieWindow.h
+        game/src/service/XOController.cpp
+        game/include/service/XOController.h
+        game/src/model/board.cpp
 )
 
 
