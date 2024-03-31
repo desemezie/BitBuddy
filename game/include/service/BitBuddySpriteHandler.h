@@ -123,6 +123,9 @@ class BitBuddySpriteHandler :public QObject{
   BitBuddyAttributeName checkLevels();
   void displayDessert(const QString &imagePath);
   void updateDessertPosition();
+  void displayDescription(const QString &text);
+  void displayDescription(const std::string &message);
+  void displayText(const QString &text);
 };
 
 

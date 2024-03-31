@@ -26,7 +26,8 @@ BitBuddySpriteHandler::BitBuddySpriteHandler(QLabel *displayLabel, QObject *pare
 void BitBuddySpriteHandler::handleEvent(const Event &event) {
   // Casts as a SingleAttributeEvent
   auto specificEvent = dynamic_cast<const SingleAttributeEvent*>(&event);
-
+  qDebug() << specificEvent->getDescription();
+  displayText(QString::fromStdString(specificEvent->getDescription()));
   // Checks if it is a bitbuddy feeling or user action
   if (specificEvent->getIncrement() < 0) {
     BitBuddyAttributeName::UniqueName attributeName = specificEvent->getAttribute();
@@ -49,9 +50,10 @@ void BitBuddySpriteHandler::handleEvent(const Event &event) {
 
 
 }
-
+// sprite organizer
 void BitBuddySpriteHandler::spriteOrganizer(const Event &event){
 
+  // gets the event and changes the sprite
   auto specificEvent = dynamic_cast<const SingleAttributeEvent*>(&event);
   auto attributeName = specificEvent->getAttribute();
 
@@ -124,6 +126,24 @@ void BitBuddySpriteHandler::spriteOrganizer(const Event &event){
 
 }
 
+void BitBuddySpriteHandler::displayText(const QString &text){
+  QLabel *textLabel = new QLabel(displayLabel->parentWidget());
+  textLabel->setText(text);
+  textLabel->setStyleSheet("QLabel { color : black; font: bold 12px; }");
+  textLabel->adjustSize(); // Adjust the label size to fit the text
+
+  // Position the label (example: center it within the parent widget)
+  int xPosition = (displayLabel->parentWidget()->width() - textLabel->width()) / 6;
+  int yPosition = (displayLabel->parentWidget()->height() - textLabel->height()) / 2;
+  textLabel->move(xPosition, yPosition);
+
+  textLabel->setAttribute(Qt::WA_DeleteOnClose); // Ensure the label is deleted when closed
+  textLabel->show();
+
+  // Use QTimer to auto-remove the text after a specified duration
+  QTimer::singleShot(3000, textLabel, &QWidget::close);
+
+}
 void BitBuddySpriteHandler::displayPills(const QString &imagePath) {
   qDebug() << "load image for pill event.";
   QPixmap pixmap(imagePath);
@@ -147,11 +167,11 @@ void BitBuddySpriteHandler::displayPills(const QString &imagePath) {
   }
 }
 
-
+// displayTacoAndRemove
 void BitBuddySpriteHandler::displayTacoAndRemove(const QString &imagePath) {
   QPixmap pixmap(imagePath);
   checkLevels();
-
+// displays the taco with size 200, 200
   if (!pixmap.isNull()) {
     QSize newSize(200, 200);
 
@@ -168,14 +188,17 @@ void BitBuddySpriteHandler::displayTacoAndRemove(const QString &imagePath) {
     qDebug() << "Failed to load image for taco event.";
   }
 }
+// display drink
 void BitBuddySpriteHandler::displayDrink(const QString &imagePath) {
   qDebug() << "Trying to load image from:" << imagePath;
+  // loads image
   QPixmap pixmap(imagePath);
   if (!pixmap.isNull()) {
     QSize newSize(250, 250);
     //temporaryLabel->setStyleSheet("background-color: red;");
     temporaryLabel->setPixmap(pixmap.scaled(newSize, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     temporaryLabel->resize(newSize);
+    // updates drink position when resize
     updateDrinkPosition();
     temporaryLabel->show();
     // Use QTimer to wait 5 seconds before removing the image
@@ -188,13 +211,17 @@ void BitBuddySpriteHandler::displayDrink(const QString &imagePath) {
   }
 }
 
+// displayZZZ
 void BitBuddySpriteHandler::displayZZZ(const QString &imagePath) {
   QPixmap pixmap(imagePath);
+
+  // loads image
   if (!pixmap.isNull()) {
     QSize newSize(200, 200);
 
     temporaryLabel->setPixmap(pixmap.scaled(newSize, Qt::KeepAspectRatio, Qt::SmoothTransformation));
     temporaryLabel->resize(newSize);
+    // updates zzz position when resize
     updateZZZPosition();
     temporaryLabel->show();
     // Use QTimer to wait 5 seconds before removing the image
@@ -208,6 +235,7 @@ void BitBuddySpriteHandler::displayZZZ(const QString &imagePath) {
   }
 }
 
+// display bubbles
 void BitBuddySpriteHandler::displayBubbles(const QString &imagePath) {
   const int numberOfBubbles = 30; // Adjust the number of bubbles as needed
 
@@ -237,6 +265,7 @@ void BitBuddySpriteHandler::displayBubbles(const QString &imagePath) {
   }
 }
 
+// displayDessert called when happiness is pressed
 void BitBuddySpriteHandler::displayDessert(const QString &imagePath) {
   QPixmap pixmap(imagePath);
   if (!pixmap.isNull()) {
@@ -256,6 +285,8 @@ void BitBuddySpriteHandler::displayDessert(const QString &imagePath) {
     qDebug() << "Failed to load image for taco event.";
   }
 }
+
+
 
 void BitBuddySpriteHandler::changeSpriteSmoothly(const QString &imagePath) {
   auto *effect = new QGraphicsOpacityEffect(this);
