@@ -11,6 +11,8 @@
 #include <QPropertyAnimation>
 #include <QGraphicsOpacityEffect>
 #include <iostream>
+// Raz
+#include <service/XOController.h>
 
 // Constructor
 BitBuddySpriteHandler::BitBuddySpriteHandler(QLabel *displayLabel, QObject *parent, BitBuddy *bitBuddy)
@@ -117,7 +119,8 @@ void BitBuddySpriteHandler::spriteOrganizer(const Event &event){
 
   //Gametime
   if(specificEvent->getAttribute() == BitBuddyAttributeName::BOREDOM){
-    displayPills(":/assets/tamagochi_pills.png");
+    XOController game;
+    int winner = game.run();
   }
 
 }

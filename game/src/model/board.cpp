@@ -2,7 +2,7 @@
 // Created by razro on 2024-03-25.
 //
 
-#include "board.h"
+#include "model/board.h"
 
 //constructor
 board::board(){

@@ -90,6 +90,7 @@ add_executable(bitbuddy game/src/main.cpp
         game/include/window/TieWindow.h
         game/src/service/XOController.cpp
         game/include/service/XOController.h
+        game/src/model/board.cpp
 )
 
 
