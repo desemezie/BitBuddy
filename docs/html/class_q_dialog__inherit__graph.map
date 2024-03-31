@@ -1,0 +1,7 @@
+<map id="QDialog" name="QDialog">
+<area shape="rect" id="Node000001" title=" " alt="" coords="169,5,229,71"/>
+<area shape="rect" id="Node000002" href="$class_settings_window.html" title="The SettingsWindow class provides a dialog for users to adjust application settings." alt="" coords="5,119,209,404"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="183,85,169,120,164,118,178,83"/>
+<area shape="rect" id="Node000003" href="$class_stats_window.html" title="The StatsWindow class provides a dialog to display statistics or information." alt="" coords="234,189,351,334"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="221,83,265,188,260,190,216,85"/>
+</map>

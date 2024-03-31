@@ -10,6 +10,7 @@
 #include <QAbstractAnimation>
 #include <QPropertyAnimation>
 #include <QGraphicsOpacityEffect>
+#include <iostream>
 
 // Constructor
 BitBuddySpriteHandler::BitBuddySpriteHandler(QLabel *displayLabel, QObject *parent, BitBuddy *bitBuddy)
@@ -17,6 +18,7 @@ BitBuddySpriteHandler::BitBuddySpriteHandler(QLabel *displayLabel, QObject *pare
   temporaryLabel = new QLabel(displayLabel->parentWidget());
   temporaryLabel->setAttribute(Qt::WA_TransparentForMouseEvents);
   temporaryLabel->hide();
+
 }
 
 
@@ -28,7 +30,7 @@ void BitBuddySpriteHandler::handleEvent(const Event &event) {
   // Checks if it is a bitbuddy feeling or user action
   if (specificEvent->getIncrement() < 0) {
     BitBuddyAttributeName::UniqueName attributeName = specificEvent->getAttribute();
-    // Gets the value of the current attiribute
+    // Gets the value of the current attribute
     int value = bitBuddy->getAttributeValue(attributeName);
     qDebug() << "Attribute: " << QString::fromStdString(BitBuddyAttributeName::toString(attributeName)) << " With Value: " << value;
     qDebug() << "URL: " << QString::fromStdString(BitBuddyAttributeName::imageURL(attributeName));
@@ -49,16 +51,40 @@ void BitBuddySpriteHandler::handleEvent(const Event &event) {
 }
 
 void BitBuddySpriteHandler::spriteOrganizer(const Event &event){
+
   auto specificEvent = dynamic_cast<const SingleAttributeEvent*>(&event);
   auto attributeName = specificEvent->getAttribute();
+
   if (specificEvent->getAttribute() == BitBuddyAttributeName::HUNGER){
     displayTacoAndRemove(":/assets/tamagochi_feed.png");
+
+    int value = bitBuddy->getAttributeValue(BitBuddyAttributeName::HUNGER);
+    if (value < BitBuddyAttributeName::valueWhereChange(BitBuddyAttributeName::HUNGER)) {
+      changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(attributeName)));
+    }
+    else {
+      changeSpriteSmoothly(":/assets/happy_bitbuddy.png");
+    }
+
   }
+
   if (specificEvent->getAttribute() == BitBuddyAttributeName::THIRST){
-    changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(attributeName)));
+
+    changeSpriteSmoothly(":/assets/happy_bitbuddy.png");
     displayDrink(":/assets/tamagochi_drink_2.png");
+
+    int value = bitBuddy->getAttributeValue(BitBuddyAttributeName::THIRST);
+    if (value < BitBuddyAttributeName::valueWhereChange(BitBuddyAttributeName::THIRST)) {
+      changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(attributeName)));
+    }
+    else {
+      changeSpriteSmoothly(":/assets/happy_bitbuddy.png");
+    }
+
   }
+
   if (specificEvent->getAttribute() == BitBuddyAttributeName::TIREDNESS) {
+
     changeSpriteSmoothly(":/assets/sleeping_bitbuddy.png");
     displayZZZ(":/assets/tamagochi_zzz.png");
     QTimer::singleShot(5000, this, [this]() {
@@ -66,13 +92,29 @@ void BitBuddySpriteHandler::spriteOrganizer(const Event &event){
       changeSpriteSmoothly(defaultImagePath);
     });
 
+    int value = bitBuddy->getAttributeValue(BitBuddyAttributeName::TIREDNESS);
+    if (value < BitBuddyAttributeName::valueWhereChange(BitBuddyAttributeName::TIREDNESS)) {
+      changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(attributeName)));
+    }
+
   }
+
   if (specificEvent->getAttribute() == BitBuddyAttributeName::HYGIENE) {
     displayBubbles(":/assets/tamagochi_bubble.png");
+    int value = bitBuddy->getAttributeValue(BitBuddyAttributeName::HYGIENE);
+    if (value < BitBuddyAttributeName::valueWhereChange(BitBuddyAttributeName::HYGIENE)) {
+      changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(attributeName)));
+    }
   }
+
   if (specificEvent->getAttribute() == BitBuddyAttributeName::HEALTH) {
     displayPills(":/assets/tamagochi_pills.png");
+    int value = bitBuddy->getAttributeValue(BitBuddyAttributeName::HEALTH);
+    if (value < BitBuddyAttributeName::valueWhereChange(BitBuddyAttributeName::HEALTH)) {
+      changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(attributeName)));
+    }
   }
+
 }
 
 void BitBuddySpriteHandler::displayPills(const QString &imagePath) {
@@ -91,7 +133,7 @@ void BitBuddySpriteHandler::displayPills(const QString &imagePath) {
     // Use QTimer to wait 5 seconds before removing the image
     QTimer::singleShot(3000, this, [this]() {
       temporaryLabel->clear(); // Removes the pixmap from the label
-
+      checkLevels();
     });
   } else {
     qDebug() << "Failed to load image";
@@ -101,6 +143,7 @@ void BitBuddySpriteHandler::displayPills(const QString &imagePath) {
 
 void BitBuddySpriteHandler::displayTacoAndRemove(const QString &imagePath) {
   QPixmap pixmap(imagePath);
+  checkLevels();
 
   if (!pixmap.isNull()) {
     QSize newSize(200, 200);
@@ -112,7 +155,7 @@ void BitBuddySpriteHandler::displayTacoAndRemove(const QString &imagePath) {
     // Use QTimer to wait 5 seconds before removing the image
     QTimer::singleShot(3000, this, [this]() {
       temporaryLabel->clear(); // Removes the pixmap from the label
-
+      checkLevels();
     });
   } else {
     qDebug() << "Failed to load image for taco event.";
@@ -131,7 +174,7 @@ void BitBuddySpriteHandler::displayDrink(const QString &imagePath) {
     // Use QTimer to wait 5 seconds before removing the image
     QTimer::singleShot(5000, this, [this]() {
       temporaryLabel->clear(); // Removes the pixmap from the label
-      // Optionally reset to a default sprite or state here
+      checkLevels();
     });
   } else {
     qDebug() << "Failed to load image for taco event.";
@@ -150,7 +193,7 @@ void BitBuddySpriteHandler::displayZZZ(const QString &imagePath) {
     // Use QTimer to wait 5 seconds before removing the image
     QTimer::singleShot(5000, this, [this]() {
       temporaryLabel->clear(); // Removes the pixmap from the label
-
+      checkLevels();
     });
 
   } else {
@@ -182,6 +225,7 @@ void BitBuddySpriteHandler::displayBubbles(const QString &imagePath) {
     QTimer::singleShot(3000, bubbleLabel, [bubbleLabel, this]() {
       bubbleLabel->deleteLater(); // Ensure the label is properly deleted
       bubbleLabels.removeAll(bubbleLabel);
+      checkLevels();
     });
   }
 }
@@ -230,7 +274,7 @@ void BitBuddySpriteHandler::updatePillsPosition() {
   int parentHeight = temporaryLabel->parentWidget()->height();
 
   int xPosition = (parentWidth - newSize.width()) / 2 + ((parentWidth - newSize.width()) / 45)/3 - ((parentWidth - newSize.width()) / 65);
-  int yPosition = (parentHeight - newSize.height()) / 2 + (parentHeight - newSize.height()) / 15;
+  int yPosition = (parentHeight - newSize.height()) / 2 + (parentHeight - newSize.height()) / 45;
 
   temporaryLabel->move(xPosition, yPosition);
 
@@ -241,8 +285,8 @@ void BitBuddySpriteHandler::updateDrinkPosition() {
   int parentWidth = temporaryLabel->parentWidget()->width();
   int parentHeight = temporaryLabel->parentWidget()->height();
 
-  int xPosition = (parentWidth - newSize.width()) / 2 + ((parentWidth - newSize.width()) / 45)/3 - ((parentWidth - newSize.width()) / 65) - 35;
-  int yPosition = (parentHeight - newSize.height()) / 2 + 150;
+  int xPosition = (parentWidth - newSize.width()) / 2 + ((parentWidth - newSize.width()) / 45)/3 - ((parentWidth - newSize.width()) / 65) - 20;
+  int yPosition = (parentHeight - newSize.height()) / 2 + 125;
 
   temporaryLabel->move(xPosition, yPosition);
 
@@ -291,4 +335,62 @@ void BitBuddySpriteHandler::updateZZZPosition() {
 
 }
 
+BitBuddyAttributeName BitBuddySpriteHandler::checkLevels(){
+  std::vector<BitBuddyAttributeName::UniqueName> attributes = {
+      BitBuddyAttributeName::HUNGER, BitBuddyAttributeName::HAPPINESS, BitBuddyAttributeName::THIRST, BitBuddyAttributeName::HEALTH, BitBuddyAttributeName::TIREDNESS, BitBuddyAttributeName::BOREDOM, BitBuddyAttributeName::HYGIENE
+  };
+
+
+  for (const auto& attr : attributes) {
+    int value = 0;
+    switch (attr) {
+      case BitBuddyAttributeName::HUNGER:
+        value = bitBuddy->getAttributeValue(BitBuddyAttributeName::HUNGER);
+        if (value < BitBuddyAttributeName::valueWhereChange(BitBuddyAttributeName::HUNGER)) {
+          changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(BitBuddyAttributeName::HUNGER)));
+        }
+        break;
+      case BitBuddyAttributeName::HAPPINESS:
+        value = bitBuddy->getAttributeValue(BitBuddyAttributeName::HAPPINESS);
+        if (value < BitBuddyAttributeName::valueWhereChange(BitBuddyAttributeName::HAPPINESS)) {
+          changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(BitBuddyAttributeName::HAPPINESS)));
+        }
+        break;
+      case BitBuddyAttributeName::THIRST:
+        value = bitBuddy->getAttributeValue(BitBuddyAttributeName::THIRST);
+        if (value < BitBuddyAttributeName::valueWhereChange(BitBuddyAttributeName::THIRST)) {
+          changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(BitBuddyAttributeName::THIRST)));
+        }
+        break;
+      case BitBuddyAttributeName::HEALTH:
+        value = bitBuddy->getAttributeValue(BitBuddyAttributeName::HEALTH);
+        if (value < BitBuddyAttributeName::valueWhereChange(BitBuddyAttributeName::HEALTH)) {
+          changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(BitBuddyAttributeName::HEALTH)));
+        }
+        break;
+      case BitBuddyAttributeName::TIREDNESS:
+        value = bitBuddy->getAttributeValue(BitBuddyAttributeName::TIREDNESS);
+        if (value < BitBuddyAttributeName::valueWhereChange(BitBuddyAttributeName::TIREDNESS)) {
+          changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(BitBuddyAttributeName::TIREDNESS)));
+        }
+        break;
+      case BitBuddyAttributeName::BOREDOM:
+        value = bitBuddy->getAttributeValue(BitBuddyAttributeName::BOREDOM);
+        if (value < BitBuddyAttributeName::valueWhereChange(BitBuddyAttributeName::BOREDOM)) {
+          changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(BitBuddyAttributeName::BOREDOM)));
+        }
+        break;
+      case BitBuddyAttributeName::HYGIENE:
+        value = bitBuddy->getAttributeValue(BitBuddyAttributeName::HYGIENE);
+        if (value < BitBuddyAttributeName::valueWhereChange(BitBuddyAttributeName::HYGIENE)) {
+          changeSpriteSmoothly(QString::fromStdString(BitBuddyAttributeName::imageURL(BitBuddyAttributeName::HYGIENE)));
+        }
+        break;
+      default:
+        std::cout << "Unknown Attribute" << std::endl;
+    }
+  }
+
+
+}
 

@@ -91,41 +91,42 @@ $(function() { codefold.init(0); });
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#ifndef BITBUDDY_SRC_BITBUDDYSTATUSWIDGET_H_</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#define BITBUDDY_SRC_BITBUDDYSTATUSWIDGET_H_</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;model/BitBuddyAttributeName.h&quot;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;model/DeprecatedEventListener.h&quot;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;model/BitBuddyAttribute.h&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;model/BitBuddy.h&quot;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;QWidget&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;QProgressBar&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;QMap&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;QLabel&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;QPair&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_bit_buddy_status_widget.html">   22</a></span><span class="keyword">class </span><a class="code hl_class" href="class_bit_buddy_status_widget.html">BitBuddyStatusWidget</a> : <span class="keyword">public</span> QWidget {</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> Q_OBJECT</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_bit_buddy_status_widget.html#a4e7e4431b391241bf646118d69a737ee">   30</a></span>  <span class="keyword">explicit</span> <a class="code hl_function" href="class_bit_buddy_status_widget.html#a4e7e4431b391241bf646118d69a737ee">BitBuddyStatusWidget</a>(<a class="code hl_class" href="class_bit_buddy.html">BitBuddy</a> *BitBuddyInstance, QWidget *parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> <span class="keyword">public</span> slots:</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_bit_buddy_status_widget.html#a57cf81f1160959a94107ed76f7526094">   38</a></span>  <span class="keywordtype">void</span> <a class="code hl_slot" href="class_bit_buddy_status_widget.html#a57cf81f1160959a94107ed76f7526094">onAttributeUpdated</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_bit_buddy_attribute.html">BitBuddyAttribute</a> &amp;attribute);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_bit_buddy_status_widget.html#a1cdf1d3e44af56c91c4ba7ee21523a51">   47</a></span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_bit_buddy_status_widget.html#a1cdf1d3e44af56c91c4ba7ee21523a51">setAttributeLevel</a>(BitBuddyAttributeName::UniqueName attributeName, <span class="keywordtype">int</span> level);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>  QMap&lt;BitBuddyAttributeName::UniqueName, QProgressBar *&gt; attributeBars;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>};</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;QLabel&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;QMap&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QProgressBar&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;model/BitBuddy.h&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;model/BitBuddyAttribute.h&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &quot;model/BitBuddyAttributeName.h&quot;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_bit_buddy_status_widget.html">   26</a></span><span class="keyword">class </span><a class="code hl_class" href="class_bit_buddy_status_widget.html">BitBuddyStatusWidget</a> final : <span class="keyword">public</span> QWidget {</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  Q_OBJECT</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keyword">explicit</span> <a class="code hl_function" href="class_bit_buddy_status_widget.html#a4d63483aa7ea49cab3cd67c4a17936fe">BitBuddyStatusWidget</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_bit_buddy.html">BitBuddy</a> *BitBuddyInstance, QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> <span class="keyword">public</span> slots:</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>  <span class="keywordtype">void</span> <a class="code hl_slot" href="class_bit_buddy_status_widget.html#a57cf81f1160959a94107ed76f7526094">onAttributeUpdated</a>(<span class="keyword">const</span> <a class="code hl_class" href="class_bit_buddy_attribute.html">BitBuddyAttribute</a> &amp;attribute);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>  <span class="keywordtype">void</span> <a class="code hl_slot" href="class_bit_buddy_status_widget.html#ab20650bf988bc2212a0026cce5c7be39">updateDarkMode</a>(<span class="keywordtype">bool</span> isDarkMode);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="class_bit_buddy_status_widget.html#a1cdf1d3e44af56c91c4ba7ee21523a51">setAttributeLevel</a>(<a class="code hl_enumeration" href="class_bit_buddy_attribute_name.html#a31753c61224d615434b2b76c0fa584aa">BitBuddyAttributeName::UniqueName</a> attributeName, <span class="keywordtype">int</span> level);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>  QMap&lt;BitBuddyAttributeName::UniqueName, QProgressBar *&gt; attributeBars;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>};</div>
 </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#endif </span><span class="comment">//BITBUDDY_SRC_BITBUDDYSTATUSWIDGET_H_</span></div>
-<div class="ttc" id="aclass_bit_buddy_attribute_html"><div class="ttname"><a href="class_bit_buddy_attribute.html">BitBuddyAttribute</a></div><div class="ttdef"><b>Definition</b> BitBuddyAttribute.h:14</div></div>
-<div class="ttc" id="aclass_bit_buddy_html"><div class="ttname"><a href="class_bit_buddy.html">BitBuddy</a></div><div class="ttdef"><b>Definition</b> BitBuddy.h:19</div></div>
-<div class="ttc" id="aclass_bit_buddy_status_widget_html"><div class="ttname"><a href="class_bit_buddy_status_widget.html">BitBuddyStatusWidget</a></div><div class="ttdef"><b>Definition</b> BitBuddyStatusWidget.h:22</div></div>
-<div class="ttc" id="aclass_bit_buddy_status_widget_html_a1cdf1d3e44af56c91c4ba7ee21523a51"><div class="ttname"><a href="class_bit_buddy_status_widget.html#a1cdf1d3e44af56c91c4ba7ee21523a51">BitBuddyStatusWidget::setAttributeLevel</a></div><div class="ttdeci">void setAttributeLevel(BitBuddyAttributeName::UniqueName attributeName, int level)</div></div>
-<div class="ttc" id="aclass_bit_buddy_status_widget_html_a4e7e4431b391241bf646118d69a737ee"><div class="ttname"><a href="class_bit_buddy_status_widget.html#a4e7e4431b391241bf646118d69a737ee">BitBuddyStatusWidget::BitBuddyStatusWidget</a></div><div class="ttdeci">BitBuddyStatusWidget(BitBuddy *BitBuddyInstance, QWidget *parent=nullptr)</div></div>
-<div class="ttc" id="aclass_bit_buddy_status_widget_html_a57cf81f1160959a94107ed76f7526094"><div class="ttname"><a href="class_bit_buddy_status_widget.html#a57cf81f1160959a94107ed76f7526094">BitBuddyStatusWidget::onAttributeUpdated</a></div><div class="ttdeci">void onAttributeUpdated(const BitBuddyAttribute &amp;attribute)</div></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="preprocessor">#endif  </span><span class="comment">// BITBUDDY_SRC_BITBUDDYSTATUSWIDGET_H_</span></div>
+<div class="ttc" id="aclass_bit_buddy_attribute_html"><div class="ttname"><a href="class_bit_buddy_attribute.html">BitBuddyAttribute</a></div><div class="ttdoc">The BitBuddyAttribute class represents an attribute of the BitBuddy.</div><div class="ttdef"><b>Definition</b> BitBuddyAttribute.h:23</div></div>
+<div class="ttc" id="aclass_bit_buddy_attribute_name_html_a31753c61224d615434b2b76c0fa584aa"><div class="ttname"><a href="class_bit_buddy_attribute_name.html#a31753c61224d615434b2b76c0fa584aa">BitBuddyAttributeName::UniqueName</a></div><div class="ttdeci">UniqueName</div><div class="ttdoc">Enum that represents the unique names of the BitBuddy attributes.</div><div class="ttdef"><b>Definition</b> BitBuddyAttributeName.h:26</div></div>
+<div class="ttc" id="aclass_bit_buddy_html"><div class="ttname"><a href="class_bit_buddy.html">BitBuddy</a></div><div class="ttdoc">Represents the BitBuddy pet in the game.</div><div class="ttdef"><b>Definition</b> BitBuddy.h:26</div></div>
+<div class="ttc" id="aclass_bit_buddy_status_widget_html"><div class="ttname"><a href="class_bit_buddy_status_widget.html">BitBuddyStatusWidget</a></div><div class="ttdoc">The BitBuddyStatusWidget class is a widget that displays the status of the BitBuddy.</div><div class="ttdef"><b>Definition</b> BitBuddyStatusWidget.h:26</div></div>
+<div class="ttc" id="aclass_bit_buddy_status_widget_html_a1cdf1d3e44af56c91c4ba7ee21523a51"><div class="ttname"><a href="class_bit_buddy_status_widget.html#a1cdf1d3e44af56c91c4ba7ee21523a51">BitBuddyStatusWidget::setAttributeLevel</a></div><div class="ttdeci">void setAttributeLevel(BitBuddyAttributeName::UniqueName attributeName, int level)</div><div class="ttdoc">Sets the level of the attribute's progress bar.</div><div class="ttdef"><b>Definition</b> BitBuddyStatusWidget.cpp:47</div></div>
+<div class="ttc" id="aclass_bit_buddy_status_widget_html_a4d63483aa7ea49cab3cd67c4a17936fe"><div class="ttname"><a href="class_bit_buddy_status_widget.html#a4d63483aa7ea49cab3cd67c4a17936fe">BitBuddyStatusWidget::BitBuddyStatusWidget</a></div><div class="ttdeci">BitBuddyStatusWidget(const BitBuddy *BitBuddyInstance, QWidget *parent=nullptr)</div><div class="ttdoc">Constructor for the BitBuddyStatusWidget.</div><div class="ttdef"><b>Definition</b> BitBuddyStatusWidget.cpp:17</div></div>
+<div class="ttc" id="aclass_bit_buddy_status_widget_html_a57cf81f1160959a94107ed76f7526094"><div class="ttname"><a href="class_bit_buddy_status_widget.html#a57cf81f1160959a94107ed76f7526094">BitBuddyStatusWidget::onAttributeUpdated</a></div><div class="ttdeci">void onAttributeUpdated(const BitBuddyAttribute &amp;attribute)</div><div class="ttdoc">Updates the progress bar for the updated attribute.</div><div class="ttdef"><b>Definition</b> BitBuddyStatusWidget.cpp:53</div></div>
+<div class="ttc" id="aclass_bit_buddy_status_widget_html_ab20650bf988bc2212a0026cce5c7be39"><div class="ttname"><a href="class_bit_buddy_status_widget.html#ab20650bf988bc2212a0026cce5c7be39">BitBuddyStatusWidget::updateDarkMode</a></div><div class="ttdeci">void updateDarkMode(bool isDarkMode)</div><div class="ttdoc">Updates the dark mode of the widget.</div><div class="ttdef"><b>Definition</b> BitBuddyStatusWidget.cpp:60</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

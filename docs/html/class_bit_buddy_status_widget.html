@@ -78,9 +78,12 @@ $(function() {
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_bit_buddy_status_widget-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">BitBuddyStatusWidget Class Reference</div></div>
+  <div class="headertitle"><div class="title">BitBuddyStatusWidget Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="class_bit_buddy_status_widget.html" title="The BitBuddyStatusWidget class is a widget that displays the status of the BitBuddy.">BitBuddyStatusWidget</a> class is a widget that displays the status of the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_bit_buddy_status_widget_8h_source.html">BitBuddyStatusWidget.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -93,29 +96,37 @@ Inheritance diagram for BitBuddyStatusWidget:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-slots" name="pub-slots"></a>
 Public Slots</h2></td></tr>
 <tr class="memitem:a57cf81f1160959a94107ed76f7526094" id="r_a57cf81f1160959a94107ed76f7526094"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57cf81f1160959a94107ed76f7526094">onAttributeUpdated</a> (const <a class="el" href="class_bit_buddy_attribute.html">BitBuddyAttribute</a> &amp;attribute)</td></tr>
+<tr class="memdesc:a57cf81f1160959a94107ed76f7526094"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the progress bar for the updated attribute.  <br /></td></tr>
 <tr class="separator:a57cf81f1160959a94107ed76f7526094"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab20650bf988bc2212a0026cce5c7be39" id="r_ab20650bf988bc2212a0026cce5c7be39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab20650bf988bc2212a0026cce5c7be39">updateDarkMode</a> (bool isDarkMode)</td></tr>
+<tr class="memdesc:ab20650bf988bc2212a0026cce5c7be39"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the dark mode of the widget.  <br /></td></tr>
+<tr class="separator:ab20650bf988bc2212a0026cce5c7be39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4e7e4431b391241bf646118d69a737ee" id="r_a4e7e4431b391241bf646118d69a737ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e7e4431b391241bf646118d69a737ee">BitBuddyStatusWidget</a> (<a class="el" href="class_bit_buddy.html">BitBuddy</a> *BitBuddyInstance, QWidget *parent=nullptr)</td></tr>
-<tr class="separator:a4e7e4431b391241bf646118d69a737ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d63483aa7ea49cab3cd67c4a17936fe" id="r_a4d63483aa7ea49cab3cd67c4a17936fe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d63483aa7ea49cab3cd67c4a17936fe">BitBuddyStatusWidget</a> (const <a class="el" href="class_bit_buddy.html">BitBuddy</a> *BitBuddyInstance, QWidget *parent=nullptr)</td></tr>
+<tr class="memdesc:a4d63483aa7ea49cab3cd67c4a17936fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the <a class="el" href="class_bit_buddy_status_widget.html" title="The BitBuddyStatusWidget class is a widget that displays the status of the BitBuddy.">BitBuddyStatusWidget</a>.  <br /></td></tr>
+<tr class="separator:a4d63483aa7ea49cab3cd67c4a17936fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a1cdf1d3e44af56c91c4ba7ee21523a51" id="r_a1cdf1d3e44af56c91c4ba7ee21523a51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cdf1d3e44af56c91c4ba7ee21523a51">setAttributeLevel</a> (BitBuddyAttributeName::UniqueName attributeName, int level)</td></tr>
+<tr class="memitem:a1cdf1d3e44af56c91c4ba7ee21523a51" id="r_a1cdf1d3e44af56c91c4ba7ee21523a51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1cdf1d3e44af56c91c4ba7ee21523a51">setAttributeLevel</a> (<a class="el" href="class_bit_buddy_attribute_name.html#a31753c61224d615434b2b76c0fa584aa">BitBuddyAttributeName::UniqueName</a> attributeName, int level)</td></tr>
+<tr class="memdesc:a1cdf1d3e44af56c91c4ba7ee21523a51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the level of the attribute's progress bar.  <br /></td></tr>
 <tr class="separator:a1cdf1d3e44af56c91c4ba7ee21523a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a873e839d738883d99f096a6f2666ab34" id="r_a873e839d738883d99f096a6f2666ab34"><td class="memItemLeft" align="right" valign="top"><a id="a873e839d738883d99f096a6f2666ab34" name="a873e839d738883d99f096a6f2666ab34"></a>
-QMap&lt; BitBuddyAttributeName::UniqueName, QProgressBar * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>attributeBars</b></td></tr>
+QMap&lt; <a class="el" href="class_bit_buddy_attribute_name.html#a31753c61224d615434b2b76c0fa584aa">BitBuddyAttributeName::UniqueName</a>, QProgressBar * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>attributeBars</b></td></tr>
 <tr class="separator:a873e839d738883d99f096a6f2666ab34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Widget that displays the status of the <a class="el" href="class_bit_buddy.html">BitBuddy</a>'s attributes. </p>
+<div class="textblock"><p>The <a class="el" href="class_bit_buddy_status_widget.html" title="The BitBuddyStatusWidget class is a widget that displays the status of the BitBuddy.">BitBuddyStatusWidget</a> class is a widget that displays the status of the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>. </p>
+<dl class="section author"><dt>Author</dt><dd>Ryan Hecht</dd></dl>
+<p>The <a class="el" href="class_bit_buddy_status_widget.html" title="The BitBuddyStatusWidget class is a widget that displays the status of the BitBuddy.">BitBuddyStatusWidget</a> class is a widget that displays the status of the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a>. Specifically, it displays the attributes of the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> along with their current values represented by how much each progress bar associated with the value is filled. For example, an attribute with a value of 2 out of 10 will have 20% of the progress bar filled and an attribute that's completely filled will have a comnpletely filled progress bar. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a4e7e4431b391241bf646118d69a737ee" name="a4e7e4431b391241bf646118d69a737ee"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e7e4431b391241bf646118d69a737ee">&#9670;&#160;</a></span>BitBuddyStatusWidget()</h2>
+<a id="a4d63483aa7ea49cab3cd67c4a17936fe" name="a4d63483aa7ea49cab3cd67c4a17936fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d63483aa7ea49cab3cd67c4a17936fe">&#9670;&#160;</a></span>BitBuddyStatusWidget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -126,7 +137,7 @@ QMap&lt; BitBuddyAttributeName::UniqueName, QProgressBar * &gt;&#160;</td><td cl
         <tr>
           <td class="memname">BitBuddyStatusWidget::BitBuddyStatusWidget </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_bit_buddy.html">BitBuddy</a> *</td>          <td class="paramname"><span class="paramname"><em>BitBuddyInstance</em>, </span></td>
+          <td class="paramtype">const <a class="el" href="class_bit_buddy.html">BitBuddy</a> *</td>          <td class="paramname"><span class="paramname"><em>BitBuddyInstance</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -140,9 +151,12 @@ QMap&lt; BitBuddyAttributeName::UniqueName, QProgressBar * &gt;&#160;</td><td cl
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Constructor for the <a class="el" href="class_bit_buddy_status_widget.html">BitBuddyStatusWidget</a> </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Constructor for the <a class="el" href="class_bit_buddy_status_widget.html" title="The BitBuddyStatusWidget class is a widget that displays the status of the BitBuddy.">BitBuddyStatusWidget</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent</td><td>The parent widget of the <a class="el" href="class_bit_buddy_status_widget.html">BitBuddyStatusWidget</a>, typically the <a class="el" href="class_main_window.html">MainWindow</a>. </td></tr>
+    <tr><td class="paramname">BitBuddyInstance</td><td>The <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> instance to display the status of </td></tr>
+    <tr><td class="paramname">parent</td><td>The parent widget of the <a class="el" href="class_bit_buddy_status_widget.html" title="The BitBuddyStatusWidget class is a widget that displays the status of the BitBuddy.">BitBuddyStatusWidget</a>, typically the <a class="el" href="class_main_window.html" title="Responsible for the window of the game.">MainWindow</a>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -172,7 +186,8 @@ QMap&lt; BitBuddyAttributeName::UniqueName, QProgressBar * &gt;&#160;</td><td cl
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Updates the progress bar for the updated attribute</p>
+
+<p>Updates the progress bar for the updated attribute. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">attribute</td><td>The attribute that was updated </td></tr>
@@ -194,7 +209,7 @@ QMap&lt; BitBuddyAttributeName::UniqueName, QProgressBar * &gt;&#160;</td><td cl
         <tr>
           <td class="memname">void BitBuddyStatusWidget::setAttributeLevel </td>
           <td>(</td>
-          <td class="paramtype">BitBuddyAttributeName::UniqueName</td>          <td class="paramname"><span class="paramname"><em>attributeName</em>, </span></td>
+          <td class="paramtype"><a class="el" href="class_bit_buddy_attribute_name.html#a31753c61224d615434b2b76c0fa584aa">BitBuddyAttributeName::UniqueName</a></td>          <td class="paramname"><span class="paramname"><em>attributeName</em>, </span></td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -208,7 +223,8 @@ QMap&lt; BitBuddyAttributeName::UniqueName, QProgressBar * &gt;&#160;</td><td cl
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Sets the level of the attribute's progress bar</p>
+
+<p>Sets the level of the attribute's progress bar. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">attributeName</td><td>The attributeName to set the level for </td></tr>
@@ -219,8 +235,42 @@ QMap&lt; BitBuddyAttributeName::UniqueName, QProgressBar * &gt;&#160;</td><td cl
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a id="ab20650bf988bc2212a0026cce5c7be39" name="ab20650bf988bc2212a0026cce5c7be39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab20650bf988bc2212a0026cce5c7be39">&#9670;&#160;</a></span>updateDarkMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitBuddyStatusWidget::updateDarkMode </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>isDarkMode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the dark mode of the widget. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isDarkMode</td><td>The dark mode to set the widget to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>game/include/component/<a class="el" href="_bit_buddy_status_widget_8h_source.html">BitBuddyStatusWidget.h</a></li>
+<li>game/src/component/<b>BitBuddyStatusWidget.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

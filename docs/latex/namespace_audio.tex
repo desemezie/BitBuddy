@@ -1,0 +1,94 @@
+\doxysection{Audio Namespace Reference}
+\hypertarget{namespace_audio}{}\label{namespace_audio}\index{Audio@{Audio}}
+
+
+Provides functionalities for audio playback and control within the application.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespace_audio_a8c64b91c174c5fff4b1e4e06d53d3dde}{initialize\+Audio\+System}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the audio system for the application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_audio_a48e4af4d1c0b79dc0f228fec2f458ffd}{play\+Sound}} (const QString \&type)
+\begin{DoxyCompactList}\small\item\em Play a sound of the specified type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_audio_a9dd8a1b27ea3753e527bcade6168f63a}{mute\+Sound}} (bool mute)
+\begin{DoxyCompactList}\small\item\em Mutes or unmutes all sound effects in the application. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{namespace_audio_adcb24fdc9dd051786fcdc96531d82a4c}{set\+Volume}} (int volume)
+\begin{DoxyCompactList}\small\item\em Sets the global volume for sound playback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{namespace_audio_a721514d50394388d0680491fb035aa88}\label{namespace_audio_a721514d50394388d0680491fb035aa88} 
+QMedia\+Player \texorpdfstring{$\ast$}{*} {\bfseries media} = nullptr
+\item 
+\Hypertarget{namespace_audio_a7549ddeaf0657ac6544c6ccbb0b9bae7}\label{namespace_audio_a7549ddeaf0657ac6544c6ccbb0b9bae7} 
+QAudio\+Output \texorpdfstring{$\ast$}{*} {\bfseries audio\+Output} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides functionalities for audio playback and control within the application. 
+
+The \doxylink{namespace_audio}{Audio} namespace encapsulates methods for playing sound effects, initializing the audio system, muting/unmuting sound effects, and adjusting the overall volume. It\textquotesingle{}s designed to offer a simple interface for managing sound effects within the application, leveraging Qt\textquotesingle{}s multimedia capabilities. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespace_audio_a8c64b91c174c5fff4b1e4e06d53d3dde}\label{namespace_audio_a8c64b91c174c5fff4b1e4e06d53d3dde} 
+\index{Audio@{Audio}!initializeAudioSystem@{initializeAudioSystem}}
+\index{initializeAudioSystem@{initializeAudioSystem}!Audio@{Audio}}
+\doxysubsubsection{\texorpdfstring{initializeAudioSystem()}{initializeAudioSystem()}}
+{\footnotesize\ttfamily void Audio\+::initialize\+Audio\+System (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the audio system for the application. 
+
+Sets up necessary components and configurations for audio playback. \Hypertarget{namespace_audio_a9dd8a1b27ea3753e527bcade6168f63a}\label{namespace_audio_a9dd8a1b27ea3753e527bcade6168f63a} 
+\index{Audio@{Audio}!muteSound@{muteSound}}
+\index{muteSound@{muteSound}!Audio@{Audio}}
+\doxysubsubsection{\texorpdfstring{muteSound()}{muteSound()}}
+{\footnotesize\ttfamily void Audio\+::mute\+Sound (\begin{DoxyParamCaption}\item[{bool}]{mute }\end{DoxyParamCaption})}
+
+
+
+Mutes or unmutes all sound effects in the application. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mute} & A boolean flag indicating whether to mute (true) or unmute (false) the sound. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespace_audio_a48e4af4d1c0b79dc0f228fec2f458ffd}\label{namespace_audio_a48e4af4d1c0b79dc0f228fec2f458ffd} 
+\index{Audio@{Audio}!playSound@{playSound}}
+\index{playSound@{playSound}!Audio@{Audio}}
+\doxysubsubsection{\texorpdfstring{playSound()}{playSound()}}
+{\footnotesize\ttfamily void Audio\+::play\+Sound (\begin{DoxyParamCaption}\item[{const QString \&}]{type }\end{DoxyParamCaption})}
+
+
+
+Play a sound of the specified type. 
+
+This function looks up and plays a sound corresponding to the given type identifier. The type could specify different sound effects within the application.
+
+
+\begin{DoxyParams}{Parameters}
+{\em type} & A QString identifier for the type of sound to play \\
+\hline
+\end{DoxyParams}
+\Hypertarget{namespace_audio_adcb24fdc9dd051786fcdc96531d82a4c}\label{namespace_audio_adcb24fdc9dd051786fcdc96531d82a4c} 
+\index{Audio@{Audio}!setVolume@{setVolume}}
+\index{setVolume@{setVolume}!Audio@{Audio}}
+\doxysubsubsection{\texorpdfstring{setVolume()}{setVolume()}}
+{\footnotesize\ttfamily void Audio\+::set\+Volume (\begin{DoxyParamCaption}\item[{int}]{volume }\end{DoxyParamCaption})}
+
+
+
+Sets the global volume for sound playback. 
+
+Adjusts the volume at which all sound effects are played back in the application.
+
+
+\begin{DoxyParams}{Parameters}
+{\em volume} & An integer specifying the volume level, typically in a range (e.\+g., 0-\/100). \\
+\hline
+\end{DoxyParams}

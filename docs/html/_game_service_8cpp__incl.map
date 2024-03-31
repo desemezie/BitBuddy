@@ -1,0 +1,35 @@
+<map id="game/src/service/GameService.cpp" name="game/src/service/GameService.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="272,5,501,31"/>
+<area shape="rect" id="Node000002" href="$_game_service_8h.html" title=" " alt="" coords="134,79,292,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="358,34,257,75,255,70,356,29"/>
+<area shape="rect" id="Node000003" href="$_event_generator_service_8h.html" title=" " alt="" coords="106,153,320,178"/>
+<area shape="poly" id="edge11_Node000001_Node000003" title=" " alt="" coords="378,33,347,67,305,107,249,146,245,142,302,103,343,64,374,30"/>
+<area shape="rect" id="Node000012" href="$_music_service_8h.html" title=" " alt="" coords="366,79,524,105"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="398,30,427,65,423,69,394,33"/>
+<area shape="rect" id="Node000014" href="$_user_bank_account_service_8h.html" title=" " alt="" coords="557,79,786,105"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="435,29,609,72,607,77,434,34"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="216,105,216,137,210,137,210,105"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,226,66,252"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="184,181,81,223,79,218,182,176"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="90,226,147,252"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="198,181,148,219,145,215,195,177"/>
+<area shape="rect" id="Node000006" href="$_event_dispatcher_service_8h.html" title=" " alt="" coords="171,226,391,252"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="226,177,261,213,257,217,222,180"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="376,300,445,326"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="304,250,376,290,373,294,301,255"/>
+<area shape="rect" id="Node000008" href="$_event_8h.html" title=" " alt="" coords="228,300,334,326"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="284,252,284,284,278,284,278,252"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="169,374,230,399"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="269,328,226,365,223,361,265,324"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="254,374,308,399"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="284,326,284,358,278,358,278,326"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="332,374,385,399"/>
+<area shape="poly" id="edge10_Node000008_Node000011" title=" " alt="" coords="296,324,336,361,332,365,292,328"/>
+<area shape="poly" id="edge14_Node000012_Node000007" title=" " alt="" coords="446,105,417,285,412,284,440,104"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="465,153,569,178"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="459,103,496,140,492,143,455,107"/>
+<area shape="rect" id="Node000015" href="$_user_bank_account_8h.html" title=" " alt="" coords="592,153,770,178"/>
+<area shape="poly" id="edge16_Node000014_Node000015" title=" " alt="" coords="676,105,680,137,675,138,670,105"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="632,226,730,252"/>
+<area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="684,179,684,211,678,211,678,179"/>
+</map>

@@ -34,7 +34,17 @@
         <file>assets/music/bye_bye_brain.mp3</file>
         <file>assets/tamagochi_soap_final.png</file>
         <file>assets/background.png</file>
+        <file>assets/nightbackground.tiff</file>
         <file>assets/fonts/ARCADECLASSIC.TTF</file>
-
+        <file>assets/fonts/ATTRIBUTE_FONT.TTF</file>
+        <file>assets/fonts/GAMES.TTF</file>
+        <file>assets/shopicon.png</file>
+        <file>assets/shop.png</file>
+        <file>assets/background2.png</file>
+        <file>assets/hotdog.png</file>
+        <file>assets/pizza.png</file>
+        <file>assets/slush.png</file>
     </qresource>
+
+
 </RCC>

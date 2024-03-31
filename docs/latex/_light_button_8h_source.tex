@@ -1,0 +1,44 @@
+\doxysection{Light\+Button.\+h}
+\hypertarget{_light_button_8h_source}{}\label{_light_button_8h_source}\index{game/include/component/LightButton.h@{game/include/component/LightButton.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ Shaylan\ Pratt\ on\ 2024-\/03-\/21.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ BITBUDDY\_INCLUDE\_COMPONENT\_LIGHTBUTTON\_H\_}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ BITBUDDY\_INCLUDE\_COMPONENT\_LIGHTBUTTON\_H\_}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_light_button}{LightButton}}\ :\ \textcolor{keyword}{public}\ QPushButton\ \{}
+\DoxyCodeLine{00020\ \ Q\_OBJECT}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00031\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_light_button_a4d2eb84c24d3739bef52e991efd96a79}{LightButton}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_light_button_a98994ebd20a71fadd5932a70b69072cb}{lightClicked}}();}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00049\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_light_button_a5bc5a213ae69e1be1ab89af8206374c7}{setImage}}(QString);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_light_button_a44f80a0722b270f2d3cb467e20b72a51}{update}}();}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_light_button_a245c594106323fda958c81716d02ab7e}{isLightOn}};\ }
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ signals:}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_light_button_ad353b775313bf2cd77f9a00aa73c4c6e}{themeChange}}(\textcolor{keyword}{const}\ QString\ \&newStyle);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_light_button_acf53b21a994603525b56ecc88ccefe3f}{textChange}}(\textcolor{keywordtype}{bool}\ isDarkMode);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BITBUDDY\_INCLUDE\_COMPONENT\_LIGHTBUTTON\_H\_}}
+
+\end{DoxyCode}

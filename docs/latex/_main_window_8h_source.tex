@@ -9,44 +9,58 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ BITBUDDY\_MAINWINDOW\_H}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ BITBUDDY\_MAINWINDOW\_H}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QLabel>}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}model/BitBuddyAttributeName.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00010\ }
 \DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}component/BitBuddyActionButton.h"{}}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}service/BitBuddySpriteHandler.h"{}}}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow\ \{}
-\DoxyCodeLine{00018\ \ Q\_OBJECT}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00020\ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00027\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \ \ \mbox{\hyperlink{class_main_window}{\string~MainWindow}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}component/BitBuddyStatusWidget.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}component/LightButton.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}model/BitBuddyAttributeName.h"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}service/BitBuddySpriteHandler.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_main_window}{MainWindow}}\ final\ :\ \textcolor{keyword}{public}\ QMainWindow\ \{}
+\DoxyCodeLine{00021\ \ Q\_OBJECT}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
 \DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_main_window}{MainWindow}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00031\ \ \ \mbox{\hyperlink{class_main_window}{\string~MainWindow}}()\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_main_window}{MainWindow}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00033\ \ \ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_main_window}{MainWindow}}\ \&)\ =\ \textcolor{keyword}{delete};}
 \DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(\mbox{\hyperlink{class_main_window}{MainWindow}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00035\ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_main_window}{MainWindow}}\ \&)\ =\ \textcolor{keyword}{delete};}
 \DoxyCodeLine{00036\ }
-\DoxyCodeLine{00037\ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}\ \&operator=(\mbox{\hyperlink{class_main_window}{MainWindow}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00037\ \ \ \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(\mbox{\hyperlink{class_main_window}{MainWindow}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
 \DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00040\ \ \ \textcolor{keywordtype}{void}\ resizeEvent(QResizeEvent\ *event)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \ \textcolor{keyword}{private}\ slots:}
-\DoxyCodeLine{00043\ \ \ \textcolor{keywordtype}{void}\ openSettings();}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00046\ \ \ QLabel\ *spriteLabel;}
-\DoxyCodeLine{00047\ \ \ \mbox{\hyperlink{class_bit_buddy_sprite_handler}{BitBuddySpriteHandler}}\ *spriteHandler;}
-\DoxyCodeLine{00048\ \ \ QPushButton\ *settingsButton;}
-\DoxyCodeLine{00049\ \ \ \mbox{\hyperlink{class_bit_buddy}{BitBuddy}}\ *bitBuddy;}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \ \ \textcolor{keywordtype}{void}\ loadDefaultSprite();}
-\DoxyCodeLine{00052\ \};}
+\DoxyCodeLine{00039\ \ \ \mbox{\hyperlink{class_main_window}{MainWindow}}\ \&operator=(\mbox{\hyperlink{class_main_window}{MainWindow}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00042\ \ \ QLabel\ *spriteLabel\{\};}
+\DoxyCodeLine{00043\ \ \ \mbox{\hyperlink{class_bit_buddy_sprite_handler}{BitBuddySpriteHandler}}\ *spriteHandler\{\};}
+\DoxyCodeLine{00044\ \ \ QPushButton\ *settingsButton\{\};}
+\DoxyCodeLine{00045\ \ \ \mbox{\hyperlink{class_bit_buddy_status_widget}{BitBuddyStatusWidget}}\ *bitBuddyStatusWidget\{\};}
+\DoxyCodeLine{00046\ \ \ \mbox{\hyperlink{class_light_button}{LightButton}}\ *lightSwitch\{\};}
+\DoxyCodeLine{00047\ \ \ QPushButton\ *stats\{\};}
+\DoxyCodeLine{00048\ \ \ QWidget\ *centralWidget;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ QPushButton\ *shop\{\};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ QPushButton\ *shopButton\{\};}
 \DoxyCodeLine{00053\ }
-\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BITBUDDY\_MAINWINDOW\_H}}
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aa353e8faed952a95e2fc62d7a5018a89}{setupUi}}();}
+\DoxyCodeLine{00062\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aa88ba24b2540a862b065a922ab8dcef6}{loadDefaultSprite}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aad75236c74a5c340c3e18749a9b5eb4f}{resizeEvent}}(QResizeEvent\ *event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00074\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a8e1c1ad87a68b27f19492549b9c4e773}{openSettings}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \textcolor{keywordtype}{void}\ updateCentralWidgetStyle(\textcolor{keyword}{const}\ QString\ \&newStyle);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_aa23840ba480cc293f6cc3e8501a58a73}{openShopWindow}}();}
+\DoxyCodeLine{00083\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_main_window_a35c1d3ce153b7919598b4df63c455cc2}{updateTheme}}(\textcolor{keyword}{const}\ QString\ \&newStyle);}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ BITBUDDY\_MAINWINDOW\_H}}
 
 \end{DoxyCode}

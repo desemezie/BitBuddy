@@ -1,0 +1,7 @@
+<map id="LightButton" name="LightButton">
+<area shape="rect" id="Node000001" title="The LightButton class extends QPushButton to provide a light&#45;themed toggle button." alt="" coords="45,134,145,259"/>
+<area shape="rect" id="Node000002" href="$class_q_push_button.html" title=" " alt="" coords="5,5,96,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,84,80,133,75,134,61,86"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="120,5,157,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="132,71,119,118,114,116,127,70"/>
+</map>

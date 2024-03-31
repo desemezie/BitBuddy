@@ -12,11 +12,20 @@
  * @brief Service that handles all transactions in the game
  * @author Ryan Hecht
  *
+ * This service is a singleton responsible for handling transactions between the user and the game. The approach with
+ * this service is questionable: events were originally supposed to be dispatched via the EventDispatcherService and
+ * nothing else, but this service causes some tighter coupling since transactions require confirmation by both parties
+ * to occur. If a refactor occurs, this service deserves to be scrutinized.
  */
-class TransactionService : public QObject {
- Q_OBJECT
+class TransactionService final : public QObject {
+  Q_OBJECT
 
  public:
+  /**
+   * @brief Singleton instance getter
+   *
+   * @return The instance of the TransactionService
+   */
   static TransactionService &getInstance();
 
   TransactionService(const TransactionService &) = delete;
@@ -25,12 +34,16 @@ class TransactionService : public QObject {
   TransactionService &operator=(TransactionService &&) = delete;
 
  public slots:
+  /**
+   * @brief Pays the user the given amount of BitBucks
+   *
+   * @param bitBucks The amount of BitBucks to pay the user
+   */
   void payUserBitBucks(int bitBucks);
 
  private:
   TransactionService() = default;
   ~TransactionService() override = default;
-
 };
 
-#endif //BITBUDDY_GAME_SRC_SERVICE_TRANSACTIONSERVICE_H_
+#endif  // BITBUDDY_GAME_SRC_SERVICE_TRANSACTIONSERVICE_H_

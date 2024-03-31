@@ -1,5 +1,5 @@
 \doxysection{Settings\+Window.\+h}
-\hypertarget{_settings_window_8h_source}{}\label{_settings_window_8h_source}\index{game/include/SettingsWindow.h@{game/include/SettingsWindow.h}}
+\hypertarget{_settings_window_8h_source}{}\label{_settings_window_8h_source}\index{game/include/window/SettingsWindow.h@{game/include/window/SettingsWindow.h}}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ \textcolor{comment}{//}}
@@ -9,47 +9,44 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ BITBUDDY\_INCLUDE\_SETTINGSWINDOW\_H\_}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ BITBUDDY\_INCLUDE\_SETTINGSWINDOW\_H\_}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QWidget>}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QDialog>}}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QVBoxLayout>}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QCheckBox>}}
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QSlider>}}
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QLabel>}}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QLineEdit>}}
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QCheckBox>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QDialog>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QLineEdit>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QSettings>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QSlider>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QVBoxLayout>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QWidget>}}
 \DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_settings_window}{SettingsWindow}}\ :\ \textcolor{keyword}{public}\ QDialog\{}
-\DoxyCodeLine{00019\ \ Q\_OBJECT}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00022\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_settings_window}{SettingsWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{00023\ \ \mbox{\hyperlink{class_settings_window}{\string~SettingsWindow}}();}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \textcolor{keyword}{private}\ slots:}
-\DoxyCodeLine{00026\ \ \ \textcolor{keywordtype}{void}\ saveSettings();}
-\DoxyCodeLine{00027\ \ \ \textcolor{keywordtype}{void}\ cancelSettings();}
-\DoxyCodeLine{00028\ \ \ \textcolor{keywordtype}{void}\ soundEffectsVolume(\textcolor{keywordtype}{int});}
-\DoxyCodeLine{00029\ \ \ \textcolor{keywordtype}{void}\ musicVolume(\textcolor{keywordtype}{int});}
-\DoxyCodeLine{00030\ \ \ \textcolor{keywordtype}{void}\ disableSoundEffects(\textcolor{keywordtype}{bool});}
-\DoxyCodeLine{00031\ \ \ \textcolor{keywordtype}{void}\ disableMusic(\textcolor{keywordtype}{bool});}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00034\ \ \ QPushButton\ *save;}
-\DoxyCodeLine{00035\ \ \ QPushButton\ *cancel;}
-\DoxyCodeLine{00036\ \ \ QVBoxLayout\ *layout;}
-\DoxyCodeLine{00037\ \ \ QSlider\ *soundEffectsSlider;}
-\DoxyCodeLine{00038\ \ \ QSlider\ *musicSlider;}
-\DoxyCodeLine{00039\ \ \ QCheckBox\ *disableSoundEffectsCheckBox;}
-\DoxyCodeLine{00040\ \ \ QCheckBox\ *disableMusicCheckBox;}
-\DoxyCodeLine{00041\ }
-\DoxyCodeLine{00042\ \ \ \textcolor{keywordtype}{void}\ setup();}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}../service/MusicService.h"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_settings_window}{SettingsWindow}}\ :\ \textcolor{keyword}{public}\ QDialog\ \{}
+\DoxyCodeLine{00030\ \ Q\_OBJECT}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00038\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_settings_window_ad1e0f4254dc44e9efadee40b8602fe5a}{SettingsWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \mbox{\hyperlink{class_settings_window_a380a4a1227c28e0b3499175b10cea230}{\string~SettingsWindow}}();}
 \DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \};}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BITBUDDY\_INCLUDE\_SETTINGSWINDOW\_H\_}}
+\DoxyCodeLine{00047\ \ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00051\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_settings_window_abe260886a3013b47e1570b4d30362b69}{saveSettings}}();}
+\DoxyCodeLine{00057\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_settings_window_ac8aaf08b611ae3088eeb8751784f5616}{soundEffectsVolume}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00063\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_settings_window_a453708c7231115b967366d894cceaf7d}{musicVolume}}(\textcolor{keywordtype}{int});}
+\DoxyCodeLine{00069\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_settings_window_ae64cb5b9ba5fb9bde3c83bc69125d905}{disableSoundEffects}}(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{00075\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_settings_window_a053ac3a65c44c0ee1e42282c875539a9}{disableMusic}}(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00078\ \ \ QPushButton\ *\mbox{\hyperlink{class_settings_window_a1a00b2e0703a4081196447aa72caec9b}{save}};\ }
+\DoxyCodeLine{00079\ \ \ QSlider\ *\mbox{\hyperlink{class_settings_window_ae598830af09a948ac1a16a037e2d4c0c}{soundEffectsSlider}};\ }
+\DoxyCodeLine{00080\ \ \ QSlider\ *\mbox{\hyperlink{class_settings_window_a91b39db773932adfd018478725609fb3}{musicSlider}};\ }
+\DoxyCodeLine{00081\ \ \ QCheckBox\ *\mbox{\hyperlink{class_settings_window_aeaf682d60c05aff6a2ccc8bbe5e164b2}{disableSoundEffectsCheckBox}};\ }
+\DoxyCodeLine{00082\ \ \ QCheckBox\ *\mbox{\hyperlink{class_settings_window_aaf1c584abaf26318f70c58e184b3f83f}{disableMusicCheckBox}};\ }
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00087\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_settings_window_a797e5c493b426ca151fc4f0553fbe9a1}{setup}}();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BITBUDDY\_INCLUDE\_SETTINGSWINDOW\_H\_}}
 
 \end{DoxyCode}

@@ -2,6 +2,11 @@
 \hypertarget{class_event_dispatcher_service}{}\label{class_event_dispatcher_service}\index{EventDispatcherService@{EventDispatcherService}}
 
 
+The \doxylink{class_event_dispatcher_service}{Event\+Dispatcher\+Service} is responsible for dispatching events to all listeners.  
+
+
+
+
 {\ttfamily \#include $<$Event\+Dispatcher\+Service.\+h$>$}
 
 Inheritance diagram for Event\+Dispatcher\+Service\+:\begin{figure}[H]
@@ -14,12 +19,12 @@ Inheritance diagram for Event\+Dispatcher\+Service\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_event_dispatcher_service_a10e18521e3e73c6401cc125f8d644372}{dispatch\+Event}} (const \mbox{\hyperlink{class_event}{Event}} \texorpdfstring{$\ast$}{*}event)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Slot that dispatches the event passed as an argumetn to all listeners. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Signals}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_event_dispatcher_service_a24f6ab3b915775f1fe202831203d94df}{event\+Dispatched}} (const \mbox{\hyperlink{class_event}{Event}} \&event)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Signal emitted when an event is dispatched. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,12 +43,17 @@ void \mbox{\hyperlink{class_event_dispatcher_service_a24f6ab3b915775f1fe20283120
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{class_event_dispatcher_service}{Event\+Dispatcher\+Service}} \& \mbox{\hyperlink{class_event_dispatcher_service_ade04effcba931646506693d7abe17da7}{get\+Instance}} ()
-\end{DoxyCompactItemize}
+static \mbox{\hyperlink{class_event_dispatcher_service}{Event\+Dispatcher\+Service}} \& \mbox{\hyperlink{class_event_dispatcher_service_aaa6e6d5fcb29fb574d85fc83e8225fb7}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Singleton instance getter. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Service that dispatches events to listeners 
+The \doxylink{class_event_dispatcher_service}{Event\+Dispatcher\+Service} is responsible for dispatching events to all listeners. 
+
+\begin{DoxyAuthor}{Author}
+Ryan Hecht
+\end{DoxyAuthor}
+The \doxylink{class_event_dispatcher_service}{Event\+Dispatcher\+Service} is a singleton service that dispatches events to all listeners. It is used to send events to \doxylink{class_bit_buddy}{Bit\+Buddy} and any other listeners. 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_event_dispatcher_service_a10e18521e3e73c6401cc125f8d644372}\label{class_event_dispatcher_service_a10e18521e3e73c6401cc125f8d644372} 
@@ -52,39 +62,46 @@ Service that dispatches events to listeners
 \doxysubsubsection{\texorpdfstring{dispatchEvent}{dispatchEvent}}
 {\footnotesize\ttfamily void Event\+Dispatcher\+Service\+::dispatch\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_event}{Event}} \texorpdfstring{$\ast$}{*}}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
 
-Slot that dispatches the event passed as an argumetn to all listeners. Use this if you want to send an event to \doxylink{class_bit_buddy}{Bit\+Buddy} and any other listeners.
+
+
+Slot that dispatches the event passed as an argumetn to all listeners. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em event} & The event to dispatch to all listeners \\
+{\em event} & The event to dispatch to all listeners\\
 \hline
 \end{DoxyParams}
-\Hypertarget{class_event_dispatcher_service_a24f6ab3b915775f1fe202831203d94df}\label{class_event_dispatcher_service_a24f6ab3b915775f1fe202831203d94df} 
+Use this if you want to send an event to \doxylink{class_bit_buddy}{Bit\+Buddy} and any other listeners. \Hypertarget{class_event_dispatcher_service_a24f6ab3b915775f1fe202831203d94df}\label{class_event_dispatcher_service_a24f6ab3b915775f1fe202831203d94df} 
 \index{EventDispatcherService@{EventDispatcherService}!eventDispatched@{eventDispatched}}
 \index{eventDispatched@{eventDispatched}!EventDispatcherService@{EventDispatcherService}}
 \doxysubsubsection{\texorpdfstring{eventDispatched}{eventDispatched}}
 {\footnotesize\ttfamily void Event\+Dispatcher\+Service\+::event\+Dispatched (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_event}{Event}} \&}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
 
-Signal emitted when an event is dispatched
+
+
+Signal emitted when an event is dispatched. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em event} & The event that was dispatched \\
 \hline
 \end{DoxyParams}
-\Hypertarget{class_event_dispatcher_service_ade04effcba931646506693d7abe17da7}\label{class_event_dispatcher_service_ade04effcba931646506693d7abe17da7} 
+\Hypertarget{class_event_dispatcher_service_aaa6e6d5fcb29fb574d85fc83e8225fb7}\label{class_event_dispatcher_service_aaa6e6d5fcb29fb574d85fc83e8225fb7} 
 \index{EventDispatcherService@{EventDispatcherService}!getInstance@{getInstance}}
 \index{getInstance@{getInstance}!EventDispatcherService@{EventDispatcherService}}
 \doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{class_event_dispatcher_service}{Event\+Dispatcher\+Service}} \& Event\+Dispatcher\+Service\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_event_dispatcher_service}{Event\+Dispatcher\+Service}} \& Event\+Dispatcher\+Service\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
-Singleton instance getter
+
+
+Singleton instance getter. 
 
 \begin{DoxyReturn}{Returns}
 the instance 
 \end{DoxyReturn}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/include/service/Event\+Dispatcher\+Service.\+h\end{DoxyCompactItemize}
+game/include/service/Event\+Dispatcher\+Service.\+h\item 
+game/src/service/Event\+Dispatcher\+Service.\+cpp\end{DoxyCompactItemize}

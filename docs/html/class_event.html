@@ -80,6 +80,9 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>The <a class="el" href="class_event.html" title="The Event class represents an event that can be dispatched to listeners.">Event</a> class represents an event that can be dispatched to listeners.  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_event_8h_source.html">Event.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Event:</div>
@@ -87,7 +90,7 @@ Inheritance diagram for Event:</div>
  <div class="center">
   <img src="class_event.png" usemap="#Event_map" alt=""/>
   <map id="Event_map" name="Event_map">
-<area href="class_single_attribute_event.html" alt="SingleAttributeEvent" shape="rect" coords="0,56,126,80"/>
+<area href="class_single_attribute_event.html" title="The SingleAttributeEvent class represents an event that modifies a single attribute of the BitBuddy." alt="SingleAttributeEvent" shape="rect" coords="0,56,126,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -95,8 +98,11 @@ Inheritance diagram for Event:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9eca0f00d5c869cd2ca8682f4f03b571" id="r_a9eca0f00d5c869cd2ca8682f4f03b571"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9eca0f00d5c869cd2ca8682f4f03b571">Event</a> (std::string description=&quot;&quot;, double probability=1.0)</td></tr>
 <tr class="separator:a9eca0f00d5c869cd2ca8682f4f03b571"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c82edff70b5f542b42b691ac6b815cc" id="r_a5c82edff70b5f542b42b691ac6b815cc"><td class="memItemLeft" align="right" valign="top"><a id="a5c82edff70b5f542b42b691ac6b815cc" name="a5c82edff70b5f542b42b691ac6b815cc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Event</b> (const <a class="el" href="class_event.html">Event</a> &amp;)=default</td></tr>
+<tr class="memitem:a105223995bbf1a1e4714d0c77f91cf0b" id="r_a105223995bbf1a1e4714d0c77f91cf0b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a105223995bbf1a1e4714d0c77f91cf0b">~Event</a> ()=default</td></tr>
+<tr class="memdesc:a105223995bbf1a1e4714d0c77f91cf0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for the <a class="el" href="class_event.html" title="The Event class represents an event that can be dispatched to listeners.">Event</a>.  <br /></td></tr>
+<tr class="separator:a105223995bbf1a1e4714d0c77f91cf0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c82edff70b5f542b42b691ac6b815cc" id="r_a5c82edff70b5f542b42b691ac6b815cc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c82edff70b5f542b42b691ac6b815cc">Event</a> (const <a class="el" href="class_event.html">Event</a> &amp;)=default</td></tr>
+<tr class="memdesc:a5c82edff70b5f542b42b691ac6b815cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor for the <a class="el" href="class_event.html" title="The Event class represents an event that can be dispatched to listeners.">Event</a>.  <br /></td></tr>
 <tr class="separator:a5c82edff70b5f542b42b691ac6b815cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4632b5f4de0e8cf1261cd9a2c20b45f1" id="r_a4632b5f4de0e8cf1261cd9a2c20b45f1"><td class="memItemLeft" align="right" valign="top"><a id="a4632b5f4de0e8cf1261cd9a2c20b45f1" name="a4632b5f4de0e8cf1261cd9a2c20b45f1"></a>
 <a class="el" href="class_event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="class_event.html">Event</a> &amp;)=default</td></tr>
@@ -108,10 +114,13 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="class_event.html">Event</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="class_event.html">Event</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:aa4fa7a603014eef08f4e0a2e70189370"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb2d5f6278344a428aca3245a1a0bca2" id="r_adb2d5f6278344a428aca3245a1a0bca2"><td class="memItemLeft" align="right" valign="top">std::chrono::system_clock::time_point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adb2d5f6278344a428aca3245a1a0bca2">getCreationTime</a> () const</td></tr>
+<tr class="memdesc:adb2d5f6278344a428aca3245a1a0bca2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the creation time of the event.  <br /></td></tr>
 <tr class="separator:adb2d5f6278344a428aca3245a1a0bca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4df924f35541e84a303c5434bf3e7e84" id="r_a4df924f35541e84a303c5434bf3e7e84"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4df924f35541e84a303c5434bf3e7e84">getDescription</a> () const</td></tr>
+<tr class="memdesc:a4df924f35541e84a303c5434bf3e7e84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the description of the event.  <br /></td></tr>
 <tr class="separator:a4df924f35541e84a303c5434bf3e7e84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad14e195091eb9810aefb6a943089882f" id="r_ad14e195091eb9810aefb6a943089882f"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad14e195091eb9810aefb6a943089882f">getProbability</a> () const</td></tr>
+<tr class="memdesc:ad14e195091eb9810aefb6a943089882f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the probability of the event.  <br /></td></tr>
 <tr class="separator:ad14e195091eb9810aefb6a943089882f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -127,10 +136,12 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>probability</b></td
 <tr class="separator:ac3046abe956234e5960076ac1f32341d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Represents an event with a description and a timestamp. </p>
+<div class="textblock"><p>The <a class="el" href="class_event.html" title="The Event class represents an event that can be dispatched to listeners.">Event</a> class represents an event that can be dispatched to listeners. </p>
+<dl class="section author"><dt>Author</dt><dd>Ryan Hecht</dd></dl>
+<p>The <a class="el" href="class_event.html" title="The Event class represents an event that can be dispatched to listeners.">Event</a> class represents an event that can be dispatched to listeners. Each event has a description and a creation time. Events are generally not meant to be constructed themselves as they do not provide much use. Instead, subclasses of <a class="el" href="class_event.html" title="The Event class represents an event that can be dispatched to listeners.">Event</a> are usually used. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9eca0f00d5c869cd2ca8682f4f03b571" name="a9eca0f00d5c869cd2ca8682f4f03b571"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9eca0f00d5c869cd2ca8682f4f03b571">&#9670;&#160;</a></span>Event()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eca0f00d5c869cd2ca8682f4f03b571">&#9670;&#160;</a></span>Event() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,11 +166,73 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>probability</b></td
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Constructs an <a class="el" href="class_event.html">Event</a> with the given description. The creation time is set to the current system time.</p>
+<p>Constructs an <a class="el" href="class_event.html" title="The Event class represents an event that can be dispatched to listeners.">Event</a> with the given description. The creation time is set to the current system time.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">description</td><td>The event's description. </td></tr>
     <tr><td class="paramname">probability</td><td>The event's probability. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a105223995bbf1a1e4714d0c77f91cf0b" name="a105223995bbf1a1e4714d0c77f91cf0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a105223995bbf1a1e4714d0c77f91cf0b">&#9670;&#160;</a></span>~Event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Event::~Event </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor for the <a class="el" href="class_event.html" title="The Event class represents an event that can be dispatched to listeners.">Event</a>. </p>
+<p>The destructor is made virtual to force <a class="el" href="class_event.html" title="The Event class represents an event that can be dispatched to listeners.">Event</a> to be polymorphic </p>
+
+</div>
+</div>
+<a id="a5c82edff70b5f542b42b691ac6b815cc" name="a5c82edff70b5f542b42b691ac6b815cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c82edff70b5f542b42b691ac6b815cc">&#9670;&#160;</a></span>Event() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Event::Event </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_event.html">Event</a> &amp;</td>          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Copy constructor for the <a class="el" href="class_event.html" title="The Event class represents an event that can be dispatched to listeners.">Event</a>. </p>
+<p>the default copy constructor is used because our explicit definition would be the same.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>The <a class="el" href="class_event.html" title="The Event class represents an event that can be dispatched to listeners.">Event</a> to copy </td></tr>
   </table>
   </dd>
 </dl>
@@ -181,7 +254,8 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>probability</b></td
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the creation time of the event.</p>
+
+<p>Returns the creation time of the event. </p>
 <dl class="section return"><dt>Returns</dt><dd>The creation time as a std::chrono::system_clock::time_point. </dd></dl>
 
 </div>
@@ -200,7 +274,8 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>probability</b></td
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the description of the event.</p>
+
+<p>Returns the description of the event. </p>
 <dl class="section return"><dt>Returns</dt><dd>The description as a std::string. </dd></dl>
 
 </div>
@@ -227,13 +302,15 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>probability</b></td
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns the probability of the event.</p>
+
+<p>Returns the probability of the event. </p>
 <dl class="section return"><dt>Returns</dt><dd>The probability as a double. </dd></dl>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>game/include/model/<a class="el" href="_event_8h_source.html">Event.h</a></li>
+<li>game/src/model/<b>Event.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

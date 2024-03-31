@@ -9,39 +9,40 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ BITBUDDY\_SRC\_BITBUDDYATTRIBUTE\_H\_}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ BITBUDDY\_SRC\_BITBUDDYATTRIBUTE\_H\_}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}model/BitBuddyAttributeName.h"{}}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
 \DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}model/BitBuddyAttributeName.h"{}}}
 \DoxyCodeLine{00011\ }
 \DoxyCodeLine{00012\ \textcolor{keyword}{inline}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ MAX\_ATTRIBUTE\_VALUE\ =\ 10;}
 \DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \{}
-\DoxyCodeLine{00015\ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00022\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_bit_buddy_attribute_a6b5e1b4b779f3a813caa46a3ddbf80f4}{BitBuddyAttribute}}(BitBuddyAttributeName::UniqueName\ attributeName,\ \textcolor{keywordtype}{int}\ value\ =\ MAX\_ATTRIBUTE\_VALUE);}
-\DoxyCodeLine{00023\ \ \ \mbox{\hyperlink{class_bit_buddy_attribute}{\string~BitBuddyAttribute}}()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00030\ \ \ QJsonObject\ \mbox{\hyperlink{class_bit_buddy_attribute_a7c455272cbadbb11d1b1833c2f71cfb7}{toJson}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00038\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \mbox{\hyperlink{class_bit_buddy_attribute_a715cafe0ade5ef334bf3c0d6e9ba49d2}{fromJson}}(\textcolor{keyword}{const}\ QJsonObject\ \&json);}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \ \ \mbox{\hyperlink{class_bit_buddy_attribute_a6b5e1b4b779f3a813caa46a3ddbf80f4}{BitBuddyAttribute}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \&);}
-\DoxyCodeLine{00041\ \ \ \mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \&);}
-\DoxyCodeLine{00042\ \ \ \mbox{\hyperlink{class_bit_buddy_attribute_a6b5e1b4b779f3a813caa46a3ddbf80f4}{BitBuddyAttribute}}(\mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \&\&)\ noexcept;}
-\DoxyCodeLine{00043\ \ \ \mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \&operator=(\mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \&\&)\ noexcept;}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \ \ [[nodiscard]]\ \mbox{\hyperlink{class_bit_buddy_attribute_name}{BitBuddyAttributeName}}::UniqueName\ getAttributeName()\ const;}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{void}\ setAttributeName(\mbox{\hyperlink{class_bit_buddy_attribute_name}{BitBuddyAttributeName}}::UniqueName\ attribute\_name);}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ getValue()\ const;}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \ \ \textcolor{keywordtype}{void}\ incrementValue(\textcolor{keywordtype}{int}\ value);}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00053\ \ private:}
-\DoxyCodeLine{00054\ \ \ \mbox{\hyperlink{class_bit_buddy_attribute_name}{BitBuddyAttributeName}}::UniqueName\ attributeName;}
-\DoxyCodeLine{00055\ \ \ \textcolor{keywordtype}{int}\ value;}
-\DoxyCodeLine{00056\ \};}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BITBUDDY\_SRC\_BITBUDDYATTRIBUTE\_H\_}}
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ final\ \{}
+\DoxyCodeLine{00024\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_bit_buddy_attribute_a6b5e1b4b779f3a813caa46a3ddbf80f4}{BitBuddyAttribute}}(\mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{BitBuddyAttributeName::UniqueName}}\ attributeName,\ \textcolor{keywordtype}{int}\ value\ =\ MAX\_ATTRIBUTE\_VALUE);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \mbox{\hyperlink{class_bit_buddy_attribute}{\string~BitBuddyAttribute}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00040\ \ \ [[nodiscard]]\ QJsonObject\ \mbox{\hyperlink{class_bit_buddy_attribute_a7c455272cbadbb11d1b1833c2f71cfb7}{toJson}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00048\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \mbox{\hyperlink{class_bit_buddy_attribute_aae7dd3acf5060377958b46707a680488}{fromJson}}(\textcolor{keyword}{const}\ QJsonObject\ \&json);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \mbox{\hyperlink{class_bit_buddy_attribute_a6b5e1b4b779f3a813caa46a3ddbf80f4}{BitBuddyAttribute}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \&);}
+\DoxyCodeLine{00051\ \ \ \mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \&);}
+\DoxyCodeLine{00052\ \ \ \mbox{\hyperlink{class_bit_buddy_attribute_a6b5e1b4b779f3a813caa46a3ddbf80f4}{BitBuddyAttribute}}(\mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \&\&)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00053\ \ \ \mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \&operator=(\mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \&\&)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00060\ \ \ [[nodiscard]]\ \mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{BitBuddyAttributeName::UniqueName}}\ \mbox{\hyperlink{class_bit_buddy_attribute_a4d9f9fdf971c8f0ce2e716265d6feb15}{getAttributeName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00067\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buddy_attribute_a86177bb6dde636fc1aace354927b70a2}{setAttributeName}}(\mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{BitBuddyAttributeName::UniqueName}}\ attribute\_name);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00074\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_bit_buddy_attribute_a06056e543d6b3bc0bec910e4f6e4fb0a}{getValue}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00084\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buddy_attribute_a54f5fa4652226ba557f4ae3ccb3fde7e}{incrementValue}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00086\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00087\ \ \ \mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{BitBuddyAttributeName::UniqueName}}\ attributeName;}
+\DoxyCodeLine{00088\ \ \ \textcolor{keywordtype}{int}\ value;}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ BITBUDDY\_SRC\_BITBUDDYATTRIBUTE\_H\_}}
 
 \end{DoxyCode}

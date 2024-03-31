@@ -3,6 +3,7 @@
 //
 
 #include "../../include/window/StatsWindow.h"
+#include "service/BitBuddyService.h"
 
 #include <QVBoxLayout>
 
@@ -20,7 +21,9 @@ void StatsWindow::setupUi() {
 
   // Initialize labels
   nameLabel = new QLabel(tr("Name: ") + name, this);
-  ageLabel = new QLabel(tr("Age: 1"), this);
+  long age = BitBuddyService::getBitBuddy().getAgeInGameYears();
+  ageLabel = new QLabel(tr("Age: ") + QString::number(age), this);
+
 
   // Layout to organize labels
   QVBoxLayout *layout = new QVBoxLayout(this);

@@ -1,0 +1,35 @@
+\doxysection{Transaction\+Service.\+h}
+\hypertarget{_transaction_service_8h_source}{}\label{_transaction_service_8h_source}\index{game/include/service/TransactionService.h@{game/include/service/TransactionService.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ Ryan\ Hecht\ \ on\ 2024-\/03-\/24.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ BITBUDDY\_GAME\_SRC\_SERVICE\_TRANSACTIONSERVICE\_H\_}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ BITBUDDY\_GAME\_SRC\_SERVICE\_TRANSACTIONSERVICE\_H\_}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_transaction_service}{TransactionService}}\ final\ :\ \textcolor{keyword}{public}\ QObject\ \{}
+\DoxyCodeLine{00021\ \ \ Q\_OBJECT}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_transaction_service}{TransactionService}}\ \&\mbox{\hyperlink{class_transaction_service_af65f03ee3e5f060c0418ebb4c1a40951}{getInstance}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \mbox{\hyperlink{class_transaction_service}{TransactionService}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_transaction_service}{TransactionService}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00032\ \ \ \mbox{\hyperlink{class_transaction_service}{TransactionService}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_transaction_service}{TransactionService}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00033\ \ \ \mbox{\hyperlink{class_transaction_service}{TransactionService}}(\mbox{\hyperlink{class_transaction_service}{TransactionService}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00034\ \ \ \mbox{\hyperlink{class_transaction_service}{TransactionService}}\ \&operator=(\mbox{\hyperlink{class_transaction_service}{TransactionService}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00042\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_transaction_service_a5ffb1da545ff651b1ad4bea68c96dde8}{payUserBitBucks}}(\textcolor{keywordtype}{int}\ bitBucks);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00045\ \ \ \mbox{\hyperlink{class_transaction_service}{TransactionService}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00046\ \ \ \mbox{\hyperlink{class_transaction_service}{\string~TransactionService}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00047\ \};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ BITBUDDY\_GAME\_SRC\_SERVICE\_TRANSACTIONSERVICE\_H\_}}
+
+\end{DoxyCode}

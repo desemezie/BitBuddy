@@ -3,18 +3,23 @@
 //
 
 #include "model/BitBuddy.h"
-#include "model/BitBuddyAttributeName.h"
-#include "service/EventDispatcherService.h"
-#include "model/SingleAttributeEvent.h"
 
-#include <iostream>
 #include <QFile>
-#include <QTextStream>
 #include <QJsonObject>
+#include <QTextStream>
+#include <iostream>
+
+#include "model/BitBuddyAttributeName.h"
+#include "model/SingleAttributeEvent.h"
+#include "service/EventDispatcherService.h"
 
 BitBuddy::BitBuddy(std::string name)
-  : name(std::move(name)), creationTime(std::chrono::system_clock::now()), dead(false), id(QUuid::createUuid()),
-    bitBuckGenerator(new BitBuckGenerator()) {
+    : name(std::move(name)),
+      creationTime(std::chrono::system_clock::now()),
+      dead(false),
+      id(QUuid::createUuid()),
+      bitBuckGenerator(new BitBuckGenerator()) {
+  currentSprite = ":/assets/happy_bitbuddy.png";
   for (int i = 0; i < NUMBER_OF_ATTRIBUTES; i++) {
     // Constructs a map of the form {HUNGER -> <BitBuddyAttribute> with name HUNGER and value 10}
     attributes.emplace(std::piecewise_construct,
@@ -22,14 +27,18 @@ BitBuddy::BitBuddy(std::string name)
                        std::forward_as_tuple(static_cast<BitBuddyAttributeName::UniqueName>(i)));
   }
 
-  BitBuddy::connectSignals();
+  connectSignals();
 }
 
 BitBuddy::BitBuddy(std::string name, const std::map<BitBuddyAttributeName::UniqueName, BitBuddyAttribute> &attributes,
                    std::chrono::system_clock::time_point creationTime, bool dead, QUuid id,
                    BitBuckGenerator *bitBuckGenerator)
-  : name(std::move(name)), attributes(attributes), creationTime(creationTime), dead(dead), id(id),
-    bitBuckGenerator(bitBuckGenerator) {
+    : name(std::move(name)),
+      attributes(attributes),
+      creationTime(creationTime),
+      dead(dead),
+      id(id),
+      bitBuckGenerator(bitBuckGenerator) {
   connectSignals();
 }
 
@@ -79,8 +88,8 @@ BitBuddy *BitBuddy::fromJson(const QJsonObject &obj) {
 int BitBuddy::getAttributeValue(BitBuddyAttributeName::UniqueName attributeName) const {
   auto it = attributes.find(attributeName);
   if (it == attributes.end()) {
-    std::cerr << "BitBuddy does not contain the attribute: " << BitBuddyAttributeName::toString(attributeName) <<
-        std::endl;
+    std::cerr << "BitBuddy does not contain the attribute: " << BitBuddyAttributeName::toString(attributeName)
+              << std::endl;
     return -1;
   }
 
@@ -112,13 +121,13 @@ long BitBuddy::getAgeInGameYears() const {
   return ageInGameYears;
 }
 
-std::string BitBuddy::getName() const {
-  return name;
-}
+std::string BitBuddy::getName() const { return name; }
 
-void BitBuddy::setName(std::string name) {
-  this->name = std::move(name);
-}
+void BitBuddy::setName(std::string name) { this->name = std::move(name); }
+
+void BitBuddy::startBitBuckGenerator() const { this->bitBuckGenerator->startGeneration(); }
+
+void BitBuddy::pauseBitBuckGenerator() const { bitBuckGenerator->pauseGeneration(); }
 
 void BitBuddy::onEvent(const Event &event) {
   if (dead) {
@@ -137,8 +146,16 @@ void BitBuddy::connectSignals() const {
 
 void BitBuddy::die(const BitBuddyAttribute &attribute) {
   dead = true;
-  std::cerr << "BitBuddy has died due to: " << BitBuddyAttributeName::toString(attribute.getAttributeName()) <<
-      std::endl;
+  std::cerr << "BitBuddy has died due to: " << BitBuddyAttributeName::toString(attribute.getAttributeName())
+            << std::endl;
 
   emit died(attribute);
 }
+
+std::string BitBuddy::getSprite() const { return this->currentSprite; }
+
+void BitBuddy::setCurrentSprite(std::string name) { this->currentSprite = name; }
+
+void BitBuddy::addItemPurchased(const std::string &itemName) { thingsPurchased.push_back(itemName); }
+
+const std::vector<std::string> &BitBuddy::getItemsPurchased() const { return thingsPurchased; }

@@ -18,7 +18,6 @@ find_package(Qt6 COMPONENTS
         Gui
         Widgets
         Multimedia
-        SpatialAudio
         REQUIRED)
 
 qt_standard_project_setup()
@@ -97,5 +96,4 @@ target_link_libraries(bitbuddy
         Qt::Gui
         Qt::Widgets
         Qt::Multimedia
-        Qt::SpatialAudio
 )

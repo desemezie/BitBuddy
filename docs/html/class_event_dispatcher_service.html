@@ -78,9 +78,12 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="class_event_dispatcher_service-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">EventDispatcherService Class Reference</div></div>
+  <div class="headertitle"><div class="title">EventDispatcherService Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="class_event_dispatcher_service.html" title="The EventDispatcherService is responsible for dispatching events to all listeners.">EventDispatcherService</a> is responsible for dispatching events to all listeners.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_event_dispatcher_service_8h_source.html">EventDispatcherService.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -93,11 +96,13 @@ Inheritance diagram for EventDispatcherService:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-slots" name="pub-slots"></a>
 Public Slots</h2></td></tr>
 <tr class="memitem:a10e18521e3e73c6401cc125f8d644372" id="r_a10e18521e3e73c6401cc125f8d644372"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10e18521e3e73c6401cc125f8d644372">dispatchEvent</a> (const <a class="el" href="class_event.html">Event</a> *event)</td></tr>
+<tr class="memdesc:a10e18521e3e73c6401cc125f8d644372"><td class="mdescLeft">&#160;</td><td class="mdescRight">Slot that dispatches the event passed as an argumetn to all listeners.  <br /></td></tr>
 <tr class="separator:a10e18521e3e73c6401cc125f8d644372"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
 Signals</h2></td></tr>
 <tr class="memitem:a24f6ab3b915775f1fe202831203d94df" id="r_a24f6ab3b915775f1fe202831203d94df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a24f6ab3b915775f1fe202831203d94df">eventDispatched</a> (const <a class="el" href="class_event.html">Event</a> &amp;event)</td></tr>
+<tr class="memdesc:a24f6ab3b915775f1fe202831203d94df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal emitted when an event is dispatched.  <br /></td></tr>
 <tr class="separator:a24f6ab3b915775f1fe202831203d94df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -117,11 +122,14 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ade04effcba931646506693d7abe17da7" id="r_ade04effcba931646506693d7abe17da7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_event_dispatcher_service.html">EventDispatcherService</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ade04effcba931646506693d7abe17da7">getInstance</a> ()</td></tr>
-<tr class="separator:ade04effcba931646506693d7abe17da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa6e6d5fcb29fb574d85fc83e8225fb7" id="r_aaa6e6d5fcb29fb574d85fc83e8225fb7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_event_dispatcher_service.html">EventDispatcherService</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa6e6d5fcb29fb574d85fc83e8225fb7">getInstance</a> ()</td></tr>
+<tr class="memdesc:aaa6e6d5fcb29fb574d85fc83e8225fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Singleton instance getter.  <br /></td></tr>
+<tr class="separator:aaa6e6d5fcb29fb574d85fc83e8225fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Service that dispatches events to listeners </p>
+<div class="textblock"><p>The <a class="el" href="class_event_dispatcher_service.html" title="The EventDispatcherService is responsible for dispatching events to all listeners.">EventDispatcherService</a> is responsible for dispatching events to all listeners. </p>
+<dl class="section author"><dt>Author</dt><dd>Ryan Hecht</dd></dl>
+<p>The <a class="el" href="class_event_dispatcher_service.html" title="The EventDispatcherService is responsible for dispatching events to all listeners.">EventDispatcherService</a> is a singleton service that dispatches events to all listeners. It is used to send events to <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> and any other listeners. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a10e18521e3e73c6401cc125f8d644372" name="a10e18521e3e73c6401cc125f8d644372"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a10e18521e3e73c6401cc125f8d644372">&#9670;&#160;</a></span>dispatchEvent</h2>
@@ -145,13 +153,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Slot that dispatches the event passed as an argumetn to all listeners. Use this if you want to send an event to <a class="el" href="class_bit_buddy.html">BitBuddy</a> and any other listeners.</p>
+
+<p>Slot that dispatches the event passed as an argumetn to all listeners. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">event</td><td>The event to dispatch to all listeners </td></tr>
+    <tr><td class="paramname">event</td><td>The event to dispatch to all listeners</td></tr>
   </table>
   </dd>
 </dl>
+<p>Use this if you want to send an event to <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> and any other listeners. </p>
 
 </div>
 </div>
@@ -177,7 +187,8 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Signal emitted when an event is dispatched</p>
+
+<p>Signal emitted when an event is dispatched. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">event</td><td>The event that was dispatched </td></tr>
@@ -187,8 +198,8 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ade04effcba931646506693d7abe17da7" name="ade04effcba931646506693d7abe17da7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ade04effcba931646506693d7abe17da7">&#9670;&#160;</a></span>getInstance()</h2>
+<a id="aaa6e6d5fcb29fb574d85fc83e8225fb7" name="aaa6e6d5fcb29fb574d85fc83e8225fb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa6e6d5fcb29fb574d85fc83e8225fb7">&#9670;&#160;</a></span>getInstance()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,7 +208,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="class_event_dispatcher_service.html">EventDispatcherService</a> &amp; EventDispatcherService::getInstance </td>
+          <td class="memname"><a class="el" href="class_event_dispatcher_service.html">EventDispatcherService</a> &amp; EventDispatcherService::getInstance </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"></span></td><td>)</td>
           <td></td>
@@ -209,13 +220,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Singleton instance getter</p>
+
+<p>Singleton instance getter. </p>
 <dl class="section return"><dt>Returns</dt><dd>the instance </dd></dl>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>game/include/service/<a class="el" href="_event_dispatcher_service_8h_source.html">EventDispatcherService.h</a></li>
+<li>game/src/service/<b>EventDispatcherService.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

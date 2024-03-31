@@ -9,39 +9,33 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ BITBUDDY\_EVENT\_H}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ BITBUDDY\_EVENT\_H}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <ctime>}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <ctime>}}
 \DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{00011\ }
-\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_event}{Event}}\ \{}
-\DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00025\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_event_a9eca0f00d5c869cd2ca8682f4f03b571}{Event}}(std::string\ description\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{double}\ probability\ =\ 1.0);}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_event}{\string~Event}}()\ =\ \textcolor{keywordflow}{default};\ \textcolor{comment}{//\ virtual\ to\ force\ Event\ to\ be\ polymorphic}}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \ \ \mbox{\hyperlink{class_event_a9eca0f00d5c869cd2ca8682f4f03b571}{Event}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_event}{Event}}\ \&)\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00031\ \ \ \mbox{\hyperlink{class_event}{Event}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_event}{Event}}\ \&)\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00033\ \ \ \mbox{\hyperlink{class_event_a9eca0f00d5c869cd2ca8682f4f03b571}{Event}}(\mbox{\hyperlink{class_event}{Event}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \ \ \mbox{\hyperlink{class_event}{Event}}\ \&operator=(\mbox{\hyperlink{class_event}{Event}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00042\ \ \ [[nodiscard]]\ std::chrono::system\_clock::time\_point\ \mbox{\hyperlink{class_event_adb2d5f6278344a428aca3245a1a0bca2}{getCreationTime}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00049\ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{class_event_a4df924f35541e84a303c5434bf3e7e84}{getDescription}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00056\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_event_ad14e195091eb9810aefb6a943089882f}{getProbability}}()\textcolor{keyword}{\ const\ }\{}
-\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{return}\ probability;}
-\DoxyCodeLine{00058\ \ \ \}}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00060\ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00061\ \ \ std::chrono::system\_clock::time\_point\ creationTime;}
-\DoxyCodeLine{00062\ \ \ std::string\ description;}
-\DoxyCodeLine{00063\ \ \ \textcolor{keywordtype}{double}\ probability;}
-\DoxyCodeLine{00064\ \};}
-\DoxyCodeLine{00065\ }
-\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BITBUDDY\_EVENT\_H}}
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_event}{Event}}\ \{}
+\DoxyCodeLine{00022\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_event_a9eca0f00d5c869cd2ca8682f4f03b571}{Event}}(std::string\ description\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{double}\ probability\ =\ 1.0);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_event_a105223995bbf1a1e4714d0c77f91cf0b}{\string~Event}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00044\ \ \ \mbox{\hyperlink{class_event_a5c82edff70b5f542b42b691ac6b815cc}{Event}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_event}{Event}}\ \&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00045\ \ \ \mbox{\hyperlink{class_event}{Event}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_event}{Event}}\ \&)\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00046\ \ \ \mbox{\hyperlink{class_event_a9eca0f00d5c869cd2ca8682f4f03b571}{Event}}(\mbox{\hyperlink{class_event}{Event}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00047\ \ \ \mbox{\hyperlink{class_event}{Event}}\ \&operator=(\mbox{\hyperlink{class_event}{Event}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ [[nodiscard]]\ std::chrono::system\_clock::time\_point\ \mbox{\hyperlink{class_event_adb2d5f6278344a428aca3245a1a0bca2}{getCreationTime}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \ \ [[nodiscard]]\ std::string\ \mbox{\hyperlink{class_event_a4df924f35541e84a303c5434bf3e7e84}{getDescription}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{class_event_ad14e195091eb9810aefb6a943089882f}{getProbability}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ probability;\ \}}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00071\ \ \ std::chrono::system\_clock::time\_point\ creationTime;}
+\DoxyCodeLine{00072\ \ \ std::string\ description;}
+\DoxyCodeLine{00073\ \ \ \textcolor{keywordtype}{double}\ probability;}
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ BITBUDDY\_EVENT\_H}}
 
 \end{DoxyCode}
