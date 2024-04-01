@@ -124,6 +124,7 @@ void BitBuddySpriteHandler::spriteOrganizer(const Event &event){
     }
   }
 
+
 }
 
 void BitBuddySpriteHandler::displayText(const QString &text){
