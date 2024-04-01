@@ -1,13 +1,22 @@
 var searchData=
 [
-  ['generateevent_0',['generateEvent',['../class_event_generator_service.html#a2e3727078583aec0197aa6308e7e6e8d',1,'EventGeneratorService']]],
-  ['getageingameyears_1',['getAgeInGameYears',['../class_bit_buddy.html#a3a8c3b9668a502627ece3811aa0cddb8',1,'BitBuddy']]],
-  ['getattribute_2',['getAttribute',['../class_single_attribute_event.html#ad2f0c73f0900b615cf7bdce85cb5ea93',1,'SingleAttributeEvent']]],
-  ['getattributevalue_3',['getAttributeValue',['../class_bit_buddy.html#abe04ae96d1ecb59377bda913ac437351',1,'BitBuddy']]],
-  ['getcreationtime_4',['getCreationTime',['../class_event.html#adb2d5f6278344a428aca3245a1a0bca2',1,'Event']]],
-  ['getdescription_5',['getDescription',['../class_event.html#a4df924f35541e84a303c5434bf3e7e84',1,'Event']]],
-  ['getincrement_6',['getIncrement',['../class_single_attribute_event.html#a986b82ae6dbd929fcc0d7785aa9f4b47',1,'SingleAttributeEvent']]],
-  ['getinstance_7',['getInstance',['../class_event_dispatcher_service.html#ade04effcba931646506693d7abe17da7',1,'EventDispatcherService::getInstance()'],['../class_event_generator_service.html#ad94dd25656a05345ccd988a5f5d979af',1,'EventGeneratorService::getInstance()'],['../class_file_storage_service.html#ad3607b6d6fe1d18a736fe491e0d6baf6',1,'FileStorageService::getInstance()'],['../class_game_service.html#a555b4c4c9ba28b5d4b56187d2edc37a4',1,'GameService::getInstance()'],['../class_music_service.html#aa1d70ce5ede888826c6e00c8f1111633',1,'MusicService::getInstance()']]],
-  ['getprobability_8',['getProbability',['../class_event.html#ad14e195091eb9810aefb6a943089882f',1,'Event']]],
-  ['getvolume_9',['getVolume',['../class_music_service.html#aeba8009cfaa095334edabf9e9c21b130',1,'MusicService']]]
+  ['generatebitbucks_0',['generateBitBucks',['../class_bit_buck_generator.html#a53c56300d781343739dbf29b9510aee6',1,'BitBuckGenerator']]],
+  ['generateevent_1',['generateEvent',['../class_event_generator_service.html#ac1f19a8ee8f0f58df557df99cc8154f2',1,'EventGeneratorService']]],
+  ['getageingameyears_2',['getAgeInGameYears',['../class_bit_buddy.html#a3a8c3b9668a502627ece3811aa0cddb8',1,'BitBuddy']]],
+  ['getattribute_3',['getAttribute',['../class_single_attribute_event.html#ad2f0c73f0900b615cf7bdce85cb5ea93',1,'SingleAttributeEvent']]],
+  ['getattributename_4',['getAttributeName',['../class_bit_buddy_attribute.html#a4d9f9fdf971c8f0ce2e716265d6feb15',1,'BitBuddyAttribute']]],
+  ['getattributevalue_5',['getAttributeValue',['../class_bit_buddy.html#abe04ae96d1ecb59377bda913ac437351',1,'BitBuddy']]],
+  ['getbalance_6',['getBalance',['../class_user_bank_account.html#a682b11ecc112957bca8ec94dd2b78399',1,'UserBankAccount']]],
+  ['getbitbucksgeneratedpertimeinterval_7',['getBitBucksGeneratedPerTimeInterval',['../class_bit_buck_generator.html#a4381bffbba66d3a3edb1aea49e828235',1,'BitBuckGenerator']]],
+  ['getbitbuddy_8',['getBitBuddy',['../class_bit_buddy_service.html#a499ec6e0476f47e4d39db1613efd7b0a',1,'BitBuddyService']]],
+  ['getcreationtime_9',['getCreationTime',['../class_event.html#adb2d5f6278344a428aca3245a1a0bca2',1,'Event']]],
+  ['getdescription_10',['getDescription',['../class_event.html#a4df924f35541e84a303c5434bf3e7e84',1,'Event']]],
+  ['getincrement_11',['getIncrement',['../class_single_attribute_event.html#a986b82ae6dbd929fcc0d7785aa9f4b47',1,'SingleAttributeEvent']]],
+  ['getinstance_12',['getInstance',['../class_bit_buddy_service.html#ac5f75c43907026f3bc7a59159e9400a4',1,'BitBuddyService::getInstance()'],['../class_event_dispatcher_service.html#aaa6e6d5fcb29fb574d85fc83e8225fb7',1,'EventDispatcherService::getInstance()'],['../class_event_generator_service.html#aa6ba452ddd49cd1eb6384fe34c6efb2e',1,'EventGeneratorService::getInstance()'],['../class_file_storage_service.html#aa1cd07035bf62fffe8b8be5af917f1f3',1,'FileStorageService::getInstance()'],['../class_game_service.html#a10638ab0a2961aad8aa0cacb0e24053e',1,'GameService::getInstance()'],['../class_music_service.html#a24f49eb5dd4ba830fb8ab80a10197a67',1,'MusicService::getInstance()'],['../class_transaction_service.html#af65f03ee3e5f060c0418ebb4c1a40951',1,'TransactionService::getInstance()'],['../class_user_bank_account_service.html#aa871e29e273ff2c0e4a22c72a879e7a4',1,'UserBankAccountService::getInstance()']]],
+  ['getname_13',['getName',['../class_bit_buddy.html#afea1f940374283639e8845c70c2b4c5c',1,'BitBuddy']]],
+  ['getprobability_14',['getProbability',['../class_event.html#ad14e195091eb9810aefb6a943089882f',1,'Event']]],
+  ['getsprite_15',['getSprite',['../class_bit_buddy.html#a3932c38915c26a51d974839aba4c01de',1,'BitBuddy']]],
+  ['getuserbankaccount_16',['getUserBankAccount',['../class_user_bank_account_service.html#a3e8f41b3fbe4204eb73be7fbe0a722b6',1,'UserBankAccountService']]],
+  ['getvalue_17',['getValue',['../class_bit_buddy_attribute.html#a06056e543d6b3bc0bec910e4f6e4fb0a',1,'BitBuddyAttribute']]],
+  ['getvolume_18',['getVolume',['../class_music_service.html#aeba8009cfaa095334edabf9e9c21b130',1,'MusicService']]]
 ];

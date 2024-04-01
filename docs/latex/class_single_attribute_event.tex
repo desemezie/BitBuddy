@@ -2,6 +2,11 @@
 \hypertarget{class_single_attribute_event}{}\label{class_single_attribute_event}\index{SingleAttributeEvent@{SingleAttributeEvent}}
 
 
+The \doxylink{class_single_attribute_event}{Single\+Attribute\+Event} class represents an event that modifies a single attribute of the \doxylink{class_bit_buddy}{Bit\+Buddy}.  
+
+
+
+
 {\ttfamily \#include $<$Single\+Attribute\+Event.\+h$>$}
 
 Inheritance diagram for Single\+Attribute\+Event\+:\begin{figure}[H]
@@ -13,14 +18,15 @@ Inheritance diagram for Single\+Attribute\+Event\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_single_attribute_event_ace88280966dd81f1648c26f4f4ce9773}{Single\+Attribute\+Event}} (int increment, Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name attribute, double probability=1.\+0, std\+::string description="{}Single attribute event."{})
-\item 
-\Hypertarget{class_single_attribute_event_a1d3e684cd7ae6a05a3f6bc4e40596981}\label{class_single_attribute_event_a1d3e684cd7ae6a05a3f6bc4e40596981} 
-{\bfseries Single\+Attribute\+Event} (const \mbox{\hyperlink{class_single_attribute_event}{Single\+Attribute\+Event}} \&)=default
-\item 
-\Hypertarget{class_single_attribute_event_a765ef1d31aee7411f3b60a2e7f5fd275}\label{class_single_attribute_event_a765ef1d31aee7411f3b60a2e7f5fd275} 
-\mbox{\hyperlink{class_single_attribute_event}{Single\+Attribute\+Event}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_single_attribute_event}{Single\+Attribute\+Event}} \&)=default
-\item 
+\mbox{\hyperlink{class_single_attribute_event_ace88280966dd81f1648c26f4f4ce9773}{Single\+Attribute\+Event}} (int increment, \mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}} attribute, double probability=1.\+0, std\+::string description="{}Single attribute event."{})
+\begin{DoxyCompactList}\small\item\em Constructor for a single attribute event. \end{DoxyCompactList}\item 
+\Hypertarget{class_single_attribute_event_a3334973d0e610b88f23249a21bd52290}\label{class_single_attribute_event_a3334973d0e610b88f23249a21bd52290} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Single\+Attribute\+Event} () override=default
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_single_attribute_event}{Single\+Attribute\+Event}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_single_attribute_event_a1d3e684cd7ae6a05a3f6bc4e40596981}{Single\+Attribute\+Event}} (const \mbox{\hyperlink{class_single_attribute_event}{Single\+Attribute\+Event}} \&)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{class_single_attribute_event}{Single\+Attribute\+Event}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_single_attribute_event}{Single\+Attribute\+Event}} \& \mbox{\hyperlink{class_single_attribute_event_a765ef1d31aee7411f3b60a2e7f5fd275}{operator=}} (const \mbox{\hyperlink{class_single_attribute_event}{Single\+Attribute\+Event}} \&)=default
+\begin{DoxyCompactList}\small\item\em Copy assignment operator for the \doxylink{class_single_attribute_event}{Single\+Attribute\+Event}. \end{DoxyCompactList}\item 
 \Hypertarget{class_single_attribute_event_a8b7bcc451ea98bed720769c177ef7479}\label{class_single_attribute_event_a8b7bcc451ea98bed720769c177ef7479} 
 {\bfseries Single\+Attribute\+Event} (\mbox{\hyperlink{class_single_attribute_event}{Single\+Attribute\+Event}} \&\&)=delete
 \item 
@@ -29,15 +35,17 @@ Inheritance diagram for Single\+Attribute\+Event\+:\begin{figure}[H]
 \item 
 int \mbox{\hyperlink{class_single_attribute_event_a986b82ae6dbd929fcc0d7785aa9f4b47}{get\+Increment}} () const
 \item 
-Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name \mbox{\hyperlink{class_single_attribute_event_ad2f0c73f0900b615cf7bdce85cb5ea93}{get\+Attribute}} () const
+\mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}} \mbox{\hyperlink{class_single_attribute_event_ad2f0c73f0900b615cf7bdce85cb5ea93}{get\+Attribute}} () const
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_event}{Event}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_event_a9eca0f00d5c869cd2ca8682f4f03b571}{Event}} (std\+::string description="{}"{}, double probability=1.\+0)
 \item 
-{\bfseries Event} (const \mbox{\hyperlink{class_event}{Event}} \&)=default
-\item 
+virtual \mbox{\hyperlink{class_event_a105223995bbf1a1e4714d0c77f91cf0b}{\texorpdfstring{$\sim$}{\string~}\+Event}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_event}{Event}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_event_a5c82edff70b5f542b42b691ac6b815cc}{Event}} (const \mbox{\hyperlink{class_event}{Event}} \&)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{class_event}{Event}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_event}{Event}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_event}{Event}} \&)=default
 \item 
 {\bfseries Event} (\mbox{\hyperlink{class_event}{Event}} \&\&)=delete
@@ -45,11 +53,11 @@ Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name \mbox{\hyperlink{class_single_attr
 \mbox{\hyperlink{class_event}{Event}} \& {\bfseries operator=} (\mbox{\hyperlink{class_event}{Event}} \&\&)=delete
 \item 
 std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{class_event_adb2d5f6278344a428aca3245a1a0bca2}{get\+Creation\+Time}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the creation time of the event. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_event_a4df924f35541e84a303c5434bf3e7e84}{get\+Description}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the description of the event. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_event_ad14e195091eb9810aefb6a943089882f}{get\+Probability}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the probability of the event. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -57,7 +65,7 @@ double \mbox{\hyperlink{class_event_ad14e195091eb9810aefb6a943089882f}{get\+Prob
 int {\bfseries increment}
 \item 
 \Hypertarget{class_single_attribute_event_a31bc42607a84700ce96549d30f59cee7}\label{class_single_attribute_event_a31bc42607a84700ce96549d30f59cee7} 
-Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name {\bfseries attribute}
+\mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}} {\bfseries attribute}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_event}{Event}}}
@@ -72,41 +80,58 @@ double {\bfseries probability}
 
 
 \doxysubsection{Detailed Description}
-Class that represents a single attribute event. 
+The \doxylink{class_single_attribute_event}{Single\+Attribute\+Event} class represents an event that modifies a single attribute of the \doxylink{class_bit_buddy}{Bit\+Buddy}. 
+
+\begin{DoxyAuthor}{Author}
+Ryan Hecht
+\end{DoxyAuthor}
+\doxylink{class_single_attribute_event}{Single\+Attribute\+Event} is a subclass of \doxylink{class_event}{Event} that represents an event that modifies a single attribute of the \doxylink{class_bit_buddy}{Bit\+Buddy}. The event has an increment, an attribute, a probability, and a description. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_single_attribute_event_ace88280966dd81f1648c26f4f4ce9773}\label{class_single_attribute_event_ace88280966dd81f1648c26f4f4ce9773} 
 \index{SingleAttributeEvent@{SingleAttributeEvent}!SingleAttributeEvent@{SingleAttributeEvent}}
 \index{SingleAttributeEvent@{SingleAttributeEvent}!SingleAttributeEvent@{SingleAttributeEvent}}
-\doxysubsubsection{\texorpdfstring{SingleAttributeEvent()}{SingleAttributeEvent()}}
-{\footnotesize\ttfamily Single\+Attribute\+Event\+::\+Single\+Attribute\+Event (\begin{DoxyParamCaption}\item[{int}]{increment,  }\item[{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}]{attribute,  }\item[{double}]{probability = {\ttfamily 1.0},  }\item[{std\+::string}]{description = {\ttfamily "{}Single~attribute~event."{}} }\end{DoxyParamCaption})}
+\doxysubsubsection{\texorpdfstring{SingleAttributeEvent()}{SingleAttributeEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Single\+Attribute\+Event\+::\+Single\+Attribute\+Event (\begin{DoxyParamCaption}\item[{int}]{increment,  }\item[{\mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}}}]{attribute,  }\item[{double}]{probability = {\ttfamily 1.0},  }\item[{std\+::string}]{description = {\ttfamily "{}Single~attribute~event."{}} }\end{DoxyParamCaption})}
 
-Constructor for a single attribute event.
+
+
+Constructor for a single attribute event. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em increment} & The increment of the event, can be positive or negative. \\
 \hline
-{\em attribute} & The attribute of the event from the Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name enum. \\
+{\em attribute} & The attribute of the event from the \doxylink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name} enum. \\
 \hline
 {\em probability} & The probability of the event occurring between 0.\+0 and 1.\+0. \\
 \hline
 {\em description} & The description of the event. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{class_single_attribute_event_a1d3e684cd7ae6a05a3f6bc4e40596981}\label{class_single_attribute_event_a1d3e684cd7ae6a05a3f6bc4e40596981} 
+\index{SingleAttributeEvent@{SingleAttributeEvent}!SingleAttributeEvent@{SingleAttributeEvent}}
+\index{SingleAttributeEvent@{SingleAttributeEvent}!SingleAttributeEvent@{SingleAttributeEvent}}
+\doxysubsubsection{\texorpdfstring{SingleAttributeEvent()}{SingleAttributeEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Single\+Attribute\+Event\+::\+Single\+Attribute\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_single_attribute_event}{Single\+Attribute\+Event}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
+
+
+Copy constructor for the \doxylink{class_single_attribute_event}{Single\+Attribute\+Event}. 
+
+The default copy constructor is used because our explicit definition would be the same. 
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_single_attribute_event_ad2f0c73f0900b615cf7bdce85cb5ea93}\label{class_single_attribute_event_ad2f0c73f0900b615cf7bdce85cb5ea93} 
 \index{SingleAttributeEvent@{SingleAttributeEvent}!getAttribute@{getAttribute}}
 \index{getAttribute@{getAttribute}!SingleAttributeEvent@{SingleAttributeEvent}}
 \doxysubsubsection{\texorpdfstring{getAttribute()}{getAttribute()}}
-{\footnotesize\ttfamily Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name Single\+Attribute\+Event\+::get\+Attribute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}} Single\+Attribute\+Event\+::get\+Attribute (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
 Returns the attribute of the event.
 
 \begin{DoxyReturn}{Returns}
-The attribute as a Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name. 
+The attribute as a \doxylink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}. 
 \end{DoxyReturn}
 \Hypertarget{class_single_attribute_event_a986b82ae6dbd929fcc0d7785aa9f4b47}\label{class_single_attribute_event_a986b82ae6dbd929fcc0d7785aa9f4b47} 
 \index{SingleAttributeEvent@{SingleAttributeEvent}!getIncrement@{getIncrement}}
@@ -119,8 +144,19 @@ Returns the increment of the event.
 \begin{DoxyReturn}{Returns}
 The increment as an int. 
 \end{DoxyReturn}
+\Hypertarget{class_single_attribute_event_a765ef1d31aee7411f3b60a2e7f5fd275}\label{class_single_attribute_event_a765ef1d31aee7411f3b60a2e7f5fd275} 
+\index{SingleAttributeEvent@{SingleAttributeEvent}!operator=@{operator=}}
+\index{operator=@{operator=}!SingleAttributeEvent@{SingleAttributeEvent}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_single_attribute_event}{Single\+Attribute\+Event}} \& Single\+Attribute\+Event\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_single_attribute_event}{Single\+Attribute\+Event}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+
+Copy assignment operator for the \doxylink{class_single_attribute_event}{Single\+Attribute\+Event}. 
+
+The default copy assignment operator is used because our explicit definition would be the same. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/include/model/Single\+Attribute\+Event.\+h\end{DoxyCompactItemize}
+game/include/model/Single\+Attribute\+Event.\+h\item 
+game/src/model/Single\+Attribute\+Event.\+cpp\end{DoxyCompactItemize}

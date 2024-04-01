@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['tojson_0',['toJson',['../class_bit_buddy_attribute.html#a7c455272cbadbb11d1b1833c2f71cfb7',1,'BitBuddyAttribute']]],
-  ['tostring_1',['toString',['../class_bit_buddy_attribute_name.html#af8805e3a815e4220af3eeb5ecafb0ea5',1,'BitBuddyAttributeName']]]
+  ['registerbitbuddy_0',['registerBitBuddy',['../class_bit_buddy_service.html#af77590296479a939209d8ea60eddb9f4',1,'BitBuddyService']]],
+  ['registeruserbankaccount_1',['registerUserBankAccount',['../class_user_bank_account_service.html#a35d8c9d762fc6f3fff9203379f10244e',1,'UserBankAccountService']]],
+  ['resizeevent_2',['resizeEvent',['../class_main_window.html#aad75236c74a5c340c3e18749a9b5eb4f',1,'MainWindow']]],
+  ['resumeservice_3',['resumeService',['../class_event_generator_service.html#a6815fef4f2b20772666c206b557420b1',1,'EventGeneratorService']]]
 ];

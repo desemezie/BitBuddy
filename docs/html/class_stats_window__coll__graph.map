@@ -1,0 +1,9 @@
+<map id="StatsWindow" name="StatsWindow">
+<area shape="rect" id="Node000001" title="The StatsWindow class provides a dialog to display statistics or information." alt="" coords="62,149,179,254"/>
+<area shape="rect" id="Node000002" href="$class_q_dialog.html" title=" " alt="" coords="5,5,65,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,82,96,148,91,150,56,85"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,5,152,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="123,70,123,132,118,132,118,70"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="189,5,247,71"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="213,71,204,99,191,126,184,137,180,134,186,123,199,97,208,70"/>
+</map>

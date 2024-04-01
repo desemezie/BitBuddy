@@ -113,6 +113,7 @@ void  BitBuddyActionButton::setButtonStyle(){
     else if (imageName == "Boredom"){
         setIcon(QIcon(":/assets/tamagochi_dead.png"));
         setIconSize(QSize(50, 50));
+        
     }
     else {//Hygiene
         //Q_ASSERT(type == "snore.mp3");

@@ -59,6 +59,8 @@ class BitBuddySpriteHandler :public QObject{
    */
   void updateZZZPosition();
 
+
+
  public slots:
   /**
    * handleEvent will take the events that are sent out by the Event dispatcher and in return change the sprite accordingly
@@ -70,6 +72,7 @@ class BitBuddySpriteHandler :public QObject{
   QLabel* temporaryLabel;
   BitBuddy * bitBuddy;
   QList<QLabel*> bubbleLabels;
+
 
   /**
    * Methods to display temporary objects.

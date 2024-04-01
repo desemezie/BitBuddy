@@ -1,0 +1,51 @@
+<map id="MainWindow" name="MainWindow">
+<area shape="rect" id="Node000001" title="Responsible for the window of the game." alt="" coords="498,1718,682,2023"/>
+<area shape="rect" id="Node000002" href="$class_q_main_window.html" title=" " alt="" coords="5,1345,103,1410"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,1425,59,1484,70,1556,81,1592,94,1628,112,1662,135,1692,173,1729,216,1760,264,1787,313,1808,411,1839,499,1857,498,1862,410,1844,311,1813,261,1791,214,1765,170,1733,131,1696,108,1665,89,1630,75,1594,65,1557,54,1485,50,1425"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="141,771,204,837"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="170,837,156,968,151,1062,152,1167,161,1279,181,1393,195,1450,214,1505,236,1558,263,1609,309,1671,365,1727,426,1774,485,1812,482,1816,423,1778,362,1731,305,1675,258,1611,231,1560,209,1507,190,1451,175,1394,156,1280,147,1167,146,1062,150,968,165,836"/>
+<area shape="rect" id="Node000004" href="$class_bit_buddy_sprite_handler.html" title="The BitBuddySpriteHandler is responsible for the changing sprites of the bitbuddy based on his emotio..." alt="" coords="344,1145,516,1610"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="170,837,164,893,163,965,173,1045,184,1083,199,1119,212,1132,229,1143,284,1198,335,1255,331,1259,280,1202,226,1147,209,1136,195,1122,179,1085,168,1046,158,966,159,892,165,836"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="476,1609,502,1693,505,1701,500,1703,497,1695,471,1610"/>
+<area shape="rect" id="Node000005" href="$class_q_object.html" title=" " alt="" coords="263,5,325,71"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="291,85,290,95,283,279,290,463,306,766,321,898,349,1066,365,1144,360,1145,343,1067,316,899,301,767,285,463,278,279,285,95,285,85"/>
+<area shape="rect" id="Node000006" href="$class_bit_buddy.html" title="Represents the BitBuddy pet in the game." alt="" coords="359,541,528,1067"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="295,86,297,253,306,358,322,463,339,532,361,600,356,602,334,533,317,464,300,359,292,253,290,86"/>
+<area shape="rect" id="Node000013" href="$class_bit_buck_generator.html" title="Generates BitBucks at a set interval and emits a signal when they are generated." alt="" coords="1033,149,1237,463"/>
+<area shape="poly" id="edge15_Node000013_Node000005" title=" " alt="" coords="339,39,489,49,689,69,791,83,885,101,965,122,1022,146,1035,155,1032,160,1019,151,963,127,884,106,791,89,689,74,488,54,339,44"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="440,1067,438,1128,433,1128,435,1066"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="331,273,377,339"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="357,338,359,420,369,517,370,524,365,525,364,518,354,420,351,339"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="401,273,531,339"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="467,338,459,524,453,524,462,338"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="556,273,605,339"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="590,338,595,376,597,423,591,472,575,519,567,528,559,532,550,536,543,543,539,547,535,544,539,540,548,532,556,527,564,524,570,516,586,471,591,423,590,377,585,339"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="630,266,849,346"/>
+<area shape="poly" id="edge11_Node000006_Node000010" title=" " alt="" coords="727,347,708,387,682,433,649,479,609,519,591,529,574,531,558,534,542,543,541,544,538,541,539,539,556,529,573,526,589,524,606,515,645,476,678,430,703,385,722,345"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="873,273,947,339"/>
+<area shape="poly" id="edge12_Node000006_Node000011" title=" " alt="" coords="911,339,907,368,898,402,884,436,863,465,826,494,790,506,751,512,704,520,659,525,620,523,584,526,564,532,543,545,540,540,562,528,583,520,620,518,659,519,703,515,751,506,789,501,823,489,859,461,879,433,893,400,901,367,906,338"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="971,273,1009,339"/>
+<area shape="poly" id="edge13_Node000006_Node000012" title=" " alt="" coords="994,339,991,383,981,435,972,460,959,484,942,504,921,520,887,530,844,534,739,530,630,528,583,533,543,546,542,541,581,528,630,523,739,525,844,528,886,525,918,515,939,500,955,481,967,458,976,433,986,382,988,338"/>
+<area shape="rect" id="Node000021" href="$class_light_button.html" title="The LightButton class extends QPushButton to provide a light&#45;themed toggle button." alt="" coords="1015,741,1115,867"/>
+<area shape="poly" id="edge25_Node000021_Node000012" title=" " alt="" coords="997,338,1056,724,1050,725,992,339"/>
+<area shape="poly" id="edge14_Node000006_Node000013" title=" " alt="" coords="1127,464,1112,494,1089,520,1056,530,998,535,836,535,664,534,594,538,544,547,543,542,593,533,664,529,836,530,998,530,1055,525,1086,515,1107,491,1122,462"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1022,5,1049,71"/>
+<area shape="poly" id="edge16_Node000013_Node000014" title=" " alt="" coords="1032,71,1030,97,1034,124,1036,132,1031,133,1029,125,1025,97,1027,70"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="1206,5,1262,71"/>
+<area shape="poly" id="edge17_Node000013_Node000015" title=" " alt="" coords="1226,72,1207,126,1204,133,1199,132,1202,124,1221,70"/>
+<area shape="rect" id="Node000016" title=" " alt="" coords="553,771,670,837"/>
+<area shape="poly" id="edge18_Node000004_Node000016" title=" " alt="" coords="606,837,580,940,543,1067,523,1130,518,1128,538,1066,575,939,601,836"/>
+<area shape="rect" id="Node000017" title=" " alt="" coords="540,1345,640,1410"/>
+<area shape="poly" id="edge19_Node000001_Node000017" title=" " alt="" coords="593,1410,593,1702,587,1702,587,1410"/>
+<area shape="rect" id="Node000018" href="$class_bit_buddy_status_widget.html" title="The BitBuddyStatusWidget class is a widget that displays the status of the BitBuddy." alt="" coords="664,1315,828,1440"/>
+<area shape="poly" id="edge20_Node000001_Node000018" title=" " alt="" coords="743,1440,725,1559,710,1628,690,1695,687,1703,682,1701,685,1693,705,1627,720,1558,738,1439"/>
+<area shape="rect" id="Node000019" href="$class_q_widget.html" title=" " alt="" coords="694,771,758,837"/>
+<area shape="poly" id="edge21_Node000018_Node000019" title=" " alt="" coords="730,851,747,1315,741,1315,725,852"/>
+<area shape="rect" id="Node000020" title=" " alt="" coords="782,764,990,844"/>
+<area shape="poly" id="edge22_Node000018_Node000020" title=" " alt="" coords="872,845,829,954,806,1022,787,1091,766,1199,755,1298,749,1298,761,1198,781,1090,801,1021,824,953,867,843"/>
+<area shape="poly" id="edge23_Node000001_Node000021" title=" " alt="" coords="1064,867,1058,913,1047,966,1030,1019,1004,1068,991,1084,978,1094,950,1107,923,1120,911,1131,900,1146,882,1185,869,1222,862,1257,860,1291,865,1357,878,1420,890,1483,895,1549,892,1584,884,1619,871,1656,851,1695,820,1737,782,1772,741,1802,698,1827,696,1822,738,1798,779,1768,816,1733,846,1693,866,1654,879,1618,887,1583,889,1549,885,1484,873,1421,860,1357,855,1291,857,1256,864,1220,877,1183,896,1143,907,1127,920,1116,948,1102,975,1090,988,1080,1000,1065,1025,1017,1042,964,1053,912,1059,866"/>
+<area shape="rect" id="Node000022" href="$class_q_push_button.html" title=" " alt="" coords="1262,273,1353,339"/>
+<area shape="poly" id="edge24_Node000021_Node000022" title=" " alt="" coords="1302,354,1283,432,1252,518,1221,581,1185,641,1114,743,1110,740,1181,638,1216,578,1248,516,1278,431,1296,353"/>
+<area shape="rect" id="Node000023" title=" " alt="" coords="981,1345,1055,1410"/>
+<area shape="poly" id="edge26_Node000001_Node000023" title=" " alt="" coords="1019,1410,1010,1471,992,1548,977,1588,958,1628,934,1664,905,1696,856,1735,803,1771,699,1827,696,1822,800,1766,853,1731,902,1692,930,1661,954,1625,972,1586,987,1546,1005,1470,1013,1410"/>
+</map>

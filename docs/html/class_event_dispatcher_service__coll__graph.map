@@ -1,0 +1,5 @@
+<map id="EventDispatcherService" name="EventDispatcherService">
+<area shape="rect" id="Node000001" title="The EventDispatcherService is responsible for dispatching events to all listeners." alt="" coords="5,119,185,324"/>
+<area shape="rect" id="Node000002" href="$class_q_object.html" title=" " alt="" coords="65,5,126,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,86,98,119,93,119,93,86"/>
+</map>

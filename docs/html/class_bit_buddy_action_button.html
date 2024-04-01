@@ -80,6 +80,11 @@ $(function() {
   <div class="headertitle"><div class="title">BitBuddyActionButton Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Will initialize the button by connecting the button click to the handleButtonClicked method.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_bit_buddy_action_button_8h_source.html">BitBuddyActionButton.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for BitBuddyActionButton:</div>
 <div class="dyncontent">
@@ -89,24 +94,158 @@ Inheritance diagram for BitBuddyActionButton:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a139242f29b1cc452f6384e3f6971c21b" id="r_a139242f29b1cc452f6384e3f6971c21b"><td class="memItemLeft" align="right" valign="top"><a id="a139242f29b1cc452f6384e3f6971c21b" name="a139242f29b1cc452f6384e3f6971c21b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BitBuddyActionButton</b> (const QIcon &amp;icon, const QString &amp;text, BitBuddyAttributeName::UniqueName attribute, QWidget *parent=nullptr)</td></tr>
+<tr class="memitem:a139242f29b1cc452f6384e3f6971c21b" id="r_a139242f29b1cc452f6384e3f6971c21b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a139242f29b1cc452f6384e3f6971c21b">BitBuddyActionButton</a> (const QIcon &amp;icon, const QString &amp;text, <a class="el" href="class_bit_buddy_attribute_name.html#a31753c61224d615434b2b76c0fa584aa">BitBuddyAttributeName::UniqueName</a> <a class="el" href="#aae11c8f2419e4f0defb1accc892fe3d3">attribute</a>, QWidget *parent=nullptr)</td></tr>
 <tr class="separator:a139242f29b1cc452f6384e3f6971c21b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb996f973ce5d23013cfc7e2bdb34926" id="r_abb996f973ce5d23013cfc7e2bdb34926"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abb996f973ce5d23013cfc7e2bdb34926">setButtonStyle</a> ()</td></tr>
+<tr class="memdesc:abb996f973ce5d23013cfc7e2bdb34926"><td class="mdescLeft">&#160;</td><td class="mdescRight">setButtonStyle is supposed to set the design of the button.  <br /></td></tr>
+<tr class="separator:abb996f973ce5d23013cfc7e2bdb34926"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-slots" name="pri-slots"></a>
 Private Slots</h2></td></tr>
-<tr class="memitem:a9edbdf28aa5f7e45660c6530c31a6b94" id="r_a9edbdf28aa5f7e45660c6530c31a6b94"><td class="memItemLeft" align="right" valign="top"><a id="a9edbdf28aa5f7e45660c6530c31a6b94" name="a9edbdf28aa5f7e45660c6530c31a6b94"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>handleButtonClicked</b> ()</td></tr>
+<tr class="memitem:a9edbdf28aa5f7e45660c6530c31a6b94" id="r_a9edbdf28aa5f7e45660c6530c31a6b94"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9edbdf28aa5f7e45660c6530c31a6b94">handleButtonClicked</a> ()</td></tr>
 <tr class="separator:a9edbdf28aa5f7e45660c6530c31a6b94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:aae11c8f2419e4f0defb1accc892fe3d3" id="r_aae11c8f2419e4f0defb1accc892fe3d3"><td class="memItemLeft" align="right" valign="top"><a id="aae11c8f2419e4f0defb1accc892fe3d3" name="aae11c8f2419e4f0defb1accc892fe3d3"></a>
-BitBuddyAttributeName::UniqueName&#160;</td><td class="memItemRight" valign="bottom"><b>attribute</b></td></tr>
+<tr class="memitem:aae11c8f2419e4f0defb1accc892fe3d3" id="r_aae11c8f2419e4f0defb1accc892fe3d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bit_buddy_attribute_name.html#a31753c61224d615434b2b76c0fa584aa">BitBuddyAttributeName::UniqueName</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aae11c8f2419e4f0defb1accc892fe3d3">attribute</a></td></tr>
 <tr class="separator:aae11c8f2419e4f0defb1accc892fe3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Will initialize the button by connecting the button click to the handleButtonClicked method. </p>
+<p>Inherits from QPushButton.</p>
+<p>Will handle the button click depending on which button it is and its Attribute.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">icon</td><td>Icon for the button </td></tr>
+    <tr><td class="paramname">attribute</td><td>Attribute that the button belongs to </td></tr>
+    <tr><td class="paramname">text</td><td>The string for the button </td></tr>
+    <tr><td class="paramname">parent</td><td>The parent widget of the button </td></tr>
+  </table>
+  </dd>
+</dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a139242f29b1cc452f6384e3f6971c21b" name="a139242f29b1cc452f6384e3f6971c21b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a139242f29b1cc452f6384e3f6971c21b">&#9670;&#160;</a></span>BitBuddyActionButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BitBuddyActionButton::BitBuddyActionButton </td>
+          <td>(</td>
+          <td class="paramtype">const QIcon &amp;</td>          <td class="paramname"><span class="paramname"><em>icon</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>text</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_bit_buddy_attribute_name.html#a31753c61224d615434b2b76c0fa584aa">BitBuddyAttributeName::UniqueName</a></td>          <td class="paramname"><span class="paramname"><em>attribute</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QWidget *</td>          <td class="paramname"><span class="paramname"><em>parent</em><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructor for the <a class="el" href="class_bit_buddy_action_button.html" title="Will initialize the button by connecting the button click to the handleButtonClicked method.">BitBuddyActionButton</a> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">icon</td><td>Icon for the button </td></tr>
+    <tr><td class="paramname">text</td><td>Text for the button </td></tr>
+    <tr><td class="paramname">attribute</td><td>Attribute the button belongs to </td></tr>
+    <tr><td class="paramname">parent</td><td>The Parent of the button, parent widget </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9edbdf28aa5f7e45660c6530c31a6b94" name="a9edbdf28aa5f7e45660c6530c31a6b94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9edbdf28aa5f7e45660c6530c31a6b94">&#9670;&#160;</a></span>handleButtonClicked</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitBuddyActionButton::handleButtonClicked </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Function will be called to handle the button clicked </p>
+
+</div>
+</div>
+<a id="abb996f973ce5d23013cfc7e2bdb34926" name="abb996f973ce5d23013cfc7e2bdb34926"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb996f973ce5d23013cfc7e2bdb34926">&#9670;&#160;</a></span>setButtonStyle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BitBuddyActionButton::setButtonStyle </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>setButtonStyle is supposed to set the design of the button. </p>
+<p><a class="el" href="#abb996f973ce5d23013cfc7e2bdb34926" title="setButtonStyle is supposed to set the design of the button.">setButtonStyle()</a> Function will set the stylesheet for the button </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aae11c8f2419e4f0defb1accc892fe3d3" name="aae11c8f2419e4f0defb1accc892fe3d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae11c8f2419e4f0defb1accc892fe3d3">&#9670;&#160;</a></span>attribute</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bit_buddy_attribute_name.html#a31753c61224d615434b2b76c0fa584aa">BitBuddyAttributeName::UniqueName</a> BitBuddyActionButton::attribute</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Attribute that the button belongs to </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>game/include/component/<a class="el" href="_bit_buddy_action_button_8h_source.html">BitBuddyActionButton.h</a></li>
+<li>game/src/component/<b>BitBuddyActionButton.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,5 +1,14 @@
 \doxysection{Launcher\+Window Class Reference}
 \hypertarget{class_launcher_window}{}\label{class_launcher_window}\index{LauncherWindow@{LauncherWindow}}
+
+
+\doxylink{class_launcher_window}{Launcher\+Window} class is responsible for the initial landing page of the application.  
+
+
+
+
+{\ttfamily \#include $<$Launcher\+Window.\+h$>$}
+
 Inheritance diagram for Launcher\+Window\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,14 +18,65 @@ Inheritance diagram for Launcher\+Window\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{class_launcher_window_a574b6ae8d06b266660eb880f0157dd7c}{Launcher\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Launcher window Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_launcher_window_af18248dede290c5a52b850c8df8a830a}{add\+Images}} ()
+\begin{DoxyCompactList}\small\item\em function to insert the image pattern \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_launcher_window_a80ccc1916c5cb28547c927066a171677}\label{class_launcher_window_a80ccc1916c5cb28547c927066a171677} 
+QLine\+Edit \texorpdfstring{$\ast$}{*} {\bfseries name\+Line}
+\begin{DoxyCompactList}\small\item\em line edit to get the \doxylink{class_bit_buddy}{Bit\+Buddy} name entered by the user \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_launcher_window}{Launcher\+Window} class is responsible for the initial landing page of the application. 
+
+Constructor to launch the \doxylink{class_launcher_window}{Launcher\+Window} instance.
+
+\begin{DoxyAuthor}{Author}
+Annabel Irani
+\end{DoxyAuthor}
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & -\/ parent widget \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_launcher_window_a574b6ae8d06b266660eb880f0157dd7c}\label{class_launcher_window_a574b6ae8d06b266660eb880f0157dd7c} 
-{\bfseries Launcher\+Window} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
-\item 
+\index{LauncherWindow@{LauncherWindow}!LauncherWindow@{LauncherWindow}}
+\index{LauncherWindow@{LauncherWindow}!LauncherWindow@{LauncherWindow}}
+\doxysubsubsection{\texorpdfstring{LauncherWindow()}{LauncherWindow()}}
+{\footnotesize\ttfamily Launcher\+Window\+::\+Launcher\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Launcher window Constructor. 
+
+Will initialize the launcher window and call the add\+Images function to add the background 
+\begin{DoxyParams}{Parameters}
+{\em parent} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
 \Hypertarget{class_launcher_window_af18248dede290c5a52b850c8df8a830a}\label{class_launcher_window_af18248dede290c5a52b850c8df8a830a} 
-void {\bfseries add\+Images} ()
-\end{DoxyCompactItemize}
+\index{LauncherWindow@{LauncherWindow}!addImages@{addImages}}
+\index{addImages@{addImages}!LauncherWindow@{LauncherWindow}}
+\doxysubsubsection{\texorpdfstring{addImages()}{addImages()}}
+{\footnotesize\ttfamily void Launcher\+Window\+::add\+Images (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+
+function to insert the image pattern 
+
+\doxylink{class_launcher_window_af18248dede290c5a52b850c8df8a830a}{add\+Images()} -\/ helper method to add the bitbuddies 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/include/Launcher\+Window.\+h\end{DoxyCompactItemize}
+game/include/window/Launcher\+Window.\+h\item 
+game/src/window/Launcher\+Window.\+cpp\end{DoxyCompactItemize}

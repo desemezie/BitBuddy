@@ -3,6 +3,7 @@
 //
 
 #include "../../include/window/SettingsWindow.h"
+#include "model/audio.h"
 
 #include "../../include/service/MusicService.h"
 
@@ -23,18 +24,24 @@ void SettingsWindow::setup() {
   // Sound effects slider
   layout->addWidget(new QLabel("Sound Effects Volume:"));
   soundEffectsSlider = new QSlider(Qt::Horizontal, this);
-  soundEffectsSlider->setRange(0, 100); // Assuming volume range is 0-100
+  soundEffectsSlider->setRange(0, 100);
   soundEffectsSlider->setValue(50);
   layout->addWidget(soundEffectsSlider);
+  int soundEffectsVolume = settings.value("soundEffectsVolume", 50).toInt(); // Default to 50
+  soundEffectsSlider->setValue(soundEffectsVolume);
+
 
   // Checkbox to disable sound effects
   disableSoundEffectsCheckBox = new QCheckBox("Disable Sound Effects", this);
   layout->addWidget(disableSoundEffectsCheckBox);
+  bool soundEffectsDisabled = settings.value("disableSoundEffects", false).toBool();
+  disableSoundEffectsCheckBox->setChecked(soundEffectsDisabled);
+
 
   // Music volume slider
   layout->addWidget(new QLabel("Music Volume:"));
   musicSlider = new QSlider(Qt::Horizontal, this);
-  musicSlider->setRange(0, 100); // Assuming volume range is 0-100
+  musicSlider->setRange(0, 100);
   int musicVolume = settings.value("musicVolume", 50).toInt(); // Default to 50 if not set
   musicSlider->setValue(musicVolume);
   layout->addWidget(musicSlider);
@@ -53,12 +60,16 @@ void SettingsWindow::setup() {
 
   // Apply the settings
   MusicService &musicService = MusicService::getInstance();
-  musicService.setVolume(musicVolume / 100.0f); // Adjust volume if needed
+  musicService.setVolume(musicVolume / 100.0f);
   if (disableMusic) {
     musicService.stopMusic();
   } else {
     musicService.startMusic();
   }
+  Audio::setVolume(soundEffectsVolume);
+  Audio::muteSound(soundEffectsDisabled);
+
+
 
   connect(soundEffectsSlider, &QSlider::valueChanged, this, &SettingsWindow::soundEffectsVolume);
   connect(musicSlider, &QSlider::valueChanged, this, &SettingsWindow::musicVolume);
@@ -78,10 +89,16 @@ void SettingsWindow::saveSettings() {
   // Save whether music is disabled
   settings.setValue("disableMusic", disableMusicCheckBox->isChecked());
 
+  soundEffectsVolume(soundEffectsSlider->value());
+  musicVolume(musicSlider->value());
+  disableSoundEffects(disableSoundEffectsCheckBox->isChecked());
+  disableMusic(disableMusicCheckBox->isChecked());
+
   accept(); // Close dialog
 }
 
 void SettingsWindow::soundEffectsVolume(int value) {
+  Audio::setVolume(value);
 
 }
 
@@ -93,6 +110,7 @@ void SettingsWindow::musicVolume(int value) {
 }
 
 void SettingsWindow::disableSoundEffects(bool checked) {
+  Audio::muteSound(checked);
   soundEffectsSlider->setEnabled(!checked); // Disable slider if sound effects are disabled
 }
 

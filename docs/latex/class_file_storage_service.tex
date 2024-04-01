@@ -27,12 +27,16 @@ Provides functionality to save and load \doxylink{class_bit_buddy}{Bit\+Buddy} i
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{class_file_storage_service}{File\+Storage\+Service}} \& \mbox{\hyperlink{class_file_storage_service_ad3607b6d6fe1d18a736fe491e0d6baf6}{get\+Instance}} ()
+static \mbox{\hyperlink{class_file_storage_service}{File\+Storage\+Service}} \& \mbox{\hyperlink{class_file_storage_service_aa1cd07035bf62fffe8b8be5af917f1f3}{get\+Instance}} ()
 \begin{DoxyCompactList}\small\item\em Gets the singleton instance of the \doxylink{class_file_storage_service}{File\+Storage\+Service}. \end{DoxyCompactList}\item 
-static void \mbox{\hyperlink{class_file_storage_service_a105834676c2e2b3175509ab5aeb113c0}{save\+Bit\+Buddy}} (const \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \&bit\+Buddy)
+static void \mbox{\hyperlink{class_file_storage_service_abdff94a19a4d40ea730b167c806348e0}{save\+Bit\+Buddy}} (const \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \&bit\+Buddy)
 \begin{DoxyCompactList}\small\item\em Saves the \doxylink{class_bit_buddy}{Bit\+Buddy} to a file. \end{DoxyCompactList}\item 
-static \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_file_storage_service_ac92bc9610af677b3b1d51c1f7943cc42}{load\+Bit\+Buddy}} (std\+::string fall\+Back\+Name)
-\begin{DoxyCompactList}\small\item\em Loads the \doxylink{class_bit_buddy}{Bit\+Buddy} from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_file_storage_service_a896c2ab2c3afa417fe40c84a94fff349}{load\+Bit\+Buddy}} (std\+::string fall\+Back\+Name)
+\begin{DoxyCompactList}\small\item\em Loads the \doxylink{class_bit_buddy}{Bit\+Buddy} from a file. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_file_storage_service_af5636cf597a089f5393a96087c47b044}{save\+User\+Bank\+Account}} (const \mbox{\hyperlink{class_user_bank_account}{User\+Bank\+Account}} \&user\+Bank\+Account)
+\begin{DoxyCompactList}\small\item\em Saves the \doxylink{class_user_bank_account}{User\+Bank\+Account} to a file. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_user_bank_account}{User\+Bank\+Account}} \& \mbox{\hyperlink{class_file_storage_service_a4f11ac3a7ae68579b4206dfe15675ea9}{load\+User\+Bank\+Account}} ()
+\begin{DoxyCompactList}\small\item\em Loads the \doxylink{class_user_bank_account}{User\+Bank\+Account} from a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -44,11 +48,11 @@ Ryan Hecht
 \doxylink{class_file_storage_service}{File\+Storage\+Service} is implemented as a singleton to ensure only one instance manages file storage operations. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_file_storage_service_ad3607b6d6fe1d18a736fe491e0d6baf6}\label{class_file_storage_service_ad3607b6d6fe1d18a736fe491e0d6baf6} 
+\Hypertarget{class_file_storage_service_aa1cd07035bf62fffe8b8be5af917f1f3}\label{class_file_storage_service_aa1cd07035bf62fffe8b8be5af917f1f3} 
 \index{FileStorageService@{FileStorageService}!getInstance@{getInstance}}
 \index{getInstance@{getInstance}!FileStorageService@{FileStorageService}}
 \doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{class_file_storage_service}{File\+Storage\+Service}} \& File\+Storage\+Service\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_file_storage_service}{File\+Storage\+Service}} \& File\+Storage\+Service\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -57,11 +61,11 @@ Gets the singleton instance of the \doxylink{class_file_storage_service}{File\+S
 \begin{DoxyReturn}{Returns}
 The instance of the \doxylink{class_file_storage_service}{File\+Storage\+Service}. 
 \end{DoxyReturn}
-\Hypertarget{class_file_storage_service_ac92bc9610af677b3b1d51c1f7943cc42}\label{class_file_storage_service_ac92bc9610af677b3b1d51c1f7943cc42} 
+\Hypertarget{class_file_storage_service_a896c2ab2c3afa417fe40c84a94fff349}\label{class_file_storage_service_a896c2ab2c3afa417fe40c84a94fff349} 
 \index{FileStorageService@{FileStorageService}!loadBitBuddy@{loadBitBuddy}}
 \index{loadBitBuddy@{loadBitBuddy}!FileStorageService@{FileStorageService}}
 \doxysubsubsection{\texorpdfstring{loadBitBuddy()}{loadBitBuddy()}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*} File\+Storage\+Service\+::load\+Bit\+Buddy (\begin{DoxyParamCaption}\item[{std\+::string}]{fall\+Back\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*} File\+Storage\+Service\+::load\+Bit\+Buddy (\begin{DoxyParamCaption}\item[{std\+::string}]{fall\+Back\+Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -77,11 +81,24 @@ If the \doxylink{class_bit_buddy}{Bit\+Buddy} cannot be loaded, a new \doxylink{
 \begin{DoxyReturn}{Returns}
 A pointer to the loaded or newly created \doxylink{class_bit_buddy}{Bit\+Buddy} instance. 
 \end{DoxyReturn}
-\Hypertarget{class_file_storage_service_a105834676c2e2b3175509ab5aeb113c0}\label{class_file_storage_service_a105834676c2e2b3175509ab5aeb113c0} 
+\Hypertarget{class_file_storage_service_a4f11ac3a7ae68579b4206dfe15675ea9}\label{class_file_storage_service_a4f11ac3a7ae68579b4206dfe15675ea9} 
+\index{FileStorageService@{FileStorageService}!loadUserBankAccount@{loadUserBankAccount}}
+\index{loadUserBankAccount@{loadUserBankAccount}!FileStorageService@{FileStorageService}}
+\doxysubsubsection{\texorpdfstring{loadUserBankAccount()}{loadUserBankAccount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user_bank_account}{User\+Bank\+Account}} \& File\+Storage\+Service\+::load\+User\+Bank\+Account (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Loads the \doxylink{class_user_bank_account}{User\+Bank\+Account} from a file. 
+
+\begin{DoxyReturn}{Returns}
+The loaded \doxylink{class_user_bank_account}{User\+Bank\+Account} instance. 
+\end{DoxyReturn}
+\Hypertarget{class_file_storage_service_abdff94a19a4d40ea730b167c806348e0}\label{class_file_storage_service_abdff94a19a4d40ea730b167c806348e0} 
 \index{FileStorageService@{FileStorageService}!saveBitBuddy@{saveBitBuddy}}
 \index{saveBitBuddy@{saveBitBuddy}!FileStorageService@{FileStorageService}}
 \doxysubsubsection{\texorpdfstring{saveBitBuddy()}{saveBitBuddy()}}
-{\footnotesize\ttfamily static void File\+Storage\+Service\+::save\+Bit\+Buddy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \&}]{bit\+Buddy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily void File\+Storage\+Service\+::save\+Bit\+Buddy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \&}]{bit\+Buddy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
 
@@ -92,8 +109,24 @@ Saves the \doxylink{class_bit_buddy}{Bit\+Buddy} to a file.
 {\em bit\+Buddy} & The \doxylink{class_bit_buddy}{Bit\+Buddy} instance to save. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{class_file_storage_service_af5636cf597a089f5393a96087c47b044}\label{class_file_storage_service_af5636cf597a089f5393a96087c47b044} 
+\index{FileStorageService@{FileStorageService}!saveUserBankAccount@{saveUserBankAccount}}
+\index{saveUserBankAccount@{saveUserBankAccount}!FileStorageService@{FileStorageService}}
+\doxysubsubsection{\texorpdfstring{saveUserBankAccount()}{saveUserBankAccount()}}
+{\footnotesize\ttfamily void File\+Storage\+Service\+::save\+User\+Bank\+Account (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_user_bank_account}{User\+Bank\+Account}} \&}]{user\+Bank\+Account }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+
+Saves the \doxylink{class_user_bank_account}{User\+Bank\+Account} to a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Bank\+Account} & The \doxylink{class_user_bank_account}{User\+Bank\+Account} instance to save. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/include/service/File\+Storage\+Service.\+h\end{DoxyCompactItemize}
+game/include/service/File\+Storage\+Service.\+h\item 
+game/src/service/File\+Storage\+Service.\+cpp\end{DoxyCompactItemize}

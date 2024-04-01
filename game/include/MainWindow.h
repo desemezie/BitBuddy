@@ -18,7 +18,7 @@
  * The main window of the application
  */
 class MainWindow final : public QMainWindow {
-  Q_OBJECT
+ Q_OBJECT
 
  public:
   /**
@@ -45,11 +45,11 @@ class MainWindow final : public QMainWindow {
   BitBuddyStatusWidget *bitBuddyStatusWidget{};
   LightButton *lightSwitch{};
   QPushButton *stats{};
+  QWidget *centralWidget;
 
   QPushButton *shop{};
 
   QPushButton *shopButton{};
-
 
   /**
    * @brief Will set up the homepage of the bitbuddy game
@@ -72,6 +72,9 @@ class MainWindow final : public QMainWindow {
    * @brief Opens the additional windows that are accessible through the mainWindow
    */
   void openSettings();
+
+  void updateCentralWidgetStyle(const QString &newStyle);
+
   void openShopWindow();
   /**
    * @brief Changes the style of the game

@@ -9,32 +9,31 @@
 \DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ BITBUDDY\_SRC\_BITBUDDYSTATUSWIDGET\_H\_}}
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ BITBUDDY\_SRC\_BITBUDDYSTATUSWIDGET\_H\_}}
 \DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}model/BitBuddyAttributeName.h"{}}}
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}model/DeprecatedEventListener.h"{}}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}model/BitBuddyAttribute.h"{}}}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}model/BitBuddy.h"{}}}
-\DoxyCodeLine{00012\ }
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QWidget>}}
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <QProgressBar>}}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <QMap>}}
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <QLabel>}}
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <QPair>}}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bit_buddy_status_widget}{BitBuddyStatusWidget}}\ :\ \textcolor{keyword}{public}\ QWidget\ \{}
-\DoxyCodeLine{00023\ \ Q\_OBJECT}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00030\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_bit_buddy_status_widget_a4e7e4431b391241bf646118d69a737ee}{BitBuddyStatusWidget}}(\mbox{\hyperlink{class_bit_buddy}{BitBuddy}}\ *BitBuddyInstance,\ QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \ \textcolor{keyword}{public}\ slots:}
-\DoxyCodeLine{00038\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buddy_status_widget_a57cf81f1160959a94107ed76f7526094}{onAttributeUpdated}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \&attribute);}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buddy_status_widget_a1cdf1d3e44af56c91c4ba7ee21523a51}{setAttributeLevel}}(BitBuddyAttributeName::UniqueName\ attributeName,\ \textcolor{keywordtype}{int}\ level);}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \ \ QMap<BitBuddyAttributeName::UniqueName,\ QProgressBar\ *>\ attributeBars;}
-\DoxyCodeLine{00050\ \};}
-\DoxyCodeLine{00051\ }
-\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//BITBUDDY\_SRC\_BITBUDDYSTATUSWIDGET\_H\_}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QMap>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QProgressBar>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}model/BitBuddy.h"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}model/BitBuddyAttribute.h"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}model/BitBuddyAttributeName.h"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bit_buddy_status_widget}{BitBuddyStatusWidget}}\ final\ :\ \textcolor{keyword}{public}\ QWidget\ \{}
+\DoxyCodeLine{00027\ \ \ Q\_OBJECT}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_bit_buddy_status_widget_a4d63483aa7ea49cab3cd67c4a17936fe}{BitBuddyStatusWidget}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bit_buddy}{BitBuddy}}\ *BitBuddyInstance,\ QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{00044\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buddy_status_widget_a57cf81f1160959a94107ed76f7526094}{onAttributeUpdated}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bit_buddy_attribute}{BitBuddyAttribute}}\ \&attribute);}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00051\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buddy_status_widget_ab20650bf988bc2212a0026cce5c7be39}{updateDarkMode}}(\textcolor{keywordtype}{bool}\ isDarkMode);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00060\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buddy_status_widget_a1cdf1d3e44af56c91c4ba7ee21523a51}{setAttributeLevel}}(\mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{BitBuddyAttributeName::UniqueName}}\ attributeName,\ \textcolor{keywordtype}{int}\ level);}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ QMap<BitBuddyAttributeName::UniqueName,\ QProgressBar\ *>\ attributeBars;}
+\DoxyCodeLine{00063\ \};}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ BITBUDDY\_SRC\_BITBUDDYSTATUSWIDGET\_H\_}}
 
 \end{DoxyCode}
