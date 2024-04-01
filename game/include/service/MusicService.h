@@ -5,14 +5,19 @@
 #ifndef BITBUDDY_SRC_SERVICE_MUSICSERVICE_H_
 #define BITBUDDY_SRC_SERVICE_MUSICSERVICE_H_
 
-#include <QObject>
 #include <QMediaPlayer>
+#include <QObject>
 
 /**
- * Service that plays music
+ * @class MusicService
+ * @brief The MusicService is responsible for playing and stopping the music in the game.
+ * @author Ryan Hecht
+ *
+ * This service is a singleton that is responsible for playing and stopping the music in the game. It uses a
+ * QMediaPlayer in a loop to play music. It can only play one track in its current rendition.
  */
-class MusicService : public QObject {
- Q_OBJECT
+class MusicService final : public QObject {
+  Q_OBJECT
 
  public:
   /**
@@ -23,40 +28,36 @@ class MusicService : public QObject {
   static MusicService &getInstance();
 
   MusicService(const MusicService &) = delete;
-
   MusicService &operator=(const MusicService &) = delete;
-
   MusicService(MusicService &&) = delete;
-
   MusicService &operator=(MusicService &&) = delete;
 
   /**
-   * Starts the music
+   * @brief Starts the music
    */
   void startMusic();
 
   /**
-   * Stops the music
+   * @brief Stops the music
    */
   void stopMusic();
 
   /**
-   * Sets the volume of the music
+   * @brief Sets the volume of the music
    *
    * @param volume The volume to set from 0.0f to 1.0f
    */
   void setVolume(float volume);
 
   /**
-   * Gets the volume of the music
+   * @brief Gets the volume of the music
    *
    * @return The volume of the music
    */
-  float getVolume() const;
+  [[nodiscard]] float getVolume() const;
 
  private:
   MusicService();
-
   ~MusicService() override;
 
   QMediaPlayer *musicPlayer;
@@ -64,4 +65,4 @@ class MusicService : public QObject {
   float currentVolume;
 };
 
-#endif //BITBUDDY_SRC_SERVICE_MUSICSERVICE_H_
+#endif  // BITBUDDY_SRC_SERVICE_MUSICSERVICE_H_

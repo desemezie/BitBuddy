@@ -1,0 +1,9 @@
+<map id="Event" name="Event">
+<area shape="rect" id="Node000001" title="The Event class represents an event that can be dispatched to listeners." alt="" coords="95,134,223,359"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,79,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="54,69,70,108,89,141,84,144,66,111,49,72"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="137,5,182,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,71,162,117,157,117,157,71"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="239,5,290,71"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="255,72,238,111,233,120,228,118,233,109,250,69"/>
+</map>

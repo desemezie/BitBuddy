@@ -2,6 +2,11 @@
 \hypertarget{class_music_service}{}\label{class_music_service}\index{MusicService@{MusicService}}
 
 
+The \doxylink{class_music_service}{Music\+Service} is responsible for playing and stopping the music in the game.  
+
+
+
+
 {\ttfamily \#include $<$Music\+Service.\+h$>$}
 
 Inheritance diagram for Music\+Service\+:\begin{figure}[H]
@@ -25,18 +30,20 @@ Inheritance diagram for Music\+Service\+:\begin{figure}[H]
 \Hypertarget{class_music_service_ae20e985ede95279f0528c55863fbbadd}\label{class_music_service_ae20e985ede95279f0528c55863fbbadd} 
 \mbox{\hyperlink{class_music_service}{Music\+Service}} \& {\bfseries operator=} (\mbox{\hyperlink{class_music_service}{Music\+Service}} \&\&)=delete
 \item 
-void \mbox{\hyperlink{class_music_service_a33291a64c5d69606289fe56ef30f15ba}{start\+Music}} ()
-\item 
-void \mbox{\hyperlink{class_music_service_a23470ace0df023a96289b2cd03184138}{stop\+Music}} ()
-\item 
+\Hypertarget{class_music_service_a33291a64c5d69606289fe56ef30f15ba}\label{class_music_service_a33291a64c5d69606289fe56ef30f15ba} 
+void {\bfseries start\+Music} ()
+\begin{DoxyCompactList}\small\item\em Starts the music. \end{DoxyCompactList}\item 
+\Hypertarget{class_music_service_a23470ace0df023a96289b2cd03184138}\label{class_music_service_a23470ace0df023a96289b2cd03184138} 
+void {\bfseries stop\+Music} ()
+\begin{DoxyCompactList}\small\item\em Stops the music. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_music_service_aec89cfd60a991c17dcbb75cae28b3d14}{set\+Volume}} (float volume)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the volume of the music. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_music_service_aeba8009cfaa095334edabf9e9c21b130}{get\+Volume}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets the volume of the music. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static \mbox{\hyperlink{class_music_service}{Music\+Service}} \& \mbox{\hyperlink{class_music_service_aa1d70ce5ede888826c6e00c8f1111633}{get\+Instance}} ()
+static \mbox{\hyperlink{class_music_service}{Music\+Service}} \& \mbox{\hyperlink{class_music_service_a24f49eb5dd4ba830fb8ab80a10197a67}{get\+Instance}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
@@ -53,14 +60,19 @@ float {\bfseries current\+Volume}
 
 
 \doxysubsection{Detailed Description}
-Service that plays music 
+The \doxylink{class_music_service}{Music\+Service} is responsible for playing and stopping the music in the game. 
+
+\begin{DoxyAuthor}{Author}
+Ryan Hecht
+\end{DoxyAuthor}
+This service is a singleton that is responsible for playing and stopping the music in the game. It uses a QMedia\+Player in a loop to play music. It can only play one track in its current rendition. 
 
 \doxysubsection{Member Function Documentation}
-\Hypertarget{class_music_service_aa1d70ce5ede888826c6e00c8f1111633}\label{class_music_service_aa1d70ce5ede888826c6e00c8f1111633} 
+\Hypertarget{class_music_service_a24f49eb5dd4ba830fb8ab80a10197a67}\label{class_music_service_a24f49eb5dd4ba830fb8ab80a10197a67} 
 \index{MusicService@{MusicService}!getInstance@{getInstance}}
 \index{getInstance@{getInstance}!MusicService@{MusicService}}
 \doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
-{\footnotesize\ttfamily static \mbox{\hyperlink{class_music_service}{Music\+Service}} \& Music\+Service\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_music_service}{Music\+Service}} \& Music\+Service\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
 Singleton instance getter
 
@@ -73,7 +85,9 @@ The instance of the \doxylink{class_music_service}{Music\+Service}
 \doxysubsubsection{\texorpdfstring{getVolume()}{getVolume()}}
 {\footnotesize\ttfamily float Music\+Service\+::get\+Volume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Gets the volume of the music
+
+
+Gets the volume of the music. 
 
 \begin{DoxyReturn}{Returns}
 The volume of the music 
@@ -84,27 +98,18 @@ The volume of the music
 \doxysubsubsection{\texorpdfstring{setVolume()}{setVolume()}}
 {\footnotesize\ttfamily void Music\+Service\+::set\+Volume (\begin{DoxyParamCaption}\item[{float}]{volume }\end{DoxyParamCaption})}
 
-Sets the volume of the music
+
+
+Sets the volume of the music. 
 
 
 \begin{DoxyParams}{Parameters}
 {\em volume} & The volume to set from 0.\+0f to 1.\+0f \\
 \hline
 \end{DoxyParams}
-\Hypertarget{class_music_service_a33291a64c5d69606289fe56ef30f15ba}\label{class_music_service_a33291a64c5d69606289fe56ef30f15ba} 
-\index{MusicService@{MusicService}!startMusic@{startMusic}}
-\index{startMusic@{startMusic}!MusicService@{MusicService}}
-\doxysubsubsection{\texorpdfstring{startMusic()}{startMusic()}}
-{\footnotesize\ttfamily void Music\+Service\+::start\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Starts the music \Hypertarget{class_music_service_a23470ace0df023a96289b2cd03184138}\label{class_music_service_a23470ace0df023a96289b2cd03184138} 
-\index{MusicService@{MusicService}!stopMusic@{stopMusic}}
-\index{stopMusic@{stopMusic}!MusicService@{MusicService}}
-\doxysubsubsection{\texorpdfstring{stopMusic()}{stopMusic()}}
-{\footnotesize\ttfamily void Music\+Service\+::stop\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Stops the music 
-
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/include/service/Music\+Service.\+h\end{DoxyCompactItemize}
+game/include/service/Music\+Service.\+h\item 
+game/src/service/Music\+Service.\+cpp\end{DoxyCompactItemize}

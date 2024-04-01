@@ -1,0 +1,112 @@
+\doxysection{User\+Bank\+Account\+Service Class Reference}
+\hypertarget{class_user_bank_account_service}{}\label{class_user_bank_account_service}\index{UserBankAccountService@{UserBankAccountService}}
+
+
+Singleton service that acts as a global registry for the \doxylink{class_user_bank_account}{User\+Bank\+Account} object to allow access throughout the application.  
+
+
+
+
+{\ttfamily \#include $<$User\+Bank\+Account\+Service.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_user_bank_account_service_a2e1fbb70f7dde355f5265bf6cc6286c0}\label{class_user_bank_account_service_a2e1fbb70f7dde355f5265bf6cc6286c0} 
+{\bfseries User\+Bank\+Account\+Service} (const \mbox{\hyperlink{class_user_bank_account_service}{User\+Bank\+Account\+Service}} \&)=delete
+\item 
+\Hypertarget{class_user_bank_account_service_ac44af59db2cc869b059913e94e908fda}\label{class_user_bank_account_service_ac44af59db2cc869b059913e94e908fda} 
+\mbox{\hyperlink{class_user_bank_account_service}{User\+Bank\+Account\+Service}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_user_bank_account_service}{User\+Bank\+Account\+Service}} \&)=delete
+\item 
+\Hypertarget{class_user_bank_account_service_a869049f2c2a562cd89471f63a09f60c4}\label{class_user_bank_account_service_a869049f2c2a562cd89471f63a09f60c4} 
+{\bfseries User\+Bank\+Account\+Service} (\mbox{\hyperlink{class_user_bank_account_service}{User\+Bank\+Account\+Service}} \&\&)=delete
+\item 
+\Hypertarget{class_user_bank_account_service_adb962f28ff94e911f11a9bf430cea74d}\label{class_user_bank_account_service_adb962f28ff94e911f11a9bf430cea74d} 
+\mbox{\hyperlink{class_user_bank_account_service}{User\+Bank\+Account\+Service}} \& {\bfseries operator=} (\mbox{\hyperlink{class_user_bank_account_service}{User\+Bank\+Account\+Service}} \&\&)=delete
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_user_bank_account_service}{User\+Bank\+Account\+Service}} \& \mbox{\hyperlink{class_user_bank_account_service_aa871e29e273ff2c0e4a22c72a879e7a4}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Singleton instance getter. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_user_bank_account_service_a35d8c9d762fc6f3fff9203379f10244e}{register\+User\+Bank\+Account}} (\mbox{\hyperlink{class_user_bank_account}{User\+Bank\+Account}} \texorpdfstring{$\ast$}{*}user\+Bank\+Account)
+\begin{DoxyCompactList}\small\item\em Registers the \doxylink{class_user_bank_account}{User\+Bank\+Account} object with the service. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_user_bank_account}{User\+Bank\+Account}} \& \mbox{\hyperlink{class_user_bank_account_service_a3e8f41b3fbe4204eb73be7fbe0a722b6}{get\+User\+Bank\+Account}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \doxylink{class_user_bank_account}{User\+Bank\+Account} object registered with the service. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_user_bank_account_service_a74596fda7f250cbdf67588f7c94ed8b0}\label{class_user_bank_account_service_a74596fda7f250cbdf67588f7c94ed8b0} 
+{\bfseries User\+Bank\+Account\+Service} ()=default
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user_bank_account_service}{User\+Bank\+Account\+Service} constructor. \end{DoxyCompactList}\item 
+\Hypertarget{class_user_bank_account_service_a4f9beedfbd52129d079bac0f333a190e}\label{class_user_bank_account_service_a4f9beedfbd52129d079bac0f333a190e} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+User\+Bank\+Account\+Service} ()
+\begin{DoxyCompactList}\small\item\em \doxylink{class_user_bank_account_service}{User\+Bank\+Account\+Service} destructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_user_bank_account_service_abfe8a2bf9e5228f5091e71a2d393d853}\label{class_user_bank_account_service_abfe8a2bf9e5228f5091e71a2d393d853} 
+static \mbox{\hyperlink{class_user_bank_account}{User\+Bank\+Account}} \texorpdfstring{$\ast$}{*} {\bfseries user\+Bank\+Account} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton service that acts as a global registry for the \doxylink{class_user_bank_account}{User\+Bank\+Account} object to allow access throughout the application. 
+
+\begin{DoxyAuthor}{Author}
+Ryan Hecht
+\end{DoxyAuthor}
+Exposes only a reference to the \doxylink{class_user_bank_account}{User\+Bank\+Account} object. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_user_bank_account_service_aa871e29e273ff2c0e4a22c72a879e7a4}\label{class_user_bank_account_service_aa871e29e273ff2c0e4a22c72a879e7a4} 
+\index{UserBankAccountService@{UserBankAccountService}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!UserBankAccountService@{UserBankAccountService}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user_bank_account_service}{User\+Bank\+Account\+Service}} \& User\+Bank\+Account\+Service\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Singleton instance getter. 
+
+\begin{DoxyReturn}{Returns}
+The instance of the \doxylink{class_user_bank_account_service}{User\+Bank\+Account\+Service} 
+\end{DoxyReturn}
+\Hypertarget{class_user_bank_account_service_a3e8f41b3fbe4204eb73be7fbe0a722b6}\label{class_user_bank_account_service_a3e8f41b3fbe4204eb73be7fbe0a722b6} 
+\index{UserBankAccountService@{UserBankAccountService}!getUserBankAccount@{getUserBankAccount}}
+\index{getUserBankAccount@{getUserBankAccount}!UserBankAccountService@{UserBankAccountService}}
+\doxysubsubsection{\texorpdfstring{getUserBankAccount()}{getUserBankAccount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user_bank_account}{User\+Bank\+Account}} \& User\+Bank\+Account\+Service\+::get\+User\+Bank\+Account (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Gets the \doxylink{class_user_bank_account}{User\+Bank\+Account} object registered with the service. 
+
+This method is used to get the \doxylink{class_user_bank_account}{User\+Bank\+Account} object registered with the service. This method should only be called after the \doxylink{class_user_bank_account}{User\+Bank\+Account} object has been registered with the service.
+
+\begin{DoxyReturn}{Returns}
+The \doxylink{class_user_bank_account}{User\+Bank\+Account} object 
+\end{DoxyReturn}
+\Hypertarget{class_user_bank_account_service_a35d8c9d762fc6f3fff9203379f10244e}\label{class_user_bank_account_service_a35d8c9d762fc6f3fff9203379f10244e} 
+\index{UserBankAccountService@{UserBankAccountService}!registerUserBankAccount@{registerUserBankAccount}}
+\index{registerUserBankAccount@{registerUserBankAccount}!UserBankAccountService@{UserBankAccountService}}
+\doxysubsubsection{\texorpdfstring{registerUserBankAccount()}{registerUserBankAccount()}}
+{\footnotesize\ttfamily void User\+Bank\+Account\+Service\+::register\+User\+Bank\+Account (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_user_bank_account}{User\+Bank\+Account}} \texorpdfstring{$\ast$}{*}}]{user\+Bank\+Account }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Registers the \doxylink{class_user_bank_account}{User\+Bank\+Account} object with the service. 
+
+This method is used to register the \doxylink{class_user_bank_account}{User\+Bank\+Account} object with the service. A pointer to the object is then stored internally in the \doxylink{class_user_bank_account_service}{User\+Bank\+Account\+Service}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Bank\+Account} & The \doxylink{class_user_bank_account}{User\+Bank\+Account} object to register \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game/include/service/User\+Bank\+Account\+Service.\+h\item 
+game/src/service/User\+Bank\+Account\+Service.\+cpp\end{DoxyCompactItemize}

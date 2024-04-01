@@ -1,0 +1,31 @@
+<map id="BitBuddySpriteHandler" name="BitBuddySpriteHandler">
+<area shape="rect" id="Node000001" title="The BitBuddySpriteHandler is responsible for the changing sprites of the bitbuddy based on his emotio..." alt="" coords="452,1145,624,1610"/>
+<area shape="rect" id="Node000002" href="$class_q_object.html" title=" " alt="" coords="17,5,78,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="35,85,33,95,26,149,18,238,10,308,10,376,26,463,63,582,110,700,164,814,224,924,286,1025,347,1118,454,1267,450,1271,342,1121,281,1028,219,926,160,817,105,702,57,584,21,464,5,377,5,307,12,237,21,148,27,94,30,84"/>
+<area shape="rect" id="Node000004" href="$class_bit_buddy.html" title="Represents the BitBuddy pet in the game." alt="" coords="364,541,533,1067"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="42,86,34,161,32,258,35,310,43,362,56,414,75,462,102,510,134,554,171,596,210,635,291,701,366,752,363,757,288,705,206,639,167,600,130,558,97,513,70,464,51,415,38,363,30,310,26,258,28,161,37,85"/>
+<area shape="rect" id="Node000011" href="$class_bit_buck_generator.html" title="Generates BitBucks at a set interval and emits a signal when they are generated." alt="" coords="85,149,289,463"/>
+<area shape="poly" id="edge12_Node000011_Node000002" title=" " alt="" coords="73,82,108,148,103,150,68,85"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="557,771,620,837"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="589,837,563,1128,557,1128,583,836"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="491,1066,499,1120,500,1127,495,1128,494,1121,485,1067"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="314,273,359,339"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="340,338,346,420,360,517,363,530,358,531,355,518,341,420,335,339"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="383,273,514,339"/>
+<area shape="poly" id="edge6_Node000004_Node000006" title=" " alt="" coords="451,338,451,524,446,524,446,338"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="539,273,588,339"/>
+<area shape="poly" id="edge7_Node000004_Node000007" title=" " alt="" coords="570,338,574,420,571,470,562,518,556,531,548,543,543,555,538,553,544,540,551,528,557,517,566,469,569,420,565,339"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="613,266,831,346"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="707,347,661,431,628,477,590,519,579,527,568,531,558,535,548,543,546,546,541,543,544,539,555,530,566,526,576,523,587,515,624,474,656,428,703,345"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="856,273,929,339"/>
+<area shape="poly" id="edge9_Node000004_Node000009" title=" " alt="" coords="894,339,889,368,881,402,867,436,845,465,808,494,772,506,732,511,684,520,646,525,614,524,583,528,548,545,546,540,581,523,614,519,646,519,683,515,731,506,770,501,805,489,841,461,862,433,876,400,884,367,888,338"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="970,273,1007,339"/>
+<area shape="poly" id="edge10_Node000004_Node000010" title=" " alt="" coords="990,339,983,383,969,434,958,460,943,483,925,504,902,520,871,529,830,533,732,530,631,529,586,534,549,546,547,540,585,529,630,523,732,525,830,528,870,524,900,515,921,500,939,480,953,457,964,433,978,382,984,338"/>
+<area shape="poly" id="edge11_Node000004_Node000011" title=" " alt="" coords="220,462,241,516,265,563,294,609,356,694,351,697,290,612,261,566,236,518,215,464"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="158,5,185,71"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="174,70,175,125,176,132,170,132,170,125,169,71"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="342,5,398,71"/>
+<area shape="poly" id="edge14_Node000011_Node000013" title=" " alt="" coords="367,71,358,99,343,126,333,135,323,140,304,151,303,151,300,147,300,147,321,135,330,131,339,123,353,97,362,70"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="649,771,766,837"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="709,837,697,963,684,1042,665,1121,633,1204,628,1202,659,1120,679,1041,692,962,703,836"/>
+</map>

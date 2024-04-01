@@ -15,24 +15,50 @@
  *
  * Exposes only a reference to the UserBankAccount object.
  */
-class UserBankAccountService {
-  public:
-    static UserBankAccountService &getInstance();
+class UserBankAccountService final {
+ public:
+  /**
+   * @brief Singleton instance getter
+   *
+   * @return The instance of the UserBankAccountService
+   */
+  static UserBankAccountService &getInstance();
 
-    UserBankAccountService(const UserBankAccountService &) = delete;
-    UserBankAccountService &operator=(const UserBankAccountService &) = delete;
-    UserBankAccountService(UserBankAccountService &&) = delete;
-    UserBankAccountService &operator=(UserBankAccountService &&) = delete;
+  UserBankAccountService(const UserBankAccountService &) = delete;
+  UserBankAccountService &operator=(const UserBankAccountService &) = delete;
+  UserBankAccountService(UserBankAccountService &&) = delete;
+  UserBankAccountService &operator=(UserBankAccountService &&) = delete;
 
-    static void registerUserBankAccount(UserBankAccount *userBankAccount);
+  /**
+   * @brief Registers the UserBankAccount object with the service
+   * @details This method is used to register the UserBankAccount object with the service. A pointer to the object
+   * is then stored internally in the UserBankAccountService.
+   *
+   * @param userBankAccount The UserBankAccount object to register
+   */
+  static void registerUserBankAccount(UserBankAccount *userBankAccount);
 
-    [[nodiscard]] static UserBankAccount &getUserBankAccount();
+  /**
+   * @brief Gets the UserBankAccount object registered with the service
+   * @details This method is used to get the UserBankAccount object registered with the service. This method should
+   * only be called after the UserBankAccount object has been registered with the service.
+   *
+   * @return The UserBankAccount object
+   */
+  [[nodiscard]] static UserBankAccount &getUserBankAccount();
 
-  private:
-    UserBankAccountService() = default;
-    ~UserBankAccountService();
+ private:
+  /**
+   * @brief UserBankAccountService constructor
+   */
+  UserBankAccountService() = default;
 
-    static UserBankAccount *userBankAccount;
+  /**
+   * @brief UserBankAccountService destructor
+   */
+  ~UserBankAccountService();
+
+  static UserBankAccount *userBankAccount;
 };
 
-#endif //BITBUDDY_GAME_SRC_SERVICE_USERBANKACCOUNTSERVICE_H_
+#endif  // BITBUDDY_GAME_SRC_SERVICE_USERBANKACCOUNTSERVICE_H_

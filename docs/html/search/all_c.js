@@ -1,12 +1,9 @@
 var searchData=
 [
-  ['savebitbuddy_0',['saveBitBuddy',['../class_file_storage_service.html#a105834676c2e2b3175509ab5aeb113c0',1,'FileStorageService']]],
-  ['setattributelevel_1',['setAttributeLevel',['../class_bit_buddy_status_widget.html#a1cdf1d3e44af56c91c4ba7ee21523a51',1,'BitBuddyStatusWidget']]],
-  ['settingswindow_2',['SettingsWindow',['../class_settings_window.html',1,'']]],
-  ['setvolume_3',['setVolume',['../class_music_service.html#aec89cfd60a991c17dcbb75cae28b3d14',1,'MusicService']]],
-  ['singleattributeevent_4',['SingleAttributeEvent',['../class_single_attribute_event.html',1,'SingleAttributeEvent'],['../class_single_attribute_event.html#ace88280966dd81f1648c26f4f4ce9773',1,'SingleAttributeEvent::SingleAttributeEvent()']]],
-  ['startmusic_5',['startMusic',['../class_music_service.html#a33291a64c5d69606289fe56ef30f15ba',1,'MusicService']]],
-  ['startservice_6',['startService',['../class_event_generator_service.html#adec5843f9f5d10afd7bc4d898a9e3290',1,'EventGeneratorService::startService()'],['../class_game_service.html#a5ea35b167de859c294e82b071e5413ae',1,'GameService::startService()']]],
-  ['stopmusic_7',['stopMusic',['../class_music_service.html#a23470ace0df023a96289b2cd03184138',1,'MusicService']]],
-  ['stopservice_8',['stopService',['../class_event_generator_service.html#a262888acaa4fab3525f294309b30d04b',1,'EventGeneratorService::stopService()'],['../class_game_service.html#a9a2fc0a0b4f900eee54ad53fa1f2ef0c',1,'GameService::stopService()']]]
+  ['onattributeupdated_0',['onAttributeUpdated',['../class_bit_buddy_status_widget.html#a57cf81f1160959a94107ed76f7526094',1,'BitBuddyStatusWidget']]],
+  ['onbuybuttonclicked_1',['onBuyButtonClicked',['../class_shop_window.html#ab53017358c1eaafc7a321cd2e3e8cdab',1,'ShopWindow']]],
+  ['onevent_2',['onEvent',['../class_bit_buddy.html#a16d803f967d6313d49177da34a9e9254',1,'BitBuddy']]],
+  ['opensettings_3',['openSettings',['../class_main_window.html#a8e1c1ad87a68b27f19492549b9c4e773',1,'MainWindow']]],
+  ['openshopwindow_4',['openShopWindow',['../class_main_window.html#aa23840ba480cc293f6cc3e8501a58a73',1,'MainWindow']]],
+  ['operator_3d_5',['operator=',['../class_single_attribute_event.html#a765ef1d31aee7411f3b60a2e7f5fd275',1,'SingleAttributeEvent']]]
 ];

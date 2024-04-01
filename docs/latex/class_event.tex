@@ -2,6 +2,11 @@
 \hypertarget{class_event}{}\label{class_event}\index{Event@{Event}}
 
 
+The \doxylink{class_event}{Event} class represents an event that can be dispatched to listeners.  
+
+
+
+
 {\ttfamily \#include $<$Event.\+h$>$}
 
 Inheritance diagram for Event\+:\begin{figure}[H]
@@ -15,9 +20,10 @@ Inheritance diagram for Event\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{class_event_a9eca0f00d5c869cd2ca8682f4f03b571}{Event}} (std\+::string description="{}"{}, double probability=1.\+0)
 \item 
-\Hypertarget{class_event_a5c82edff70b5f542b42b691ac6b815cc}\label{class_event_a5c82edff70b5f542b42b691ac6b815cc} 
-{\bfseries Event} (const \mbox{\hyperlink{class_event}{Event}} \&)=default
-\item 
+virtual \mbox{\hyperlink{class_event_a105223995bbf1a1e4714d0c77f91cf0b}{\texorpdfstring{$\sim$}{\string~}\+Event}} ()=default
+\begin{DoxyCompactList}\small\item\em Destructor for the \doxylink{class_event}{Event}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_event_a5c82edff70b5f542b42b691ac6b815cc}{Event}} (const \mbox{\hyperlink{class_event}{Event}} \&)=default
+\begin{DoxyCompactList}\small\item\em Copy constructor for the \doxylink{class_event}{Event}. \end{DoxyCompactList}\item 
 \Hypertarget{class_event_a4632b5f4de0e8cf1261cd9a2c20b45f1}\label{class_event_a4632b5f4de0e8cf1261cd9a2c20b45f1} 
 \mbox{\hyperlink{class_event}{Event}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_event}{Event}} \&)=default
 \item 
@@ -28,11 +34,11 @@ Inheritance diagram for Event\+:\begin{figure}[H]
 \mbox{\hyperlink{class_event}{Event}} \& {\bfseries operator=} (\mbox{\hyperlink{class_event}{Event}} \&\&)=delete
 \item 
 std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{class_event_adb2d5f6278344a428aca3245a1a0bca2}{get\+Creation\+Time}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the creation time of the event. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{class_event_a4df924f35541e84a303c5434bf3e7e84}{get\+Description}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the description of the event. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{class_event_ad14e195091eb9810aefb6a943089882f}{get\+Probability}} () const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Returns the probability of the event. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -48,13 +54,18 @@ double {\bfseries probability}
 
 
 \doxysubsection{Detailed Description}
-Represents an event with a description and a timestamp. 
+The \doxylink{class_event}{Event} class represents an event that can be dispatched to listeners. 
+
+\begin{DoxyAuthor}{Author}
+Ryan Hecht
+\end{DoxyAuthor}
+The \doxylink{class_event}{Event} class represents an event that can be dispatched to listeners. Each event has a description and a creation time. Events are generally not meant to be constructed themselves as they do not provide much use. Instead, subclasses of \doxylink{class_event}{Event} are usually used. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{class_event_a9eca0f00d5c869cd2ca8682f4f03b571}\label{class_event_a9eca0f00d5c869cd2ca8682f4f03b571} 
 \index{Event@{Event}!Event@{Event}}
 \index{Event@{Event}!Event@{Event}}
-\doxysubsubsection{\texorpdfstring{Event()}{Event()}}
+\doxysubsubsection{\texorpdfstring{Event()}{Event()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Event\+::\+Event (\begin{DoxyParamCaption}\item[{std\+::string}]{description = {\ttfamily "{}"{}},  }\item[{double}]{probability = {\ttfamily 1.0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
 
 Constructs an \doxylink{class_event}{Event} with the given description. The creation time is set to the current system time.
@@ -66,6 +77,33 @@ Constructs an \doxylink{class_event}{Event} with the given description. The crea
 {\em probability} & The event\textquotesingle{}s probability. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{class_event_a105223995bbf1a1e4714d0c77f91cf0b}\label{class_event_a105223995bbf1a1e4714d0c77f91cf0b} 
+\index{Event@{Event}!````~Event@{\texorpdfstring{$\sim$}{\string~}Event}}
+\index{````~Event@{\texorpdfstring{$\sim$}{\string~}Event}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Event()}{\string~Event()}}
+{\footnotesize\ttfamily virtual Event\+::\texorpdfstring{$\sim$}{\string~}\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destructor for the \doxylink{class_event}{Event}. 
+
+The destructor is made virtual to force \doxylink{class_event}{Event} to be polymorphic \Hypertarget{class_event_a5c82edff70b5f542b42b691ac6b815cc}\label{class_event_a5c82edff70b5f542b42b691ac6b815cc} 
+\index{Event@{Event}!Event@{Event}}
+\index{Event@{Event}!Event@{Event}}
+\doxysubsubsection{\texorpdfstring{Event()}{Event()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Event\+::\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_event}{Event}} \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Copy constructor for the \doxylink{class_event}{Event}. 
+
+the default copy constructor is used because our explicit definition would be the same.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The \doxylink{class_event}{Event} to copy \\
+\hline
+\end{DoxyParams}
 
 
 \doxysubsection{Member Function Documentation}
@@ -75,7 +113,9 @@ Constructs an \doxylink{class_event}{Event} with the given description. The crea
 \doxysubsubsection{\texorpdfstring{getCreationTime()}{getCreationTime()}}
 {\footnotesize\ttfamily std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point Event\+::get\+Creation\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Returns the creation time of the event.
+
+
+Returns the creation time of the event. 
 
 \begin{DoxyReturn}{Returns}
 The creation time as a std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point. 
@@ -86,7 +126,9 @@ The creation time as a std\+::chrono\+::system\+\_\+clock\+::time\+\_\+point.
 \doxysubsubsection{\texorpdfstring{getDescription()}{getDescription()}}
 {\footnotesize\ttfamily std\+::string Event\+::get\+Description (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-Returns the description of the event.
+
+
+Returns the description of the event. 
 
 \begin{DoxyReturn}{Returns}
 The description as a std\+::string. 
@@ -97,13 +139,16 @@ The description as a std\+::string.
 \doxysubsubsection{\texorpdfstring{getProbability()}{getProbability()}}
 {\footnotesize\ttfamily double Event\+::get\+Probability (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
 
-Returns the probability of the event.
+
+
+Returns the probability of the event. 
 
 \begin{DoxyReturn}{Returns}
 The probability as a double. 
 \end{DoxyReturn}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/include/model/Event.\+h\end{DoxyCompactItemize}
+game/include/model/Event.\+h\item 
+game/src/model/Event.\+cpp\end{DoxyCompactItemize}

@@ -74,14 +74,16 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pri-slots">Private Slots</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_main_window-members.html">List of all members</a>  </div>
-  <div class="headertitle"><div class="title">MainWindow Class Reference</div></div>
+  <div class="headertitle"><div class="title">MainWindow Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Responsible for the window of the game.  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_main_window_8h_source.html">MainWindow.h</a>&gt;</code></p>
 <div class="dynheader">
@@ -94,7 +96,7 @@ Inheritance diagram for MainWindow:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a996c5a2b6f77944776856f08ec30858d" id="r_a996c5a2b6f77944776856f08ec30858d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a996c5a2b6f77944776856f08ec30858d">MainWindow</a> (QWidget *parent=nullptr)</td></tr>
-<tr class="memdesc:a996c5a2b6f77944776856f08ec30858d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of the <a class="el" href="class_main_window.html">MainWindow</a>.  <br /></td></tr>
+<tr class="memdesc:a996c5a2b6f77944776856f08ec30858d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor of the <a class="el" href="class_main_window.html" title="Responsible for the window of the game.">MainWindow</a>.  <br /></td></tr>
 <tr class="separator:a996c5a2b6f77944776856f08ec30858d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1d822d2183a379458e4bc0e2ea2bf3b" id="r_af1d822d2183a379458e4bc0e2ea2bf3b"><td class="memItemLeft" align="right" valign="top"><a id="af1d822d2183a379458e4bc0e2ea2bf3b" name="af1d822d2183a379458e4bc0e2ea2bf3b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MainWindow</b> (const <a class="el" href="class_main_window.html">MainWindow</a> &amp;)=delete</td></tr>
@@ -109,41 +111,73 @@ Public Member Functions</h2></td></tr>
 <a class="el" href="class_main_window.html">MainWindow</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (<a class="el" href="class_main_window.html">MainWindow</a> &amp;&amp;)=delete</td></tr>
 <tr class="separator:a54da5b008666d19dcdfb1a5102057b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:aad75236c74a5c340c3e18749a9b5eb4f" id="r_aad75236c74a5c340c3e18749a9b5eb4f"><td class="memItemLeft" align="right" valign="top"><a id="aad75236c74a5c340c3e18749a9b5eb4f" name="aad75236c74a5c340c3e18749a9b5eb4f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>resizeEvent</b> (QResizeEvent *event) override</td></tr>
-<tr class="separator:aad75236c74a5c340c3e18749a9b5eb4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-slots" name="pri-slots"></a>
 Private Slots</h2></td></tr>
-<tr class="memitem:a8e1c1ad87a68b27f19492549b9c4e773" id="r_a8e1c1ad87a68b27f19492549b9c4e773"><td class="memItemLeft" align="right" valign="top"><a id="a8e1c1ad87a68b27f19492549b9c4e773" name="a8e1c1ad87a68b27f19492549b9c4e773"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>openSettings</b> ()</td></tr>
+<tr class="memitem:a8e1c1ad87a68b27f19492549b9c4e773" id="r_a8e1c1ad87a68b27f19492549b9c4e773"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e1c1ad87a68b27f19492549b9c4e773">openSettings</a> ()</td></tr>
+<tr class="memdesc:a8e1c1ad87a68b27f19492549b9c4e773"><td class="mdescLeft">&#160;</td><td class="mdescRight">Opens the additional windows that are accessible through the mainWindow.  <br /></td></tr>
 <tr class="separator:a8e1c1ad87a68b27f19492549b9c4e773"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d6030556f6c422800de375e4df9f808" id="r_a4d6030556f6c422800de375e4df9f808"><td class="memItemLeft" align="right" valign="top"><a id="a4d6030556f6c422800de375e4df9f808" name="a4d6030556f6c422800de375e4df9f808"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>updateCentralWidgetStyle</b> (const QString &amp;newStyle)</td></tr>
+<tr class="separator:a4d6030556f6c422800de375e4df9f808"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa23840ba480cc293f6cc3e8501a58a73" id="r_aa23840ba480cc293f6cc3e8501a58a73"><td class="memItemLeft" align="right" valign="top"><a id="aa23840ba480cc293f6cc3e8501a58a73" name="aa23840ba480cc293f6cc3e8501a58a73"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>openShopWindow</b> ()</td></tr>
+<tr class="memdesc:aa23840ba480cc293f6cc3e8501a58a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Responsible for opening the shop window when the shop button is pressed. <br /></td></tr>
+<tr class="separator:aa23840ba480cc293f6cc3e8501a58a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35c1d3ce153b7919598b4df63c455cc2" id="r_a35c1d3ce153b7919598b4df63c455cc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35c1d3ce153b7919598b4df63c455cc2">updateTheme</a> (const QString &amp;newStyle)</td></tr>
+<tr class="memdesc:a35c1d3ce153b7919598b4df63c455cc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the style of the game.  <br /></td></tr>
+<tr class="separator:a35c1d3ce153b7919598b4df63c455cc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:aabdff4cfb4b3b58909f2febf9023b55d" id="r_aabdff4cfb4b3b58909f2febf9023b55d"><td class="memItemLeft" align="right" valign="top"><a id="aabdff4cfb4b3b58909f2febf9023b55d" name="aabdff4cfb4b3b58909f2febf9023b55d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>loadDefaultSprite</b> ()</td></tr>
-<tr class="separator:aabdff4cfb4b3b58909f2febf9023b55d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa353e8faed952a95e2fc62d7a5018a89" id="r_aa353e8faed952a95e2fc62d7a5018a89"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa353e8faed952a95e2fc62d7a5018a89">setupUi</a> ()</td></tr>
+<tr class="memdesc:aa353e8faed952a95e2fc62d7a5018a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">Will set up the homepage of the bitbuddy game.  <br /></td></tr>
+<tr class="separator:aa353e8faed952a95e2fc62d7a5018a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa88ba24b2540a862b065a922ab8dcef6" id="r_aa88ba24b2540a862b065a922ab8dcef6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa88ba24b2540a862b065a922ab8dcef6">loadDefaultSprite</a> () const</td></tr>
+<tr class="memdesc:aa88ba24b2540a862b065a922ab8dcef6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the default sprite to the happy bitbuddy.  <br /></td></tr>
+<tr class="separator:aa88ba24b2540a862b065a922ab8dcef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad75236c74a5c340c3e18749a9b5eb4f" id="r_aad75236c74a5c340c3e18749a9b5eb4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad75236c74a5c340c3e18749a9b5eb4f">resizeEvent</a> (QResizeEvent *event) override</td></tr>
+<tr class="memdesc:aad75236c74a5c340c3e18749a9b5eb4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">resizeEvent will be called when the window is resized  <br /></td></tr>
+<tr class="separator:aad75236c74a5c340c3e18749a9b5eb4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a0466805ebcbb37c6f6585757ae5cdcbc" id="r_a0466805ebcbb37c6f6585757ae5cdcbc"><td class="memItemLeft" align="right" valign="top"><a id="a0466805ebcbb37c6f6585757ae5cdcbc" name="a0466805ebcbb37c6f6585757ae5cdcbc"></a>
-QLabel *&#160;</td><td class="memItemRight" valign="bottom"><b>spriteLabel</b></td></tr>
+QLabel *&#160;</td><td class="memItemRight" valign="bottom"><b>spriteLabel</b> {}</td></tr>
 <tr class="separator:a0466805ebcbb37c6f6585757ae5cdcbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc068ac0d3d1e5ca06bf90dec3de5854" id="r_afc068ac0d3d1e5ca06bf90dec3de5854"><td class="memItemLeft" align="right" valign="top"><a id="afc068ac0d3d1e5ca06bf90dec3de5854" name="afc068ac0d3d1e5ca06bf90dec3de5854"></a>
-<a class="el" href="class_bit_buddy_sprite_handler.html">BitBuddySpriteHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>spriteHandler</b></td></tr>
+<a class="el" href="class_bit_buddy_sprite_handler.html">BitBuddySpriteHandler</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>spriteHandler</b> {}</td></tr>
 <tr class="separator:afc068ac0d3d1e5ca06bf90dec3de5854"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec2daff2fee8e4f8f3efd274e08ba41a" id="r_aec2daff2fee8e4f8f3efd274e08ba41a"><td class="memItemLeft" align="right" valign="top"><a id="aec2daff2fee8e4f8f3efd274e08ba41a" name="aec2daff2fee8e4f8f3efd274e08ba41a"></a>
-QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><b>settingsButton</b></td></tr>
+QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><b>settingsButton</b> {}</td></tr>
 <tr class="separator:aec2daff2fee8e4f8f3efd274e08ba41a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2e2dc3bb1df56ecce3536b6282019e8" id="r_af2e2dc3bb1df56ecce3536b6282019e8"><td class="memItemLeft" align="right" valign="top"><a id="af2e2dc3bb1df56ecce3536b6282019e8" name="af2e2dc3bb1df56ecce3536b6282019e8"></a>
-<a class="el" href="class_bit_buddy.html">BitBuddy</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>bitBuddy</b></td></tr>
-<tr class="separator:af2e2dc3bb1df56ecce3536b6282019e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f8816ada80f8e9c89318d92de5e6471" id="r_a9f8816ada80f8e9c89318d92de5e6471"><td class="memItemLeft" align="right" valign="top"><a id="a9f8816ada80f8e9c89318d92de5e6471" name="a9f8816ada80f8e9c89318d92de5e6471"></a>
+<a class="el" href="class_bit_buddy_status_widget.html">BitBuddyStatusWidget</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>bitBuddyStatusWidget</b> {}</td></tr>
+<tr class="separator:a9f8816ada80f8e9c89318d92de5e6471"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5ad86027c7df768b6961432b861230f" id="r_af5ad86027c7df768b6961432b861230f"><td class="memItemLeft" align="right" valign="top"><a id="af5ad86027c7df768b6961432b861230f" name="af5ad86027c7df768b6961432b861230f"></a>
+<a class="el" href="class_light_button.html">LightButton</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>lightSwitch</b> {}</td></tr>
+<tr class="separator:af5ad86027c7df768b6961432b861230f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0876b630a84e44ba0ee3afa0ae26ff0" id="r_ab0876b630a84e44ba0ee3afa0ae26ff0"><td class="memItemLeft" align="right" valign="top"><a id="ab0876b630a84e44ba0ee3afa0ae26ff0" name="ab0876b630a84e44ba0ee3afa0ae26ff0"></a>
+QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><b>stats</b> {}</td></tr>
+<tr class="separator:ab0876b630a84e44ba0ee3afa0ae26ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3bde47a75b6c59146d6aff1752d077f" id="r_ad3bde47a75b6c59146d6aff1752d077f"><td class="memItemLeft" align="right" valign="top"><a id="ad3bde47a75b6c59146d6aff1752d077f" name="ad3bde47a75b6c59146d6aff1752d077f"></a>
+QWidget *&#160;</td><td class="memItemRight" valign="bottom"><b>centralWidget</b></td></tr>
+<tr class="separator:ad3bde47a75b6c59146d6aff1752d077f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2cf19667f04ffd79b622b2fe3a136f72" id="r_a2cf19667f04ffd79b622b2fe3a136f72"><td class="memItemLeft" align="right" valign="top"><a id="a2cf19667f04ffd79b622b2fe3a136f72" name="a2cf19667f04ffd79b622b2fe3a136f72"></a>
+QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><b>shop</b> {}</td></tr>
+<tr class="separator:a2cf19667f04ffd79b622b2fe3a136f72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8ad673d6721a5f96f16da3431bb9424" id="r_af8ad673d6721a5f96f16da3431bb9424"><td class="memItemLeft" align="right" valign="top"><a id="af8ad673d6721a5f96f16da3431bb9424" name="af8ad673d6721a5f96f16da3431bb9424"></a>
+QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><b>shopButton</b> {}</td></tr>
+<tr class="separator:af8ad673d6721a5f96f16da3431bb9424"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The main window of the application </p>
+<div class="textblock"><p>Responsible for the window of the game. </p>
+<p>The main window of the application</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a996c5a2b6f77944776856f08ec30858d" name="a996c5a2b6f77944776856f08ec30858d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a996c5a2b6f77944776856f08ec30858d">&#9670;&#160;</a></span>MainWindow()</h2>
@@ -168,18 +202,178 @@ QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><b>settingsButt
 </table>
 </div><div class="memdoc">
 
-<p>Constructor of the <a class="el" href="class_main_window.html">MainWindow</a>. </p>
+<p>Constructor of the <a class="el" href="class_main_window.html" title="Responsible for the window of the game.">MainWindow</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent</td><td>The parent widget of the <a class="el" href="class_main_window.html">MainWindow</a>, typically the desktop. </td></tr>
+    <tr><td class="paramname">parent</td><td>The parent widget of the <a class="el" href="class_main_window.html" title="Responsible for the window of the game.">MainWindow</a>, typically the desktop. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa88ba24b2540a862b065a922ab8dcef6" name="aa88ba24b2540a862b065a922ab8dcef6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa88ba24b2540a862b065a922ab8dcef6">&#9670;&#160;</a></span>loadDefaultSprite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::loadDefaultSprite </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the default sprite to the happy bitbuddy. </p>
+<p>Will load the default sprite used for the <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> which is the happy bitbuddy. </p>
+
+</div>
+</div>
+<a id="a8e1c1ad87a68b27f19492549b9c4e773" name="a8e1c1ad87a68b27f19492549b9c4e773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e1c1ad87a68b27f19492549b9c4e773">&#9670;&#160;</a></span>openSettings</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::openSettings </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Opens the additional windows that are accessible through the mainWindow. </p>
+<p>Responsible for opening the setting window when the settings button is pressed. </p>
+
+</div>
+</div>
+<a id="aad75236c74a5c340c3e18749a9b5eb4f" name="aad75236c74a5c340c3e18749a9b5eb4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad75236c74a5c340c3e18749a9b5eb4f">&#9670;&#160;</a></span>resizeEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::resizeEvent </td>
+          <td>(</td>
+          <td class="paramtype">QResizeEvent *</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>resizeEvent will be called when the window is resized </p>
+<p>Will ensure the position of the bitbuddy and its items are in the correct places </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>resize event is sent in</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>resize <a class="el" href="class_event.html" title="The Event class represents an event that can be dispatched to listeners.">Event</a> is responsible for ensuring the objects on the screen remain in their correct position regardless of the window size </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>takes in the event which is sent when the window is resized </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa353e8faed952a95e2fc62d7a5018a89" name="aa353e8faed952a95e2fc62d7a5018a89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa353e8faed952a95e2fc62d7a5018a89">&#9670;&#160;</a></span>setupUi()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::setupUi </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Will set up the homepage of the bitbuddy game. </p>
+<p>setupUI() is responsible for the design of the mainwindow aswell as the functionality </p>
+
+</div>
+</div>
+<a id="a35c1d3ce153b7919598b4df63c455cc2" name="a35c1d3ce153b7919598b4df63c455cc2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35c1d3ce153b7919598b4df63c455cc2">&#9670;&#160;</a></span>updateTheme</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::updateTheme </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>newStyle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Changes the style of the game. </p>
+<p>Changes the theme of the <a class="el" href="class_main_window.html" title="Responsible for the window of the game.">MainWindow</a>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">newStyle</td><td>light or dark</td></tr>
+    <tr><td class="paramname">newStyle</td><td>causes the blue status bars to become grey </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>game/include/<a class="el" href="_main_window_8h_source.html">MainWindow.h</a></li>
+<li>game/src/<b>MainWindow.cpp</b></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,0 +1,14 @@
+\chapter{Bit\+Buddy}
+\hypertarget{index}{}\label{index}\index{BitBuddy@{BitBuddy}}
+\label{index_md__r_e_a_d_m_e}%
+\Hypertarget{index_md__r_e_a_d_m_e}%
+ \doxylink{class_bit_buddy}{Bit\+Buddy} is a silly little C++ game developed in the Qt framework.\hypertarget{index_autotoc_md1}{}\doxysubsection{\texorpdfstring{Dependencies}{Dependencies}}\label{index_autotoc_md1}
+
+\begin{DoxyItemize}
+\item A modern C++ compiler (Opening and running the project in CLion should be enough)
+\item Qt 6.\+2.\+1 or later
+\item CMake 3.\+26 or later
+\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{Running the Program}{Running the Program}}\label{index_autotoc_md2}
+You need to ensure that CMake can find your QT 6 installation. You can either set this manually in the {\ttfamily CMake\+Lists.\+txt} by appending a manual{\ttfamily CMAKE\+\_\+\+PREFIX\+\_\+\+PATH} or you can set the {\ttfamily CMAKE\+\_\+\+PREFIX\+\_\+\+PATH} environment variable to the path of your Qt 6 installation.
+
+After you\textquotesingle{}ve configured this, you can run {\ttfamily cmake ..} to configure the project, then {\ttfamily make} to build the project and then {\ttfamily ./bitbuddy} to run the application 

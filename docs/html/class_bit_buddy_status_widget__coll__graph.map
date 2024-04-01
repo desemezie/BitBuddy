@@ -1,0 +1,7 @@
+<map id="BitBuddyStatusWidget" name="BitBuddyStatusWidget">
+<area shape="rect" id="Node000001" title="The BitBuddyStatusWidget class is a widget that displays the status of the BitBuddy." alt="" coords="35,148,199,274"/>
+<area shape="rect" id="Node000002" href="$class_q_widget.html" title=" " alt="" coords="5,13,69,78"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,90,90,147,85,150,57,92"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="93,5,301,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="181,86,157,134,152,132,176,84"/>
+</map>

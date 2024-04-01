@@ -1,0 +1,7 @@
+<map id="UserBankAccount" name="UserBankAccount">
+<area shape="rect" id="Node000001" title="Represents a user&#39;s bank account with a balance that can be deposited to or withdrawn from." alt="" coords="5,134,143,379"/>
+<area shape="rect" id="Node000002" href="$class_q_object.html" title=" " alt="" coords="10,5,71,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="50,85,58,133,53,134,45,85"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="95,5,122,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="106,71,99,117,94,116,101,70"/>
+</map>

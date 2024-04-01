@@ -6,6 +6,7 @@
 #define BITBUDDY_SRC_SERVICE_FILESTORAGESERVICE_H_
 
 #include <QString>
+
 #include "model/BitBuddy.h"
 #include "model/UserBankAccount.h"
 
@@ -20,7 +21,7 @@ const QString USER_BANK_ACCOUNT_FILE_NAME = "userBankAccount.json";
  *
  * FileStorageService is implemented as a singleton to ensure only one instance manages file storage operations.
  */
-class FileStorageService {
+class FileStorageService final {
  public:
   /**
    * @brief Gets the singleton instance of the FileStorageService.
@@ -50,15 +51,25 @@ class FileStorageService {
    * @param fallBackName The name to use for the creation of a new BitBuddy if loading fails.
    * @return A pointer to the loaded or newly created BitBuddy instance.
    */
-  static BitBuddy *loadBitBuddy(std::string fallBackName);
+  [[nodiscard]] static BitBuddy *loadBitBuddy(std::string fallBackName);
 
+  /**
+   * @brief Saves the UserBankAccount to a file.
+   *
+   * @param userBankAccount The UserBankAccount instance to save.
+   */
   static void saveUserBankAccount(const UserBankAccount &userBankAccount);
 
-  static UserBankAccount &loadUserBankAccount();
+  /**
+   * @brief Loads the UserBankAccount from a file.
+   *
+   * @return The loaded UserBankAccount instance.
+   */
+  [[nodiscard]] static UserBankAccount &loadUserBankAccount();
 
  private:
   FileStorageService();
   ~FileStorageService() = default;
 };
 
-#endif //BITBUDDY_SRC_SERVICE_FILESTORAGESERVICE_H_
+#endif  // BITBUDDY_SRC_SERVICE_FILESTORAGESERVICE_H_

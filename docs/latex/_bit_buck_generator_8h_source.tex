@@ -1,0 +1,55 @@
+\doxysection{Bit\+Buck\+Generator.\+h}
+\hypertarget{_bit_buck_generator_8h_source}{}\label{_bit_buck_generator_8h_source}\index{game/include/model/BitBuckGenerator.h@{game/include/model/BitBuckGenerator.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ Ryan\ Hecht\ \ on\ 2024-\/03-\/24.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ BITBUDDY\_GAME\_SRC\_BITBUCKGENERATOR\_H\_}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ BITBUDDY\_GAME\_SRC\_BITBUCKGENERATOR\_H\_}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QTimer>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ BIT\_BUCK\_GENERATION\_INTERVAL\_MS\ =\ 1000;\ \ \textcolor{comment}{//\ 1000\ milliseconds\ =\ 1\ second}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ MIN\_BIT\_BUCKS\_GENERATED\_PER\_TIME\_INTERVAL\ =\ 1;}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_bit_buck_generator}{BitBuckGenerator}}\ final\ :\ \textcolor{keyword}{public}\ QObject\ \{}
+\DoxyCodeLine{00024\ \ \ Q\_OBJECT}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_bit_buck_generator_a8deef83555ba38daf5a340e132172f9a}{BitBuckGenerator}}(\textcolor{keywordtype}{int}\ bitBucketsGeneratedPerTimeInterval\ =\ MIN\_BIT\_BUCKS\_GENERATED\_PER\_TIME\_INTERVAL,}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \mbox{\hyperlink{class_bit_buck_generator_a8deef83555ba38daf5a340e132172f9a}{BitBuckGenerator}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bit_buck_generator}{BitBuckGenerator}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00037\ \ \ \mbox{\hyperlink{class_bit_buck_generator}{BitBuckGenerator}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_bit_buck_generator}{BitBuckGenerator}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00038\ \ \ \mbox{\hyperlink{class_bit_buck_generator_a8deef83555ba38daf5a340e132172f9a}{BitBuckGenerator}}(\mbox{\hyperlink{class_bit_buck_generator}{BitBuckGenerator}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00039\ \ \ \mbox{\hyperlink{class_bit_buck_generator}{BitBuckGenerator}}\ \&operator=(\mbox{\hyperlink{class_bit_buck_generator}{BitBuckGenerator}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00046\ \ \ [[nodiscard]]\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_bit_buck_generator_a4381bffbba66d3a3edb1aea49e828235}{getBitBucksGeneratedPerTimeInterval}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buck_generator_a499a7623cd2ec22919566b4323a09aae}{setBitBucksGeneratedPerTimeInterval}}(\textcolor{keywordtype}{int}\ bitBucksGeneratedPerTimeInterval);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buck_generator_a5e9d506b12f003fb7f677fa04c126691}{pauseGeneration}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buck_generator_ab5c6b4825523ee8aaceaeca20ef880c1}{startGeneration}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00072\ \ \ [[nodiscard]]\ QJsonObject\ \mbox{\hyperlink{class_bit_buck_generator_aab4a2cbb19cf29718ef77b0bb0aebdb5}{toJson}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00082\ \ \ [[nodiscard]]\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_bit_buck_generator}{BitBuckGenerator}}\ *\mbox{\hyperlink{class_bit_buck_generator_a93a4bf718f45661516f2c784201a7412}{fromJson}}(\textcolor{keyword}{const}\ QJsonObject\ \&bitBuckGeneratorJson);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ signals:}
+\DoxyCodeLine{00090\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buck_generator_a07dfc228b67b8323c7ac011773c4b109}{bitBucksGenerated}}(\textcolor{keywordtype}{int}\ bitBucks);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00093\ \ \ \textcolor{keywordtype}{int}\ bitBucksGeneratedPerTimeInterval;}
+\DoxyCodeLine{00094\ \ \ QTimer\ generationTimer;}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00100\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_bit_buck_generator_a53c56300d781343739dbf29b9510aee6}{generateBitBucks}}();}
+\DoxyCodeLine{00101\ \};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ BITBUDDY\_GAME\_SRC\_BITBUCKGENERATOR\_H\_}}
+
+\end{DoxyCode}

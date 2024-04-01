@@ -1,0 +1,3 @@
+<map id="GameService" name="GameService">
+<area shape="rect" id="Node000001" title="The GameService is responsible for starting and stopping the EventGeneratorService and MusicService." alt="" coords="5,5,124,231"/>
+</map>

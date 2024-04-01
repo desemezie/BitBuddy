@@ -1,0 +1,12 @@
+<map id="game/src/model/BitBuddyAttribute.cpp" name="game/src/model/BitBuddyAttribute.cpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,251,31"/>
+<area shape="rect" id="Node000002" href="$_bit_buddy_attribute_8h.html" title=" " alt="" coords="104,79,277,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,29,172,65,168,69,136,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="18,153,115,178"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="122,33,94,80,75,139,70,137,90,78,117,30"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="171,108,102,147,99,142,168,103"/>
+<area shape="rect" id="Node000004" href="$_bit_buddy_attribute_name_8h.html" title=" " alt="" coords="140,153,348,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="202,103,228,138,224,142,197,106"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="217,226,271,252"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="247,179,247,211,241,211,241,179"/>
+</map>

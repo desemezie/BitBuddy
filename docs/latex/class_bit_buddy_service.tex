@@ -1,0 +1,93 @@
+\doxysection{Bit\+Buddy\+Service Class Reference}
+\hypertarget{class_bit_buddy_service}{}\label{class_bit_buddy_service}\index{BitBuddyService@{BitBuddyService}}
+
+
+Singleton service that acts as a global registry for the \doxylink{class_bit_buddy}{Bit\+Buddy} object to allow access throughout the application.  
+
+
+
+
+{\ttfamily \#include $<$Bit\+Buddy\+Service.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bit_buddy_service_a9bf30cbea7789d591313d10350cd9544}\label{class_bit_buddy_service_a9bf30cbea7789d591313d10350cd9544} 
+{\bfseries Bit\+Buddy\+Service} (const \mbox{\hyperlink{class_bit_buddy_service}{Bit\+Buddy\+Service}} \&)=delete
+\item 
+\Hypertarget{class_bit_buddy_service_a0b48230fed91dcff79645ba2b4925420}\label{class_bit_buddy_service_a0b48230fed91dcff79645ba2b4925420} 
+\mbox{\hyperlink{class_bit_buddy_service}{Bit\+Buddy\+Service}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_bit_buddy_service}{Bit\+Buddy\+Service}} \&)=delete
+\item 
+\Hypertarget{class_bit_buddy_service_ae7b6112216401eebdb51503f652463f1}\label{class_bit_buddy_service_ae7b6112216401eebdb51503f652463f1} 
+{\bfseries Bit\+Buddy\+Service} (\mbox{\hyperlink{class_bit_buddy_service}{Bit\+Buddy\+Service}} \&\&)=delete
+\item 
+\Hypertarget{class_bit_buddy_service_a79657d8aa13080ee6822d0d50d2ff65f}\label{class_bit_buddy_service_a79657d8aa13080ee6822d0d50d2ff65f} 
+\mbox{\hyperlink{class_bit_buddy_service}{Bit\+Buddy\+Service}} \& {\bfseries operator=} (\mbox{\hyperlink{class_bit_buddy_service}{Bit\+Buddy\+Service}} \&\&)=delete
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_bit_buddy_service}{Bit\+Buddy\+Service}} \& \mbox{\hyperlink{class_bit_buddy_service_ac5f75c43907026f3bc7a59159e9400a4}{get\+Instance}} ()
+\item 
+static void \mbox{\hyperlink{class_bit_buddy_service_af77590296479a939209d8ea60eddb9f4}{register\+Bit\+Buddy}} (\mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*}bit\+Buddy)
+\item 
+static \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \& \mbox{\hyperlink{class_bit_buddy_service_a499ec6e0476f47e4d39db1613efd7b0a}{get\+Bit\+Buddy}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_bit_buddy_service_aef5910add14f0925e440bf1b5ea36fa8}\label{class_bit_buddy_service_aef5910add14f0925e440bf1b5ea36fa8} 
+static \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*} {\bfseries bit\+Buddy} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton service that acts as a global registry for the \doxylink{class_bit_buddy}{Bit\+Buddy} object to allow access throughout the application. 
+
+\begin{DoxyAuthor}{Author}
+Ryan Hecht
+\end{DoxyAuthor}
+Exposes only a reference to the \doxylink{class_bit_buddy}{Bit\+Buddy} object. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_bit_buddy_service_a499ec6e0476f47e4d39db1613efd7b0a}\label{class_bit_buddy_service_a499ec6e0476f47e4d39db1613efd7b0a} 
+\index{BitBuddyService@{BitBuddyService}!getBitBuddy@{getBitBuddy}}
+\index{getBitBuddy@{getBitBuddy}!BitBuddyService@{BitBuddyService}}
+\doxysubsubsection{\texorpdfstring{getBitBuddy()}{getBitBuddy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \& Bit\+Buddy\+Service\+::get\+Bit\+Buddy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Gets the \doxylink{class_bit_buddy}{Bit\+Buddy} object registered with the service
+
+\begin{DoxyReturn}{Returns}
+The \doxylink{class_bit_buddy}{Bit\+Buddy} object 
+\end{DoxyReturn}
+\Hypertarget{class_bit_buddy_service_ac5f75c43907026f3bc7a59159e9400a4}\label{class_bit_buddy_service_ac5f75c43907026f3bc7a59159e9400a4} 
+\index{BitBuddyService@{BitBuddyService}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!BitBuddyService@{BitBuddyService}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bit_buddy_service}{Bit\+Buddy\+Service}} \& Bit\+Buddy\+Service\+::get\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Singleton instance getter
+
+\begin{DoxyReturn}{Returns}
+the instance 
+\end{DoxyReturn}
+\Hypertarget{class_bit_buddy_service_af77590296479a939209d8ea60eddb9f4}\label{class_bit_buddy_service_af77590296479a939209d8ea60eddb9f4} 
+\index{BitBuddyService@{BitBuddyService}!registerBitBuddy@{registerBitBuddy}}
+\index{registerBitBuddy@{registerBitBuddy}!BitBuddyService@{BitBuddyService}}
+\doxysubsubsection{\texorpdfstring{registerBitBuddy()}{registerBitBuddy()}}
+{\footnotesize\ttfamily void Bit\+Buddy\+Service\+::register\+Bit\+Buddy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bit_buddy}{Bit\+Buddy}} \texorpdfstring{$\ast$}{*}}]{bit\+Buddy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Registers the \doxylink{class_bit_buddy}{Bit\+Buddy} object with the service
+
+
+\begin{DoxyParams}{Parameters}
+{\em bit\+Buddy} & The \doxylink{class_bit_buddy}{Bit\+Buddy} object to register \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game/include/service/Bit\+Buddy\+Service.\+h\item 
+game/src/service/Bit\+Buddy\+Service.\+cpp\end{DoxyCompactItemize}

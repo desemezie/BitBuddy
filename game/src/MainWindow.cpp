@@ -32,14 +32,11 @@ constexpr double DEFAULT_SCREEN_PERCENTAGE = 0.9;
  * @param parent
  */
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) {
-
-
-  // Loads bitbuddy's bank account
-
-  UserBankAccountService::registerUserBankAccount(&FileStorageService::loadUserBankAccount());
-
   // sets up the UI
   setupUi();
+
+  // Start the bitBuckGenerator on the bitbuddy
+  BitBuddyService::getBitBuddy().startBitBuckGenerator();
 
   // connects buttons to the functions they should work on when signaled
   connect(settingsButton, &QPushButton::clicked, this, &MainWindow::openSettings);
@@ -71,7 +68,6 @@ MainWindow::~MainWindow() {
  * @brief setupUI() is responsible for the design of the mainwindow aswell as the functionality
  */
 void MainWindow::setupUi() {
-
   // Set up central widget
   centralWidget = new QWidget(this);
   setCentralWidget(centralWidget);
@@ -132,8 +128,6 @@ void MainWindow::setupUi() {
   layout->addWidget(shop, 0, 1, Qt::AlignBottom | Qt::AlignRight);
   connect(shop, &QPushButton::clicked, this, &MainWindow::openShopWindow);
 
-
-
   // Add action buttons on the botton
   auto *rowLayout1 = new QHBoxLayout;
   auto *rowLayout2 = new QHBoxLayout;
@@ -185,7 +179,8 @@ void MainWindow::loadDefaultSprite() const {
 }
 
 /**
- * resize Event is responsible for ensuring the objects on the screen remain in their correct position regardless of the window size
+ * resize Event is responsible for ensuring the objects on the screen remain in their correct position regardless of the
+ * window size
  * @param event takes in the event which is sent when the window is resized
  */
 void MainWindow::resizeEvent(QResizeEvent *event) {
@@ -208,19 +203,15 @@ void MainWindow::openSettings() {
   settingsDialog.exec();
 }
 
-
-void MainWindow::updateCentralWidgetStyle(const QString &newStyle) {
-  centralWidget->setStyleSheet(newStyle);
-}
+void MainWindow::updateCentralWidgetStyle(const QString &newStyle) { centralWidget->setStyleSheet(newStyle); }
 
 /**
  * @brief Responsible for opening the shop window when the shop button is pressed
  */
 void MainWindow::openShopWindow() {
-  auto *shopWindow = new ShopWindow(this); // Pass 'this' to set MainWindow as the parent
-  shopWindow->setAttribute(Qt::WA_DeleteOnClose); // Ensure the window is deleted automatically when closed
+  auto *shopWindow = new ShopWindow(this);         // Pass 'this' to set MainWindow as the parent
+  shopWindow->setAttribute(Qt::WA_DeleteOnClose);  // Ensure the window is deleted automatically when closed
   shopWindow->show();
-
 }
 
 /**
@@ -230,4 +221,3 @@ void MainWindow::openShopWindow() {
 void MainWindow::updateTheme(const QString &newStyle) {
   this->setStyleSheet(newStyle);  // NOTE, THIS CAUSES THE BLUE STATUS BARS TO BECOME GREY
 }
-

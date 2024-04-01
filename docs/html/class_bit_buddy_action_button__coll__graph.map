@@ -1,0 +1,7 @@
+<map id="BitBuddyActionButton" name="BitBuddyActionButton">
+<area shape="rect" id="Node000001" title="Will initialize the button by connecting the button click to the handleButtonClicked method." alt="" coords="28,134,188,239"/>
+<area shape="rect" id="Node000002" href="$class_q_push_button.html" title=" " alt="" coords="5,5,96,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,84,90,133,85,135,66,86"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="121,5,210,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="156,72,137,119,132,117,151,70"/>
+</map>

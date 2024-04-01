@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>BitBuddy: Main Page</title>
+<title>BitBuddy: BitBuddy</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,10 +71,23 @@ $(function() {
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">BitBuddy Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title"><a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a> <a class="el" href="class_bit_buddy.html" title="Represents the BitBuddy pet in the game.">BitBuddy</a> is a silly little C++ game developed in the Qt framework.</p>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Dependencies</h2>
+<ul>
+<li>A modern C++ compiler (Opening and running the project in CLion should be enough)</li>
+<li>Qt 6.2.1 or later</li>
+<li>CMake 3.26 or later</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Running the Program</h2>
+<p>You need to ensure that CMake can find your QT 6 installation. You can either set this manually in the <code>CMakeLists.txt</code> by appending a manual<code>CMAKE_PREFIX_PATH</code> or you can set the <code>CMAKE_PREFIX_PATH</code> environment variable to the path of your Qt 6 installation.</p>
+<p>After you've configured this, you can run <code>cmake ..</code> to configure the project, then <code>make</code> to build the project and then <code>./bitbuddy</code> to run the application </p>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"/>
 </div><!-- contents -->
 <!-- start footer part -->

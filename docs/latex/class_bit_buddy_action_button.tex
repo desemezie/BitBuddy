@@ -1,5 +1,14 @@
 \doxysection{Bit\+Buddy\+Action\+Button Class Reference}
 \hypertarget{class_bit_buddy_action_button}{}\label{class_bit_buddy_action_button}\index{BitBuddyActionButton@{BitBuddyActionButton}}
+
+
+Will initialize the button by connecting the button click to the handle\+Button\+Clicked method.  
+
+
+
+
+{\ttfamily \#include $<$Bit\+Buddy\+Action\+Button.\+h$>$}
+
 Inheritance diagram for Bit\+Buddy\+Action\+Button\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,23 +18,91 @@ Inheritance diagram for Bit\+Buddy\+Action\+Button\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_bit_buddy_action_button_a139242f29b1cc452f6384e3f6971c21b}\label{class_bit_buddy_action_button_a139242f29b1cc452f6384e3f6971c21b} 
-{\bfseries Bit\+Buddy\+Action\+Button} (const QIcon \&icon, const QString \&text, Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name attribute, QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_bit_buddy_action_button_a139242f29b1cc452f6384e3f6971c21b}{Bit\+Buddy\+Action\+Button}} (const QIcon \&icon, const QString \&text, \mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}} \mbox{\hyperlink{class_bit_buddy_action_button_aae11c8f2419e4f0defb1accc892fe3d3}{attribute}}, QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\item 
+void \mbox{\hyperlink{class_bit_buddy_action_button_abb996f973ce5d23013cfc7e2bdb34926}{set\+Button\+Style}} ()
+\begin{DoxyCompactList}\small\item\em set\+Button\+Style is supposed to set the design of the button. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Slots}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_bit_buddy_action_button_a9edbdf28aa5f7e45660c6530c31a6b94}\label{class_bit_buddy_action_button_a9edbdf28aa5f7e45660c6530c31a6b94} 
-void {\bfseries handle\+Button\+Clicked} ()
+void \mbox{\hyperlink{class_bit_buddy_action_button_a9edbdf28aa5f7e45660c6530c31a6b94}{handle\+Button\+Clicked}} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_bit_buddy_action_button_aae11c8f2419e4f0defb1accc892fe3d3}\label{class_bit_buddy_action_button_aae11c8f2419e4f0defb1accc892fe3d3} 
-Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name {\bfseries attribute}
+\mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}} \mbox{\hyperlink{class_bit_buddy_action_button_aae11c8f2419e4f0defb1accc892fe3d3}{attribute}}
 \end{DoxyCompactItemize}
 
 
-The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\doxysubsection{Detailed Description}
+Will initialize the button by connecting the button click to the handle\+Button\+Clicked method. 
+
+Inherits from QPush\+Button.
+
+Will handle the button click depending on which button it is and its Attribute.
+
+
+\begin{DoxyParams}{Parameters}
+{\em icon} & Icon for the button \\
+\hline
+{\em attribute} & Attribute that the button belongs to \\
+\hline
+{\em text} & The string for the button \\
+\hline
+{\em parent} & The parent widget of the button \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_bit_buddy_action_button_a139242f29b1cc452f6384e3f6971c21b}\label{class_bit_buddy_action_button_a139242f29b1cc452f6384e3f6971c21b} 
+\index{BitBuddyActionButton@{BitBuddyActionButton}!BitBuddyActionButton@{BitBuddyActionButton}}
+\index{BitBuddyActionButton@{BitBuddyActionButton}!BitBuddyActionButton@{BitBuddyActionButton}}
+\doxysubsubsection{\texorpdfstring{BitBuddyActionButton()}{BitBuddyActionButton()}}
+{\footnotesize\ttfamily Bit\+Buddy\+Action\+Button\+::\+Bit\+Buddy\+Action\+Button (\begin{DoxyParamCaption}\item[{const QIcon \&}]{icon,  }\item[{const QString \&}]{text,  }\item[{\mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}}}]{attribute,  }\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructor for the \doxylink{class_bit_buddy_action_button}{Bit\+Buddy\+Action\+Button} 
+\begin{DoxyParams}{Parameters}
+{\em icon} & Icon for the button \\
+\hline
+{\em text} & Text for the button \\
+\hline
+{\em attribute} & Attribute the button belongs to \\
+\hline
+{\em parent} & The Parent of the button, parent widget \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_bit_buddy_action_button_a9edbdf28aa5f7e45660c6530c31a6b94}\label{class_bit_buddy_action_button_a9edbdf28aa5f7e45660c6530c31a6b94} 
+\index{BitBuddyActionButton@{BitBuddyActionButton}!handleButtonClicked@{handleButtonClicked}}
+\index{handleButtonClicked@{handleButtonClicked}!BitBuddyActionButton@{BitBuddyActionButton}}
+\doxysubsubsection{\texorpdfstring{handleButtonClicked}{handleButtonClicked}}
+{\footnotesize\ttfamily void Bit\+Buddy\+Action\+Button\+::handle\+Button\+Clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+Function will be called to handle the button clicked \Hypertarget{class_bit_buddy_action_button_abb996f973ce5d23013cfc7e2bdb34926}\label{class_bit_buddy_action_button_abb996f973ce5d23013cfc7e2bdb34926} 
+\index{BitBuddyActionButton@{BitBuddyActionButton}!setButtonStyle@{setButtonStyle}}
+\index{setButtonStyle@{setButtonStyle}!BitBuddyActionButton@{BitBuddyActionButton}}
+\doxysubsubsection{\texorpdfstring{setButtonStyle()}{setButtonStyle()}}
+{\footnotesize\ttfamily void Bit\+Buddy\+Action\+Button\+::set\+Button\+Style (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+set\+Button\+Style is supposed to set the design of the button. 
+
+\doxylink{class_bit_buddy_action_button_abb996f973ce5d23013cfc7e2bdb34926}{set\+Button\+Style()} Function will set the stylesheet for the button 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_bit_buddy_action_button_aae11c8f2419e4f0defb1accc892fe3d3}\label{class_bit_buddy_action_button_aae11c8f2419e4f0defb1accc892fe3d3} 
+\index{BitBuddyActionButton@{BitBuddyActionButton}!attribute@{attribute}}
+\index{attribute@{attribute}!BitBuddyActionButton@{BitBuddyActionButton}}
+\doxysubsubsection{\texorpdfstring{attribute}{attribute}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bit_buddy_attribute_name_a31753c61224d615434b2b76c0fa584aa}{Bit\+Buddy\+Attribute\+Name\+::\+Unique\+Name}} Bit\+Buddy\+Action\+Button\+::attribute\hspace{0.3cm}{\ttfamily [private]}}
+
+Attribute that the button belongs to 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-game/include/component/Bit\+Buddy\+Action\+Button.\+h\end{DoxyCompactItemize}
+game/include/component/Bit\+Buddy\+Action\+Button.\+h\item 
+game/src/component/Bit\+Buddy\+Action\+Button.\+cpp\end{DoxyCompactItemize}
