@@ -60,15 +60,16 @@ int XOController::run(){
       gameBoard.hide();
       QEventLoop loop;
       buddy.show();
-      QTimer::singleShot(10000, &loop, &QEventLoop::quit);
+      QTimer::singleShot(3600000, &loop, &QEventLoop::quit);
       loop.exec(); // Allow event loop to continue until timer expires
+
       return -1;
     }
     if(b.isTerminal()){
       gameBoard.hide();
       QEventLoop loop;
       tie.show();
-      QTimer::singleShot(10000, &loop, &QEventLoop::quit);
+      QTimer::singleShot(3600000, &loop, &QEventLoop::quit);
       loop.exec(); // Allow event loop to continue until timer expires
       return 0;
 
