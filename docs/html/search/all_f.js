@@ -31,5 +31,6 @@ var searchData=
   ['statsclicked_28',['statsClicked',['../class_stats_button.html#a42ef92c0ab9ca350c1837c4fb278c783',1,'StatsButton']]],
   ['statswindow_29',['StatsWindow',['../class_stats_window.html',1,'StatsWindow'],['../class_stats_window.html#a7b6fb09bda2a49a32b2e8f636aef7365',1,'StatsWindow::StatsWindow()']]],
   ['stopmusic_30',['stopMusic',['../class_music_service.html#a23470ace0df023a96289b2cd03184138',1,'MusicService']]],
-  ['stopservice_31',['stopService',['../class_event_generator_service.html#a262888acaa4fab3525f294309b30d04b',1,'EventGeneratorService::stopService()'],['../class_game_service.html#a9ca946e04f80a3f96a90fb0a61789ac3',1,'GameService::stopService()']]]
+  ['stopservice_31',['stopService',['../class_event_generator_service.html#a262888acaa4fab3525f294309b30d04b',1,'EventGeneratorService::stopService()'],['../class_game_service.html#a9ca946e04f80a3f96a90fb0a61789ac3',1,'GameService::stopService()']]],
+  ['structure_20of_20the_20project_32',['Structure of the Project',['../index.html#autotoc_md4',1,'']]]
 ];

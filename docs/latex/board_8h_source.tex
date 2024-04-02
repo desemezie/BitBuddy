@@ -1,0 +1,46 @@
+\doxysection{board.\+h}
+\hypertarget{board_8h_source}{}\label{board_8h_source}\index{game/include/model/board.h@{game/include/model/board.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{//}}
+\DoxyCodeLine{00002\ \textcolor{comment}{//\ Created\ by\ razro\ on\ 2024-\/03-\/25.}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ TICTACTOE\_BOARD\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ TICTACTOE\_BOARD\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classboard}{board}}\ \{}
+\DoxyCodeLine{00012\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{char}\ content[3][3];}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{bool}\ initialState;}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ minimax\ helpers}}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ maxValue(\mbox{\hyperlink{classboard}{board}}\ b);}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{int}\ minValue(\mbox{\hyperlink{classboard}{board}}\ b);}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classboard}{board}}();}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ \ getters}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{bool}\ isInitialState();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ printContent();}
+\DoxyCodeLine{00023\ \textcolor{comment}{//\ \ setters}}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ setValue(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ column,\ \textcolor{keywordtype}{char}\ value);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ \ game\ specific}}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{char}\ getWinner();}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ isTerminal();}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ getUtility();}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{char}\ getCurrentPlayer();}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classboard}{board}}\ getResult(std::pair<int,\ int>\ move);}
+\DoxyCodeLine{00032\ \ \ \ \ std::set<std::pair<int,\ int>>\ getActions();}
+\DoxyCodeLine{00033\ \ \ \ \ std::pair<int,\ int>\ minimax();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//TICTACTOE\_BOARD\_H}}
+
+\end{DoxyCode}
