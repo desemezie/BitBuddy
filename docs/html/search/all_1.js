@@ -11,5 +11,8 @@ var searchData=
   ['bitbuddyevents_8',['BitBuddyEvents',['../class_bit_buddy_events.html',1,'']]],
   ['bitbuddyservice_9',['BitBuddyService',['../class_bit_buddy_service.html',1,'']]],
   ['bitbuddyspritehandler_10',['BitBuddySpriteHandler',['../class_bit_buddy_sprite_handler.html',1,'']]],
-  ['bitbuddystatuswidget_11',['BitBuddyStatusWidget',['../class_bit_buddy_status_widget.html',1,'BitBuddyStatusWidget'],['../class_bit_buddy_status_widget.html#a4d63483aa7ea49cab3cd67c4a17936fe',1,'BitBuddyStatusWidget::BitBuddyStatusWidget()']]]
+  ['bitbuddystatuswidget_11',['BitBuddyStatusWidget',['../class_bit_buddy_status_widget.html',1,'BitBuddyStatusWidget'],['../class_bit_buddy_status_widget.html#a4d63483aa7ea49cab3cd67c4a17936fe',1,'BitBuddyStatusWidget::BitBuddyStatusWidget()']]],
+  ['board_12',['board',['../classboard.html',1,'']]],
+  ['boardwindow_13',['BoardWindow',['../class_board_window.html',1,'']]],
+  ['buddywindow_14',['BuddyWindow',['../class_buddy_window.html',1,'']]]
 ];

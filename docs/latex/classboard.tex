@@ -1,0 +1,59 @@
+\doxysection{board Class Reference}
+\hypertarget{classboard}{}\label{classboard}\index{board@{board}}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classboard_a4d81a72add07a19191715037d4598a27}\label{classboard_a4d81a72add07a19191715037d4598a27} 
+bool {\bfseries is\+Initial\+State} ()
+\item 
+\Hypertarget{classboard_ac10d8ed7a048df8784c192d6747dc134}\label{classboard_ac10d8ed7a048df8784c192d6747dc134} 
+void {\bfseries print\+Content} ()
+\item 
+\Hypertarget{classboard_a7d8b7ed2c25d3cb31975bb661754a042}\label{classboard_a7d8b7ed2c25d3cb31975bb661754a042} 
+void {\bfseries set\+Value} (int row, int column, char value)
+\item 
+\Hypertarget{classboard_ab6a775a2be81771773ba92a349d32b06}\label{classboard_ab6a775a2be81771773ba92a349d32b06} 
+char {\bfseries get\+Winner} ()
+\item 
+\Hypertarget{classboard_ae4734e1ef4dcc7f4846a600b10572d4e}\label{classboard_ae4734e1ef4dcc7f4846a600b10572d4e} 
+bool {\bfseries is\+Terminal} ()
+\item 
+\Hypertarget{classboard_af910b9f827939a141cf802da86c9340a}\label{classboard_af910b9f827939a141cf802da86c9340a} 
+int {\bfseries get\+Utility} ()
+\item 
+\Hypertarget{classboard_a26eb3cf98d88c2da48515dddec6e1036}\label{classboard_a26eb3cf98d88c2da48515dddec6e1036} 
+char {\bfseries get\+Current\+Player} ()
+\item 
+\Hypertarget{classboard_a61d6e7f16fc23dd12af867a1b1533f67}\label{classboard_a61d6e7f16fc23dd12af867a1b1533f67} 
+\mbox{\hyperlink{classboard}{board}} {\bfseries get\+Result} (std\+::pair$<$ int, int $>$ move)
+\item 
+\Hypertarget{classboard_a14395d45e6b34ae5f1135532d86a6446}\label{classboard_a14395d45e6b34ae5f1135532d86a6446} 
+std\+::set$<$ std\+::pair$<$ int, int $>$ $>$ {\bfseries get\+Actions} ()
+\item 
+\Hypertarget{classboard_a558d4950e6d6ef455a643cef5c6ed168}\label{classboard_a558d4950e6d6ef455a643cef5c6ed168} 
+std\+::pair$<$ int, int $>$ {\bfseries minimax} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classboard_a899f23b6aaa1b59fe9134c2bf610e234}\label{classboard_a899f23b6aaa1b59fe9134c2bf610e234} 
+int {\bfseries max\+Value} (\mbox{\hyperlink{classboard}{board}} b)
+\item 
+\Hypertarget{classboard_ab785aca1ab9f7ec52a9c913804c0dfd5}\label{classboard_ab785aca1ab9f7ec52a9c913804c0dfd5} 
+int {\bfseries min\+Value} (\mbox{\hyperlink{classboard}{board}} b)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classboard_a6b50ac0e9e31630977eda08c9bc46fd4}\label{classboard_a6b50ac0e9e31630977eda08c9bc46fd4} 
+char {\bfseries content} \mbox{[}3\mbox{]}\mbox{[}3\mbox{]}
+\item 
+\Hypertarget{classboard_a67c3f8d11ee5b720d10e6315a0d85aba}\label{classboard_a67c3f8d11ee5b720d10e6315a0d85aba} 
+bool {\bfseries initial\+State}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game/include/model/board.\+h\item 
+game/src/model/board.\+cpp\end{DoxyCompactItemize}

@@ -14,35 +14,36 @@
 \DoxyCodeLine{00010\ }
 \DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}service/EventDispatcherService.h"{}}}
 \DoxyCodeLine{00012\ }
-\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ final\ \{}
-\DoxyCodeLine{00022\ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00028\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&\mbox{\hyperlink{class_event_generator_service_aa6ba452ddd49cd1eb6384fe34c6efb2e}{getInstance}}();}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00030\ \ \ \mbox{\hyperlink{class_event_generator_service_a766bae241700d4fc0357854cbc2b74ae}{EventGeneratorService}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00031\ \ \ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00032\ \ \ \mbox{\hyperlink{class_event_generator_service_a766bae241700d4fc0357854cbc2b74ae}{EventGeneratorService}}(\mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00033\ \ \ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&operator=(\mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00041\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_generator_service_adec5843f9f5d10afd7bc4d898a9e3290}{startService}}();}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00046\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_generator_service_a262888acaa4fab3525f294309b30d04b}{stopService}}();}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00052\ \ \ \mbox{\hyperlink{class_event_generator_service_a766bae241700d4fc0357854cbc2b74ae}{EventGeneratorService}}()\ =\ \textcolor{keywordflow}{default};}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00057\ \ \ \mbox{\hyperlink{class_event_generator_service_a6c8675c979bd271d382c06bff560f6ec}{\string~EventGeneratorService}}();}
-\DoxyCodeLine{00058\ }
-\DoxyCodeLine{00062\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_generator_service_a6815fef4f2b20772666c206b557420b1}{resumeService}}();}
-\DoxyCodeLine{00063\ }
-\DoxyCodeLine{00070\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_generator_service_ac1f19a8ee8f0f58df557df99cc8154f2}{generateEvent}}();}
-\DoxyCodeLine{00071\ }
-\DoxyCodeLine{00072\ \ \ std::thread\ eventGeneratorServiceThread;}
-\DoxyCodeLine{00073\ \ \ std::atomic<bool>\ running\{\textcolor{keyword}{false}\};}
-\DoxyCodeLine{00074\ \ \ std::atomic<bool>\ paused\{\textcolor{keyword}{false}\};}
-\DoxyCodeLine{00075\ \ \ std::mutex\ pauseMutex;}
-\DoxyCodeLine{00076\ \ \ std::condition\_variable\ pauseCondition;}
-\DoxyCodeLine{00077\ \};}
-\DoxyCodeLine{00078\ }
-\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ BITBUDDY\_EVENTGENERATORSERVICE\_H}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ final\ \{}
+\DoxyCodeLine{00023\ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&\mbox{\hyperlink{class_event_generator_service_aa6ba452ddd49cd1eb6384fe34c6efb2e}{getInstance}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \mbox{\hyperlink{class_event_generator_service_a766bae241700d4fc0357854cbc2b74ae}{EventGeneratorService}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00032\ \ \ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&operator=(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00033\ \ \ \mbox{\hyperlink{class_event_generator_service_a766bae241700d4fc0357854cbc2b74ae}{EventGeneratorService}}(\mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00034\ \ \ \mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&operator=(\mbox{\hyperlink{class_event_generator_service}{EventGeneratorService}}\ \&\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00042\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_generator_service_adec5843f9f5d10afd7bc4d898a9e3290}{startService}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_generator_service_a262888acaa4fab3525f294309b30d04b}{stopService}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00053\ \ \ \mbox{\hyperlink{class_event_generator_service_a766bae241700d4fc0357854cbc2b74ae}{EventGeneratorService}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \mbox{\hyperlink{class_event_generator_service_a6c8675c979bd271d382c06bff560f6ec}{\string~EventGeneratorService}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_generator_service_a6815fef4f2b20772666c206b557420b1}{resumeService}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00071\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_event_generator_service_ac1f19a8ee8f0f58df557df99cc8154f2}{generateEvent}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ std::thread\ eventGeneratorServiceThread;}
+\DoxyCodeLine{00074\ \ \ std::atomic<bool>\ running\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{00075\ \ \ std::atomic<bool>\ paused\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{00076\ \ \ std::mutex\ pauseMutex;}
+\DoxyCodeLine{00077\ \ \ std::condition\_variable\ pauseCondition;}
+\DoxyCodeLine{00078\ \};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ BITBUDDY\_EVENTGENERATORSERVICE\_H}}
 
 \end{DoxyCode}
