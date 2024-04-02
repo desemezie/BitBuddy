@@ -6,9 +6,76 @@
 
 \begin{DoxyItemize}
 \item A modern C++ compiler (Opening and running the project in CLion should be enough)
-\item Qt 6.\+2.\+1 or later
+\item Qt 6.\+6.\+1 or later
 \item CMake 3.\+26 or later
+\item A Unix environment (this is because the project assumes the use of libc++ or libstdc++ for the standard library implementation)
+\item CMake
+\item A build system supported by CMake (We recommend using Ninja and use it in our example)
 \end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{Running the Program}{Running the Program}}\label{index_autotoc_md2}
-You need to ensure that CMake can find your QT 6 installation. You can either set this manually in the {\ttfamily CMake\+Lists.\+txt} by appending a manual{\ttfamily CMAKE\+\_\+\+PREFIX\+\_\+\+PATH} or you can set the {\ttfamily CMAKE\+\_\+\+PREFIX\+\_\+\+PATH} environment variable to the path of your Qt 6 installation.
+You need to ensure that CMake can find your QT 6 installation. You can set this manually in the {\ttfamily CMake\+Lists.\+txt} by appending a manual{\ttfamily CMAKE\+\_\+\+PREFIX\+\_\+\+PATH}, you can set the {\ttfamily CMAKE\+\_\+\+PREFIX\+\_\+\+PATH} environment variable to the path of your Qt 6 installation, or you can specify the path to the Qt 6 installation when running CMake via the command line.
 
-After you\textquotesingle{}ve configured this, you can run {\ttfamily cmake ..} to configure the project, then {\ttfamily make} to build the project and then {\ttfamily ./bitbuddy} to run the application 
+We recommend using CLion\textquotesingle{}s built in CMake support to build and run the project; however, if you would like to build the project manually, you can do so by running the following commands from the root directory of the project (from the directory that this README.\+md file is in)\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/DCMAKE\_PREFIX\_PATH=/path/to/Qt/6.6.3/your\_platform\ -\/S\ <source\_dir>\ -\/B\ <build\_dir>\ -\/G\ <generator>}
+\DoxyCodeLine{cd\ <build\_dir>}
+\DoxyCodeLine{cmake\ -\/-\/build\ .\ -\/-\/config\ Release}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md3}{}\doxysubsubsection{\texorpdfstring{Example\+:}{Example\+:}}\label{index_autotoc_md3}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/DCMAKE\_PREFIX\_PATH=/Users/ryanhecht/Qt/6.6.1/macos\ -\/S\ ./\ -\/B\ ./build\ -\/G\ Ninja}
+\DoxyCodeLine{cd\ build}
+\DoxyCodeLine{cmake\ -\/-\/build\ .\ -\/-\/config\ Release}
+
+\end{DoxyCode}
+
+
+There should now be a \textquotesingle{}bitbuddy\textquotesingle{} executable in the build directory. You can run this executable to play the game.\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{Structure of the Project}{Structure of the Project}}\label{index_autotoc_md4}
+We decided to separate header files from source files into the {\ttfamily include} and {\ttfamily src} directories, respectively. This allows readers to navigate through only the include directory to see the public interface of the project, but they can still switch to the implementation of a header file with a hotkey (usually F10).
+
+Below is the organization of the project\textquotesingle{}s directories and files, along with descriptions for each\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{group17/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Root\ directory\ of\ the\ project}
+\DoxyCodeLine{├──\ assets/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Contains\ static\ resources\ like\ images,\ fonts,\ etc.}
+\DoxyCodeLine{│\ \ \ ├──\ fonts/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Font\ files\ used\ in\ the\ project}
+\DoxyCodeLine{│\ \ \ ├──\ music/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Music\ files\ used\ in\ the\ project}
+\DoxyCodeLine{│\ \ \ └──\ .png\ \&\ .mp3\ files\ \ \ \ \ \ \ \ \ \ \#\ Other\ assets\ used\ in\ the\ project}
+\DoxyCodeLine{├──\ docs/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Documentation\ files}
+\DoxyCodeLine{│\ \ \ ├──\ html/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ HTML\ documentation\ generated\ by\ Doxygen}
+\DoxyCodeLine{│\ \ \ └──\ latex/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ LaTeX\ documentation\ generated\ by\ Doxygen}
+\DoxyCodeLine{├──\ game/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Main\ application\ code}
+\DoxyCodeLine{│\ \ \ ├──\ include/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Header\ files\ for\ the\ project}
+\DoxyCodeLine{│\ \ \ │\ \ \ ├──\ component/\ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Components\ used\ across\ the\ project}
+\DoxyCodeLine{│\ \ \ │\ \ \ ├──\ model/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Data\ models\ used\ in\ the\ project}
+\DoxyCodeLine{│\ \ \ │\ \ \ ├──\ service/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Services\ (usually\ singleton)\ that\ handle\ application\ logic}
+\DoxyCodeLine{│\ \ \ │\ \ \ │──\ window/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Window\ definitions\ for\ the\ UI}
+\DoxyCodeLine{│\ \ \ │\ \ \ └──\ MainWindow.h\ \ \ \ \ \ \ \ \ \ \ \#\ Main\ window\ UI\ class\ definition}
+\DoxyCodeLine{│\ \ \ └──\ src/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Source\ files\ implementing\ the\ project's\ functionality}
+\DoxyCodeLine{│\ \ \ \ \ \ \ ├──\ component/\ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Component\ implementations}
+\DoxyCodeLine{│\ \ \ \ \ \ \ ├──\ model/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Model\ implementations}
+\DoxyCodeLine{│\ \ \ \ \ \ \ ├──\ service/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Service\ implementations}
+\DoxyCodeLine{│\ \ \ \ \ \ \ ├──\ window/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Window\ implementations}
+\DoxyCodeLine{│\ \ \ \ \ \ \ ├──\ main.cpp\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Entry\ point\ of\ the\ application}
+\DoxyCodeLine{│\ \ \ \ \ \ \ └──\ MainWindow.cpp\ \ \ \ \ \ \ \ \ \#\ Main\ window\ UI\ class\ implementation}
+\DoxyCodeLine{├──\ .clang-\/format\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Configuration\ for\ code\ formatting\ with\ Clang-\/Format}
+\DoxyCodeLine{├──\ .gitignore\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Specifies\ intentionally\ untracked\ files\ to\ ignore}
+\DoxyCodeLine{├──\ CMakeLists.txt\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ CMake\ configuration\ file}
+\DoxyCodeLine{├──\ dox.config\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Doxygen\ configuration\ file\ for\ generating\ documentation}
+\DoxyCodeLine{├──\ README.md\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ The\ README\ file\ with\ project\ info\ and\ instructions}
+\DoxyCodeLine{└──\ resources.qrc\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \#\ Qt\ Resource\ Collection\ file\ for\ embedding\ resources}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{Authors}{Authors}}\label{index_autotoc_md5}
+
+\begin{DoxyItemize}
+\item Ryan Hecht (\href{mailto:ryanhecht.dev@gmail.com}{\texttt{ ryanhecht.\+dev@gmail.\+com}})
+\item Annabel Irani
+\item Razvan Rotundu
+\item Daniel Esemezie
+\item Shaylan Pratt 
+\end{DoxyItemize}

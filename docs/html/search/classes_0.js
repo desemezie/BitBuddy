@@ -8,5 +8,8 @@ var searchData=
   ['bitbuddyevents_5',['BitBuddyEvents',['../class_bit_buddy_events.html',1,'']]],
   ['bitbuddyservice_6',['BitBuddyService',['../class_bit_buddy_service.html',1,'']]],
   ['bitbuddyspritehandler_7',['BitBuddySpriteHandler',['../class_bit_buddy_sprite_handler.html',1,'']]],
-  ['bitbuddystatuswidget_8',['BitBuddyStatusWidget',['../class_bit_buddy_status_widget.html',1,'']]]
+  ['bitbuddystatuswidget_8',['BitBuddyStatusWidget',['../class_bit_buddy_status_widget.html',1,'']]],
+  ['board_9',['board',['../classboard.html',1,'']]],
+  ['boardwindow_10',['BoardWindow',['../class_board_window.html',1,'']]],
+  ['buddywindow_11',['BuddyWindow',['../class_buddy_window.html',1,'']]]
 ];
