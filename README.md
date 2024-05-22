@@ -1,6 +1,10 @@
 # BitBuddy
 
-BitBuddy is a silly little C++ game developed in the Qt framework.
+BitBuddy is a virtual pet C++ game developed in the Qt framework.
+
+<img width="1440" alt="Screenshot 2024-05-22 at 4 39 43 PM" src="https://github.com/desemezie/BitBuddy/assets/104041033/0ff6406e-3f79-4c82-950a-83528e82b798">
+
+
 
 ### Dependencies
 
