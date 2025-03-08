@@ -8,7 +8,8 @@
 board::board(){
     for (auto &row: content) {
         for (auto &element: row) {
-            element = '\0';
+            element = '\0';     //initialize all elements to null
+            
         }
     }
     initialState = true;
@@ -23,7 +24,9 @@ void board::printContent() {
         for(auto& element : row){
             std::cout << "|  " << element << "  ";
         }
-        std::cout << "|" << std::endl;
+
+        std::cout << "|" << std::endl; //new line
+
     }
     std::cout << "Initial state? " << this->isInitialState() << std::endl;
 }
@@ -31,7 +34,7 @@ void board::printContent() {
 void board::setValue(int row, int column, char value) {
     content[row][column] = value;
     initialState = false;
-}
+}       
 //game related functions
 // Return 1 if X won, -1 if O won, 0 otherwise,
 char board::getWinner() {

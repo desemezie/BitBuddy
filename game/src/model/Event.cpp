@@ -10,9 +10,9 @@ Event::Event(std::string description, double probability)
 }
 
 std::chrono::system_clock::time_point Event::getCreationTime() const {
-  return creationTime;
+  return creationTime;  // Return the time the event was created
 }
 
 std::string Event::getDescription() const {
-  return description;
+  return description;         // Return the description of the event
 }

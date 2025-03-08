@@ -13,7 +13,9 @@ BitBuckGenerator::BitBuckGenerator(int bitBucketsGeneratedPerTimeInterval, QObje
 
   connect(&generationTimer, &QTimer::timeout, this, &BitBuckGenerator::generateBitBucks);
   connect(this, &BitBuckGenerator::bitBucksGenerated, &TransactionService::getInstance(),
+  
           &TransactionService::payUserBitBucks);
+
 }
 
 int BitBuckGenerator::getBitBucksGeneratedPerTimeInterval() const { return bitBucksGeneratedPerTimeInterval; }
